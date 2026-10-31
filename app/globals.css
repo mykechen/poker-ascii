@@ -1,0 +1,152 @@
+:root {
+  --ink: #f2f2f2;
+  --paper: #0a0a0a;
+  --faint: #3d3d3d;
+  --muted: #a6a6a6;
+  --warn: #ffc400;
+  --mono: var(--font-mono), ui-monospace, "Source Code Pro", Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; min-height: 100%; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+button, input { font: inherit; color: inherit; }
+
+button.t {
+  background: none;
+  border: 0;
+  padding: 0 0.4ch;
+  cursor: pointer;
+}
+
+button.t:hover:not(:disabled) { outline: 1px solid var(--ink); outline-offset: -1px; }
+button.t:disabled { color: var(--muted); cursor: default; }
+button.t:focus-visible, input:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+.screen { max-width: 1100px; margin: 0 auto; padding: 28px 20px 48px; }
+
+.top, .top-actions, .buttons, .editor, .status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1.2rem;
+}
+
+.top { justify-content: space-between; margin-bottom: 16px; }
+.kicker, h1 { margin: 0; font-size: 15px; font-weight: 400; }
+h1 { letter-spacing: 0.08em; text-transform: uppercase; }
+.status { margin: 0; color: var(--muted); }
+.status span { margin-left: 1.2rem; }
+
+.editor {
+  border: 1px solid var(--ink);
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.editor label, .raise { display: flex; flex-direction: column; gap: 4px; color: var(--muted); font-size: 13px; }
+
+input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  border-radius: 0;
+  padding: 2px 0.4ch;
+  min-width: 12ch;
+}
+
+.table-fig {
+  position: relative;
+  height: 680px;
+  margin: 8px 0 20px;
+}
+
+.felt {
+  position: absolute;
+  inset: 12% 10%;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px var(--paper), 0 0 0 7px var(--ink);
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.board { display: flex; gap: 6px; }
+.pot { margin: 0; }
+
+.seat {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 18ch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--paper);
+  padding: 4px 0;
+  font-size: 13px;
+}
+
+.hole { display: flex; gap: 4px; min-height: 40px; margin-bottom: 4px; }
+.who, .meta, .act, .seat-actions { margin: 0; }
+.who { padding: 0 0.5ch; white-space: nowrap; }
+.meta, .act { color: var(--muted); white-space: nowrap; }
+.seat.turn .who, .seat.win .who { background: var(--ink); color: var(--paper); }
+.seat.out { color: var(--muted); }
+.seat-actions { margin-top: 2px; }
+
+.cd {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 40px;
+  border: 1px solid var(--ink);
+  border-radius: 3px;
+  background: var(--paper);
+  box-shadow: 1px 1px 0 var(--ink);
+  line-height: 1.05;
+}
+
+.board .cd { width: 42px; height: 58px; font-size: 16px; box-shadow: 2px 2px 0 var(--ink); }
+.cd.slot { border-style: dashed; border-color: var(--faint); box-shadow: none; }
+.cd.down {
+  box-shadow: none;
+  background: repeating-linear-gradient(-45deg, var(--paper), var(--paper) 3px, var(--faint) 3px, var(--faint) 4px);
+}
+
+.action, .log { border-top: 1px solid var(--faint); padding-top: 12px; }
+.log p, .hint, .turn, .result, .error { margin: 0 0 4px; }
+.hint, .log { color: var(--muted); }
+.error { background: var(--warn); color: #111; display: inline-block; padding: 0 0.6ch; }
+.result { margin-bottom: 8px; }
+.controls { display: flex; flex-direction: column; gap: 8px; }
+.buttons { display: flex; flex-wrap: wrap; align-items: end; gap: 8px 4px; }
+
+@media (max-width: 800px) {
+  .table-fig { height: auto; display: flex; flex-direction: column; gap: 12px; }
+  .felt { display: none; }
+  .center { position: static; transform: none; }
+  .seat { position: static; transform: none; width: auto; align-items: flex-start; text-align: left; }
+  .action { position: sticky; bottom: 0; background: var(--paper); padding-bottom: 12px; }
+}

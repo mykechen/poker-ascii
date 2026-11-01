@@ -47,6 +47,27 @@ export type PublicView = {
   revealRequired: boolean;
 };
 
+/**
+ * One player's view of a shared table.
+ * They see their own hole cards. Everyone else stays face down until showdown.
+ * Action buttons are included only when this seat is the one to act.
+ */
+export function projectForPlayer(state: TableState, viewer: number | null): PublicView {
+  const showdown = state.phase === "complete" && state.result?.showed === true;
+  const yourTurn = state.phase === "betting" && viewer !== null && state.toAct === viewer;
+  const seats: PublicSeat[] = state.seats.map((seat, index) => {
+    let hole: VisibleHole = null;
+    if (seat.hole.length === 2) {
+      const mine = index === viewer;
+      const tableSees = showdown && seat.inHand && !seat.folded;
+      hole = mine || tableSees ? seat.hole : "down";
+    }
+    return seatView(state, seat, index, hole);
+  });
+  const validActions = yourTurn ? legalActions(state) : [];
+  return viewOf(state, seats, validActions, false);
+}
+
 /** Hide hole cards except the revealed actor, and live hands at showdown. */
 export function projectView(state: TableState, revealed: boolean): PublicView {
   const showdown = state.phase === "complete" && state.result?.showed === true;
@@ -58,26 +79,34 @@ export function projectView(state: TableState, revealed: boolean): PublicView {
       const tableSees = showdown && seat.inHand && !seat.folded;
       hole = actorSees || tableSees ? seat.hole : "down";
     }
-    return {
-      seat: index,
-      occupied: seat.name !== null,
-      name: seat.name,
-      stack: seat.stack,
-      away: seat.away,
-      inHand: seat.inHand,
-      folded: seat.folded,
-      allIn: seat.allIn,
-      streetCommitted: seat.streetCommitted,
-      hole,
-      button: state.button === index && state.phase !== "idle",
-      smallBlind: state.smallBlindSeat === index && state.phase !== "idle",
-      bigBlind: state.bigBlindSeat === index && state.phase !== "idle",
-      toAct: state.toAct === index,
-      lastAction: seat.lastAction,
-    };
+    return seatView(state, seat, index, hole);
   });
 
   const validActions = revealRequired ? [] : legalActions(state);
+  return viewOf(state, seats, validActions, revealRequired);
+}
+
+function seatView(state: TableState, seat: TableState["seats"][number], index: number, hole: VisibleHole): PublicSeat {
+  return {
+    seat: index,
+    occupied: seat.name !== null,
+    name: seat.name,
+    stack: seat.stack,
+    away: seat.away,
+    inHand: seat.inHand,
+    folded: seat.folded,
+    allIn: seat.allIn,
+    streetCommitted: seat.streetCommitted,
+    hole,
+    button: state.button === index && state.phase !== "idle",
+    smallBlind: state.smallBlindSeat === index && state.phase !== "idle",
+    bigBlind: state.bigBlindSeat === index && state.phase !== "idle",
+    toAct: state.toAct === index,
+    lastAction: seat.lastAction,
+  };
+}
+
+function viewOf(state: TableState, seats: PublicSeat[], validActions: LegalAction[], revealRequired: boolean): PublicView {
   return {
     seats,
     board: state.board,

@@ -2,9 +2,17 @@
 
 import { useState, type FormEvent } from "react";
 import { cardParts } from "@/lib/poker/cards";
-import type { Card, LegalAction } from "@/lib/poker/types";
-import type { PublicSeat, VisibleHole } from "@/lib/poker/view";
+import type { Card, Command, LegalAction } from "@/lib/poker/types";
+import type { PublicSeat, PublicView, VisibleHole } from "@/lib/poker/view";
 import { useTable } from "@/hooks/useTable";
+
+type Remote = {
+  view: PublicView;
+  you: number | null;
+  code: string;
+  send: (command: Command) => void;
+  link: "live" | "reconnecting";
+};
 
 const SEAT_POS = [
   { left: "50%", top: "88%" },
@@ -23,9 +31,13 @@ type Editor =
   | { kind: "blinds" }
   | null;
 
-export function TableScreen() {
-  const { view, send, reveal } = useTable();
+export function TableScreen({ remote }: { remote?: Remote }) {
+  const local = useTable();
+  const view = remote?.view ?? local.view;
+  const send = remote?.send ?? local.send;
+  const you = remote?.you ?? null;
   const [editor, setEditor] = useState<Editor>(null);
+  const [copied, setCopied] = useState(false);
   const [name, setName] = useState("");
   const [stack, setStack] = useState("200");
   const [smallBlind, setSmallBlind] = useState(String(view.smallBlind));
@@ -42,9 +54,19 @@ export function TableScreen() {
   const ready = view.seats.filter((seat) => seat.occupied && !seat.away && seat.stack > 0).length;
 
   function openSit(seat: number) {
+    if (remote && you !== null) return;
     setName("");
     setStack("200");
     setEditor({ kind: "sit", seat });
+  }
+
+  function copyLink() {
+    if (!remote) return;
+    const url = `${window.location.origin}/t/${remote.code}`;
+    void navigator.clipboard.writeText(url).then(() => {
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1200);
+    });
   }
 
   function openAdd(seat: number) {
@@ -101,19 +123,33 @@ export function TableScreen() {
     <main className="screen">
       <header className="top">
         <div>
-          <p className="kicker">TABLE 01</p>
+          <p className="kicker">{remote ? `TABLE ${remote.code}` : "TABLE 01"}</p>
           <h1>No Limit</h1>
         </div>
         <p className="status">
           {view.handNumber === 0 ? "NO HAND" : `HAND ${String(view.handNumber).padStart(6, "0")}`}
           <span>BLINDS {view.smallBlind}/{view.bigBlind}</span>
           <span>{view.street ? view.street.toUpperCase() : "WAITING"}</span>
+          {remote?.link === "reconnecting" && <span>RECONNECTING</span>}
         </p>
         <div className="top-actions">
-          <button type="button" className="t" onClick={openBlinds} disabled={inHand}>
+          <a className="t" href="/">
+            [TABLES]
+          </a>
+          {remote && (
+            <button type="button" className="t" onClick={copyLink}>
+              [{copied ? "COPIED" : "COPY LINK"}]
+            </button>
+          )}
+          <button type="button" className="t" onClick={openBlinds} disabled={inHand || (remote ? you === null : false)}>
             [BLINDS]
           </button>
-          <button type="button" className="t" onClick={() => send({ type: "startHand" })} disabled={inHand || ready < 2}>
+          <button
+            type="button"
+            className="t"
+            onClick={() => send({ type: "startHand" })}
+            disabled={inHand || ready < 2 || (remote ? you === null : false)}
+          >
             [START]
           </button>
         </div>
@@ -177,8 +213,11 @@ export function TableScreen() {
           <Seat
             key={seat.seat}
             seat={seat}
+            mine={you === seat.seat}
             winner={view.result?.winners.some((item) => item.seat === seat.seat && item.net > 0) ?? false}
             locked={inHand}
+            canSit={!remote || you === null}
+            canManage={!remote || you === seat.seat}
             onSit={() => openSit(seat.seat)}
             onLeave={() => send({ type: "leave", seat: seat.seat })}
             onAway={() => send({ type: seat.away ? "back" : "away", seat: seat.seat })}
@@ -190,17 +229,20 @@ export function TableScreen() {
       <section className="action" aria-live="polite">
         {view.error && <p className="error">{view.error}</p>}
         {view.result && <p className="result">{view.result.text}</p>}
-        {view.revealRequired && (
+        {!remote && view.revealRequired && (
           <p className="turn">
             {view.actorName} to act
-            <button type="button" className="t" onClick={reveal}>
+            <button type="button" className="t" onClick={local.reveal}>
               [REVEAL]
             </button>
           </p>
         )}
-        {!view.revealRequired && view.toAct !== null && (
+        {remote && view.toAct !== null && you !== view.toAct && (
+          <p className="turn">{view.actorName} to act</p>
+        )}
+        {(remote ? you === view.toAct && view.toAct !== null : !view.revealRequired && view.toAct !== null) && (
           <div className="controls">
-            <p className="turn">{view.actorName} to act</p>
+            <p className="turn">{remote ? "You to act" : `${view.actorName} to act`}</p>
             <div className="buttons">
               {fold && (
                 <button type="button" className="t" onClick={() => act("fold")}>
@@ -250,7 +292,9 @@ export function TableScreen() {
             </div>
           </div>
         )}
-        {!inHand && ready < 2 && <p className="hint">Sit at least two players, then deal.</p>}
+        {remote && you === null && inHand && <p className="hint">A hand is in progress. Sit when it ends.</p>}
+        {remote && you === null && !inHand && <p className="hint">Take an open seat. The link is the invite.</p>}
+        {!inHand && ready < 2 && (!remote || you !== null) && <p className="hint">Sit at least two players, then deal.</p>}
       </section>
 
       <section className="log" aria-label="Hand log">
@@ -265,16 +309,22 @@ export function TableScreen() {
 
 function Seat({
   seat,
+  mine,
   winner,
   locked,
+  canSit,
+  canManage,
   onSit,
   onLeave,
   onAway,
   onAdd,
 }: {
   seat: PublicSeat;
+  mine: boolean;
   winner: boolean;
   locked: boolean;
+  canSit: boolean;
+  canManage: boolean;
   onSit: () => void;
   onLeave: () => void;
   onAway: () => void;
@@ -283,7 +333,7 @@ function Seat({
   const pos = SEAT_POS[seat.seat]!;
   return (
     <article
-      className={`seat${seat.toAct ? " turn" : ""}${winner ? " win" : ""}${seat.folded ? " out" : ""}`}
+      className={`seat${seat.toAct ? " turn" : ""}${winner ? " win" : ""}${seat.folded ? " out" : ""}${mine ? " you" : ""}`}
       style={pos}
     >
       {seat.hole && (
@@ -302,6 +352,7 @@ function Seat({
         <>
           <p className="who">
             {seat.name}
+            {mine && <span> YOU</span>}
             {seat.button && <span> D</span>}
             {seat.smallBlind && <span> SB</span>}
             {seat.bigBlind && <span> BB</span>}
@@ -309,7 +360,7 @@ function Seat({
           </p>
           <p className="meta">{chips(seat.stack)}{seat.streetCommitted > 0 ? ` · IN ${chips(seat.streetCommitted)}` : ""}</p>
           {seat.lastAction && <p className="act">{seat.lastAction}</p>}
-          {!locked && (
+          {!locked && canManage && (
             <p className="seat-actions">
               <button type="button" className="t" onClick={onAdd}>[ADD]</button>
               <button type="button" className="t" onClick={onAway}>{seat.away ? "[BACK]" : "[AWAY]"}</button>
@@ -317,10 +368,12 @@ function Seat({
             </p>
           )}
         </>
-      ) : (
+      ) : canSit ? (
         <button type="button" className="t" onClick={onSit} disabled={locked}>
           [OPEN]
         </button>
+      ) : (
+        <p className="meta">OPEN</p>
       )}
     </article>
   );

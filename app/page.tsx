@@ -1,5 +1,5 @@
-import { TableScreen } from "@/components/table/TableScreen";
+import { Lobby } from "@/components/lobby/Lobby";
 
 export default function Page() {
-  return <TableScreen />;
+  return <Lobby />;
 }

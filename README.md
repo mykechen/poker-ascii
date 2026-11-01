@@ -1,6 +1,6 @@
 # No Limit
 
-A local eight-seat no-limit hold'em table. Players sit with a stack they choose, set the blinds, and pass one screen around the table. There is no network and no bot.
+An eight-seat no-limit hold'em table. Open a table, send the link, and each player sits from their own browser. One screen can still be passed around the table.
 
 The rules live in `lib/poker`. `apply()` is the only way chips move. On each turn the engine publishes the legal actions: fold, check, call, raise-to, and all-in. The page only offers those actions.
 
@@ -12,6 +12,10 @@ npm run dev
 ```
 
 Open [http://127.0.0.1:38471](http://127.0.0.1:38471).
+
+[OPEN TABLE] sits you and shows a four-character code. Send that link. The other player opens it, takes an empty seat, and sees only their own hole cards. [START] deals. Action buttons show up only for the seat that is next.
+
+The table lives in the memory of this server. A restart clears the rooms. [ONE SCREEN] is the pass-and-play table, with a reveal step so the next player can take the device.
 
 ## Test
 

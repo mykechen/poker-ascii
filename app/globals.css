@@ -29,7 +29,8 @@ button.t {
   cursor: pointer;
 }
 
-button.t:hover:not(:disabled) { outline: 1px solid var(--ink); outline-offset: -1px; }
+a.t { color: inherit; text-decoration: none; padding: 0 0.4ch; }
+button.t:hover:not(:disabled), a.t:hover { outline: 1px solid var(--ink); outline-offset: -1px; }
 button.t:disabled { color: var(--muted); cursor: default; }
 button.t:focus-visible, input:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 
@@ -110,7 +111,10 @@ input {
 .who, .meta, .act, .seat-actions { margin: 0; }
 .who { padding: 0 0.5ch; white-space: nowrap; }
 .meta, .act { color: var(--muted); white-space: nowrap; }
+.seat.you { outline: 1px solid var(--ink); }
 .seat.turn .who, .seat.win .who { background: var(--ink); color: var(--paper); }
+.lobby { max-width: 720px; }
+.lobby-lead { max-width: 62ch; margin: 0 0 16px; }
 .seat.out { color: var(--muted); }
 .seat-actions { margin-top: 2px; }
 

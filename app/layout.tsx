@@ -10,7 +10,7 @@ const mono = Source_Code_Pro({
 
 export const metadata: Metadata = {
   title: "No Limit",
-  description: "A local eight-seat no-limit hold'em table.",
+  description: "An eight-seat no-limit hold'em table. Open a code and let other players sit.",
 };
 
 export default function RootLayout({

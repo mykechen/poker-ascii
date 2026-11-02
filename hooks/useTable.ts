@@ -1,40 +1,33 @@
 "use client";
 
-import { useReducer } from "react";
-import { apply, createTable } from "@/lib/poker/engine";
-import type { Command, TableState } from "@/lib/poker/types";
+import { useEffect, useReducer } from "react";
+import type { BotNote } from "@/lib/poker/bot";
+import { botActAt, createLocalSession, reduceLocal } from "@/lib/poker/local";
+import type { Command } from "@/lib/poker/types";
 import { projectView, type PublicView } from "@/lib/poker/view";
-
-type Session = {
-  table: TableState;
-  revealed: boolean;
-};
-
-type Action = Command | { type: "reveal" };
-
-function reducer(session: Session, action: Action): Session {
-  if (action.type === "reveal") return { ...session, revealed: true };
-  const table = apply(session.table, action);
-  const sameActor =
-    table.phase === "betting" &&
-    table.toAct !== null &&
-    table.toAct === session.table.toAct &&
-    table.handNumber === session.table.handNumber;
-  return { table, revealed: sameActor ? session.revealed : false };
-}
 
 export function useTable(): {
   view: PublicView;
+  bots: boolean[];
+  botNotes: BotNote[];
+  botActAt: number | null;
   send: (command: Command) => void;
   reveal: () => void;
+  seatBot: (input: { seat: number; name: string; stack: number }) => void;
 } {
-  const [session, dispatch] = useReducer(reducer, undefined, () => ({
-    table: createTable(),
-    revealed: false,
-  }));
+  const [session, dispatch] = useReducer(reduceLocal, undefined, createLocalSession);
+  useEffect(() => {
+    dispatch({ type: "botTick", now: Date.now() });
+    const id = window.setInterval(() => dispatch({ type: "botTick", now: Date.now() }), 200);
+    return () => window.clearInterval(id);
+  }, []);
   return {
     view: projectView(session.table, session.revealed),
+    bots: session.bots,
+    botNotes: session.botNotes,
+    botActAt: botActAt(session),
     send: (command) => dispatch(command),
     reveal: () => dispatch({ type: "reveal" }),
+    seatBot: (input) => dispatch({ type: "seatBot", ...input }),
   };
 }

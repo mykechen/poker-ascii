@@ -1,8 +1,10 @@
 import { randomBytes, randomInt } from "node:crypto";
 import { mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import { readBotAction, simplePolicy, type BotNote, type Policy } from "./bot";
 import { legalActions, apply, createTable } from "./engine";
-import type { Command, PlayAction, TableState } from "./types";
+import { ACTION_MS, BETWEEN_HANDS_MS, BOT_THINK_MS, STREET_PAUSE_MS } from "./timing";
+import { SEAT_COUNT, type Command, type PlayAction, type TableState } from "./types";
 import { projectForPlayer, type PublicView } from "./view";
 
 const CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
@@ -10,16 +12,23 @@ const CODE_LENGTH = 4;
 const ROOM_TTL_MS = 12 * 60 * 60 * 1000;
 const ACTIONS: readonly PlayAction[] = ["fold", "check", "call", "raise", "all_in"];
 
-export const STREET_PAUSE_MS = 3_000;
-export const ACTION_MS = 20_000;
-export const BETWEEN_HANDS_MS = 8_000;
+export { ACTION_MS, BETWEEN_HANDS_MS, STREET_PAUSE_MS };
 
-export type RoomCommand = Command | { type: "boot"; seat: number };
+let botPolicy: Policy = simplePolicy;
+
+/** Tests swap the policy. The table still rejects anything outside the menu. */
+export function setBotPolicy(next: Policy): void {
+  botPolicy = next;
+}
+
+export type RoomCommand = Command | { type: "boot"; seat: number } | { type: "seatBot"; seat: number; name: string; stack: number };
 
 export type RoomClock = {
   pauseMs: number;
   remainMs: number | null;
   dealMs: number | null;
+  /** Milliseconds until a bot seat acts. Null when a person is to act. */
+  botMs: number | null;
 };
 
 export type RoomSnapshot = {
@@ -31,6 +40,8 @@ export type RoomSnapshot = {
   seatKey: string | null;
   clock: RoomClock;
   view: PublicView;
+  bots: boolean[];
+  botNotes: BotNote[];
 };
 
 export type RoomResult = RoomSnapshot & { token: string };
@@ -52,6 +63,10 @@ type Room = {
   actDeadline: number | null;
   dealAt: number | null;
   notifiedPause: number | null;
+  bots: Set<number>;
+  botNotes: BotNote[];
+  /** Set when a bot already failed this turn, so the timeout can stand. */
+  botAttempt: string | null;
 };
 
 type Runtime = {
@@ -136,6 +151,7 @@ export function resetRooms(): void {
   current.fileOverride = null;
   current.loaded = true;
   current.now = () => Date.now();
+  botPolicy = simplePolicy;
 }
 
 export function configureRooms(options: { file: string | null }): void {
@@ -259,6 +275,7 @@ export function perform(code: string, token: string | null, command: RoomCommand
   if (!known && command.type !== "sit") return { error: "Sit down before you act." };
 
   const seat = room.seats.get(playerToken) ?? null;
+  if (command.type === "seatBot") return seatBot(room, playerToken, command);
   if (command.type === "boot") return boot(room, playerToken, command.seat);
   if (command.type === "startHand") {
     if (seat === null) return { error: "Sit down before you deal." };
@@ -278,12 +295,22 @@ export function perform(code: string, token: string | null, command: RoomCommand
   }
 
   if (command.type === "leave") {
+    const wasBot = room.bots.has(seat);
     const result = commit(room, playerToken, { type: "leave", seat });
-    if (!("error" in result)) room.seats.set(playerToken, null);
+    if (!("error" in result)) {
+      room.seats.set(playerToken, null);
+      if (wasBot) {
+        room.bots.delete(seat);
+        publish(room);
+        return { token: playerToken, ...snapshot(room, playerToken) };
+      }
+    }
     return result;
   }
   if (command.type === "away" || command.type === "back" || command.type === "addChips") {
-    return commit(room, playerToken, { ...command, seat });
+    const resolved = actedSeat(room, playerToken, command.seat);
+    if (typeof resolved !== "number") return resolved;
+    return commit(room, playerToken, { ...command, seat: resolved });
   }
   if (command.type === "act") {
     return commit(room, playerToken, { type: "act", seat, action: command.action, amount: command.amount });
@@ -303,12 +330,17 @@ export function parseCommand(value: unknown): RoomCommand | { error: string } {
     case "leave":
       return { type: "leave", seat: 0 };
     case "away":
-      return { type: "away", seat: 0 };
+      return { type: "away", seat: requestedSeat(command.seat) };
     case "back":
-      return { type: "back", seat: 0 };
+      return { type: "back", seat: requestedSeat(command.seat) };
     case "addChips":
       if (!whole(command.amount)) return { error: "Add a whole number of chips." };
-      return { type: "addChips", seat: 0, amount: command.amount };
+      return { type: "addChips", seat: requestedSeat(command.seat), amount: command.amount };
+    case "seatBot":
+      if (typeof command.name !== "string" || !whole(command.stack) || !whole(command.seat)) {
+        return { error: "A seat needs a name, a stack, and a seat number." };
+      }
+      return { type: "seatBot", name: command.name, stack: command.stack, seat: command.seat };
     case "setBlinds":
       if (!whole(command.smallBlind) || !whole(command.bigBlind)) {
         return { error: "Blinds must be whole numbers of chips." };
@@ -339,9 +371,48 @@ function boot(room: Room, token: string, seat: number): RoomResult | { error: st
   if (room.table.phase === "betting") return { error: "Clear a seat between hands." };
   const seated = [...room.seats.entries()].find(([, index]) => index === seat);
   if (!seated) return { error: "That seat is empty." };
-  const result = commit(room, token, { type: "leave", seat });
-  if (!("error" in result)) room.seats.set(seated[0], null);
-  return result;
+  const before = room.table;
+  const next = apply(room.table, { type: "leave", seat });
+  if (next.error) return { error: next.error };
+  room.table = next;
+  room.seats.set(seated[0], null);
+  room.bots.delete(seat);
+  follow(room, before, next);
+  publish(room);
+  return { token, ...snapshot(room, token) };
+}
+
+function seatBot(
+  room: Room,
+  token: string,
+  command: { seat: number; name: string; stack: number },
+): RoomResult | { error: string } {
+  if (token !== room.hostToken) return { error: "Only the player who opened the table can seat a bot." };
+  if (room.bots.size >= 7) return { error: "Seven bots is the limit." };
+  const before = room.table;
+  const next = apply(room.table, { type: "sit", seat: command.seat, name: command.name, stack: command.stack });
+  if (next.error) return { error: next.error };
+  room.table = next;
+  room.seats.set(mintToken(), command.seat);
+  room.bots.add(command.seat);
+  follow(room, before, next);
+  publish(room);
+  return { token, ...snapshot(room, token) };
+}
+
+function actedSeat(room: Room, token: string, requested: number): number | { error: string } {
+  const own = room.seats.get(token) ?? null;
+  if (requested < 0) {
+    if (own === null) return { error: "Sit down before you act." };
+    return own;
+  }
+  if (own === requested) return requested;
+  if (token === room.hostToken && room.bots.has(requested)) return requested;
+  return { error: "That seat is not a bot." };
+}
+
+function requestedSeat(value: unknown): number {
+  return whole(value) ? value : -1;
 }
 
 function sitToken(room: Room, token: string, command: Extract<Command, { type: "sit" }>): RoomResult | { error: string } {
@@ -367,6 +438,7 @@ function commit(room: Room, token: string, command: Command): RoomResult | { err
 
 function follow(room: Room, before: TableState, after: TableState) {
   const now = runtime().now();
+  if (before.handNumber !== after.handNumber) room.botNotes = [];
   if (after.phase === "complete") {
     room.actNotBefore = null;
     room.actDeadline = null;
@@ -405,6 +477,10 @@ function sync(room: Room) {
       }
       continue;
     }
+    if (takeBotAction(room, now)) {
+      changed = true;
+      continue;
+    }
     const waiting =
       room.table.phase === "betting" &&
       room.table.toAct !== null &&
@@ -431,6 +507,9 @@ function sync(room: Room) {
         break;
       }
       room.table = next;
+      if (room.bots.has(seat)) {
+        room.botNotes.push({ handNumber: next.handNumber, at: next.log.length, seat, text: "Timed out." });
+      }
       follow(room, before, next);
       changed = true;
       continue;
@@ -468,6 +547,12 @@ function snapshot(room: Room, token: string | null): RoomSnapshot {
       : null;
   const dealMs =
     room.dealAt !== null && room.table.phase !== "betting" ? Math.max(0, room.dealAt - now) : null;
+  const botDue =
+    room.table.phase === "betting" &&
+    room.table.toAct !== null &&
+    room.bots.has(room.table.toAct) &&
+    room.actNotBefore !== null;
+  const botMs = botDue ? Math.max(0, room.actNotBefore! + BOT_THINK_MS - now) : null;
   return {
     code: room.code,
     version: room.version,
@@ -475,9 +560,36 @@ function snapshot(room: Room, token: string | null): RoomSnapshot {
     host: token !== null && token === room.hostToken,
     known: token !== null && room.seats.has(token),
     seatKey: you !== null && token !== null ? token : null,
-    clock: { pauseMs, remainMs, dealMs },
+    clock: { pauseMs, remainMs, dealMs, botMs },
     view,
+    bots: Array.from({ length: SEAT_COUNT }, (_, index) => room.bots.has(index)),
+    botNotes: room.botNotes.filter((note) => note.handNumber === room.table.handNumber),
   };
+}
+
+function takeBotAction(room: Room, now: number): boolean {
+  const seat = room.table.toAct;
+  if (room.table.phase !== "betting" || seat === null || !room.bots.has(seat)) return false;
+  if (room.actNotBefore === null || now < room.actNotBefore + BOT_THINK_MS) return false;
+  const key = `${room.table.handNumber}:${room.table.street}:${seat}`;
+  if (room.botAttempt === key) return false;
+  room.botAttempt = key;
+  const decision = readBotAction(projectForPlayer(room.table, seat), botPolicy);
+  if (!decision) {
+    console.error("Bot did not return a legal action.", seat);
+    return false;
+  }
+  const before = room.table;
+  const next = apply(room.table, { type: "act", seat, action: decision.action, amount: decision.amount });
+  if (next.error) {
+    console.error("Bot action was rejected.", seat);
+    return false;
+  }
+  room.table = next;
+  room.botNotes.push({ handNumber: next.handNumber, at: next.log.length, seat, text: decision.reason });
+  room.botAttempt = null;
+  follow(room, before, next);
+  return true;
 }
 
 function publish(room: Room) {
@@ -500,6 +612,15 @@ function arm(room: Room) {
   if (room.actDeadline !== null && room.actDeadline > now) times.push(room.actDeadline);
   if (room.actNotBefore !== null && room.notifiedPause !== room.actNotBefore && room.actNotBefore > now) {
     times.push(room.actNotBefore);
+  }
+  if (
+    room.table.phase === "betting" &&
+    room.table.toAct !== null &&
+    room.bots.has(room.table.toAct) &&
+    room.actNotBefore !== null
+  ) {
+    const botAt = room.actNotBefore + BOT_THINK_MS;
+    if (botAt > now) times.push(botAt);
   }
   if (times.length === 0) return;
   const delay = Math.max(0, Math.min(...times) - now);
@@ -527,6 +648,9 @@ function blankRoom(): Room {
     actDeadline: null,
     dealAt: null,
     notifiedPause: null,
+    bots: new Set(),
+    botNotes: [],
+    botAttempt: null,
   };
 }
 
@@ -598,6 +722,8 @@ type SerializedRoom = {
   actDeadline: number | null;
   dealAt: number | null;
   notifiedPause: number | null;
+  bots?: number[];
+  botNotes?: BotNote[];
 };
 
 function serialize(room: Room): SerializedRoom {
@@ -612,10 +738,13 @@ function serialize(room: Room): SerializedRoom {
     actDeadline: room.actDeadline,
     dealAt: room.dealAt,
     notifiedPause: room.notifiedPause,
+    bots: [...room.bots],
+    botNotes: room.botNotes,
   };
 }
 
 function deserialize(item: SerializedRoom): Room {
+  const bots = (item.bots ?? []).filter((seat) => item.table.seats[seat]?.name);
   return {
     code: item.code,
     table: item.table,
@@ -628,6 +757,9 @@ function deserialize(item: SerializedRoom): Room {
     actDeadline: item.actDeadline,
     dealAt: item.dealAt,
     notifiedPause: item.notifiedPause,
+    bots: new Set(bots),
+    botNotes: item.botNotes ?? [],
+    botAttempt: null,
   };
 }
 

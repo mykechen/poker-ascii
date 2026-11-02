@@ -65,7 +65,7 @@ export function Lobby() {
         </Link>
       </header>
       <p className="hint lobby-lead">
-        You get a code and a link. Anyone who opens it sits in an empty seat. The server deals the cards, and each player only sees their own.
+        You get a code and a link. Anyone who opens it sits in an empty seat. The server deals the cards, and each player only sees their own. The opener can also seat a bot in an empty chair. It is marked BOT and plays only that seat.
       </p>
       {error && <p className="error">{error}</p>}
       <form className="editor" onSubmit={createTable}>

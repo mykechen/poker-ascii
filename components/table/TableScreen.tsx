@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { cardParts } from "@/lib/poker/cards";
+import type { BotNote } from "@/lib/poker/bot";
 import type { Card, Command, LegalAction } from "@/lib/poker/types";
 import type { PublicSeat, PublicView, VisibleHole } from "@/lib/poker/view";
 import { useTable } from "@/hooks/useTable";
@@ -11,9 +12,13 @@ type RoomClock = {
   pauseMs: number;
   remainMs: number | null;
   dealMs: number | null;
+  botMs: number | null;
 };
 
-type RemoteCommand = Command | { type: "boot"; seat: number };
+type RemoteCommand =
+  | Command
+  | { type: "boot"; seat: number }
+  | { type: "seatBot"; seat: number; name: string; stack: number };
 
 type Remote = {
   view: PublicView;
@@ -21,6 +26,8 @@ type Remote = {
   host: boolean;
   seatKey: string | null;
   clock: RoomClock;
+  bots: boolean[];
+  botNotes: BotNote[];
   version: number;
   code: string;
   send: (command: RemoteCommand) => void;
@@ -42,6 +49,7 @@ const SEAT_POS = [
 
 type Editor =
   | { kind: "sit"; seat: number }
+  | { kind: "bot"; seat: number }
   | { kind: "add"; seat: number }
   | { kind: "blinds" }
   | null;
@@ -50,15 +58,24 @@ export function TableScreen({ remote }: { remote?: Remote }) {
   const local = useTable();
   const view = remote?.view ?? local.view;
   const you = remote?.you ?? null;
+  const bots = remote?.bots ?? local.bots;
+  const botNotes = (remote?.botNotes ?? local.botNotes).filter((note) => note.handNumber === view.handNumber);
   function send(command: RemoteCommand) {
     if (command.type === "boot") {
       remote?.send(command);
+      return;
+    }
+    if (command.type === "seatBot") {
+      if (remote) remote.send(command);
+      else local.seatBot(command);
       return;
     }
     if (remote) remote.send(command);
     else local.send(command);
   }
   const clock = useLiveClock(remote?.clock, remote?.version ?? 0);
+  const now = useNow(!remote && local.botActAt !== null);
+  const botMs = remote ? clock.botMs : local.botActAt === null ? null : Math.max(0, local.botActAt - now);
   const [editor, setEditor] = useState<Editor>(null);
   const [copied, setCopied] = useState(false);
   const [copiedKey, setCopiedKey] = useState(false);
@@ -91,6 +108,12 @@ export function TableScreen({ remote }: { remote?: Remote }) {
     setEditor({ kind: "sit", seat });
   }
 
+  function openBot(seat: number) {
+    setName("Bot");
+    setStack("200");
+    setEditor({ kind: "bot", seat });
+  }
+
   function copyText(value: string, mark: (copied: boolean) => void) {
     void navigator.clipboard.writeText(value).then(() => {
       mark(true);
@@ -118,6 +141,8 @@ export function TableScreen({ remote }: { remote?: Remote }) {
     event.preventDefault();
     if (editor?.kind === "sit") {
       send({ type: "sit", seat: editor.seat, name, stack: Number(stack) });
+    } else if (editor?.kind === "bot") {
+      send({ type: "seatBot", seat: editor.seat, name, stack: Number(stack) });
     } else if (editor?.kind === "add") {
       send({ type: "addChips", seat: editor.seat, amount: Number(stack) });
     } else if (editor?.kind === "blinds") {
@@ -222,7 +247,7 @@ export function TableScreen({ remote }: { remote?: Remote }) {
 
       {editor && (
         <form className="editor" onSubmit={submitEditor}>
-          {editor.kind === "sit" && (
+          {(editor.kind === "sit" || editor.kind === "bot") && (
             <>
               <label>
                 Name
@@ -254,7 +279,7 @@ export function TableScreen({ remote }: { remote?: Remote }) {
           )}
           <div className="top-actions">
             <button type="submit" className="t">
-              [{editor.kind === "sit" ? "SIT" : editor.kind === "add" ? "ADD" : "SET"}]
+              [{editor.kind === "sit" ? "SIT" : editor.kind === "bot" ? "SEAT BOT" : editor.kind === "add" ? "ADD" : "SET"}]
             </button>
             <button type="button" className="t" onClick={() => setEditor(null)}>
               [CANCEL]
@@ -289,9 +314,13 @@ export function TableScreen({ remote }: { remote?: Remote }) {
             mine={you === seat.seat}
             winner={view.result?.winners.some((item) => item.seat === seat.seat && item.net > 0) ?? false}
             locked={inHand}
+            bot={bots[seat.seat] ?? false}
+            reason={latestReason(botNotes, seat.seat)}
             canSit={!remote || you === null}
+            canSeatBot={!inHand && (!remote || Boolean(remote.host))}
             canManage={!remote || you === seat.seat}
             canBoot={Boolean(remote?.host) && you !== seat.seat}
+            onBot={() => openBot(seat.seat)}
             onBoot={() => send({ type: "boot", seat: seat.seat })}
             onSit={() => openSit(seat.seat)}
             onLeave={() => send({ type: "leave", seat: seat.seat })}
@@ -304,7 +333,7 @@ export function TableScreen({ remote }: { remote?: Remote }) {
       <section className="action" aria-live="polite">
         {view.error && <p className="error">{view.error}</p>}
         {view.result && <p className="result">{view.result.text}</p>}
-        {!remote && view.revealRequired && (
+        {!remote && view.revealRequired && view.toAct !== null && !bots[view.toAct] && (
           <p className="turn">
             {view.actorName} to act
             <button type="button" className="t" onClick={local.reveal}>
@@ -318,10 +347,13 @@ export function TableScreen({ remote }: { remote?: Remote }) {
         {remote && clock.dealMs !== null && (
           <p className="hint">Next hand in {Math.ceil(clock.dealMs / 1000)}s. Sit out to skip it.</p>
         )}
-        {remote && view.toAct !== null && you !== view.toAct && clock.pauseMs === 0 && (
+        {botMs !== null && botMs > 0 && clock.pauseMs === 0 && (
+          <p className="turn">{view.actorName} {Math.ceil(botMs / 1000)}s</p>
+        )}
+        {remote && view.toAct !== null && you !== view.toAct && clock.pauseMs === 0 && !(botMs !== null && botMs > 0) && (
           <p className="turn">{view.actorName} to act</p>
         )}
-        {(remote ? you === view.toAct && view.toAct !== null && clock.pauseMs === 0 : !view.revealRequired && view.toAct !== null) && (
+        {(remote ? you === view.toAct && view.toAct !== null && clock.pauseMs === 0 : !view.revealRequired && view.toAct !== null && !bots[view.toAct]) && (
           <div className="controls">
             <p className="turn">{remote ? "You to act" : `${view.actorName} to act`}</p>
             <div className="buttons">
@@ -381,7 +413,14 @@ export function TableScreen({ remote }: { remote?: Remote }) {
       <section className="log" aria-label="Hand log" ref={logRef}>
         {view.log.length === 0 && <p className="hint">Blinds, bets, and the showdown land here.</p>}
         {view.log.map((entry, index) => (
-          <p key={`${entry.text}-${index}`}>{entry.text}</p>
+          <span key={`${entry.text}-${index}`}>
+            <p>{entry.text}</p>
+            {botNotes
+              .filter((note) => note.at === index + 1)
+              .map((note) => (
+                <p key={`${note.seat}-${note.text}`}>{view.seats[note.seat]?.name} — {note.text}</p>
+              ))}
+          </span>
         ))}
       </section>
     </main>
@@ -393,10 +432,14 @@ function Seat({
   mine,
   winner,
   locked,
+  bot,
+  reason,
   canSit,
+  canSeatBot,
   canManage,
   canBoot,
   onBoot,
+  onBot,
   onSit,
   onLeave,
   onAway,
@@ -406,10 +449,14 @@ function Seat({
   mine: boolean;
   winner: boolean;
   locked: boolean;
+  bot: boolean;
+  reason: string | null;
   canSit: boolean;
+  canSeatBot: boolean;
   canManage: boolean;
   canBoot: boolean;
   onBoot: () => void;
+  onBot: () => void;
   onSit: () => void;
   onLeave: () => void;
   onAway: () => void;
@@ -442,17 +489,21 @@ function Seat({
             {seat.smallBlind && <span> SB</span>}
             {seat.bigBlind && <span> BB</span>}
             {seat.away && <span> AWAY</span>}
+            {bot && <span> BOT</span>}
           </p>
           <p className="meta">{chips(seat.stack)}{seat.streetCommitted > 0 ? ` · IN ${chips(seat.streetCommitted)}` : ""}</p>
           {seat.lastAction && <p className="act">{seat.lastAction}</p>}
-          {!locked && (canManage || canBoot) && (
+          {reason && <p className="act">{reason}</p>}
+          {!locked && (canManage || canBoot || (bot && canSeatBot)) && (
             <p className="seat-actions">
-              {canManage && (
+              {(canManage || (bot && canSeatBot)) && (
                 <>
                   <button type="button" className="t" onClick={onAdd}>[ADD]</button>
                   <button type="button" className="t" onClick={onAway}>{seat.away ? "[BACK]" : "[AWAY]"}</button>
-                  <button type="button" className="t" onClick={onLeave}>[LEAVE]</button>
                 </>
+              )}
+              {canManage && (
+                <button type="button" className="t" onClick={onLeave}>[LEAVE]</button>
               )}
               {canBoot && (
                 <button type="button" className="t" onClick={onBoot}>[CLEAR]</button>
@@ -460,12 +511,20 @@ function Seat({
             </p>
           )}
         </>
-      ) : canSit ? (
-        <button type="button" className="t" onClick={onSit} disabled={locked}>
-          [OPEN]
-        </button>
       ) : (
-        <p className="meta">OPEN</p>
+        <p className="seat-actions">
+          {canSit && (
+            <button type="button" className="t" onClick={onSit} disabled={locked}>
+              [OPEN]
+            </button>
+          )}
+          {canSeatBot && (
+            <button type="button" className="t" onClick={onBot} disabled={locked}>
+              [BOT]
+            </button>
+          )}
+          {!canSit && !canSeatBot && <span className="meta">OPEN</span>}
+        </p>
       )}
     </article>
   );
@@ -498,11 +557,31 @@ function useLiveClock(clock: RoomClock | undefined, version: number): RoomClock 
     return () => window.clearInterval(id);
   }, [clock, version]);
   void tick;
-  if (!clock) return { pauseMs: 0, remainMs: null, dealMs: null };
+  if (!clock) return { pauseMs: 0, remainMs: null, dealMs: null, botMs: null };
   const elapsed = Date.now() - anchor.current.at;
   return {
     pauseMs: Math.max(0, clock.pauseMs - elapsed),
     remainMs: clock.remainMs === null ? null : Math.max(0, clock.remainMs - elapsed),
     dealMs: clock.dealMs === null ? null : Math.max(0, clock.dealMs - elapsed),
+    botMs: clock.botMs == null ? null : Math.max(0, clock.botMs - elapsed),
   };
+}
+
+function useNow(active: boolean): number {
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => {
+    if (!active) return;
+    setNow(Date.now());
+    const id = window.setInterval(() => setNow(Date.now()), 250);
+    return () => window.clearInterval(id);
+  }, [active]);
+  return now;
+}
+
+function latestReason(notes: BotNote[], seat: number): string | null {
+  for (let index = notes.length - 1; index >= 0; index--) {
+    const note = notes[index];
+    if (note && note.seat === seat) return note.text;
+  }
+  return null;
 }

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import type { BotNote } from "@/lib/poker/bot";
 import type { Command } from "@/lib/poker/types";
 import type { PublicView } from "@/lib/poker/view";
 import { TableScreen } from "./TableScreen";
@@ -10,6 +11,7 @@ type RoomClock = {
   pauseMs: number;
   remainMs: number | null;
   dealMs: number | null;
+  botMs: number | null;
 };
 
 type Snapshot = {
@@ -21,6 +23,8 @@ type Snapshot = {
   seatKey: string | null;
   clock: RoomClock;
   view: PublicView;
+  bots: boolean[];
+  botNotes: BotNote[];
   token?: string;
 };
 
@@ -81,7 +85,7 @@ export function RemoteTable({ code }: { code: string }) {
     };
   }, [ready, token, room]);
 
-  async function send(command: Command | { type: "boot"; seat: number }) {
+  async function send(command: Command | { type: "boot"; seat: number } | { type: "seatBot"; seat: number; name: string; stack: number }) {
     try {
       const response = await fetch(`/api/tables/${room}`, {
         method: "POST",
@@ -140,6 +144,8 @@ export function RemoteTable({ code }: { code: string }) {
         host: snap.host,
         seatKey: snap.seatKey,
         clock: snap.clock,
+        bots: snap.bots ?? [],
+        botNotes: snap.botNotes ?? [],
         version: snap.version,
         code: snap.code,
         send,

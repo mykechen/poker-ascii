@@ -17,7 +17,7 @@ Open [http://127.0.0.1:38471](http://127.0.0.1:38471).
 
 A table is written to `data/rooms.json`, so a restart keeps the seats, the stacks, and the hand. [COPY SEAT KEY] is how a lost tab sits back down. The next hand deals itself after a showdown. Sit out to skip it. The player who opened the table can [CLEAR] a seat between hands. Each street waits three seconds before anyone can act. A turn lasts twenty seconds, then the seat checks, or folds if it owes chips.
 
-[BOT] seats a portfolio opponent in an empty chair, up to seven. Give it a name and a stack. The felt marks it BOT. It sees only that seat's cards, waits out the street pause, then plays one legal action and writes the reason under its name. [CLEAR] removes it. [AWAY] and [ADD] work on a bot the same way they do on your own seat. A bot never acts for a person. If its choice is illegal, the turn timer checks or folds it.
+[BOT] seats a portfolio opponent in an empty chair, up to seven. Give it a name and a stack. The felt marks it BOT. It sees only that seat's cards, waits out the street pause, then plays one legal action and writes the reason under its name. It plays the chart in `simplePolicy`, and folds one pair when three or more players are still in the hand. [CLEAR] removes it. [AWAY] and [ADD] work on a bot the same way they do on your own seat. A bot never acts for a person. If its choice is illegal, the turn timer checks or folds it.
 
 [ONE SCREEN] is the pass-and-play table, with a reveal step so the next player can take the device. That table stays on the device.
 
@@ -40,7 +40,7 @@ npm run train
 npm run train -- --hands 200 --seats 2 --seed 1
 ```
 
-Seat 0's bb/100 is the number to beat. The candidate starts as a copy of the chart, so the first run is the baseline for that seed. It will wander away from zero. Change one rule and run the same seed again. The difference is the result. 1,200 hands shows a gross leak. A few hundred is noise. A policy that returns an illegal action is checked or folded, and that turn counts under fallbacks.
+Seat 0's bb/100 is the number to beat. The candidate folds one pair in a multiway pot. The other seats still call with the chart. Compare a seed before and after one change in `lib/poker/candidate.ts`. The score wanders away from zero either way. The difference is the result. 1,200 hands shows a gross leak. A few hundred is noise. A policy that returns an illegal action is checked or folded, and that turn counts under fallbacks.
 
 ## Rules in this table
 

@@ -32,7 +32,7 @@ const report = playMatch({
 console.log("");
 console.log(formatReport(report));
 console.log("");
-console.log("Seat 0 is the candidate. The other seats play the chart. Run this seed again after one change.");
+console.log("Seat 0 folds one pair when three players remain. The other seats play the chart.");
 
 function flag(name: string, fallback: number): number {
   const index = process.argv.indexOf(`--${name}`);

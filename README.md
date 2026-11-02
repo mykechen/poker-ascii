@@ -31,6 +31,17 @@ A table is written to `data/rooms.json`, so a restart keeps the seats, the stack
 npm test
 ```
 
+## Train
+
+`simplePolicy` is the chart the table already plays. The next version goes in `lib/poker/candidate.ts`. `npm run train` deals through the same engine: seat 0 plays the candidate, and the other seats play the chart. Each seat sees only its own cards. Stacks return to the starting amount before every hand, the button moves, and the same seed deals the same cards.
+
+```bash
+npm run train
+npm run train -- --hands 200 --seats 2 --seed 1
+```
+
+Seat 0's bb/100 is the number to beat. The candidate starts as a copy of the chart, so the first run is the baseline for that seed. It will wander away from zero. Change one rule and run the same seed again. The difference is the result. 1,200 hands shows a gross leak. A few hundred is noise. A policy that returns an illegal action is checked or folded, and that turn counts under fallbacks.
+
 ## Rules in this table
 
 - Blinds start at 1/2 and can be changed between hands. Each player types their own stack.

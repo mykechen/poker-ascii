@@ -7,7 +7,7 @@ import type { PublicView, RaisePresets } from "./view";
 const presets: RaisePresets = { min: 4, half: 7, pot: 10, allIn: 200 };
 
 describe("strategies", () => {
-  it("names seven styles", () => {
+  it("names eight styles", () => {
     expect(strategies.map((item) => item.id)).toEqual([
       "chart",
       "multiway",
@@ -16,6 +16,7 @@ describe("strategies", () => {
       "aggressor",
       "position",
       "maniac",
+      "learner",
     ]);
   });
 

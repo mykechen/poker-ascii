@@ -1,8 +1,9 @@
 import { simplePolicy, type Policy, type PolicyAction } from "./bot";
 import { candidate } from "./candidate";
+import { learner } from "./learner";
 import type { PublicView } from "./view";
 
-export type StrategyId = "chart" | "multiway" | "tight" | "station" | "aggressor" | "position" | "maniac";
+export type StrategyId = "chart" | "multiway" | "tight" | "station" | "aggressor" | "position" | "maniac" | "learner";
 
 export type Strategy = {
   id: StrategyId;
@@ -104,6 +105,12 @@ export const strategies: readonly Strategy[] = [
     name: "Maniac",
     rule: "Bets or raises the pot on every turn the menu allows.",
     policy: maniac,
+  },
+  {
+    id: "learner",
+    name: "Learner",
+    rule: "Bluffs when the table folds, and stops bluffing when the table calls.",
+    policy: learner,
   },
 ];
 

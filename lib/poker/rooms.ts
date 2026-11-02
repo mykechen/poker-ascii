@@ -2,7 +2,7 @@ import { randomBytes, randomInt } from "node:crypto";
 import { mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { readBotAction, type BotNote, type Policy } from "./bot";
-import { candidate } from "./candidate";
+import { learner } from "./learner";
 import { legalActions, apply, createTable } from "./engine";
 import { ACTION_MS, BETWEEN_HANDS_MS, BOT_THINK_MS, STREET_PAUSE_MS } from "./timing";
 import { SEAT_COUNT, type Command, type PlayAction, type TableState } from "./types";
@@ -15,7 +15,7 @@ const ACTIONS: readonly PlayAction[] = ["fold", "check", "call", "raise", "all_i
 
 export { ACTION_MS, BETWEEN_HANDS_MS, STREET_PAUSE_MS };
 
-let botPolicy: Policy = candidate;
+let botPolicy: Policy = learner;
 
 /** Tests swap the policy. The table still rejects anything outside the menu. */
 export function setBotPolicy(next: Policy): void {
@@ -152,7 +152,7 @@ export function resetRooms(): void {
   current.fileOverride = null;
   current.loaded = true;
   current.now = () => Date.now();
-  botPolicy = candidate;
+  botPolicy = learner;
 }
 
 export function configureRooms(options: { file: string | null }): void {

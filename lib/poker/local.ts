@@ -1,5 +1,5 @@
 import { readBotAction, type BotNote } from "./bot";
-import { candidate } from "./candidate";
+import { learner } from "./learner";
 import { apply, createTable, legalActions } from "./engine";
 import { ACTION_MS, BOT_THINK_MS, STREET_PAUSE_MS } from "./timing";
 import { SEAT_COUNT, type Command, type TableState } from "./types";
@@ -114,7 +114,7 @@ function tick(session: LocalSession, now: number): LocalSession {
     return base;
   }
 
-  const decision = readBotAction(projectForPlayer(table, table.toAct), candidate);
+  const decision = readBotAction(projectForPlayer(table, table.toAct), learner);
   if (!decision) {
     const failed = { ...base, botAttempt: turnKey };
     if (now >= openAt + ACTION_MS) return timedOut(failed, table.toAct, now);

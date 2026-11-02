@@ -19,6 +19,10 @@ A table is written to `data/rooms.json`, so a restart keeps the seats, the stack
 
 [ONE SCREEN] is the pass-and-play table, with a reveal step so the next player can take the device. That table stays on the device.
 
+## Host
+
+`npm run dev` is the server for everyone at that address. On Vercel the same routes run, and the tables move to Redis when `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` are set (Vercel Redis uses `KV_REST_API_URL` and `KV_REST_API_TOKEN`). Without that store, each server keeps its own tables.
+
 ## Test
 
 ```bash

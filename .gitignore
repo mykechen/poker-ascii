@@ -42,3 +42,6 @@ next-env.d.ts
 
 # tables saved on this machine
 /data
+
+# Vercel
+.vercel

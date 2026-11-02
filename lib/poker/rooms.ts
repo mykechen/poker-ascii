@@ -75,11 +75,56 @@ function runtime(): Runtime {
   return globalRuntime.__nlhe;
 }
 
+function sharedRedis(): { url: string; token: string } | null {
+  const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+  if (!url || !token) return null;
+  return { url: url.replace(/\/$/, ""), token };
+}
+
 function persistenceFile(): string | null {
   const current = runtime();
   if (current.fileOverride !== undefined) return current.fileOverride;
-  if (process.env.VITEST) return null;
+  if (process.env.VITEST || sharedRedis() || process.env.VERCEL) return null;
   return path.join(process.cwd(), "data", "rooms.json");
+}
+
+const ROOMS_KEY = "nlhe:rooms";
+
+/** Load every table from the shared store. No-op when this process keeps the file itself. */
+export async function pullSharedRooms(): Promise<void> {
+  const redis = sharedRedis();
+  if (!redis) return;
+  const raw = await redisCommand(redis, ["GET", ROOMS_KEY]);
+  const current = runtime();
+  current.loaded = true;
+  current.rooms.clear();
+  if (typeof raw !== "string" || raw.length === 0) return;
+  const parsed = JSON.parse(raw) as { rooms?: SerializedRoom[] };
+  for (const item of parsed.rooms ?? []) {
+    const room = deserialize(item);
+    current.rooms.set(room.code, room);
+  }
+}
+
+/** Write every table to the shared store. No-op when this process keeps the file itself. */
+export async function pushSharedRooms(): Promise<void> {
+  const redis = sharedRedis();
+  if (!redis) return;
+  const payload = JSON.stringify({ rooms: [...runtime().rooms.values()].map(serialize) });
+  await redisCommand(redis, ["SET", ROOMS_KEY, payload]);
+}
+
+async function redisCommand(redis: { url: string; token: string }, command: string[]): Promise<unknown> {
+  const response = await fetch(redis.url, {
+    method: "POST",
+    headers: { authorization: `Bearer ${redis.token}`, "content-type": "application/json" },
+    body: JSON.stringify(command),
+    cache: "no-store",
+  });
+  if (!response.ok) throw new Error(`Shared table store returned ${response.status}.`);
+  const body = (await response.json()) as { result?: unknown };
+  return body.result;
 }
 
 export function resetRooms(): void {
@@ -532,10 +577,14 @@ function save() {
   const payload = {
     rooms: [...runtime().rooms.values()].map(serialize),
   };
-  mkdirSync(path.dirname(file), { recursive: true });
-  const temporary = `${file}.tmp`;
-  writeFileSync(temporary, JSON.stringify(payload));
-  renameSync(temporary, file);
+  try {
+    mkdirSync(path.dirname(file), { recursive: true });
+    const temporary = `${file}.tmp`;
+    writeFileSync(temporary, JSON.stringify(payload));
+    renameSync(temporary, file);
+  } catch (error) {
+    console.error("Could not save tables to disk.", error);
+  }
 }
 
 type SerializedRoom = {

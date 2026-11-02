@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import type { Command } from "@/lib/poker/types";
 import type { PublicView } from "@/lib/poker/view";
@@ -115,9 +116,9 @@ export function RemoteTable({ code }: { code: string }) {
         <h1>That table is gone</h1>
         <p className="hint">That code does not match a table.</p>
         <p>
-          <a className="t" href="/">
+          <Link className="t" href="/">
             [TABLES]
-          </a>
+          </Link>
         </p>
       </main>
     );

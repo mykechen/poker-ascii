@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { cardParts } from "@/lib/poker/cards";
 import type { Card, Command, LegalAction } from "@/lib/poker/types";
@@ -167,9 +168,9 @@ export function TableScreen({ remote }: { remote?: Remote }) {
           {clock.remainMs !== null && <span>{Math.ceil(clock.remainMs / 1000)}s</span>}
         </p>
         <div className="top-actions">
-          <a className="t" href="/">
+          <Link className="t" href="/">
             [TABLES]
-          </a>
+          </Link>
           {remote && (
             <button type="button" className="t" onClick={copyLink}>
               [{copied ? "COPIED" : "COPY LINK"}]

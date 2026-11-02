@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 
@@ -59,9 +60,9 @@ export function Lobby() {
           <p className="kicker">NO LIMIT</p>
           <h1>Open a table</h1>
         </div>
-        <a className="t" href="/local">
+        <Link className="t" href="/local">
           [ONE SCREEN]
-        </a>
+        </Link>
       </header>
       <p className="hint lobby-lead">
         You get a code and a link. Anyone who opens it sits in an empty seat. The server deals the cards, and each player only sees their own.

@@ -5,10 +5,20 @@ import type { Command } from "@/lib/poker/types";
 import type { PublicView } from "@/lib/poker/view";
 import { TableScreen } from "./TableScreen";
 
+type RoomClock = {
+  pauseMs: number;
+  remainMs: number | null;
+  dealMs: number | null;
+};
+
 type Snapshot = {
   code: string;
   version: number;
   you: number | null;
+  host: boolean;
+  known: boolean;
+  seatKey: string | null;
+  clock: RoomClock;
   view: PublicView;
   token?: string;
 };
@@ -70,7 +80,7 @@ export function RemoteTable({ code }: { code: string }) {
     };
   }, [ready, token, room]);
 
-  async function send(command: Command) {
+  async function send(command: Command | { type: "boot"; seat: number }) {
     try {
       const response = await fetch(`/api/tables/${room}`, {
         method: "POST",
@@ -103,7 +113,7 @@ export function RemoteTable({ code }: { code: string }) {
       <main className="screen">
         <p className="kicker">TABLE {room}</p>
         <h1>That table is gone</h1>
-        <p className="hint">Codes live while this server is running. Open a new table.</p>
+        <p className="hint">That code does not match a table.</p>
         <p>
           <a className="t" href="/">
             [TABLES]
@@ -121,5 +131,25 @@ export function RemoteTable({ code }: { code: string }) {
     );
   }
 
-  return <TableScreen remote={{ view: snap.view, you: snap.you, code: snap.code, send, link }} />;
+  return (
+    <TableScreen
+      remote={{
+        view: snap.view,
+        you: snap.you,
+        host: snap.host,
+        seatKey: snap.seatKey,
+        clock: snap.clock,
+        version: snap.version,
+        code: snap.code,
+        send,
+        link,
+        unknownKey: Boolean(token) && !snap.known,
+        onReclaim: (key) => {
+          sessionStorage.setItem(storageKey, key);
+          version.current = -1;
+          setToken(key);
+        },
+      }}
+    />
+  );
 }

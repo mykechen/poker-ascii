@@ -13,6 +13,41 @@ export type PotPlayer = {
  * One leftover chip goes to the winner closest clockwise from the button,
  * starting with the seat immediately left of the button.
  */
+export type LivePot = {
+  name: string;
+  amount: number;
+};
+
+/**
+ * Pots currently in the middle.
+ * A side pot appears only when an all-in stack is smaller than the chips still in front of other players.
+ * An unmatched bet stays inside the single pot until someone is all-in for less.
+ */
+export function describePots(players: { committed: number; allIn: boolean }[]): LivePot[] {
+  const active = players.filter((player) => player.committed > 0);
+  const total = active.reduce((sum, player) => sum + player.committed, 0);
+  if (total === 0) return [];
+  const max = Math.max(...active.map((player) => player.committed));
+  const cuts = [...new Set(active.filter((player) => player.allIn && player.committed < max).map((player) => player.committed))].sort(
+    (a, b) => a - b,
+  );
+  if (cuts.length === 0) return [{ name: "POT", amount: total }];
+
+  const sizes: number[] = [];
+  let previous = 0;
+  for (const level of [...cuts, max]) {
+    const contributors = active.filter((player) => player.committed >= level);
+    const size = (level - previous) * contributors.length;
+    previous = level;
+    if (size > 0 && contributors.length >= 2) sizes.push(size);
+  }
+  if (sizes.length === 0) return [{ name: "POT", amount: total }];
+  return sizes.map((amount, index) => ({
+    name: index === 0 ? "POT" : `SIDE ${index}`,
+    amount,
+  }));
+}
+
 export function settlePots(button: number, players: PotPlayer[]): Map<number, number> {
   const awarded = new Map<number, number>();
   const add = (seat: number, chips: number) => {

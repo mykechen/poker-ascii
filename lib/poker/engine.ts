@@ -548,7 +548,7 @@ function logPlayer(
 
 function pushLog(state: TableState, entry: LogEntry) {
   state.log.push(entry);
-  if (state.log.length > 80) state.log.splice(0, state.log.length - 80);
+  if (state.log.length > 400) state.log.splice(0, state.log.length - 400);
 }
 
 function draw(state: TableState): Card {

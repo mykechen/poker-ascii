@@ -1,4 +1,5 @@
 import { legalActions } from "./engine";
+import { describePots, type LivePot } from "./pots";
 import type { Card, LegalAction, TableState } from "./types";
 
 export type VisibleHole = Card[] | "down" | null;
@@ -32,6 +33,7 @@ export type PublicView = {
   seats: PublicSeat[];
   board: Card[];
   pot: number;
+  pots: LivePot[];
   street: TableState["street"];
   phase: TableState["phase"];
   handNumber: number;
@@ -111,6 +113,7 @@ function viewOf(state: TableState, seats: PublicSeat[], validActions: LegalActio
     seats,
     board: state.board,
     pot: state.pot,
+    pots: describePots(state.seats.map((seat) => ({ committed: seat.handCommitted, allIn: seat.allIn }))),
     street: state.street,
     phase: state.phase,
     handNumber: state.handNumber,

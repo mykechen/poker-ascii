@@ -15,7 +15,9 @@ Open [http://127.0.0.1:38471](http://127.0.0.1:38471).
 
 [OPEN TABLE] sits you and shows a four-character code. Send that link. The other player opens it, takes an empty seat, and sees only their own hole cards. [START] deals. Action buttons show up only for the seat that is next.
 
-The table lives in the memory of this server. A restart clears the rooms. [ONE SCREEN] is the pass-and-play table, with a reveal step so the next player can take the device.
+A table is written to `data/rooms.json`, so a restart keeps the seats, the stacks, and the hand. [COPY SEAT KEY] is how a lost tab sits back down. The next hand deals itself after a showdown. Sit out to skip it. The player who opened the table can [CLEAR] a seat between hands. Each street waits three seconds before anyone can act. A turn lasts twenty seconds, then the seat checks, or folds if it owes chips.
+
+[ONE SCREEN] is the pass-and-play table, with a reveal step so the next player can take the device. That table stays on the device.
 
 ## Test
 

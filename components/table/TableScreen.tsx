@@ -1,17 +1,31 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { cardParts } from "@/lib/poker/cards";
 import type { Card, Command, LegalAction } from "@/lib/poker/types";
 import type { PublicSeat, PublicView, VisibleHole } from "@/lib/poker/view";
 import { useTable } from "@/hooks/useTable";
 
+type RoomClock = {
+  pauseMs: number;
+  remainMs: number | null;
+  dealMs: number | null;
+};
+
+type RemoteCommand = Command | { type: "boot"; seat: number };
+
 type Remote = {
   view: PublicView;
   you: number | null;
+  host: boolean;
+  seatKey: string | null;
+  clock: RoomClock;
+  version: number;
   code: string;
-  send: (command: Command) => void;
+  send: (command: RemoteCommand) => void;
   link: "live" | "reconnecting";
+  unknownKey: boolean;
+  onReclaim: (key: string) => void;
 };
 
 const SEAT_POS = [
@@ -34,10 +48,21 @@ type Editor =
 export function TableScreen({ remote }: { remote?: Remote }) {
   const local = useTable();
   const view = remote?.view ?? local.view;
-  const send = remote?.send ?? local.send;
   const you = remote?.you ?? null;
+  function send(command: RemoteCommand) {
+    if (command.type === "boot") {
+      remote?.send(command);
+      return;
+    }
+    if (remote) remote.send(command);
+    else local.send(command);
+  }
+  const clock = useLiveClock(remote?.clock, remote?.version ?? 0);
   const [editor, setEditor] = useState<Editor>(null);
   const [copied, setCopied] = useState(false);
+  const [copiedKey, setCopiedKey] = useState(false);
+  const [reclaimKey, setReclaimKey] = useState("");
+  const logRef = useRef<HTMLElement>(null);
   const [name, setName] = useState("");
   const [stack, setStack] = useState("200");
   const [smallBlind, setSmallBlind] = useState(String(view.smallBlind));
@@ -50,6 +75,11 @@ export function TableScreen({ remote }: { remote?: Remote }) {
     setAmount(view.presets ? String(view.presets.min) : "");
   }
 
+  useEffect(() => {
+    const node = logRef.current;
+    if (node) node.scrollTop = node.scrollHeight;
+  }, [view.log.length, view.handNumber]);
+
   const inHand = view.phase === "betting";
   const ready = view.seats.filter((seat) => seat.occupied && !seat.away && seat.stack > 0).length;
 
@@ -60,13 +90,16 @@ export function TableScreen({ remote }: { remote?: Remote }) {
     setEditor({ kind: "sit", seat });
   }
 
+  function copyText(value: string, mark: (copied: boolean) => void) {
+    void navigator.clipboard.writeText(value).then(() => {
+      mark(true);
+      window.setTimeout(() => mark(false), 1200);
+    });
+  }
+
   function copyLink() {
     if (!remote) return;
-    const url = `${window.location.origin}/t/${remote.code}`;
-    void navigator.clipboard.writeText(url).then(() => {
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 1200);
-    });
+    copyText(`${window.location.origin}/t/${remote.code}`, setCopied);
   }
 
   function openAdd(seat: number) {
@@ -131,6 +164,7 @@ export function TableScreen({ remote }: { remote?: Remote }) {
           <span>BLINDS {view.smallBlind}/{view.bigBlind}</span>
           <span>{view.street ? view.street.toUpperCase() : "WAITING"}</span>
           {remote?.link === "reconnecting" && <span>RECONNECTING</span>}
+          {clock.remainMs !== null && <span>{Math.ceil(clock.remainMs / 1000)}s</span>}
         </p>
         <div className="top-actions">
           <a className="t" href="/">
@@ -139,6 +173,11 @@ export function TableScreen({ remote }: { remote?: Remote }) {
           {remote && (
             <button type="button" className="t" onClick={copyLink}>
               [{copied ? "COPIED" : "COPY LINK"}]
+            </button>
+          )}
+          {remote?.seatKey && (
+            <button type="button" className="t" onClick={() => copyText(remote.seatKey!, setCopiedKey)}>
+              [{copiedKey ? "COPIED" : "COPY SEAT KEY"}]
             </button>
           )}
           <button type="button" className="t" onClick={openBlinds} disabled={inHand || (remote ? you === null : false)}>
@@ -154,6 +193,31 @@ export function TableScreen({ remote }: { remote?: Remote }) {
           </button>
         </div>
       </header>
+
+      {remote && you === null && (
+        <form
+          className="editor"
+          onSubmit={(event) => {
+            event.preventDefault();
+            const key = reclaimKey.trim();
+            if (key) remote.onReclaim(key);
+          }}
+        >
+          <label>
+            Seat key
+            <input
+              value={reclaimKey}
+              onChange={(event) => setReclaimKey(event.target.value)}
+              autoComplete="off"
+              spellCheck={false}
+            />
+          </label>
+          <button type="submit" className="t">
+            [RECLAIM]
+          </button>
+          {remote.unknownKey && <p className="error">That seat key is not at this table.</p>}
+        </form>
+      )}
 
       {editor && (
         <form className="editor" onSubmit={submitEditor}>
@@ -207,7 +271,15 @@ export function TableScreen({ remote }: { remote?: Remote }) {
               return <CardFace key={index} value={dealt ?? "slot"} />;
             })}
           </div>
-          <p className="pot">POT {chips(view.pot)}</p>
+          {view.pots.length === 0 ? (
+            <p className="pot">POT {chips(view.pot)}</p>
+          ) : (
+            view.pots.map((pot) => (
+              <p key={pot.name} className="pot">
+                {pot.name} {chips(pot.amount)}
+              </p>
+            ))
+          )}
         </div>
         {view.seats.map((seat) => (
           <Seat
@@ -218,6 +290,8 @@ export function TableScreen({ remote }: { remote?: Remote }) {
             locked={inHand}
             canSit={!remote || you === null}
             canManage={!remote || you === seat.seat}
+            canBoot={Boolean(remote?.host) && you !== seat.seat}
+            onBoot={() => send({ type: "boot", seat: seat.seat })}
             onSit={() => openSit(seat.seat)}
             onLeave={() => send({ type: "leave", seat: seat.seat })}
             onAway={() => send({ type: seat.away ? "back" : "away", seat: seat.seat })}
@@ -237,10 +311,16 @@ export function TableScreen({ remote }: { remote?: Remote }) {
             </button>
           </p>
         )}
-        {remote && view.toAct !== null && you !== view.toAct && (
+        {remote && clock.pauseMs > 0 && (
+          <p className="turn">{(view.street ?? "hand").toUpperCase()} {Math.ceil(clock.pauseMs / 1000)}s</p>
+        )}
+        {remote && clock.dealMs !== null && (
+          <p className="hint">Next hand in {Math.ceil(clock.dealMs / 1000)}s. Sit out to skip it.</p>
+        )}
+        {remote && view.toAct !== null && you !== view.toAct && clock.pauseMs === 0 && (
           <p className="turn">{view.actorName} to act</p>
         )}
-        {(remote ? you === view.toAct && view.toAct !== null : !view.revealRequired && view.toAct !== null) && (
+        {(remote ? you === view.toAct && view.toAct !== null && clock.pauseMs === 0 : !view.revealRequired && view.toAct !== null) && (
           <div className="controls">
             <p className="turn">{remote ? "You to act" : `${view.actorName} to act`}</p>
             <div className="buttons">
@@ -297,9 +377,9 @@ export function TableScreen({ remote }: { remote?: Remote }) {
         {!inHand && ready < 2 && (!remote || you !== null) && <p className="hint">Sit at least two players, then deal.</p>}
       </section>
 
-      <section className="log" aria-label="Hand log">
+      <section className="log" aria-label="Hand log" ref={logRef}>
         {view.log.length === 0 && <p className="hint">Blinds, bets, and the showdown land here.</p>}
-        {view.log.slice(-12).map((entry, index) => (
+        {view.log.map((entry, index) => (
           <p key={`${entry.text}-${index}`}>{entry.text}</p>
         ))}
       </section>
@@ -314,6 +394,8 @@ function Seat({
   locked,
   canSit,
   canManage,
+  canBoot,
+  onBoot,
   onSit,
   onLeave,
   onAway,
@@ -325,6 +407,8 @@ function Seat({
   locked: boolean;
   canSit: boolean;
   canManage: boolean;
+  canBoot: boolean;
+  onBoot: () => void;
   onSit: () => void;
   onLeave: () => void;
   onAway: () => void;
@@ -360,11 +444,18 @@ function Seat({
           </p>
           <p className="meta">{chips(seat.stack)}{seat.streetCommitted > 0 ? ` · IN ${chips(seat.streetCommitted)}` : ""}</p>
           {seat.lastAction && <p className="act">{seat.lastAction}</p>}
-          {!locked && canManage && (
+          {!locked && (canManage || canBoot) && (
             <p className="seat-actions">
-              <button type="button" className="t" onClick={onAdd}>[ADD]</button>
-              <button type="button" className="t" onClick={onAway}>{seat.away ? "[BACK]" : "[AWAY]"}</button>
-              <button type="button" className="t" onClick={onLeave}>[LEAVE]</button>
+              {canManage && (
+                <>
+                  <button type="button" className="t" onClick={onAdd}>[ADD]</button>
+                  <button type="button" className="t" onClick={onAway}>{seat.away ? "[BACK]" : "[AWAY]"}</button>
+                  <button type="button" className="t" onClick={onLeave}>[LEAVE]</button>
+                </>
+              )}
+              {canBoot && (
+                <button type="button" className="t" onClick={onBoot}>[CLEAR]</button>
+              )}
             </p>
           )}
         </>
@@ -394,4 +485,23 @@ function CardFace({ value }: { value: Card | VisibleHole | "slot" }) {
 
 function chips(value: number): string {
   return value.toLocaleString("en-US");
+}
+
+function useLiveClock(clock: RoomClock | undefined, version: number): RoomClock {
+  const [tick, setTick] = useState(0);
+  const anchor = useRef({ version, at: Date.now() });
+  if (anchor.current.version !== version) anchor.current = { version, at: Date.now() };
+  useEffect(() => {
+    if (!clock) return;
+    const id = window.setInterval(() => setTick((value) => value + 1), 250);
+    return () => window.clearInterval(id);
+  }, [clock, version]);
+  void tick;
+  if (!clock) return { pauseMs: 0, remainMs: null, dealMs: null };
+  const elapsed = Date.now() - anchor.current.at;
+  return {
+    pauseMs: Math.max(0, clock.pauseMs - elapsed),
+    remainMs: clock.remainMs === null ? null : Math.max(0, clock.remainMs - elapsed),
+    dealMs: clock.dealMs === null ? null : Math.max(0, clock.dealMs - elapsed),
+  };
 }

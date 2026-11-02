@@ -1,5 +1,7 @@
 import { randomBytes, randomInt } from "node:crypto";
-import { apply, createTable } from "./engine";
+import { mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
+import path from "node:path";
+import { legalActions, apply, createTable } from "./engine";
 import type { Command, PlayAction, TableState } from "./types";
 import { projectForPlayer, type PublicView } from "./view";
 
@@ -8,10 +10,26 @@ const CODE_LENGTH = 4;
 const ROOM_TTL_MS = 12 * 60 * 60 * 1000;
 const ACTIONS: readonly PlayAction[] = ["fold", "check", "call", "raise", "all_in"];
 
+export const STREET_PAUSE_MS = 3_000;
+export const ACTION_MS = 20_000;
+export const BETWEEN_HANDS_MS = 8_000;
+
+export type RoomCommand = Command | { type: "boot"; seat: number };
+
+export type RoomClock = {
+  pauseMs: number;
+  remainMs: number | null;
+  dealMs: number | null;
+};
+
 export type RoomSnapshot = {
   code: string;
   version: number;
   you: number | null;
+  host: boolean;
+  known: boolean;
+  seatKey: string | null;
+  clock: RoomClock;
   view: PublicView;
 };
 
@@ -26,20 +44,84 @@ type Room = {
   table: TableState;
   version: number;
   updatedAt: number;
+  hostToken: string;
   seats: Map<string, number | null>;
   waiters: Waiter[];
+  timer?: ReturnType<typeof setTimeout>;
+  actNotBefore: number | null;
+  actDeadline: number | null;
+  dealAt: number | null;
+  notifiedPause: number | null;
 };
 
-type Store = Map<string, Room>;
+type Runtime = {
+  rooms: Map<string, Room>;
+  /** Undefined uses the default file outside tests. Null keeps rooms in memory. */
+  fileOverride: string | null | undefined;
+  loaded: boolean;
+  now: () => number;
+};
 
-function store(): Store {
-  const globalStore = globalThis as typeof globalThis & { __nlheRooms?: Store };
-  if (!globalStore.__nlheRooms) globalStore.__nlheRooms = new Map();
-  return globalStore.__nlheRooms;
+function runtime(): Runtime {
+  const globalRuntime = globalThis as typeof globalThis & { __nlhe?: Runtime };
+  if (!globalRuntime.__nlhe) {
+    globalRuntime.__nlhe = {
+      rooms: new Map(),
+      fileOverride: undefined,
+      loaded: false,
+      now: () => Date.now(),
+    };
+  }
+  return globalRuntime.__nlhe;
+}
+
+function persistenceFile(): string | null {
+  const current = runtime();
+  if (current.fileOverride !== undefined) return current.fileOverride;
+  if (process.env.VITEST) return null;
+  return path.join(process.cwd(), "data", "rooms.json");
 }
 
 export function resetRooms(): void {
-  store().clear();
+  const current = runtime();
+  for (const room of current.rooms.values()) {
+    if (room.timer) clearTimeout(room.timer);
+  }
+  current.rooms.clear();
+  current.fileOverride = null;
+  current.loaded = true;
+  current.now = () => Date.now();
+}
+
+export function configureRooms(options: { file: string | null }): void {
+  const current = runtime();
+  for (const room of current.rooms.values()) {
+    if (room.timer) clearTimeout(room.timer);
+  }
+  current.rooms.clear();
+  current.fileOverride = options.file;
+  current.loaded = false;
+  current.now = () => Date.now();
+}
+
+export function reloadRooms(): void {
+  const current = runtime();
+  for (const room of current.rooms.values()) {
+    if (room.timer) clearTimeout(room.timer);
+  }
+  current.rooms.clear();
+  current.loaded = false;
+}
+
+export function freezeRooms(at = 1_700_000_000_000): void {
+  runtime().now = () => at;
+}
+
+export function advanceRooms(ms: number): void {
+  const current = runtime();
+  const at = current.now() + ms;
+  current.now = () => at;
+  for (const room of ready().values()) sync(room);
 }
 
 export function normalizeCode(value: string): string | null {
@@ -65,21 +147,27 @@ export function openTable(input: {
   if (blinds.error) return { error: blinds.error };
   room.table = blinds;
   const token = mintToken();
+  room.hostToken = token;
+  ready().set(room.code, room);
   const sat = sitToken(room, token, {
     type: "sit",
     seat: input.seat ?? 0,
     name: input.name,
     stack: input.stack,
   });
-  if ("error" in sat) return sat;
-  store().set(room.code, room);
-  return { token, ...snapshot(room, token) };
+  if ("error" in sat) {
+    ready().delete(room.code);
+    save();
+    return sat;
+  }
+  return sat;
 }
 
 export function readSnapshot(code: string, token: string | null): RoomSnapshot | null {
   prune();
-  const room = store().get(code);
+  const room = ready().get(code);
   if (!room) return null;
+  sync(room);
   return snapshot(room, token);
 }
 
@@ -89,8 +177,9 @@ export function waitForSnapshot(
   since: number,
   timeoutMs: number,
 ): Promise<RoomSnapshot | null> {
-  const room = store().get(code);
+  const room = ready().get(code);
   if (!room) return Promise.resolve(null);
+  sync(room);
   if (room.version !== since) return Promise.resolve(snapshot(room, token));
 
   return new Promise((resolve) => {
@@ -107,23 +196,25 @@ export function waitForSnapshot(
       if (settled) return;
       settled = true;
       room.waiters = room.waiters.filter((item) => item !== waiter);
-      const current = store().get(code);
+      const current = ready().get(code);
       resolve(current ? snapshot(current, token) : null);
     }, timeoutMs);
     room.waiters.push(waiter);
   });
 }
 
-export function perform(code: string, token: string | null, command: Command): RoomResult | { error: string } {
+export function perform(code: string, token: string | null, command: RoomCommand): RoomResult | { error: string } {
   prune();
-  const room = store().get(code);
+  const room = ready().get(code);
   if (!room) return { error: "No table with that code." };
+  sync(room);
 
   const playerToken = token ?? mintToken();
   const known = room.seats.has(playerToken);
   if (!known && command.type !== "sit") return { error: "Sit down before you act." };
 
   const seat = room.seats.get(playerToken) ?? null;
+  if (command.type === "boot") return boot(room, playerToken, command.seat);
   if (command.type === "startHand") {
     if (seat === null) return { error: "Sit down before you deal." };
     return commit(room, playerToken, { type: "startHand" });
@@ -137,6 +228,9 @@ export function perform(code: string, token: string | null, command: Command): R
     return sitToken(room, playerToken, command);
   }
   if (seat === null) return { error: "Sit down before you act." };
+  if (command.type === "act" && room.actNotBefore !== null && runtime().now() < room.actNotBefore) {
+    return { error: "Wait for the street." };
+  }
 
   if (command.type === "leave") {
     const result = commit(room, playerToken, { type: "leave", seat });
@@ -152,7 +246,7 @@ export function perform(code: string, token: string | null, command: Command): R
   return { error: "That action is not part of the table." };
 }
 
-export function parseCommand(value: unknown): Command | { error: string } {
+export function parseCommand(value: unknown): RoomCommand | { error: string } {
   if (!value || typeof value !== "object") return { error: "Send a table action." };
   const command = value as Record<string, unknown>;
   switch (command.type) {
@@ -177,6 +271,9 @@ export function parseCommand(value: unknown): Command | { error: string } {
       return { type: "setBlinds", smallBlind: command.smallBlind, bigBlind: command.bigBlind };
     case "startHand":
       return { type: "startHand" };
+    case "boot":
+      if (!whole(command.seat)) return { error: "Choose a seat to clear." };
+      return { type: "boot", seat: command.seat };
     case "act":
       if (typeof command.action !== "string" || !ACTIONS.includes(command.action as PlayAction)) {
         return { error: "That action is not part of the table." };
@@ -192,49 +289,199 @@ export function parseCommand(value: unknown): Command | { error: string } {
   }
 }
 
+function boot(room: Room, token: string, seat: number): RoomResult | { error: string } {
+  if (token !== room.hostToken) return { error: "Only the player who opened the table can clear a seat." };
+  if (room.table.phase === "betting") return { error: "Clear a seat between hands." };
+  const seated = [...room.seats.entries()].find(([, index]) => index === seat);
+  if (!seated) return { error: "That seat is empty." };
+  const result = commit(room, token, { type: "leave", seat });
+  if (!("error" in result)) room.seats.set(seated[0], null);
+  return result;
+}
+
 function sitToken(room: Room, token: string, command: Extract<Command, { type: "sit" }>): RoomResult | { error: string } {
+  const before = room.table;
   const next = apply(room.table, command);
   if (next.error) return { error: next.error };
   room.table = next;
   room.seats.set(token, command.seat);
+  follow(room, before, next);
   publish(room);
   return { token, ...snapshot(room, token) };
 }
 
 function commit(room: Room, token: string, command: Command): RoomResult | { error: string } {
+  const before = room.table;
   const next = apply(room.table, command);
   if (next.error) return { error: next.error };
   room.table = next;
+  follow(room, before, next);
   publish(room);
   return { token, ...snapshot(room, token) };
 }
 
+function follow(room: Room, before: TableState, after: TableState) {
+  const now = runtime().now();
+  if (after.phase === "complete") {
+    room.actNotBefore = null;
+    room.actDeadline = null;
+    room.notifiedPause = null;
+    room.dealAt = now + BETWEEN_HANDS_MS;
+    return;
+  }
+  if (after.phase === "betting" && after.toAct !== null) {
+    const newStreet = before.handNumber !== after.handNumber || before.street !== after.street || before.phase !== "betting";
+    const pause = newStreet ? STREET_PAUSE_MS : 0;
+    room.actNotBefore = now + pause;
+    room.actDeadline = room.actNotBefore + ACTION_MS;
+    room.dealAt = null;
+    room.notifiedPause = pause === 0 ? room.actNotBefore : null;
+    return;
+  }
+  room.actNotBefore = null;
+  room.actDeadline = null;
+  room.notifiedPause = null;
+  room.dealAt = null;
+}
+
+function sync(room: Room) {
+  let changed = false;
+  for (let step = 0; step < 30; step++) {
+    const now = runtime().now();
+    if (room.dealAt !== null && now >= room.dealAt && room.table.phase !== "betting") {
+      const before = room.table;
+      const next = apply(room.table, { type: "startHand" });
+      room.dealAt = null;
+      changed = true;
+      if (!next.error) {
+        room.table = next;
+        follow(room, before, next);
+        continue;
+      }
+      continue;
+    }
+    const waiting =
+      room.table.phase === "betting" &&
+      room.table.toAct !== null &&
+      room.actDeadline !== null &&
+      room.actNotBefore !== null &&
+      now >= room.actDeadline &&
+      now >= room.actNotBefore;
+    if (waiting) {
+      const seat = room.table.toAct!;
+      const offered = legalActions(room.table);
+      const action = offered.some((item) => item.action === "check")
+        ? "check"
+        : offered.some((item) => item.action === "fold")
+          ? "fold"
+          : null;
+      if (action === null) {
+        room.actDeadline = null;
+        break;
+      }
+      const before = room.table;
+      const next = apply(room.table, { type: "act", seat, action });
+      if (next.error) {
+        room.actDeadline = null;
+        break;
+      }
+      room.table = next;
+      follow(room, before, next);
+      changed = true;
+      continue;
+    }
+    break;
+  }
+
+  const now = runtime().now();
+  const pauseOpened =
+    room.table.phase === "betting" &&
+    room.actNotBefore !== null &&
+    room.notifiedPause !== room.actNotBefore &&
+    now >= room.actNotBefore;
+  if (pauseOpened) {
+    room.notifiedPause = room.actNotBefore;
+    changed = true;
+  }
+  if (changed) publish(room);
+  else arm(room);
+}
+
 function snapshot(room: Room, token: string | null): RoomSnapshot {
-  const you = token ? room.seats.get(token) ?? null : null;
+  const now = runtime().now();
+  const you = token ? (room.seats.get(token) ?? null) : null;
   const view = projectForPlayer(room.table, you);
-  return { code: room.code, version: room.version, you, view };
+  const pauseMs =
+    room.table.phase === "betting" && room.actNotBefore !== null ? Math.max(0, room.actNotBefore - now) : 0;
+  if (pauseMs > 0) {
+    view.validActions = [];
+    view.presets = null;
+  }
+  const remainMs =
+    pauseMs === 0 && room.table.phase === "betting" && room.actDeadline !== null
+      ? Math.max(0, room.actDeadline - now)
+      : null;
+  const dealMs =
+    room.dealAt !== null && room.table.phase !== "betting" ? Math.max(0, room.dealAt - now) : null;
+  return {
+    code: room.code,
+    version: room.version,
+    you,
+    host: token !== null && token === room.hostToken,
+    known: token !== null && room.seats.has(token),
+    seatKey: you !== null && token !== null ? token : null,
+    clock: { pauseMs, remainMs, dealMs },
+    view,
+  };
 }
 
 function publish(room: Room) {
   room.version += 1;
-  room.updatedAt = Date.now();
+  room.updatedAt = runtime().now();
   const waiters = room.waiters;
   room.waiters = [];
   for (const waiter of waiters) waiter.resolve(room);
+  arm(room);
+  save();
+}
+
+function arm(room: Room) {
+  if (room.timer) clearTimeout(room.timer);
+  room.timer = undefined;
+  if (process.env.VITEST) return;
+  const now = runtime().now();
+  const times: number[] = [];
+  if (room.dealAt !== null && room.dealAt > now) times.push(room.dealAt);
+  if (room.actDeadline !== null && room.actDeadline > now) times.push(room.actDeadline);
+  if (room.actNotBefore !== null && room.notifiedPause !== room.actNotBefore && room.actNotBefore > now) {
+    times.push(room.actNotBefore);
+  }
+  if (times.length === 0) return;
+  const delay = Math.max(0, Math.min(...times) - now);
+  room.timer = setTimeout(() => {
+    room.timer = undefined;
+    sync(room);
+  }, delay);
+  room.timer.unref?.();
 }
 
 function blankRoom(): Room {
   let code = "";
   do {
     code = Array.from({ length: CODE_LENGTH }, () => CODE_ALPHABET[randomInt(CODE_ALPHABET.length)]).join("");
-  } while (store().has(code));
+  } while (ready().has(code));
   return {
     code,
     table: createTable(),
     version: 0,
-    updatedAt: Date.now(),
+    updatedAt: runtime().now(),
+    hostToken: "",
     seats: new Map(),
     waiters: [],
+    actNotBefore: null,
+    actDeadline: null,
+    dealAt: null,
+    notifiedPause: null,
   };
 }
 
@@ -243,10 +490,96 @@ function mintToken(): string {
 }
 
 function prune() {
-  const cutoff = Date.now() - ROOM_TTL_MS;
-  for (const [code, room] of store()) {
-    if (room.updatedAt < cutoff) store().delete(code);
+  const cutoff = runtime().now() - ROOM_TTL_MS;
+  let removed = false;
+  for (const [code, room] of ready()) {
+    if (room.updatedAt < cutoff) {
+      if (room.timer) clearTimeout(room.timer);
+      ready().delete(code);
+      removed = true;
+    }
   }
+  if (removed) save();
+}
+
+function ready(): Map<string, Room> {
+  const current = runtime();
+  if (!current.loaded) {
+    current.loaded = true;
+    const file = persistenceFile();
+    if (file) loadFile(file, current.rooms);
+  }
+  return current.rooms;
+}
+
+function loadFile(file: string, rooms: Map<string, Room>) {
+  try {
+    const parsed = JSON.parse(readFileSync(file, "utf8")) as { rooms?: SerializedRoom[] };
+    for (const item of parsed.rooms ?? []) {
+      const room = deserialize(item);
+      rooms.set(room.code, room);
+      arm(room);
+    }
+  } catch (error) {
+    const missing = error && typeof error === "object" && "code" in error && error.code === "ENOENT";
+    if (!missing) console.error("Could not read saved tables.", error);
+  }
+}
+
+function save() {
+  const file = persistenceFile();
+  if (!file) return;
+  const payload = {
+    rooms: [...runtime().rooms.values()].map(serialize),
+  };
+  mkdirSync(path.dirname(file), { recursive: true });
+  const temporary = `${file}.tmp`;
+  writeFileSync(temporary, JSON.stringify(payload));
+  renameSync(temporary, file);
+}
+
+type SerializedRoom = {
+  code: string;
+  table: TableState;
+  version: number;
+  updatedAt: number;
+  hostToken: string;
+  seats: [string, number | null][];
+  actNotBefore: number | null;
+  actDeadline: number | null;
+  dealAt: number | null;
+  notifiedPause: number | null;
+};
+
+function serialize(room: Room): SerializedRoom {
+  return {
+    code: room.code,
+    table: room.table,
+    version: room.version,
+    updatedAt: room.updatedAt,
+    hostToken: room.hostToken,
+    seats: [...room.seats.entries()],
+    actNotBefore: room.actNotBefore,
+    actDeadline: room.actDeadline,
+    dealAt: room.dealAt,
+    notifiedPause: room.notifiedPause,
+  };
+}
+
+function deserialize(item: SerializedRoom): Room {
+  return {
+    code: item.code,
+    table: item.table,
+    version: item.version,
+    updatedAt: item.updatedAt,
+    hostToken: item.hostToken,
+    seats: new Map(item.seats),
+    waiters: [],
+    actNotBefore: item.actNotBefore,
+    actDeadline: item.actDeadline,
+    dealAt: item.dealAt,
+    notifiedPause: item.notifiedPause,
+  };
 }
 
 function whole(value: unknown): value is number {

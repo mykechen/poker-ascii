@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "train": "vite-node scripts/train.ts"
+    "train": "vite-node scripts/train.ts",
+    "field": "vite-node scripts/field.ts"
   },
   "dependencies": {
     "next": "15.5.28",

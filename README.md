@@ -42,6 +42,8 @@ npm run train -- --hands 200 --seats 2 --seed 1
 
 Seat 0's bb/100 is the number to beat. The candidate folds one pair in a multiway pot. The other seats still call with the chart. Compare a seed before and after one change in `lib/poker/candidate.ts`. The score wanders away from zero either way. The difference is the result. 1,200 hands shows a gross leak. A few hundred is noise. A policy that returns an illegal action is checked or folded, and that turn counts under fallbacks.
 
+`lib/poker/strategies.ts` has seven styles: the chart, the multiway fold, a tight chart, a calling station, an aggressor, a position chart, and a maniac. `npm run field` plays each one against five copies of the chart, then seats all seven at one table.
+
 ## Rules in this table
 
 - Blinds start at 1/2 and can be changed between hands. Each player types their own stack.

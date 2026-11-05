@@ -1,0 +1,27 @@
+{
+  "baselineSource": "7998411a5017d4f55b9d88c221720aa7ef6e6f08",
+  "candidateBaseSource": "0455b8044c703db2e4a8e12d840eedaa569d0bb9",
+  "candidatePatch": "candidate-source.patch",
+  "baselineMs": [
+    20315.912,
+    20920.32,
+    20748.358
+  ],
+  "candidateMs": [
+    12475.675,
+    12463.631,
+    12979.48
+  ],
+  "medianBaselineMs": 20748.358,
+  "medianCandidateMs": 12475.675,
+  "throughputRatio": 1.6631050424125349,
+  "timeReductionFraction": 0.3987150694045284,
+  "handsPerRepetition": 168,
+  "decisionsPerRepetition": 2381,
+  "traceHash": "9962e689bb3a530d39c2e503b9817acded9dc4b8f5ec71c91a13319c8e1e4065",
+  "outcomeHash": "b1fd2a2bedb048758e881fe9a3db54527f31359319ff981b6d58a011846f363a",
+  "forecastTotalsIdentical": true,
+  "invalidFallbacks": 0,
+  "nonconservingMatches": 0,
+  "independentPokerEvidence": false
+}

@@ -1,0 +1,81 @@
+{
+  "settings": {
+    "phase": "baseline",
+    "hands": 2,
+    "seed": 20001,
+    "seedRole": "inspected historical profiling reuse; not fresh poker evidence",
+    "sourceFingerprint": "57035199f91eb2d21791cc2518f3dcdd4fb73a3ecac8a608bcb28422533accd8",
+    "sourceCommit": "7998411a5017d4f55b9d88c221720aa7ef6e6f08",
+    "node": "v20.14.0",
+    "v8": "11.3.244.8-node.23",
+    "equitySamples": 50,
+    "riverSamples": 16,
+    "tableSizes": [
+      6,
+      7,
+      8
+    ],
+    "repetitions": 3,
+    "command": [
+      "/usr/local/bin/node",
+      "/private/tmp/poker-profile-baseline/node_modules/vite-node/vite-node.mjs",
+      "--phase",
+      "baseline",
+      "--output",
+      "/private/tmp/poker-training-foundation/handoffs/runs/2026-11-05-cache-external-baseline",
+      "--hands",
+      "2",
+      "--seed",
+      "20001"
+    ]
+  },
+  "status": "complete",
+  "stage": "complete",
+  "warmup": {
+    "elapsedMs": 20338.829,
+    "traceHash": "9962e689bb3a530d39c2e503b9817acded9dc4b8f5ec71c91a13319c8e1e4065",
+    "outcomeHash": "b1fd2a2bedb048758e881fe9a3db54527f31359319ff981b6d58a011846f363a",
+    "hands": 168,
+    "decisions": 2381,
+    "window": {
+      "start": 944284443743,
+      "end": 944304782572
+    }
+  },
+  "repetitions": [
+    {
+      "elapsedMs": 20315.912,
+      "traceHash": "9962e689bb3a530d39c2e503b9817acded9dc4b8f5ec71c91a13319c8e1e4065",
+      "outcomeHash": "b1fd2a2bedb048758e881fe9a3db54527f31359319ff981b6d58a011846f363a",
+      "hands": 168,
+      "decisions": 2381,
+      "window": {
+        "start": 944304784642,
+        "end": 944325100554
+      }
+    },
+    {
+      "elapsedMs": 20920.32,
+      "traceHash": "9962e689bb3a530d39c2e503b9817acded9dc4b8f5ec71c91a13319c8e1e4065",
+      "outcomeHash": "b1fd2a2bedb048758e881fe9a3db54527f31359319ff981b6d58a011846f363a",
+      "hands": 168,
+      "decisions": 2381,
+      "window": {
+        "start": 944325104204,
+        "end": 944346024524
+      }
+    },
+    {
+      "elapsedMs": 20748.358,
+      "traceHash": "9962e689bb3a530d39c2e503b9817acded9dc4b8f5ec71c91a13319c8e1e4065",
+      "outcomeHash": "b1fd2a2bedb048758e881fe9a3db54527f31359319ff981b6d58a011846f363a",
+      "hands": 168,
+      "decisions": 2381,
+      "window": {
+        "start": 944346027354,
+        "end": 944366775712
+      }
+    }
+  ],
+  "endToEndSnapshotMs": 82550.068
+}

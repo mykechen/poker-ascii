@@ -1,0 +1,6 @@
+baseline repetition 1: 20315.9ms, 8.27 hands/sec
+baseline repetition 2: 20920.3ms, 8.03 hands/sec
+baseline repetition 3: 20748.4ms, 8.10 hands/sec
+real 82.57
+user 89.97
+sys 2.01

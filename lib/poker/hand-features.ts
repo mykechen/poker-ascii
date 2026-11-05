@@ -3,7 +3,24 @@ import { evaluate } from "./evaluator";
 import type { Card } from "./types";
 import type { PublicView } from "./view";
 
-export function handFeatures(hole: [Card, Card], board: Card[]) {
+/** Cache pure card calculations only; no opponent identities, actions or range weights. */
+export function createHandFeatureEvaluator(capacity = 8192) {
+  if (!Number.isSafeInteger(capacity) || capacity < 0 || capacity > 100000) throw new Error("Invalid hand-feature cache capacity.");
+  const cache = new Map<string, ReturnType<typeof computeHandFeatures>>();
+  return function cachedHandFeatures(hole: [Card, Card], board: Card[]) {
+    if (capacity === 0 || board.length < 3) return computeHandFeatures(hole, board);
+    const key = [...hole].sort().join("") + ":" + [...board].sort().join("");
+    const hit = cache.get(key);
+    if (hit) return { ...hit };
+    const result = computeHandFeatures(hole, board);
+    if (cache.size >= capacity) cache.delete(cache.keys().next().value!);
+    cache.set(key, result);
+    return { ...result };
+  };
+}
+export const handFeatures = createHandFeatureEvaluator();
+
+function computeHandFeatures(hole: [Card, Card], board: Card[]) {
   const ranks = hole.map(rankValue);
   const made = board.length >= 3 ? evaluate([...hole, ...board]).score[0]! : 0;
   const group = board.length < 3

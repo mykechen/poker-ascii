@@ -1,0 +1,61 @@
+{
+  "settings": {
+    "phase": "profile",
+    "hands": 2,
+    "seed": 20001,
+    "seedRole": "inspected historical profiling reuse; not fresh poker evidence",
+    "sourceFingerprint": "3776a4397874075955b14585d3fd4e1006f83e5abd8ccd06d26811f3e7271569",
+    "sourceCommit": "0455b8044c703db2e4a8e12d840eedaa569d0bb9",
+    "node": "v20.14.0",
+    "v8": "11.3.244.8-node.23",
+    "equitySamples": 50,
+    "riverSamples": 16,
+    "tableSizes": [
+      6,
+      7,
+      8
+    ],
+    "repetitions": 1,
+    "command": [
+      "/usr/local/bin/node",
+      "--cpu-prof",
+      "--cpu-prof-dir=handoffs/runs/2026-11-05-cache-candidate",
+      "/private/tmp/poker-training-foundation/node_modules/vite-node/vite-node.mjs",
+      "--phase",
+      "profile",
+      "--output",
+      "handoffs/runs/2026-11-05-cache-candidate",
+      "--hands",
+      "2",
+      "--seed",
+      "20001"
+    ]
+  },
+  "status": "complete",
+  "stage": "complete",
+  "warmup": {
+    "elapsedMs": 12786.764,
+    "traceHash": "9962e689bb3a530d39c2e503b9817acded9dc4b8f5ec71c91a13319c8e1e4065",
+    "outcomeHash": "b1fd2a2bedb048758e881fe9a3db54527f31359319ff981b6d58a011846f363a",
+    "hands": 168,
+    "decisions": 2381,
+    "window": {
+      "start": 944505459430,
+      "end": 944518246194
+    }
+  },
+  "repetitions": [
+    {
+      "elapsedMs": 13093.081,
+      "traceHash": "9962e689bb3a530d39c2e503b9817acded9dc4b8f5ec71c91a13319c8e1e4065",
+      "outcomeHash": "b1fd2a2bedb048758e881fe9a3db54527f31359319ff981b6d58a011846f363a",
+      "hands": 168,
+      "decisions": 2381,
+      "window": {
+        "start": 944518248597,
+        "end": 944531341678
+      }
+    }
+  ],
+  "endToEndSnapshotMs": 26197.547833
+}

@@ -1,0 +1,18 @@
+{
+  "purpose": "Prevent inspected evidence from becoming a fresh holdout; update before each tracked experiment.",
+  "retired_inspected_ranges": [
+    {"start": 0, "end": 10004, "reason": "Conservative retirement of legacy prototype/test and initial screening seed space; not all values were run."},
+    {"start": 20001, "end": 20002, "reason": "No-memory tuning and historical profiling reuse"},
+    {"start": 30001, "end": 30003, "reason": "No-memory held-out evaluation"},
+    {"start": 41000, "end": 41002, "reason": "Flop instrumentation test and training screen"},
+    {"start": 42001, "end": 42001, "reason": "Flop validation screen"},
+    {"start": 43001, "end": 43002, "reason": "Flop held-out evaluation screen"}
+  ],
+  "reserved_not_run": [
+    {"start": 51001, "end": 51004, "role": "Contextual flop training"},
+    {"start": 51005, "end": 51008, "role": "Prespecified training-only quota top-up"},
+    {"start": 52001, "end": 52002, "role": "Contextual flop validation"},
+    {"start": 53001, "end": 53004, "role": "Contextual flop evaluation"}
+  ],
+  "reservation_spec": "docs/superpowers/specs/2026-11-05-contextual-flop-model-design.md"
+}

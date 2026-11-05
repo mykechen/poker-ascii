@@ -1,21 +1,21 @@
 # Development queue
 
-## Next task — profile within-hand computation
+## Completed — profile and optimize within-hand computation
 
-Status: queued in this repository; not scheduled for automatic execution.
+See [Step 0005](0005-training-computation.md). The valid profile identified repeated pure hand features as a dominant cost. A bounded feature cache reduced median matched workload time about40% with exact action/payout/forecast equivalence, at unchanged budgets. No opponent memory or live-policy change. Initial rejected clock-origin analysis is preserved.
 
-Worktree: /private/tmp/poker-training-foundation. Branch: poker-training-foundation. Read the latest handoff and run interpretation first. Check both workspace statuses; preserve unrelated original-workspace changes.
+## Next task — contextual population response experiment
 
-Run a bounded CPU profile of no-memory equity-only and current river policies at existing sample budgets. Use a recorded deterministic workload with all 6/7/8-player sizes and seat rotations. Historical inspected seeds may be reused for profiling if labelled as such; profiling is not a fresh strategy evaluation. Record elapsed time, decisions, hands/sec, range conditioning/feature evaluation/equity sampling/river response costs and profiler overhead. Identify the dominant cost before proposing a change. Preserve raw profiles and accounting under handoffs/. Add no artificial delays.
+Status: specification written and builder-reviewed; implementation/fitting are queued, not scheduled automatically.
 
-Only implement a focused optimization if profiling supports it. Use test-first behavior/invariant coverage; preserve deterministic legal actions, payout conservation and no-memory inference. Benchmark before/after on the same workload and report uncertainty and any numerical drift. Do not increase budgets, add earlier-street search, change the live app bot, or merge main. Commit and push each verified step without collaborator/co-author additions.
+Worktree: /private/tmp/poker-training-foundation. Branch: poker-training-foundation. Preserve unrelated changes in the original main workspace.
 
-## Following research task — contextual population response model
+Read the [detailed experiment specification](../docs/superpowers/specs/2026-11-05-contextual-flop-model-design.md), [seed registry](seed-registry.json), latest handoff and interpretations. Write the task-level implementation plan before changing model code.
 
-Use the bounded flop diagnostic context breakdowns and the validation frequency baseline as motivation, not proof of generalization. Fit global legal-support-conditioned response parameters on a new training partition, compare against current, uniform and smoothed frequency baselines, validate reliability and freeze before fresh evaluation with equity/current-river controls. Never fit family labels or individual identities, never read target hidden cards, and never remember opponents across hands. The original uniform-mixture fit failed to earn a nonzero weight; do not silently discard that outcome.
+The next pilot makes current, uniform, smoothed support-frequency and one regularized global contextual likelihood family eligible in advance. Preserve hand-conditioned likelihoods by transforming before latent marginalization. Validation must replay common observer-permitted histories with each model's own within-hand beliefs; then freeze selection before fresh on-policy evaluation. No opponent identity/family inputs, actual target hidden cards, cross-hand memory, budget increase or live promotion.
 
-Seeds 20001–20002, 30001–30003, 41000 (test), 41001–41002, 42001, and 43001–43002 are inspected/used and cannot become a fresh holdout.
+The unsuccessful uniform-mixture fit remains valid historical evidence; do not silently discard it or promote the previously descriptive frequency baseline without the new declared selection process. Reserved seed ranges are not yet run. Update the registry and handoffs on execution, including failures.
 
-## Detailed next-step plan
+## Later
 
-See [profiling and response-model roadmap](../docs/superpowers/plans/2026-11-05-profiling-and-response-roadmap.md). Current priority remains a bounded measurement run, followed by one evidence-backed optimization; the later global response-model experiment requires its own frozen specification and fresh partitions.
+Independent profit confirmation, persistent-stack/stack-depth checks and stronger opponents follow only if supported by the pilot. Earlier-street search and heads-up optimization remain later projects. Commit/push each verified step without collaborator/co-author additions; no merge to main.

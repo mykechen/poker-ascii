@@ -41,12 +41,12 @@
 
 **Interface:** Reuse runLeagueBatch(configuration, seed, fields, tableSizes, hands). The new runner exposes `--phase baseline|profile`, `--output RUN_DIRECTORY`, `--hands 2`, and `--seed 20001`; baseline runs three measured repetitions and profile runs one, each after its own warm-up. It records exact configurations, runtime versions, source hash, measured phase, raw matches, elapsed time, hands/sec and decision counts. Its outputs must use the run handoff convention.
 
-- [ ] Define a fixed workload before timing: equity-only and current river policies, existing 50 equity samples/16 river worlds, both existing field compositions, all 6/7/8-player sizes and seat rotations. Start at two hands per match and seed 20001. Label this inspected seed explicitly as profiling reuse.
-- [ ] Implement one untimed warm-up, then three unprofiled measured repetitions and one CPU-profiled repetition. Keep reports per repetition; do not pool repeated deals as independent strategic evidence. If too brief for useful samples, increase workload size only and document it before comparison.
-- [ ] Run the CPU-profiled repetition using the installed entry point: `node --cpu-prof --cpu-prof-dir=RUN_DIRECTORY node_modules/vite-node/vite-node.mjs scripts/profile-training.ts` followed by `--phase profile --output RUN_DIRECTORY --hands 2 --seed 20001`. Create RUN_DIRECTORY first and record the full actual command.
-- [ ] Separate Vite startup/module loading from measured poker time. Record both end-to-end and measured workload elapsed time; compute profiler overhead against the unprofiled baseline.
-- [ ] Inspect sampled self/inclusive costs for range conditioning, combination-key construction, hand-feature/evaluator work, equity sampling and river rollout settlement. Do not sum overlapping inclusive costs as if disjoint.
-- [ ] Verify every raw match net sums to zero, fallbacks are zero, seat rotations are complete and deterministic decisions/payouts match across equivalent repetitions. Save raw CPU profiles and an interpretation; commit and push.
+- [x] Define a fixed workload before timing: equity-only and current river policies, existing 50 equity samples/16 river worlds, both existing field compositions, all 6/7/8-player sizes and seat rotations. Start at two hands per match and seed 20001. Label this inspected seed explicitly as profiling reuse.
+- [x] Implement one untimed warm-up, then three unprofiled measured repetitions and one CPU-profiled repetition. Keep reports per repetition; do not pool repeated deals as independent strategic evidence. If too brief for useful samples, increase workload size only and document it before comparison.
+- [x] Run the CPU-profiled repetition using the installed entry point: `node --cpu-prof --cpu-prof-dir=RUN_DIRECTORY node_modules/vite-node/vite-node.mjs scripts/profile-training.ts` followed by `--phase profile --output RUN_DIRECTORY --hands 2 --seed 20001`. Create RUN_DIRECTORY first and record the full actual command.
+- [x] Separate Vite startup/module loading from measured poker time. Record both end-to-end and measured workload elapsed time; compute profiler overhead against the unprofiled baseline.
+- [x] Inspect sampled self/inclusive costs for range conditioning, combination-key construction, hand-feature/evaluator work, equity sampling and river rollout settlement. Do not sum overlapping inclusive costs as if disjoint.
+- [x] Verify every raw match net sums to zero, fallbacks are zero, seat rotations are complete and deterministic decisions/payouts match across equivalent repetitions. Save raw CPU profiles and an interpretation; commit and push.
 
 **Gate:** Name a dominant cost supported by the profile before choosing an optimization. If there is no clear hot path, end with the measurement handoff rather than guessing.
 
@@ -54,12 +54,12 @@
 
 **Files:** modify only the runtime module(s) identified in Step 1 and their focused tests; extend the profile runner only if necessary for comparison.
 
-- [ ] Choose one candidate from evidence, such as avoiding repeated pure hand evaluations or repeated combination-key creation. Specify the exact invariant and the expected cost reduction before coding. Do not assume a cache is the winner.
-- [ ] Write a regression that exercises changing boards, card blockers, legal support, different sampled hands and hand reset. For a cache, also test bounded eviction and absence of mutable-result aliasing. Watch a meaningful failing regression before implementation.
-- [ ] Implement the smallest change. Keep all probability calculations and random-stream consumption identical wherever possible.
-- [ ] Compare before/after on the exact Step 1 workload and machine, with matched repetitions and identical sample budgets. Use an external baseline checkout/worktree rather than rewriting the user's existing workspace. Report timing spread, profiler overhead and any numerical/decision drift.
-- [ ] Require matching deterministic action traces (instrument policy outputs without consuming additional random values) and payouts, zero invalid outputs, full tests/lint/typecheck and focused independent review. If behavior drifts, investigate rather than calling it an optimization.
-- [ ] Save a new handoff with speed/compute results and limitations. Commit/push only a justified optimization; retaining the original is a valid result.
+- [x] Choose one candidate from evidence, such as avoiding repeated pure hand evaluations or repeated combination-key creation. Specify the exact invariant and the expected cost reduction before coding. Do not assume a cache is the winner.
+- [x] Write a regression that exercises changing boards, card blockers, legal support, different sampled hands and hand reset. For a cache, also test bounded eviction and absence of mutable-result aliasing. Watch a meaningful failing regression before implementation.
+- [x] Implement the smallest change. Keep all probability calculations and random-stream consumption identical wherever possible.
+- [x] Compare before/after on the exact Step 1 workload and machine, with matched repetitions and identical sample budgets. Use an external baseline checkout/worktree rather than rewriting the user's existing workspace. Report timing spread, profiler overhead and any numerical/decision drift.
+- [x] Require matching deterministic action traces (instrument policy outputs without consuming additional random values) and payouts, zero invalid outputs, full tests/lint/typecheck and focused independent review. If behavior drifts, investigate rather than calling it an optimization.
+- [x] Save a new handoff with speed/compute results and limitations. Commit/push only a justified optimization; retaining the original is a valid result.
 
 ## Step 3: Design the next global flop-model experiment
 
@@ -84,3 +84,7 @@ After a meaningful model improvement, design longer-session and stronger-opponen
 ## Required handoff after each step/run
 
 Record source commit/fingerprint; status and command; exact workload/budgets/seed roles; raw-data pointers; correctness checks; measured results with uncertainty/limitations; unsuccessful alternatives; decision and next action. Update handoffs/QUEUE.md and the handoff index, then commit/push. Do not mark a queued task as automatically scheduled.
+
+## Execution update
+
+Steps 1 and 2 completed and pushed: marker-based profile with full coverage and one bounded pure-feature cache, measured 39.87% less time on the fixed workload with exact actions/payouts/forecast totals. See handoffs/0005-training-computation.md. The initial clock-origin rejection is retained. Step 3 now has a builder-reviewed detailed specification and reserved seeds (handoffs/0006-contextual-model-spec.md); model implementation, fitting and evaluation remain queued rather than silently started.

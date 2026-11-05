@@ -33,6 +33,7 @@ export function decisionContext(view: PublicView, seat: number) {
   const size = price / Math.max(1, view.pot);
   return {
     facing: price > 0, price, spr,
+    canRaise: player.stack>price && live.filter(s=>!s.allIn).length>=2 && (!player.acted || !view.betting || view.betting.raiseOpen || price>=view.betting.minRaise),
     position: player.button ? "button" : player.smallBlind || player.bigBlind ? "blind" : "field",
     size: size === 0 ? "free" : size <= 0.33 ? "small" : size <= 0.75 ? "medium" : "large",
     depth: spr <= 1 ? "short" : spr <= 4 ? "medium" : "deep",

@@ -1,13 +1,14 @@
 import { createAdaptivePolicy } from "./adaptive";
 import { runBenchmark, type BenchmarkReport } from "./benchmark";
+import { scorePrediction } from "./calibration";
 import { simplePolicy } from "./bot";
 import { strategyById, type StrategyId } from "./strategies";
 
 export type LeagueField = { id: string; opponents: StrategyId[] };
 export type LeaguePlan = { tuningSeeds: number[]; evaluationSeeds: number[]; tuningFields: LeagueField[]; evaluationFields: LeagueField[]; tableSizes: number[]; hands: number };
-export type LeagueConfiguration = { id: string; mode: "adaptive" | "frozen" | "equity" | "chart"; styleRetention: number; riverRiskPenalty: number; equitySamples: number; riverSamples: number };
+export type LeagueConfiguration = { id: string; mode: "frozen" | "equity" | "chart"; styleRetention: number; riverRiskPenalty: number; equitySamples: number; riverSamples: number };
 export type LeagueRow = { seed: number; players: number; field: string; bb100: number };
-export type LeagueBatch = { configuration: LeagueConfiguration; seed: number; rows: LeagueRow[]; cells: { players: number; field: string; report: BenchmarkReport }[]; elapsedMs: number; riverDecisions: number; riverComputeMs: number };
+export type LeagueBatch = { configuration: LeagueConfiguration; seed: number; rows: LeagueRow[]; cells: { players: number; field: string; report: BenchmarkReport }[]; elapsedMs: number; riverDecisions: number; riverComputeMs: number; calibration: Record<string, {count:number;brierSum:number;logLossSum:number;uniformBrierSum:number;uniformLogLossSum:number}> };
 
 export function validateLeaguePlan(plan: LeaguePlan): void {
   const normalize = (seeds: number[]) => seeds.map(s => s >>> 0);
@@ -49,24 +50,25 @@ export function selectConfiguration(scores: { id: string; meanBb100: number }[])
 }
 
 export function runLeagueBatch(configuration: LeagueConfiguration, seed: number, fields: LeagueField[], tableSizes: number[], hands: number): LeagueBatch {
-  if (!configuration.id || !["adaptive", "frozen", "equity", "chart"].includes(configuration.mode) || !Number.isFinite(configuration.styleRetention) || configuration.styleRetention < 0 || configuration.styleRetention > 1 || !Number.isFinite(configuration.riverRiskPenalty) || configuration.riverRiskPenalty < 0 || !Number.isSafeInteger(configuration.equitySamples) || configuration.equitySamples < 2 || configuration.equitySamples > 1000000 || !Number.isSafeInteger(configuration.riverSamples) || configuration.riverSamples < 2 || configuration.riverSamples > 10000) throw new Error("Invalid league configuration.");
+  if (!configuration.id || !["frozen", "equity", "chart"].includes(configuration.mode) || !Number.isFinite(configuration.styleRetention) || configuration.styleRetention < 0 || configuration.styleRetention > 1 || !Number.isFinite(configuration.riverRiskPenalty) || configuration.riverRiskPenalty < 0 || !Number.isSafeInteger(configuration.equitySamples) || configuration.equitySamples < 2 || configuration.equitySamples > 1000000 || !Number.isSafeInteger(configuration.riverSamples) || configuration.riverSamples < 2 || configuration.riverSamples > 10000) throw new Error("Invalid league configuration.");
   if(!fields.length || fields.some(f=>!f.id || !f.opponents.length) || new Set(fields.map(f=>f.id)).size!==fields.length)throw new Error("Provide nonempty unique league fields.");
   fields.forEach(field=>field.opponents.forEach(strategyById));
   if(!tableSizes.length || new Set(tableSizes).size!==tableSizes.length || tableSizes.some(n=>![6,7,8].includes(n)))throw new Error("Use distinct league table sizes 6, 7, 8.");
   if(!Number.isSafeInteger(seed) || !Number.isSafeInteger(hands) || hands<1 || hands>100000)throw new Error("Invalid league seed or hand count.");
   const started = performance.now();
   let riverDecisions = 0, riverComputeMs = 0;
+  const calibration: LeagueBatch["calibration"] = {};
   const cells: LeagueBatch["cells"] = [];
   const rows: LeagueRow[] = [];
   for (const field of fields) for (const players of tableSizes) {
     const seats = Array.from({ length: players }, (_, i) => i === 0
-      ? { name: configuration.id.slice(0, 16), policy: simplePolicy, policyFactory: () => configuration.mode === "chart" ? simplePolicy : createAdaptivePolicy({ samples: configuration.equitySamples, riverSamples: configuration.mode === "equity" ? false : configuration.riverSamples, learn: configuration.mode !== "frozen", styleRetention: configuration.styleRetention, riverRiskPenalty: configuration.riverRiskPenalty, seed: 42, onRiverDecision: r => { riverDecisions++; riverComputeMs += r.elapsedMs; } }).policy }
+      ? { name: configuration.id.slice(0, 16), policy: simplePolicy, policyFactory: () => configuration.mode === "chart" ? simplePolicy : createAdaptivePolicy({ samples: configuration.equitySamples, riverSamples: configuration.mode === "equity" ? false : configuration.riverSamples, learn: false, styleRetention: configuration.styleRetention, riverRiskPenalty: configuration.riverRiskPenalty, seed: 42, onRiverDecision: r => { riverDecisions++; riverComputeMs += r.elapsedMs; }, onPrediction: record => { const score=scorePrediction(record.probabilities,record.actual);const cell=calibration[record.street]??{count:0,brierSum:0,logLossSum:0,uniformBrierSum:0,uniformLogLossSum:0};cell.count++;cell.brierSum+=score.brier;cell.logLossSum+=score.logLoss;cell.uniformBrierSum+=score.uniformBrier;cell.uniformLogLossSum+=score.uniformLogLoss;calibration[record.street]=cell; } }).policy }
       : { name: `opponent-${i}`, policy: strategyById(field.opponents[(i - 1) % field.opponents.length]!).policy });
     const report = runBenchmark({ seats, seeds: [seed], hands });
     cells.push({ players, field: field.id, report });
     rows.push({ seed, players, field: field.id, bb100: report.meanBb100[0]! });
   }
-  return { configuration: { ...configuration }, seed, rows, cells, elapsedMs: performance.now() - started, riverDecisions, riverComputeMs };
+  return { configuration: { ...configuration }, seed, rows, cells, elapsedMs: performance.now() - started, riverDecisions, riverComputeMs, calibration };
 }
 
 export function pairedLeagueDelta(candidate: LeagueRow[], control: LeagueRow[]) {

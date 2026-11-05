@@ -1,0 +1,27 @@
+# Experiment handoffs
+
+Every canonical `npm run league` experiment writes a folder under `handoffs/runs/DATE-EXPERIMENT_ID/` automatically. Resume updates the same experiment, so a restarted process is not mistaken for independent evidence.
+
+Each folder contains:
+
+- handoff.md: status, source commit/fingerprint, exact settings, progress, results, limitations, and next steps.
+- summary.json: machine-readable report and accounting checks.
+- raw-results.json.gz: full compressed checkpoint, including all completed match results.
+
+Reports update at initialization and after every completed seed batch. Exceptions mark the run failed and preserve partial results. SIGINT/SIGTERM mark the report interrupted at the next completed batch boundary; SIGKILL or a machine crash may leave the last report marked running. Its checkpoint remains resumable. Keep smoke runs labelled by their tiny hand/batch settings. Invalid invocations rejected before initialization are not experiment runs.
+
+Before each completed stage is handed off: verify the report against raw matches, record interpretation and next steps, then commit and push the run folder. Do not treat different-seed historical runs as paired comparisons or reuse inspected evaluation seeds for new tuning decisions.
+
+Current training defaults reset opponent beliefs each hand. Within-hand inference remains active. Historical opt-in cross-hand learning remains in code for reproducibility, but the current league disables it for all variants. Legacy benchmark scripts remain development utilities; use the league runner for tracked experiments.
+
+## Historical results
+
+The first league screen is recorded in [0001-league-screening.md](0001-league-screening.md). Its original complete artifacts remain under docs/experiments/2026-11-05-league-screening/.
+
+## Current tracked run
+
+`npm run league -- --hands 24 --tuning-seeds 2 --evaluation-seeds 3 --output data/no-memory-calibration-v1.json`
+
+Candidate memory is disabled; benchmark opponents keep their prescribed strategies. The grid varies only river sampling-noise penalties (0, 1, 2). Controls are no-memory equity-only and chart policies. Fresh seed ranges start at 20001 for tuning and 30001 for evaluation.
+
+Calibration reports multiclass Brier score and log loss, with lower scores better, against a uniform forecast over supported legal action classes on the same observations. Scores are measured before each observed action updates the range. Different policies generate different trajectories, so their prediction scores are descriptive and should not be treated as a paired forecasting contest. Measuring calibration does not itself fit or improve the model.

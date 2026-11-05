@@ -1,3 +1,5 @@
+> Historical protocol for the first screen. Current no-memory settings and automatically tracked run reports are documented in handoffs/README.md. The current runner no longer uses the memory-retention grid described below.
+
 # League evaluation and parameter tuning
 
 `npm run league -- --hands 12 --tuning-seeds 2 --evaluation-seeds 3 --output data/league-screening.json` runs a bounded exploratory experiment. Defaults use reduced budgets of 50 equity samples and 16 river worlds per candidate to make screening affordable. These settings themselves affect policy quality and cannot establish performance at larger budgets.

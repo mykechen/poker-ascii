@@ -46,3 +46,15 @@ it("tempers learned hypotheses between hands with configurable retention",()=>{
  beliefs.typeWeights().forEach((p,i)=>expect(p).toBeCloseTo(0.5*before[i]!+0.5/3));
  expect(()=>beliefs.newHand(false,-1)).toThrow(/retention/);
 });
+it("returns pre-action predictive probabilities before conditioning",()=>{
+ const beliefs=new RangeBeliefs(range);
+ const expected=[0,0,0];
+ for(let style=0;style<3;style++)for(const hand of range){
+ const p=actionProbabilities(hand.cards,[],context,style);p.forEach((n,i)=>{expected[i]+=n/6;});
+ }
+ const prediction=beliefs.observe([],context,"aggressive");
+ prediction.forEach((p,i)=>expect(p).toBeCloseTo(expected[i]!));
+});
+it("assigns no aggression probability when public rules close raising",()=>{
+ expect(actionProbabilities(["Ah","Ad"],[],{...context,canRaise:false},1)[2]).toBe(0);
+});

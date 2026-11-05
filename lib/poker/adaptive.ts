@@ -8,7 +8,8 @@ import type { Card, Street } from "./types";
 import type { PublicView } from "./view";
 
 type Evidence = { seat: number; street: Street; board: Card[]; facing: boolean; action: ActionClass };
-export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor"> & { priorStrength?: number; learn?: boolean; styleRetention?: number; riverRiskPenalty?: number; riverSamples?: number | false; onRiverDecision?: (result: RiverResult) => void } = {}) {
+export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor"> & { priorStrength?: number; learn?: boolean; styleRetention?: number; riverRiskPenalty?: number; riverSamples?: number | false; onRiverDecision?: (result: RiverResult) => void; onPrediction?: (record: {street: Street; probabilities: [number, number, number]; actual: ActionClass; facing: boolean}) => void } = {}) {
+  const learn=options.learn??false;
   const retention=options.styleRetention??1;
   if(!Number.isFinite(retention)||retention<0||retention>1)throw new Error("Style retention must be between zero and one.");
   const model=new OpponentModel(options.priorStrength);
@@ -25,7 +26,7 @@ export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor
   };
   const ensureHand=(view:PublicView)=>{
     if(hand===view.handNumber)return;
-    hand=view.handNumber;for(const belief of beliefs.values())belief.newHand(options.learn===false,retention);evidence=[];
+    hand=view.handNumber;for(const belief of beliefs.values())belief.newHand(!learn,retention);evidence=[];
   };
   const control=createEquityPolicy({...options,rangeFor:(view,seat)=>{
     ensureHand(view);const belief=beliefFor(seat);belief.condition(knownCards(view));return belief.mixture();
@@ -49,7 +50,7 @@ export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor
       if(seat===null || before.street===null)return;
       // The observer's own cards are private to it; exclude its actions from opponent learning.
       if(Array.isArray(before.seats[seat]!.hole)) {if(after.phase==="complete")learnReveals(after);return;}
-      const currentBet=Math.max(...before.seats.map(s=>s.streetCommitted));
+      const currentBet=before.betting?.currentBet??Math.max(...before.seats.map(s=>s.streetCommitted));
       const facing=currentBet>before.seats[seat]!.streetCommitted;
       const entry=after.log.findLast(e=>e.seat===seat && e.street===before.street && ["fold","check","call","bet","raise","all_in"].includes(e.action));
       if(!entry)throw new Error("Missing action observation.");
@@ -57,15 +58,16 @@ export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor
       const event:Evidence={seat,street:before.street,board:[...before.board],facing,action};
       const belief=beliefFor(seat);
       belief.condition(knownCards(before));
-      belief.observe(before.board,decisionContext(before,seat),action);
+      const probabilities=belief.observe(before.board,decisionContext(before,seat),action);
+      options.onPrediction?.({street:before.street,probabilities,actual:action,facing});
       inferences++;
-      if(options.learn!==false) {model.record(ids[seat]!,before.street,facing,action);count++;}
-      evidence.push(event);
+      if(learn) {model.record(ids[seat]!,before.street,facing,action);count++;}
+      if(learn)evidence.push(event);
       if(after.phase==="complete") learnReveals(after);
     }
   });
   function learnReveals(view:PublicView):void {
-    if(options.learn===false)return;
+    if(!learn)return;
     const processed=new Set<number>();
     for(const event of evidence) {
       if(processed.has(event.seat))continue;

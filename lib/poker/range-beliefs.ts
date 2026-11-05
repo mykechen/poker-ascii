@@ -3,7 +3,7 @@ import { handFeatures } from "./hand-features";
 import type { ActionClass } from "./opponent";
 import type { Card } from "./types";
 
-export type ResponseContext = { facing: boolean; position: string; size: string; depth: string; players: string };
+export type ResponseContext = { facing: boolean; canRaise?: boolean; position: string; size: string; depth: string; players: string };
 
 /** Provisional tight/balanced/loose response hypotheses, not labels assigned to players. */
 export function actionProbabilities(cards: [Card, Card], board: Card[], context: ResponseContext, style: number): [number, number, number] {
@@ -20,6 +20,7 @@ function probabilitiesForFeatures(features: ReturnType<typeof handFeatures>, c: 
   if (c.depth === "short" && features.group === "strong") aggressive *= 1.3;
   if (c.players === "many" && features.group !== "strong") { fold *= 1.25; aggressive *= 0.7; }
   if (!c.facing) { fold = 0; passive *= 1.5; }
+  if(c.canRaise===false)aggressive=0;
   const total = fold + passive + aggressive;
   return [fold / total, passive / total, aggressive / total];
 }
@@ -47,14 +48,20 @@ export class RangeBeliefs {
     this.ranges = this.ranges.map((range, i) => range.filter(h => h.cards.every(c => !known.includes(c))).map(h => ({ ...h, weight: h.weight / masses[i]! })));
     this.weights = posterior;
   }
-  observe(board: Card[], context: ResponseContext, action: ActionClass): void {
+  observe(board: Card[], context: ResponseContext, action: ActionClass): [number, number, number] {
     const index = action === "fold" ? 0 : action === "passive" ? 1 : 2;
     const features = new Map(this.ranges[0]!.map(h => [comboKey(h.cards), handFeatures(h.cards, board)]));
-    const weighted = this.ranges.map((range, style) => range.map(h => ({ ...h, weight: h.weight * probabilitiesForFeatures(features.get(comboKey(h.cards))!, context, style)[index]! })));
+    const prediction: [number, number, number] = [0, 0, 0];
+    const weighted = this.ranges.map((range, style) => range.map(h => {
+      const probabilities = probabilitiesForFeatures(features.get(comboKey(h.cards))!, context, style);
+      probabilities.forEach((p, i) => { prediction[i] += this.weights[style]! * h.weight * p; });
+      return { ...h, weight: h.weight * probabilities[index]! };
+    }));
     const masses = weighted.map(range => range.reduce((sum, h) => sum + h.weight, 0));
     const posterior = normalized(this.weights.map((p, i) => p * masses[i]!));
     this.ranges = weighted.map((range, i) => range.map(h => ({ ...h, weight: h.weight / masses[i]! })));
     this.weights = posterior;
+    return prediction;
   }
   reveal(cards: [Card, Card]): void {
     const key = comboKey(cards);

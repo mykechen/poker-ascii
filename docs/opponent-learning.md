@@ -11,3 +11,11 @@ Limitations: no draw classifier, position/sizing/stack-depth conditioning, evide
 `npm run benchmark:adaptive -- 10 2` compares adaptive and frozen versions using paired seeds and seat rotations at 6/7/8 players. Factories or lifecycle reset prevent personal-history leakage across experiments. A 2-hand, one-batch smoke run completed for all sizes; no strength conclusion follows.
 
 Tests cover prior shrinkage, context separation, session reset, terminal observations, distinct identities, legal multiplayer adaptation, and public reveal processing when the observer makes the final action. Full verification: 80 tests, lint, and TypeScript checks pass.
+
+## Contextual Bayesian extension
+
+The active adaptive policy now uses `RangeBeliefs`: a mixture over provisional tight/balanced/loose response hypotheses, each with its own conditional hand range. Every action updates style probabilities by its marginal likelihood, then conditions that style's hand range. A reveal updates style weights using the conditional probability of the exact revealed combination, rather than fitting selected showdown action counts. Hand ranges reset per hand; learned type weights persist per session. Frozen controls reset type weights each hand but still infer within each hand.
+
+Likelihoods now include bet-size bucket, SPR bucket, button/blind/field position, remaining player-count bucket, and private draw features. These coefficients are provisional hypotheses, not optimized frequencies. Bayesian correctness is conditional on this approximate independent-opponent model; it is not an assertion that real opponents follow these hypotheses. Correlations between opponents and folded-card distributions remain unmodeled.
+
+Step verification: 86 tests, lint, and TypeScript checks pass. Independent review found no important issue. Public view additions expose only current betting state, acted flags, and commitments for upcoming engine-based river reconstruction; no deck or opponent private cards are published.

@@ -14,6 +14,8 @@ export type PublicSeat = {
   folded: boolean;
   allIn: boolean;
   streetCommitted: number;
+  handCommitted?: number;
+  acted?: boolean;
   hole: VisibleHole;
   button: boolean;
   smallBlind: boolean;
@@ -47,6 +49,7 @@ export type PublicView = {
   result: TableState["result"];
   error: string | null;
   revealRequired: boolean;
+  betting?: { currentBet: number; minRaise: number; raiseOpen: boolean };
 };
 
 /**
@@ -99,6 +102,8 @@ function seatView(state: TableState, seat: TableState["seats"][number], index: n
     folded: seat.folded,
     allIn: seat.allIn,
     streetCommitted: seat.streetCommitted,
+    handCommitted: seat.handCommitted,
+    acted: seat.acted,
     hole,
     button: state.button === index && state.phase !== "idle",
     smallBlind: state.smallBlindSeat === index && state.phase !== "idle",
@@ -127,6 +132,7 @@ function viewOf(state: TableState, seats: PublicSeat[], validActions: LegalActio
     result: state.result,
     error: state.error,
     revealRequired,
+    betting: { currentBet: state.currentBet, minRaise: state.minRaise, raiseOpen: state.raiseOpen },
   };
 }
 

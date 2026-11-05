@@ -15,3 +15,7 @@ Only implement a focused optimization if profiling supports it. Use test-first b
 Use the bounded flop diagnostic context breakdowns and the validation frequency baseline as motivation, not proof of generalization. Fit global legal-support-conditioned response parameters on a new training partition, compare against current, uniform and smoothed frequency baselines, validate reliability and freeze before fresh evaluation with equity/current-river controls. Never fit family labels or individual identities, never read target hidden cards, and never remember opponents across hands. The original uniform-mixture fit failed to earn a nonzero weight; do not silently discard that outcome.
 
 Seeds 20001–20002, 30001–30003, 41000 (test), 41001–41002, 42001, and 43001–43002 are inspected/used and cannot become a fresh holdout.
+
+## Detailed next-step plan
+
+See [profiling and response-model roadmap](../docs/superpowers/plans/2026-11-05-profiling-and-response-roadmap.md). Current priority remains a bounded measurement run, followed by one evidence-backed optimization; the later global response-model experiment requires its own frozen specification and fresh partitions.

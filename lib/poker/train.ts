@@ -79,6 +79,7 @@ export function playMatch(options: TrainOptions): TrainReport {
     if (name.length < 1 || name.length > 16) throw new Error("Use a name of 1 to 16 characters.");
   }
 
+  startPolicySession(seats);
   const count = seats.length;
   const net = Array.from({ length: count }, () => 0);
   const buttons = Array.from({ length: count }, () => 0);
@@ -152,6 +153,7 @@ export function playHand(table: TableState, seats: TrainSeat[], decisions: numbe
     if (decision) {
       const next = apply(state, { type: "act", seat, action: decision.action, amount: decision.amount });
       if (next.error) throw new Error(next.error);
+      observePolicies(seats, state, next);
       state = next;
       continue;
     }
@@ -166,6 +168,7 @@ export function playHand(table: TableState, seats: TrainSeat[], decisions: numbe
     if (action === null) throw new Error("The seat had no check or fold.");
     const next = apply(state, { type: "act", seat, action });
     if (next.error) throw new Error(next.error);
+    observePolicies(seats, state, next);
     state = next;
   }
   if (state.phase !== "complete") throw new Error("The hand did not finish.");
@@ -209,4 +212,15 @@ export function mulberry32(seed: number): () => number {
     t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
+}
+
+let sessionSerial = 0;
+export function startPolicySession(seats: TrainSeat[]): void {
+  const ids=seats.map((_,seat)=>`session-${sessionSerial}:${seat}`);
+  sessionSerial++;
+  for(const player of seats) player.policy.startSession?.([...ids]);
+}
+
+function observePolicies(seats: TrainSeat[], before: TableState, after: TableState): void {
+  seats.forEach((player,seat)=>player.policy.observe?.(projectForPlayer(before,seat),projectForPlayer(after,seat)));
 }

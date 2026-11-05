@@ -20,7 +20,10 @@ export type PolicyAction = {
 };
 
 /** A later bot replaces this function. The seat, the view, and the menu stay. */
-export type Policy = (view: PublicView) => PolicyAction;
+export type Policy = ((view: PublicView) => PolicyAction) & {
+  startSession?: (joinIds: string[]) => void;
+  observe?: (before: PublicView, after: PublicView) => void;
+};
 
 /**
  * Pot odds and made-hand groups. Weak on purpose: no bluffs, no position,

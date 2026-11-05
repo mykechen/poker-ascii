@@ -12,7 +12,8 @@
     "field": "vite-node scripts/field.ts",
     "learn": "vite-node scripts/learn.ts",
     "benchmark": "vite-node scripts/benchmark.ts",
-    "benchmark:equity": "vite-node scripts/equity-benchmark.ts"
+    "benchmark:equity": "vite-node scripts/equity-benchmark.ts",
+    "benchmark:adaptive": "vite-node scripts/adaptive-benchmark.ts"
   },
   "dependencies": {
     "next": "15.5.28",

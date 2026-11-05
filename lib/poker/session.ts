@@ -1,6 +1,6 @@
 import { apply, createTable } from "./engine";
 import { shuffleDeck } from "./cards";
-import { mulberry32, playHand, type TrainOptions } from "./train";
+import { mulberry32, playHand, startPolicySession, type TrainOptions } from "./train";
 
 export type SessionOptions = Omit<TrainOptions, "onHand" | "invalidAction">;
 export type SessionReport = {
@@ -30,6 +30,7 @@ export function playSession(options: SessionOptions): SessionReport {
     state = apply(state, { type: "sit", seat, name: player.name, stack });
     if (state.error) throw new Error(state.error);
   }
+  startPolicySession(policies);
   const random = mulberry32(seed);
   const handsDealt = seats.map(() => 0);
   const eliminatedAt: (number | null)[] = seats.map(() => null);

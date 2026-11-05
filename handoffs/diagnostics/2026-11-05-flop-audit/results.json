@@ -1,0 +1,65 @@
+{
+  "sourceExperiment": "5a4690bf0ef2ce9ad6714a0dd4c77d1871aced7501b3460bca45061184a729df",
+  "accounting": {
+    "hands": 15120,
+    "matches": 630,
+    "illegalFallbacks": 0,
+    "nonconservingMatches": 0
+  },
+  "flopBySeed": [
+    {
+      "configuration": "no-memory-risk-1",
+      "seed": 30001,
+      "count": 1607,
+      "brier": 0.6590476814521019,
+      "uniformBrier": 0.563057456959134,
+      "logLoss": 0.9295943909697074,
+      "uniformLogLoss": 0.8465527721777083
+    },
+    {
+      "configuration": "no-memory-risk-1",
+      "seed": 30002,
+      "count": 1573,
+      "brier": 0.6676727988466384,
+      "uniformBrier": 0.5664335664335634,
+      "logLoss": 0.9434968684257466,
+      "uniformLogLoss": 0.8547661397359163
+    },
+    {
+      "configuration": "no-memory-risk-1",
+      "seed": 30003,
+      "count": 1609,
+      "brier": 0.6498039953588008,
+      "uniformBrier": 0.5684690283820143,
+      "logLoss": 0.9244184142507755,
+      "uniformLogLoss": 0.859717992529791
+    },
+    {
+      "configuration": "equity-control",
+      "seed": 30001,
+      "count": 1605,
+      "brier": 0.6592082298702421,
+      "uniformBrier": 0.563239875389405,
+      "logLoss": 0.9300143413061687,
+      "uniformLogLoss": 0.8469965580290127
+    },
+    {
+      "configuration": "equity-control",
+      "seed": 30002,
+      "count": 1574,
+      "brier": 0.6675594516145075,
+      "uniformBrier": 0.5664972469292642,
+      "logLoss": 0.9434182261214601,
+      "uniformLogLoss": 0.8549210610503586
+    },
+    {
+      "configuration": "equity-control",
+      "seed": 30003,
+      "count": 1609,
+      "brier": 0.650321655944359,
+      "uniformBrier": 0.5689869484151611,
+      "logLoss": 0.9254981821429071,
+      "uniformLogLoss": 0.8609779835431789
+    }
+  ]
+}

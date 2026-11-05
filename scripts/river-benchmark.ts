@@ -1,0 +1,10 @@
+import { runBenchmark } from "../lib/poker/benchmark";
+import { createAdaptivePolicy } from "../lib/poker/adaptive";
+import { simplePolicy } from "../lib/poker/bot";
+const hands=Number(process.argv[2]??10);
+const batches=Number(process.argv[3]??2);
+const samples=Number(process.argv[4]??32);
+if(!Number.isSafeInteger(batches)||batches<1||batches>10000)throw new Error("Provide 1 to 10000 batches.");
+let decisions=0,totalMs=0;
+const results=[6,7,8].map(players=>({players,report:runBenchmark({hands,seeds:Array.from({length:batches},(_,i)=>i+1),seats:Array.from({length:players},(_,i)=>({name:`P${i}`,policy:simplePolicy,...(i===0?{policyFactory:()=>createAdaptivePolicy({samples:100,riverSamples:samples,onRiverDecision:r=>{decisions++;totalMs+=r.elapsedMs;}}).policy}:{})}))})}));
+console.log(JSON.stringify({label:"Adaptive river rollout integration; small runs cannot establish strength",decisions,totalSearchMs:totalMs,meanSearchMs:decisions?totalMs/decisions:null,samples,results},null,2));

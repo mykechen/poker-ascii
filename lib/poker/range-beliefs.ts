@@ -61,6 +61,10 @@ export class RangeBeliefs {
     // The observed hole cards condition this hand fully; repeating a reveal is idempotent.
     this.ranges = this.ranges.map(() => [{ cards: [...cards], weight: 1 }]);
   }
+  typeWeightsGiven(cards: [Card, Card]): number[] {
+    const key = comboKey(cards);
+    return normalized(this.weights.map((p, style) => p * (this.ranges[style]!.find(h => comboKey(h.cards) === key)?.weight ?? 0)));
+  }
   typeWeights(): number[] { return [...this.weights]; }
   mixture(): WeightedHand[] {
     return this.ranges[0]!.map((h, index) => ({ cards: [...h.cards], weight: this.ranges.reduce((sum, range, style) => sum + this.weights[style]! * range[index]!.weight, 0) }));

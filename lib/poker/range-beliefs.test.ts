@@ -34,3 +34,9 @@ it("conditions blockers and separates context-dependent likelihoods",()=>{
  const large=actionProbabilities(["7c","2d"],[],{...context,size:"large"},1);
  expect(large[0]).toBeGreaterThan(small[0]);
 });
+it("conditions response style on the sampled hand",()=>{
+ const beliefs=new RangeBeliefs(range);beliefs.observe([],context,"aggressive");
+ const conditional=beliefs.typeWeightsGiven(range[1]!.cards);
+ beliefs.reveal(range[1]!.cards);
+ expect(conditional).toEqual(beliefs.typeWeights());
+});

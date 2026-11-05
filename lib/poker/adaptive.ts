@@ -3,11 +3,12 @@ import { createEquityPolicy, type EquityPolicyOptions } from "./equity-policy";
 import { OpponentModel, type ActionClass } from "./opponent";
 import { decisionContext } from "./hand-features";
 import { RangeBeliefs } from "./range-beliefs";
+import { evaluateRiverActions, type RiverResult } from "./river-ev";
 import type { Card, Street } from "./types";
 import type { PublicView } from "./view";
 
 type Evidence = { seat: number; street: Street; board: Card[]; facing: boolean; action: ActionClass };
-export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor"> & { priorStrength?: number; learn?: boolean } = {}) {
+export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor"> & { priorStrength?: number; learn?: boolean; riverSamples?: number | false; onRiverDecision?: (result: RiverResult) => void } = {}) {
   const model=new OpponentModel(options.priorStrength);
   let ids:string[]=[];
   let hand=-1, count=0, reveals=0, inferences=0;
@@ -27,7 +28,16 @@ export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor
   const control=createEquityPolicy({...options,rangeFor:(view,seat)=>{
     ensureHand(view);const belief=beliefFor(seat);belief.condition(knownCards(view));return belief.mixture();
   }});
-  const policy:Policy=Object.assign((view:PublicView)=>{ensureHand(view);return control(view);},{
+  const policy:Policy=Object.assign((view:PublicView)=>{
+    ensureHand(view);
+    if(view.street==="river" && options.riverSamples!==false) {
+      for(const opponent of view.seats.filter(s=>s.inHand&&!s.folded&&s.seat!==view.toAct))beliefFor(opponent.seat).condition(knownCards(view));
+      const result=evaluateRiverActions(view,{samples:options.riverSamples??64,seed:(options.seed??1)^Math.imul(view.handNumber,31)^view.log.length,
+        rangeFor:seat=>beliefFor(seat).mixture(),styleFor:(seat,cards)=>beliefFor(seat).typeWeightsGiven(cards)});
+      options.onRiverDecision?.(result);return result.best;
+    }
+    return control(view);
+  },{
     startSession:(joinIds:string[])=>{
       ids=[...joinIds];model.startSession(ids);hand=-1;count=0;reveals=0;inferences=0;beliefs.clear();evidence=[];revealedEvidence.length=0;
     },

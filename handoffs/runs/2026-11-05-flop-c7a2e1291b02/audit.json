@@ -1,0 +1,16 @@
+{
+  "accounting": {
+    "hands": 1512,
+    "matches": 378,
+    "illegalFallbacks": 0,
+    "nonconservingMatches": 0
+  },
+  "frozenWeight": 0,
+  "meanBb100": {
+    "fitted-river": 1125.3720238095239,
+    "current-river": 1125.3720238095239,
+    "equity-control": 1130.5369543650795
+  },
+  "forecastScoresRecomputed": true,
+  "rawProfitRecomputed": true
+}

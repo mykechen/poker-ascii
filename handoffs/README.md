@@ -32,3 +32,11 @@ Calibration reports multiclass Brier score and log loss, with lower scores bette
 - [0002 — no-memory calibration and 24-hand matches](0002-no-memory-calibration.md).
 
 Folders for the one-hand development smoke checks are retained under runs/ and explicitly labelled in their interpretation files. They are integration tests, not independent strategy evidence.
+
+## Flop diagnostics and queued work
+
+- [0003 — public forecast instrumentation and global fitting workflow](0003-flop-instrumentation.md).
+- [0004 — bounded diagnostic screen; unsuccessful uniform-mixture fit](0004-flop-diagnostic-screen.md).
+- [Next development task](QUEUE.md): profile within-hand computation before search expansion. Repository queue only; not an automatically scheduled job.
+
+Canonical league seed starts are configurable with `--tuning-seed-start` and `--evaluation-seed-start`. The bounded diagnostic workflow is `node_modules/.bin/vite-node scripts/flop-diagnostics.ts`, with `--training-start`, `--validation-start`, `--evaluation-start` and corresponding `--*-count` flags. It preserves progress and failure artifacts but does not resume interrupted runs. It never changes live defaults. Seeds 41001–41002, 42001 and 43001–43002 are now inspected.

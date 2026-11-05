@@ -1,0 +1,62 @@
+{
+  "weight": 0,
+  "trainingFit": {
+    "weight": 0,
+    "grid": [
+      {
+        "weight": 0,
+        "count": 724,
+        "brier": 0.3225140770739424,
+        "logLoss": 0.5257363926726469
+      },
+      {
+        "weight": 0.25,
+        "count": 724,
+        "brier": 0.3530069665318629,
+        "logLoss": 0.5651466382574833
+      },
+      {
+        "weight": 0.5,
+        "count": 724,
+        "brier": 0.396243655942591,
+        "logLoss": 0.6143501527251722
+      },
+      {
+        "weight": 0.75,
+        "count": 724,
+        "brier": 0.4522241453061262,
+        "logLoss": 0.6736458729500104
+      },
+      {
+        "weight": 1,
+        "count": 724,
+        "brier": 0.5209484346224678,
+        "logLoss": 0.7441103364133187
+      }
+    ]
+  },
+  "validationScores": {
+    "current": {
+      "count": 379,
+      "brier": 0.35320967826788796,
+      "logLoss": 0.5687352995680434
+    },
+    "fitted": {
+      "count": 379,
+      "brier": 0.35320967826788796,
+      "logLoss": 0.5687352995680434
+    },
+    "uniform": {
+      "count": 379,
+      "brier": 0.5277044854881258,
+      "logLoss": 0.7605463937810922
+    },
+    "frequency": {
+      "count": 379,
+      "brier": 0.3258869208936401,
+      "logLoss": 0.5111976861251628
+    }
+  },
+  "rule": "Training minimum log loss on fixed 0/.25/.5/.75/1 grid; validation must improve log loss, otherwise weight zero. No held-out selection.",
+  "frozenAt": "2026-11-05T07:28:50.936Z"
+}

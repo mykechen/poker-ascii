@@ -7,7 +7,11 @@ export type ReplayObservation={match:number;hand:number;seat:number;order:number
 export function replayObservations(rows:ReplayObservation[],model:ResponseModel){
  validateResponseModel(model);
  const beliefs=new Map<string,RangeBeliefs>();
+ let previous:ReplayObservation|undefined;
  return rows.map(row=>{
+  if(previous&&(row.match<previous.match||row.match===previous.match&&(row.hand<previous.hand||row.order<=previous.order)))throw new Error("Replay action order is not increasing.");
+  if(!previous||row.match!==previous.match||row.hand!==previous.hand)beliefs.clear();
+  previous=row;
   const key=`${row.match}:${row.hand}:${row.seat}`;
   let belief=beliefs.get(key);if(!belief){belief=new RangeBeliefs(undefined,0,model);beliefs.set(key,belief);}
   belief.condition(row.known);

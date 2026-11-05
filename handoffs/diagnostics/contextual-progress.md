@@ -9,3 +9,7 @@ Tasks 2–5 pending. No seeds consumed. No fitted parameters or poker-strength c
 Ruling: existing worktree and explicit continuation authorize inline execution and existing-branch pushes; no additional plan approval is required. Shared public context uses existing bucket strings; no numerical boundaries changed.
 
 Tasks 2–3 implemented: optional component/replay capture, shared inference model, independent candidate replay, deterministic gradient/backtracking fits and selection gates. Gradient finite differences pass. Replay integration exactly reproduces observed reference forecasts. One selection test fixture omitted a required large group: corrected fixture rather than weakening the gate. Experiment not run; independent review and runner still pending.
+
+Runner implemented with exact fixed partitions/lineups, quota stop, hashed freeze, alias deduplication, raw accounting, durable partial artifacts and before-batch seed tracking. Independent review in progress. Review found replay retained historical ranges: fixed by clearing on hand/match boundary and rejecting out-of-order streams (regression RED→GREEN). No experiment seeds consumed.
+
+Independent review completed: one important retention issue fixed and covered; no further blocking model/privacy/partition findings. Added held-out support/facing counts and scores requested by review. Full suite 146/146, lint, tsc and diff checks passed. Runner ready for bounded collection. Author review confirms no live defaults changed.

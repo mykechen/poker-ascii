@@ -29,3 +29,7 @@ it("league capture excludes target cards and reproduces observer forecasts",asyn
  const replay=replayObservations(events,{version:1,kind:"current"});
  replay.forEach((r,i)=>r.probabilities.forEach((p,j)=>expect(p).toBeCloseTo(batch.forecasts![i]!.probabilities[j]!,10)));
 });
+it("rejects out-of-order replay histories",()=>{
+ const row:ReplayObservation={match:0,hand:1,seat:1,order:1,board:[],known:[],context,actual:"passive"};
+ expect(()=>replayObservations([row,{...row,order:0}],{version:1,kind:"current"})).toThrow(/order/i);
+});

@@ -22,7 +22,11 @@ Paths are relative to the implementation worktree:
 4. `handoffs/seed-registry.json`
 5. `handoffs/README.md`
 
-## Next task
+## Latest completed work — read first
+
+The contextual pilot is now completed. Read `handoffs/0007-contextual-flop-pilot.md` and the updated queue/registry before doing anything below. The implementation and pilot instructions below describe completed work; do not rerun or reuse the inspected seeds. Next work is an independent confirmation design, not live promotion.
+
+## Previous task (completed)
 
 Write the task-level implementation plan, then implement and run the reviewed contextual flop-response experiment. Follow its model definitions, common-history validation procedure, selection gates, reserved partitions, quota rules and stopping rules. Continue through verified implementation, the bounded experiment, interpretation and handoff; do not stop at proposing the work.
 

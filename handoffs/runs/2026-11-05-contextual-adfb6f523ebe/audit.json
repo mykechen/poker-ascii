@@ -1,0 +1,11 @@
+{
+  "matches": 840,
+  "hands": 1680,
+  "fallbacks": 0,
+  "zeroSum": true,
+  "bb100Recomputed": true,
+  "rotationMeansRecomputed": true,
+  "freezeHashVerified": true,
+  "freezeBeforeEveryEvaluation": true,
+  "trainingFlopObservations": 1422
+}

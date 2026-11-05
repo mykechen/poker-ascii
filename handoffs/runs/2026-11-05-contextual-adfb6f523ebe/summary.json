@@ -1,0 +1,5258 @@
+{
+  "settings": {
+    "hands": 2,
+    "tableSizes": [
+      6,
+      7,
+      8
+    ],
+    "equitySamples": 50,
+    "riverSamples": 16,
+    "quota": 500,
+    "seeds": {
+      "training": [
+        51001,
+        51002,
+        51003,
+        51004
+      ],
+      "topUp": [
+        51005,
+        51006,
+        51007,
+        51008
+      ],
+      "validation": [
+        52001,
+        52002
+      ],
+      "evaluation": [
+        53001,
+        53002,
+        53003,
+        53004
+      ]
+    },
+    "fields": {
+      "training": [
+        {
+          "id": "train-balanced",
+          "opponents": [
+            "chart",
+            "tight",
+            "station",
+            "position",
+            "aggressor"
+          ]
+        },
+        {
+          "id": "train-pressure",
+          "opponents": [
+            "maniac",
+            "station",
+            "chart",
+            "aggressor",
+            "tight"
+          ]
+        },
+        {
+          "id": "train-passive",
+          "opponents": [
+            "station",
+            "maniac",
+            "position",
+            "tight",
+            "chart"
+          ]
+        }
+      ],
+      "validation": [
+        {
+          "id": "validate-position",
+          "opponents": [
+            "position",
+            "station",
+            "aggressor",
+            "chart",
+            "maniac"
+          ]
+        },
+        {
+          "id": "validate-tight",
+          "opponents": [
+            "tight",
+            "maniac",
+            "station",
+            "position",
+            "aggressor"
+          ]
+        }
+      ],
+      "evaluation": [
+        {
+          "id": "evaluate-multiway",
+          "opponents": [
+            "multiway",
+            "learner",
+            "maniac",
+            "station",
+            "tight"
+          ]
+        },
+        {
+          "id": "evaluate-learner",
+          "opponents": [
+            "learner",
+            "multiway",
+            "aggressor",
+            "station",
+            "position"
+          ]
+        }
+      ]
+    },
+    "features": [
+      "intercept",
+      "support:001",
+      "support:010",
+      "support:011",
+      "support:100",
+      "support:101",
+      "support:110",
+      "support:111",
+      "size:free",
+      "size:small",
+      "size:medium",
+      "size:large",
+      "depth:short",
+      "depth:medium",
+      "depth:deep",
+      "position:button",
+      "position:blind",
+      "position:field",
+      "players:heads-up",
+      "players:few",
+      "players:many",
+      "paired",
+      "three-suited"
+    ],
+    "lambdas": [
+      0.001,
+      0.01,
+      0.1,
+      1
+    ],
+    "maxIterations": 200,
+    "gradientTolerance": 0.000001,
+    "eligible": [
+      "current",
+      "uniform",
+      "frequency",
+      "contextual:.001",
+      "contextual:.01",
+      "contextual:.1",
+      "contextual:1"
+    ]
+  },
+  "sourceCommit": "19997c6791a0223f46c2743b1b1e27669da8ac05",
+  "sourceFingerprint": "adfb6f523ebe76141c3b2858c28931e2052f2e8339d5d31d18fce305c9a884f3",
+  "status": "complete",
+  "phase": "evaluation",
+  "training": 4,
+  "validation": 2,
+  "evaluation": 12,
+  "panels": {
+    "training": [
+      1800,
+      1778,
+      1840,
+      1820
+    ],
+    "validation": [
+      1124,
+      1134
+    ]
+  },
+  "fits": [
+    {
+      "converged": false,
+      "model": {
+        "version": 1,
+        "kind": "contextual",
+        "features": [
+          "intercept",
+          "support:001",
+          "support:010",
+          "support:011",
+          "support:100",
+          "support:101",
+          "support:110",
+          "support:111",
+          "size:free",
+          "size:small",
+          "size:medium",
+          "size:large",
+          "depth:short",
+          "depth:medium",
+          "depth:deep",
+          "position:button",
+          "position:blind",
+          "position:field",
+          "players:heads-up",
+          "players:few",
+          "players:many",
+          "paired",
+          "three-suited"
+        ],
+        "coefficients": [
+          [
+            -0.9045684847687624,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -0.6342001443649214,
+            -0.27036834040384156,
+            0,
+            -0.6865704696261635,
+            -0.21799801514259975,
+            0,
+            -0.43620392933889196,
+            -0.07651473950309869,
+            -0.39184981592677237,
+            -0.44407117566657967,
+            -0.024583236345050878,
+            -0.43591407275713245,
+            -0.8304736169794708,
+            -0.17010360155728704,
+            0.09600873376799578,
+            -0.03039038076897548,
+            -0.24286914601269055
+          ],
+          [
+            -0.35868184082504545,
+            0,
+            0,
+            0.9309754335819663,
+            0,
+            0,
+            0,
+            -1.2896572744070105,
+            0.9309754335819663,
+            -0.1608960034263878,
+            -1.1287612709806238,
+            0,
+            0.6637605057253017,
+            -0.24508552597467226,
+            -0.7773568205756745,
+            0.2751537889967476,
+            -0.5522414416662947,
+            -0.08159418815549781,
+            0.008425514154411737,
+            -0.33882826421549306,
+            -0.02827909076396415,
+            0.4604917990677772,
+            -0.05826625907322118
+          ]
+        ],
+        "supports": [
+          "011",
+          "110",
+          "111"
+        ],
+        "lambda": 0.001
+      },
+      "trace": [
+        {
+          "iteration": 0,
+          "loss": 0.733602687686074,
+          "gradientNorm": 0.2978333379544571,
+          "step": 1
+        },
+        {
+          "iteration": 1,
+          "loss": 0.655629330784061,
+          "gradientNorm": 0.22895262743526934,
+          "step": 1
+        },
+        {
+          "iteration": 2,
+          "loss": 0.6083883667981447,
+          "gradientNorm": 0.1855042118597807,
+          "step": 1
+        },
+        {
+          "iteration": 3,
+          "loss": 0.5768209126895194,
+          "gradientNorm": 0.1557893347704549,
+          "step": 1
+        },
+        {
+          "iteration": 4,
+          "loss": 0.5542868551653298,
+          "gradientNorm": 0.1340677395504954,
+          "step": 1
+        },
+        {
+          "iteration": 5,
+          "loss": 0.5374501591152456,
+          "gradientNorm": 0.11747840769037098,
+          "step": 1
+        },
+        {
+          "iteration": 6,
+          "loss": 0.5244320354158157,
+          "gradientNorm": 0.10441792532998351,
+          "step": 1
+        },
+        {
+          "iteration": 7,
+          "loss": 0.5140888972227834,
+          "gradientNorm": 0.09389335579932458,
+          "step": 1
+        },
+        {
+          "iteration": 8,
+          "loss": 0.5056859264913252,
+          "gradientNorm": 0.08524970566096753,
+          "step": 1
+        },
+        {
+          "iteration": 9,
+          "loss": 0.4987309711288681,
+          "gradientNorm": 0.07803668020169786,
+          "step": 1
+        },
+        {
+          "iteration": 10,
+          "loss": 0.4928830402589476,
+          "gradientNorm": 0.07193494010570997,
+          "step": 1
+        },
+        {
+          "iteration": 11,
+          "loss": 0.4878990196550909,
+          "gradientNorm": 0.06671209710524505,
+          "step": 1
+        },
+        {
+          "iteration": 12,
+          "loss": 0.48360127569243505,
+          "gradientNorm": 0.06219522988336056,
+          "step": 1
+        },
+        {
+          "iteration": 13,
+          "loss": 0.4798596176073067,
+          "gradientNorm": 0.05791913550818312,
+          "step": 1
+        },
+        {
+          "iteration": 14,
+          "loss": 0.47687710754492124,
+          "gradientNorm": 0.0490752813053422,
+          "step": 1
+        },
+        {
+          "iteration": 15,
+          "loss": 0.47452529798967913,
+          "gradientNorm": 0.046787740778464135,
+          "step": 1
+        },
+        {
+          "iteration": 16,
+          "loss": 0.47238559399627844,
+          "gradientNorm": 0.04469255307441771,
+          "step": 1
+        },
+        {
+          "iteration": 17,
+          "loss": 0.47043151328365695,
+          "gradientNorm": 0.04276714621745923,
+          "step": 1
+        },
+        {
+          "iteration": 18,
+          "loss": 0.4686407096468814,
+          "gradientNorm": 0.04099225365278498,
+          "step": 1
+        },
+        {
+          "iteration": 19,
+          "loss": 0.4669942102985861,
+          "gradientNorm": 0.03935134799418499,
+          "step": 1
+        },
+        {
+          "iteration": 20,
+          "loss": 0.46547581300406854,
+          "gradientNorm": 0.03783018737313916,
+          "step": 1
+        },
+        {
+          "iteration": 21,
+          "loss": 0.4640716057788725,
+          "gradientNorm": 0.03641644541275383,
+          "step": 1
+        },
+        {
+          "iteration": 22,
+          "loss": 0.46277142497870494,
+          "gradientNorm": 0.03503809761803117,
+          "step": 1
+        },
+        {
+          "iteration": 23,
+          "loss": 0.46156581424997967,
+          "gradientNorm": 0.033711872259036234,
+          "step": 1
+        },
+        {
+          "iteration": 24,
+          "loss": 0.4604635969507678,
+          "gradientNorm": 0.031926437633738314,
+          "step": 1
+        },
+        {
+          "iteration": 25,
+          "loss": 0.45946091466429484,
+          "gradientNorm": 0.03089131933105979,
+          "step": 1
+        },
+        {
+          "iteration": 26,
+          "loss": 0.4585217629734925,
+          "gradientNorm": 0.029917522244776264,
+          "step": 1
+        },
+        {
+          "iteration": 27,
+          "loss": 0.45764050458346334,
+          "gradientNorm": 0.028999826121639684,
+          "step": 1
+        },
+        {
+          "iteration": 28,
+          "loss": 0.45681213932300074,
+          "gradientNorm": 0.028133607517281403,
+          "step": 1
+        },
+        {
+          "iteration": 29,
+          "loss": 0.4560322161068089,
+          "gradientNorm": 0.027314753725528607,
+          "step": 1
+        },
+        {
+          "iteration": 30,
+          "loss": 0.45529675932026153,
+          "gradientNorm": 0.02653959131736799,
+          "step": 1
+        },
+        {
+          "iteration": 31,
+          "loss": 0.4546022069118172,
+          "gradientNorm": 0.02580482646103739,
+          "step": 1
+        },
+        {
+          "iteration": 32,
+          "loss": 0.45394535805061564,
+          "gradientNorm": 0.025107494868218557,
+          "step": 1
+        },
+        {
+          "iteration": 33,
+          "loss": 0.4533233286445525,
+          "gradientNorm": 0.024444919635660232,
+          "step": 1
+        },
+        {
+          "iteration": 34,
+          "loss": 0.45273351335442186,
+          "gradientNorm": 0.023814675580528657,
+          "step": 1
+        },
+        {
+          "iteration": 35,
+          "loss": 0.45217355300601814,
+          "gradientNorm": 0.023214558933934898,
+          "step": 1
+        },
+        {
+          "iteration": 36,
+          "loss": 0.4516413591425457,
+          "gradientNorm": 0.022636602095888293,
+          "step": 1
+        },
+        {
+          "iteration": 37,
+          "loss": 0.45113530613382147,
+          "gradientNorm": 0.02208358606553562,
+          "step": 1
+        },
+        {
+          "iteration": 38,
+          "loss": 0.45066079232733847,
+          "gradientNorm": 0.021531230001201957,
+          "step": 1
+        },
+        {
+          "iteration": 39,
+          "loss": 0.45020698053194735,
+          "gradientNorm": 0.02108571218060183,
+          "step": 1
+        },
+        {
+          "iteration": 40,
+          "loss": 0.4497777501376549,
+          "gradientNorm": 0.020522587912740524,
+          "step": 1
+        },
+        {
+          "iteration": 41,
+          "loss": 0.4493622175327534,
+          "gradientNorm": 0.0201400113562305,
+          "step": 1
+        },
+        {
+          "iteration": 42,
+          "loss": 0.44897378188915016,
+          "gradientNorm": 0.019635906484488215,
+          "step": 1
+        },
+        {
+          "iteration": 43,
+          "loss": 0.448592386019333,
+          "gradientNorm": 0.019212823365334662,
+          "step": 1
+        },
+        {
+          "iteration": 44,
+          "loss": 0.4482373038102942,
+          "gradientNorm": 0.018765009378585187,
+          "step": 1
+        },
+        {
+          "iteration": 45,
+          "loss": 0.44789451371522,
+          "gradientNorm": 0.01829217898816673,
+          "step": 1
+        },
+        {
+          "iteration": 46,
+          "loss": 0.4475679127579635,
+          "gradientNorm": 0.018038288220587468,
+          "step": 1
+        },
+        {
+          "iteration": 47,
+          "loss": 0.4472552834978659,
+          "gradientNorm": 0.017559077478767542,
+          "step": 1
+        },
+        {
+          "iteration": 48,
+          "loss": 0.44695078067238386,
+          "gradientNorm": 0.017338733601170955,
+          "step": 1
+        },
+        {
+          "iteration": 49,
+          "loss": 0.44666650930533935,
+          "gradientNorm": 0.01684097197184116,
+          "step": 1
+        },
+        {
+          "iteration": 50,
+          "loss": 0.44638571167367785,
+          "gradientNorm": 0.016431623267106423,
+          "step": 1
+        },
+        {
+          "iteration": 51,
+          "loss": 0.44612248933465604,
+          "gradientNorm": 0.016442143355711612,
+          "step": 1
+        },
+        {
+          "iteration": 52,
+          "loss": 0.44586741094467663,
+          "gradientNorm": 0.015966337017265776,
+          "step": 1
+        },
+        {
+          "iteration": 53,
+          "loss": 0.44562849142790517,
+          "gradientNorm": 0.014674293952544628,
+          "step": 1
+        },
+        {
+          "iteration": 54,
+          "loss": 0.44541982084874704,
+          "gradientNorm": 0.014770546790415118,
+          "step": 1
+        },
+        {
+          "iteration": 55,
+          "loss": 0.44521580277157974,
+          "gradientNorm": 0.014210182278085213,
+          "step": 1
+        },
+        {
+          "iteration": 56,
+          "loss": 0.44501542169756625,
+          "gradientNorm": 0.013993441513334981,
+          "step": 1
+        },
+        {
+          "iteration": 57,
+          "loss": 0.44482393884380816,
+          "gradientNorm": 0.01404126016692363,
+          "step": 1
+        },
+        {
+          "iteration": 58,
+          "loss": 0.4446428210386176,
+          "gradientNorm": 0.013497663419895325,
+          "step": 1
+        },
+        {
+          "iteration": 59,
+          "loss": 0.444461947106509,
+          "gradientNorm": 0.013303846163397682,
+          "step": 1
+        },
+        {
+          "iteration": 60,
+          "loss": 0.44428665919537286,
+          "gradientNorm": 0.013480543382915253,
+          "step": 1
+        },
+        {
+          "iteration": 61,
+          "loss": 0.4441227592083857,
+          "gradientNorm": 0.012944900648514895,
+          "step": 1
+        },
+        {
+          "iteration": 62,
+          "loss": 0.4439567563127796,
+          "gradientNorm": 0.012722674471485692,
+          "step": 1
+        },
+        {
+          "iteration": 63,
+          "loss": 0.4437974783436429,
+          "gradientNorm": 0.012429942023831872,
+          "step": 1
+        },
+        {
+          "iteration": 64,
+          "loss": 0.44364988809082434,
+          "gradientNorm": 0.012666145613980898,
+          "step": 1
+        },
+        {
+          "iteration": 65,
+          "loss": 0.44350192697832674,
+          "gradientNorm": 0.012100499831275584,
+          "step": 1
+        },
+        {
+          "iteration": 66,
+          "loss": 0.443356447833528,
+          "gradientNorm": 0.011945193819892772,
+          "step": 1
+        },
+        {
+          "iteration": 67,
+          "loss": 0.4432183989880887,
+          "gradientNorm": 0.012192945599529926,
+          "step": 1
+        },
+        {
+          "iteration": 68,
+          "loss": 0.4430852183754494,
+          "gradientNorm": 0.01152198504418229,
+          "step": 1
+        },
+        {
+          "iteration": 69,
+          "loss": 0.442953352113597,
+          "gradientNorm": 0.011359390341862211,
+          "step": 1
+        },
+        {
+          "iteration": 70,
+          "loss": 0.4428266897940523,
+          "gradientNorm": 0.011648728775364617,
+          "step": 1
+        },
+        {
+          "iteration": 71,
+          "loss": 0.4427072404289586,
+          "gradientNorm": 0.011104888620959222,
+          "step": 1
+        },
+        {
+          "iteration": 72,
+          "loss": 0.4425850884689574,
+          "gradientNorm": 0.010889233449472596,
+          "step": 1
+        },
+        {
+          "iteration": 73,
+          "loss": 0.44246719933662265,
+          "gradientNorm": 0.010763648843734394,
+          "step": 1
+        },
+        {
+          "iteration": 74,
+          "loss": 0.4423591648092507,
+          "gradientNorm": 0.010974634771907365,
+          "step": 1
+        },
+        {
+          "iteration": 75,
+          "loss": 0.44224967915370106,
+          "gradientNorm": 0.010403439627284461,
+          "step": 1
+        },
+        {
+          "iteration": 76,
+          "loss": 0.4421443633949224,
+          "gradientNorm": 0.010018302708453318,
+          "step": 1
+        },
+        {
+          "iteration": 77,
+          "loss": 0.44204923934082774,
+          "gradientNorm": 0.010394978838835452,
+          "step": 1
+        },
+        {
+          "iteration": 78,
+          "loss": 0.4419543815984414,
+          "gradientNorm": 0.009808814739283196,
+          "step": 1
+        },
+        {
+          "iteration": 79,
+          "loss": 0.441858678154489,
+          "gradientNorm": 0.009705372933221629,
+          "step": 1
+        },
+        {
+          "iteration": 80,
+          "loss": 0.4417676987175627,
+          "gradientNorm": 0.010093162643672157,
+          "step": 1
+        },
+        {
+          "iteration": 81,
+          "loss": 0.4416806287072689,
+          "gradientNorm": 0.009522594402853593,
+          "step": 1
+        },
+        {
+          "iteration": 82,
+          "loss": 0.4415904165100273,
+          "gradientNorm": 0.009424704178586008,
+          "step": 1
+        },
+        {
+          "iteration": 83,
+          "loss": 0.44150313234239197,
+          "gradientNorm": 0.009812827598659023,
+          "step": 1
+        },
+        {
+          "iteration": 84,
+          "loss": 0.4414233022538345,
+          "gradientNorm": 0.009237606495664205,
+          "step": 1
+        },
+        {
+          "iteration": 85,
+          "loss": 0.4413394557552924,
+          "gradientNorm": 0.009025396776158186,
+          "step": 1
+        },
+        {
+          "iteration": 86,
+          "loss": 0.44125839469777794,
+          "gradientNorm": 0.008938338603239579,
+          "step": 1
+        },
+        {
+          "iteration": 87,
+          "loss": 0.4411855549248338,
+          "gradientNorm": 0.009396139004568788,
+          "step": 1
+        },
+        {
+          "iteration": 88,
+          "loss": 0.4411081817190823,
+          "gradientNorm": 0.008790095603245179,
+          "step": 1
+        },
+        {
+          "iteration": 89,
+          "loss": 0.4410312749690317,
+          "gradientNorm": 0.008708706402247688,
+          "step": 1
+        },
+        {
+          "iteration": 90,
+          "loss": 0.44096037843960567,
+          "gradientNorm": 0.009177378618521864,
+          "step": 1
+        },
+        {
+          "iteration": 91,
+          "loss": 0.44088903625979387,
+          "gradientNorm": 0.008569388416572362,
+          "step": 1
+        },
+        {
+          "iteration": 92,
+          "loss": 0.44081593636084976,
+          "gradientNorm": 0.008491599775746919,
+          "step": 1
+        },
+        {
+          "iteration": 93,
+          "loss": 0.4407468250710651,
+          "gradientNorm": 0.008970998635812256,
+          "step": 1
+        },
+        {
+          "iteration": 94,
+          "loss": 0.4406818686887143,
+          "gradientNorm": 0.008263913437642526,
+          "step": 1
+        },
+        {
+          "iteration": 95,
+          "loss": 0.4406138844904816,
+          "gradientNorm": 0.008189879819122083,
+          "step": 1
+        },
+        {
+          "iteration": 96,
+          "loss": 0.4405479829381428,
+          "gradientNorm": 0.008687226094790211,
+          "step": 1
+        },
+        {
+          "iteration": 97,
+          "loss": 0.44048892678784585,
+          "gradientNorm": 0.008067427728546574,
+          "step": 1
+        },
+        {
+          "iteration": 98,
+          "loss": 0.44042412855829216,
+          "gradientNorm": 0.007997009520309068,
+          "step": 1
+        },
+        {
+          "iteration": 99,
+          "loss": 0.44036045225496295,
+          "gradientNorm": 0.007928264745841969,
+          "step": 1
+        },
+        {
+          "iteration": 100,
+          "loss": 0.440304431261356,
+          "gradientNorm": 0.008466608324293138,
+          "step": 1
+        },
+        {
+          "iteration": 101,
+          "loss": 0.4402436690023116,
+          "gradientNorm": 0.007814406999075806,
+          "step": 1
+        },
+        {
+          "iteration": 102,
+          "loss": 0.4401828642292184,
+          "gradientNorm": 0.007748064405334909,
+          "step": 1
+        },
+        {
+          "iteration": 103,
+          "loss": 0.44012757083399023,
+          "gradientNorm": 0.008293886242126935,
+          "step": 1
+        },
+        {
+          "iteration": 104,
+          "loss": 0.44007168137177016,
+          "gradientNorm": 0.0076396655941870645,
+          "step": 1
+        },
+        {
+          "iteration": 105,
+          "loss": 0.4400135627265552,
+          "gradientNorm": 0.007575556984565126,
+          "step": 1
+        },
+        {
+          "iteration": 106,
+          "loss": 0.4399589830686382,
+          "gradientNorm": 0.008129408921444295,
+          "step": 1
+        },
+        {
+          "iteration": 107,
+          "loss": 0.4399076187992886,
+          "gradientNorm": 0.0074722218587937855,
+          "step": 1
+        },
+        {
+          "iteration": 108,
+          "loss": 0.43985201736806573,
+          "gradientNorm": 0.007410201035980312,
+          "step": 1
+        },
+        {
+          "iteration": 109,
+          "loss": 0.43979831480704756,
+          "gradientNorm": 0.007918786616646842,
+          "step": 1
+        },
+        {
+          "iteration": 110,
+          "loss": 0.43975182890597986,
+          "gradientNorm": 0.00727903550788622,
+          "step": 1
+        },
+        {
+          "iteration": 111,
+          "loss": 0.43969906656847824,
+          "gradientNorm": 0.007218333118798903,
+          "step": 1
+        },
+        {
+          "iteration": 112,
+          "loss": 0.4396471763410581,
+          "gradientNorm": 0.00715927471398932,
+          "step": 1
+        },
+        {
+          "iteration": 113,
+          "loss": 0.4396033149219387,
+          "gradientNorm": 0.007747785055775501,
+          "step": 1
+        },
+        {
+          "iteration": 114,
+          "loss": 0.439553684240784,
+          "gradientNorm": 0.007060433238156625,
+          "step": 1
+        },
+        {
+          "iteration": 115,
+          "loss": 0.43950441542256774,
+          "gradientNorm": 0.006951157834916164,
+          "step": 1
+        },
+        {
+          "iteration": 116,
+          "loss": 0.439462292365602,
+          "gradientNorm": 0.007524147509295859,
+          "step": 1
+        },
+        {
+          "iteration": 117,
+          "loss": 0.4394167415568139,
+          "gradientNorm": 0.0068444835468304864,
+          "step": 1
+        },
+        {
+          "iteration": 118,
+          "loss": 0.4393700882897326,
+          "gradientNorm": 0.006788269021369422,
+          "step": 1
+        },
+        {
+          "iteration": 119,
+          "loss": 0.4393292541796068,
+          "gradientNorm": 0.007376417377874284,
+          "step": 1
+        },
+        {
+          "iteration": 120,
+          "loss": 0.43928674981876226,
+          "gradientNorm": 0.0067053061103701,
+          "step": 1
+        },
+        {
+          "iteration": 121,
+          "loss": 0.4392419713425415,
+          "gradientNorm": 0.006651127024594358,
+          "step": 1
+        },
+        {
+          "iteration": 122,
+          "loss": 0.43920205279066155,
+          "gradientNorm": 0.007251387681261114,
+          "step": 1
+        },
+        {
+          "iteration": 123,
+          "loss": 0.43916280739541574,
+          "gradientNorm": 0.006460762873948945,
+          "step": 1
+        },
+        {
+          "iteration": 124,
+          "loss": 0.43912127122436295,
+          "gradientNorm": 0.006399802669973826,
+          "step": 1
+        },
+        {
+          "iteration": 125,
+          "loss": 0.4390837476612785,
+          "gradientNorm": 0.0070196007629933195,
+          "step": 1
+        },
+        {
+          "iteration": 126,
+          "loss": 0.4390481218002931,
+          "gradientNorm": 0.00631996466447955,
+          "step": 1
+        },
+        {
+          "iteration": 127,
+          "loss": 0.4390083456912419,
+          "gradientNorm": 0.006267830328495936,
+          "step": 1
+        },
+        {
+          "iteration": 128,
+          "loss": 0.4389716412189256,
+          "gradientNorm": 0.006900767330249208,
+          "step": 1
+        },
+        {
+          "iteration": 129,
+          "loss": 0.4389384766726273,
+          "gradientNorm": 0.006174170206829797,
+          "step": 1
+        },
+        {
+          "iteration": 130,
+          "loss": 0.4389005162910378,
+          "gradientNorm": 0.006122699612971552,
+          "step": 1
+        },
+        {
+          "iteration": 131,
+          "loss": 0.43886514635134066,
+          "gradientNorm": 0.006746574603855555,
+          "step": 1
+        },
+        {
+          "iteration": 132,
+          "loss": 0.4388345998294269,
+          "gradientNorm": 0.006026960589973702,
+          "step": 1
+        },
+        {
+          "iteration": 133,
+          "loss": 0.43879843107732536,
+          "gradientNorm": 0.00597577737057675,
+          "step": 1
+        },
+        {
+          "iteration": 134,
+          "loss": 0.4387649244929247,
+          "gradientNorm": 0.006588670013000155,
+          "step": 1
+        },
+        {
+          "iteration": 135,
+          "loss": 0.4387359525818326,
+          "gradientNorm": 0.0059090973221933366,
+          "step": 1
+        },
+        {
+          "iteration": 136,
+          "loss": 0.4387011814203758,
+          "gradientNorm": 0.005859982784639208,
+          "step": 1
+        },
+        {
+          "iteration": 137,
+          "loss": 0.43866921167351797,
+          "gradientNorm": 0.006492277063325891,
+          "step": 1
+        },
+        {
+          "iteration": 138,
+          "loss": 0.4386413621787706,
+          "gradientNorm": 0.005796875515473256,
+          "step": 1
+        },
+        {
+          "iteration": 139,
+          "loss": 0.43860789665178823,
+          "gradientNorm": 0.005749553956130645,
+          "step": 1
+        },
+        {
+          "iteration": 140,
+          "loss": 0.4385785372743195,
+          "gradientNorm": 0.005816011979570947,
+          "step": 1
+        },
+        {
+          "iteration": 141,
+          "loss": 0.438555826805498,
+          "gradientNorm": 0.005591077769528021,
+          "step": 1
+        },
+        {
+          "iteration": 142,
+          "loss": 0.43852503218182376,
+          "gradientNorm": 0.005737405620363485,
+          "step": 1
+        },
+        {
+          "iteration": 143,
+          "loss": 0.4385054606589184,
+          "gradientNorm": 0.005483525677084297,
+          "step": 1
+        },
+        {
+          "iteration": 144,
+          "loss": 0.43847561427619214,
+          "gradientNorm": 0.00540395426203105,
+          "step": 1
+        },
+        {
+          "iteration": 145,
+          "loss": 0.43845498479168776,
+          "gradientNorm": 0.005669064729410993,
+          "step": 1
+        },
+        {
+          "iteration": 146,
+          "loss": 0.4384286568438216,
+          "gradientNorm": 0.005319699895599928,
+          "step": 1
+        },
+        {
+          "iteration": 147,
+          "loss": 0.4384054094054418,
+          "gradientNorm": 0.00560799284149222,
+          "step": 1
+        },
+        {
+          "iteration": 148,
+          "loss": 0.43838331322725893,
+          "gradientNorm": 0.005243214313973933,
+          "step": 1
+        },
+        {
+          "iteration": 149,
+          "loss": 0.43835721964661917,
+          "gradientNorm": 0.005548830890728774,
+          "step": 1
+        },
+        {
+          "iteration": 150,
+          "loss": 0.4383394340422043,
+          "gradientNorm": 0.005173060866716417,
+          "step": 1
+        },
+        {
+          "iteration": 151,
+          "loss": 0.43831283060902326,
+          "gradientNorm": 0.005113384833864726,
+          "step": 1
+        },
+        {
+          "iteration": 152,
+          "loss": 0.4382944481861521,
+          "gradientNorm": 0.005481785912551701,
+          "step": 1
+        },
+        {
+          "iteration": 153,
+          "loss": 0.4382719234339362,
+          "gradientNorm": 0.004936239524158564,
+          "step": 1
+        },
+        {
+          "iteration": 154,
+          "loss": 0.43825135020473266,
+          "gradientNorm": 0.005120049274640945,
+          "step": 1
+        },
+        {
+          "iteration": 155,
+          "loss": 0.43823582245470327,
+          "gradientNorm": 0.004803275389695594,
+          "step": 1
+        },
+        {
+          "iteration": 156,
+          "loss": 0.438213466106442,
+          "gradientNorm": 0.005065817960286564,
+          "step": 1
+        },
+        {
+          "iteration": 157,
+          "loss": 0.4382014574340716,
+          "gradientNorm": 0.004722832539113419,
+          "step": 1
+        },
+        {
+          "iteration": 158,
+          "loss": 0.43817932159494266,
+          "gradientNorm": 0.004652633651575564,
+          "step": 1
+        },
+        {
+          "iteration": 159,
+          "loss": 0.4381659081672065,
+          "gradientNorm": 0.00498286743499077,
+          "step": 1
+        },
+        {
+          "iteration": 160,
+          "loss": 0.4381473020420481,
+          "gradientNorm": 0.00521411949435978,
+          "step": 1
+        },
+        {
+          "iteration": 161,
+          "loss": 0.4381352832214052,
+          "gradientNorm": 0.004956404609806344,
+          "step": 1
+        },
+        {
+          "iteration": 162,
+          "loss": 0.43811471049630896,
+          "gradientNorm": 0.005143683291045163,
+          "step": 1
+        },
+        {
+          "iteration": 163,
+          "loss": 0.4381054410910752,
+          "gradientNorm": 0.004930963276622461,
+          "step": 1
+        },
+        {
+          "iteration": 164,
+          "loss": 0.43808331808726514,
+          "gradientNorm": 0.005081259372795233,
+          "step": 1
+        },
+        {
+          "iteration": 165,
+          "loss": 0.43807631679019393,
+          "gradientNorm": 0.00490592262141638,
+          "step": 1
+        },
+        {
+          "iteration": 166,
+          "loss": 0.4380535866218315,
+          "gradientNorm": 0.004101664974248949,
+          "step": 1
+        },
+        {
+          "iteration": 167,
+          "loss": 0.43804412351181726,
+          "gradientNorm": 0.005022750202603581,
+          "step": 1
+        },
+        {
+          "iteration": 168,
+          "loss": 0.4380290775303695,
+          "gradientNorm": 0.004839259389389098,
+          "step": 1
+        },
+        {
+          "iteration": 169,
+          "loss": 0.4380148728573343,
+          "gradientNorm": 0.004971148596020334,
+          "step": 1
+        },
+        {
+          "iteration": 170,
+          "loss": 0.438001752996273,
+          "gradientNorm": 0.004815697116726048,
+          "step": 1
+        },
+        {
+          "iteration": 171,
+          "loss": 0.4379865016719262,
+          "gradientNorm": 0.0049242031477699545,
+          "step": 1
+        },
+        {
+          "iteration": 172,
+          "loss": 0.43797502788489157,
+          "gradientNorm": 0.004013586112022713,
+          "step": 1
+        },
+        {
+          "iteration": 173,
+          "loss": 0.4379589937805003,
+          "gradientNorm": 0.00397663272998403,
+          "step": 1
+        },
+        {
+          "iteration": 174,
+          "loss": 0.43794731799550524,
+          "gradientNorm": 0.004867314846934779,
+          "step": 1
+        },
+        {
+          "iteration": 175,
+          "loss": 0.43793591513031227,
+          "gradientNorm": 0.003960495557418492,
+          "step": 1
+        },
+        {
+          "iteration": 176,
+          "loss": 0.43792030422167705,
+          "gradientNorm": 0.003923159956142771,
+          "step": 1
+        },
+        {
+          "iteration": 177,
+          "loss": 0.4379096144866089,
+          "gradientNorm": 0.0048159306139748115,
+          "step": 1
+        },
+        {
+          "iteration": 178,
+          "loss": 0.43789809437319616,
+          "gradientNorm": 0.003908743106886332,
+          "step": 1
+        },
+        {
+          "iteration": 179,
+          "loss": 0.4378828903331862,
+          "gradientNorm": 0.0038711389111446034,
+          "step": 1
+        },
+        {
+          "iteration": 180,
+          "loss": 0.4378732625555865,
+          "gradientNorm": 0.004768993770263261,
+          "step": 1
+        },
+        {
+          "iteration": 181,
+          "loss": 0.43786149995709533,
+          "gradientNorm": 0.003858271455804395,
+          "step": 1
+        },
+        {
+          "iteration": 182,
+          "loss": 0.4378466873450393,
+          "gradientNorm": 0.0038205025236585383,
+          "step": 1
+        },
+        {
+          "iteration": 183,
+          "loss": 0.4378381566072626,
+          "gradientNorm": 0.004725718914311479,
+          "step": 1
+        },
+        {
+          "iteration": 184,
+          "loss": 0.4378260730440415,
+          "gradientNorm": 0.003809074920092326,
+          "step": 1
+        },
+        {
+          "iteration": 185,
+          "loss": 0.43781163689161967,
+          "gradientNorm": 0.0037712287647111977,
+          "step": 1
+        },
+        {
+          "iteration": 186,
+          "loss": 0.4378042079359591,
+          "gradientNorm": 0.0046855121166186325,
+          "step": 1
+        },
+        {
+          "iteration": 187,
+          "loss": 0.4377917765789316,
+          "gradientNorm": 0.0037566294596097457,
+          "step": 1
+        },
+        {
+          "iteration": 188,
+          "loss": 0.4377777363099369,
+          "gradientNorm": 0.003718760137201337,
+          "step": 1
+        },
+        {
+          "iteration": 189,
+          "loss": 0.4377714253955691,
+          "gradientNorm": 0.004644324505132586,
+          "step": 1
+        },
+        {
+          "iteration": 190,
+          "loss": 0.43775862724913484,
+          "gradientNorm": 0.003710108757196088,
+          "step": 1
+        },
+        {
+          "iteration": 191,
+          "loss": 0.43774493331969694,
+          "gradientNorm": 0.003672313853804648,
+          "step": 1
+        },
+        {
+          "iteration": 192,
+          "loss": 0.43773967171193906,
+          "gradientNorm": 0.0046091080597696725,
+          "step": 1
+        },
+        {
+          "iteration": 193,
+          "loss": 0.4377264896851801,
+          "gradientNorm": 0.0036649248834874047,
+          "step": 1
+        },
+        {
+          "iteration": 194,
+          "loss": 0.43771371586645447,
+          "gradientNorm": 0.004565281810079398,
+          "step": 1
+        },
+        {
+          "iteration": 195,
+          "loss": 0.4377084070816751,
+          "gradientNorm": 0.0036573938909169133,
+          "step": 1
+        },
+        {
+          "iteration": 196,
+          "loss": 0.4376951040350441,
+          "gradientNorm": 0.003617760226816241,
+          "step": 1
+        },
+        {
+          "iteration": 197,
+          "loss": 0.43768389443604583,
+          "gradientNorm": 0.004536941949871658,
+          "step": 1
+        },
+        {
+          "iteration": 198,
+          "loss": 0.4376776902418872,
+          "gradientNorm": 0.0035684214172584656,
+          "step": 1
+        },
+        {
+          "iteration": 199,
+          "loss": 0.43766502916835204,
+          "gradientNorm": 0.0035285428752183847,
+          "step": 1
+        },
+        {
+          "iteration": 200,
+          "loss": 0.43765555259226124,
+          "gradientNorm": 0.004474991717878167,
+          "step": 0
+        }
+      ],
+      "featureCounts": [
+        1422,
+        0,
+        0,
+        788,
+        0,
+        0,
+        333,
+        301,
+        788,
+        353,
+        281,
+        0,
+        569,
+        285,
+        568,
+        161,
+        489,
+        772,
+        207,
+        1098,
+        117,
+        153,
+        60
+      ]
+    },
+    {
+      "converged": false,
+      "model": {
+        "version": 1,
+        "kind": "contextual",
+        "features": [
+          "intercept",
+          "support:001",
+          "support:010",
+          "support:011",
+          "support:100",
+          "support:101",
+          "support:110",
+          "support:111",
+          "size:free",
+          "size:small",
+          "size:medium",
+          "size:large",
+          "depth:short",
+          "depth:medium",
+          "depth:deep",
+          "position:button",
+          "position:blind",
+          "position:field",
+          "players:heads-up",
+          "players:few",
+          "players:many",
+          "paired",
+          "three-suited"
+        ],
+        "coefficients": [
+          [
+            -0.8030271168293801,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -0.5257713340415112,
+            -0.27725578278786883,
+            0,
+            -0.5546224734978803,
+            -0.24840464333149925,
+            0,
+            -0.4633797977242597,
+            -0.08867367773580119,
+            -0.2509736413693193,
+            -0.3498232422421436,
+            -0.06535805739467203,
+            -0.3878458171925647,
+            -0.46126251866563633,
+            -0.265355455266762,
+            -0.07640914289698184,
+            -0.027668409474131645,
+            -0.11232241735521008
+          ],
+          [
+            -0.21999364037083083,
+            0,
+            0,
+            0.6943373846644664,
+            0,
+            0,
+            0,
+            -0.9143310250352962,
+            0.6943373846644664,
+            -0.10359353853082238,
+            -0.8107374865044743,
+            0,
+            0.549993335780007,
+            -0.23108630345080533,
+            -0.5389006727000325,
+            0.11594722383304384,
+            -0.33846723606184176,
+            0.002526371857967384,
+            -0.011383915682386444,
+            -0.2521100311524408,
+            0.043500306463996455,
+            0.20167110279074116,
+            -0.0656245614965181
+          ]
+        ],
+        "supports": [
+          "011",
+          "110",
+          "111"
+        ],
+        "lambda": 0.01
+      },
+      "trace": [
+        {
+          "iteration": 0,
+          "loss": 0.733602687686074,
+          "gradientNorm": 0.2978333379544571,
+          "step": 1
+        },
+        {
+          "iteration": 1,
+          "loss": 0.6560285019214479,
+          "gradientNorm": 0.2263038658420265,
+          "step": 1
+        },
+        {
+          "iteration": 2,
+          "loss": 0.6100971380900754,
+          "gradientNorm": 0.18138853406540562,
+          "step": 1
+        },
+        {
+          "iteration": 3,
+          "loss": 0.5800602891127045,
+          "gradientNorm": 0.15072319317765487,
+          "step": 1
+        },
+        {
+          "iteration": 4,
+          "loss": 0.5590713903128186,
+          "gradientNorm": 0.12833124446873106,
+          "step": 1
+        },
+        {
+          "iteration": 5,
+          "loss": 0.5437217490659995,
+          "gradientNorm": 0.1112481901086796,
+          "step": 1
+        },
+        {
+          "iteration": 6,
+          "loss": 0.5321070804067713,
+          "gradientNorm": 0.09781304420254104,
+          "step": 1
+        },
+        {
+          "iteration": 7,
+          "loss": 0.5230778153038436,
+          "gradientNorm": 0.08699741673517768,
+          "step": 1
+        },
+        {
+          "iteration": 8,
+          "loss": 0.5159014450798028,
+          "gradientNorm": 0.07812343703960131,
+          "step": 1
+        },
+        {
+          "iteration": 9,
+          "loss": 0.5100914398195174,
+          "gradientNorm": 0.07072546229128744,
+          "step": 1
+        },
+        {
+          "iteration": 10,
+          "loss": 0.50531349434801,
+          "gradientNorm": 0.06447347301110805,
+          "step": 1
+        },
+        {
+          "iteration": 11,
+          "loss": 0.5013312345726141,
+          "gradientNorm": 0.059127411664815804,
+          "step": 1
+        },
+        {
+          "iteration": 12,
+          "loss": 0.4979733856335419,
+          "gradientNorm": 0.054508709324622644,
+          "step": 1
+        },
+        {
+          "iteration": 13,
+          "loss": 0.49511318326472215,
+          "gradientNorm": 0.05048193187625714,
+          "step": 1
+        },
+        {
+          "iteration": 14,
+          "loss": 0.4926550501206589,
+          "gradientNorm": 0.046942611016244445,
+          "step": 1
+        },
+        {
+          "iteration": 15,
+          "loss": 0.4905257329071262,
+          "gradientNorm": 0.04380896809294307,
+          "step": 1
+        },
+        {
+          "iteration": 16,
+          "loss": 0.4886964046915568,
+          "gradientNorm": 0.03700579894208684,
+          "step": 1
+        },
+        {
+          "iteration": 17,
+          "loss": 0.48736311710383284,
+          "gradientNorm": 0.0350637785293353,
+          "step": 1
+        },
+        {
+          "iteration": 18,
+          "loss": 0.4861651683007667,
+          "gradientNorm": 0.03327578070712578,
+          "step": 1
+        },
+        {
+          "iteration": 19,
+          "loss": 0.48508550927602995,
+          "gradientNorm": 0.031624473726077774,
+          "step": 1
+        },
+        {
+          "iteration": 20,
+          "loss": 0.4841097059882941,
+          "gradientNorm": 0.030095109253454006,
+          "step": 1
+        },
+        {
+          "iteration": 21,
+          "loss": 0.4832254616882733,
+          "gradientNorm": 0.028675045097997637,
+          "step": 1
+        },
+        {
+          "iteration": 22,
+          "loss": 0.4824222405815938,
+          "gradientNorm": 0.027353376557206367,
+          "step": 1
+        },
+        {
+          "iteration": 23,
+          "loss": 0.48169096828448865,
+          "gradientNorm": 0.02612064261933894,
+          "step": 1
+        },
+        {
+          "iteration": 24,
+          "loss": 0.48102379138145357,
+          "gradientNorm": 0.024968589338020337,
+          "step": 1
+        },
+        {
+          "iteration": 25,
+          "loss": 0.48041388291583764,
+          "gradientNorm": 0.023889978086405052,
+          "step": 1
+        },
+        {
+          "iteration": 26,
+          "loss": 0.47985528387907284,
+          "gradientNorm": 0.0228784293173231,
+          "step": 1
+        },
+        {
+          "iteration": 27,
+          "loss": 0.479342773137553,
+          "gradientNorm": 0.021928294536806333,
+          "step": 1
+        },
+        {
+          "iteration": 28,
+          "loss": 0.4788717599963055,
+          "gradientNorm": 0.021034550796579603,
+          "step": 1
+        },
+        {
+          "iteration": 29,
+          "loss": 0.4784381949141094,
+          "gradientNorm": 0.020192713250063294,
+          "step": 1
+        },
+        {
+          "iteration": 30,
+          "loss": 0.47803849487522504,
+          "gradientNorm": 0.019398762275047707,
+          "step": 1
+        },
+        {
+          "iteration": 31,
+          "loss": 0.4776694806743666,
+          "gradientNorm": 0.018649082407149804,
+          "step": 1
+        },
+        {
+          "iteration": 32,
+          "loss": 0.4773283239459564,
+          "gradientNorm": 0.017940410901660833,
+          "step": 1
+        },
+        {
+          "iteration": 33,
+          "loss": 0.47701250221100605,
+          "gradientNorm": 0.017269794186668918,
+          "step": 1
+        },
+        {
+          "iteration": 34,
+          "loss": 0.47671976055803733,
+          "gradientNorm": 0.01663455081751111,
+          "step": 1
+        },
+        {
+          "iteration": 35,
+          "loss": 0.47644807884242696,
+          "gradientNorm": 0.016032239814565502,
+          "step": 1
+        },
+        {
+          "iteration": 36,
+          "loss": 0.4761956434991821,
+          "gradientNorm": 0.01546063348049814,
+          "step": 1
+        },
+        {
+          "iteration": 37,
+          "loss": 0.4759608232309354,
+          "gradientNorm": 0.014917693962491553,
+          "step": 1
+        },
+        {
+          "iteration": 38,
+          "loss": 0.47574214796563097,
+          "gradientNorm": 0.01440155295970897,
+          "step": 1
+        },
+        {
+          "iteration": 39,
+          "loss": 0.4755382905847261,
+          "gradientNorm": 0.013910494083927635,
+          "step": 1
+        },
+        {
+          "iteration": 40,
+          "loss": 0.4753480510083329,
+          "gradientNorm": 0.013442937467758018,
+          "step": 1
+        },
+        {
+          "iteration": 41,
+          "loss": 0.4751703422930992,
+          "gradientNorm": 0.012997426284656994,
+          "step": 1
+        },
+        {
+          "iteration": 42,
+          "loss": 0.47500417845503684,
+          "gradientNorm": 0.012572614901526415,
+          "step": 1
+        },
+        {
+          "iteration": 43,
+          "loss": 0.47484866377571855,
+          "gradientNorm": 0.012167258430772836,
+          "step": 1
+        },
+        {
+          "iteration": 44,
+          "loss": 0.47470298338817385,
+          "gradientNorm": 0.011780203486399507,
+          "step": 1
+        },
+        {
+          "iteration": 45,
+          "loss": 0.4745663949701649,
+          "gradientNorm": 0.011410379979670641,
+          "step": 1
+        },
+        {
+          "iteration": 46,
+          "loss": 0.47443822139852065,
+          "gradientNorm": 0.011056793815431712,
+          "step": 1
+        },
+        {
+          "iteration": 47,
+          "loss": 0.4743178442397942,
+          "gradientNorm": 0.010718520371325195,
+          "step": 1
+        },
+        {
+          "iteration": 48,
+          "loss": 0.4742046979706342,
+          "gradientNorm": 0.010394698659729116,
+          "step": 1
+        },
+        {
+          "iteration": 49,
+          "loss": 0.4740982648364083,
+          "gradientNorm": 0.010084526086921387,
+          "step": 1
+        },
+        {
+          "iteration": 50,
+          "loss": 0.4739980702693938,
+          "gradientNorm": 0.009787253736263815,
+          "step": 1
+        },
+        {
+          "iteration": 51,
+          "loss": 0.4739036787986864,
+          "gradientNorm": 0.009502182112526767,
+          "step": 1
+        },
+        {
+          "iteration": 52,
+          "loss": 0.4738147487737853,
+          "gradientNorm": 0.00916429380431121,
+          "step": 1
+        },
+        {
+          "iteration": 53,
+          "loss": 0.47373196620808256,
+          "gradientNorm": 0.008902733996467974,
+          "step": 1
+        },
+        {
+          "iteration": 54,
+          "loss": 0.4736538286951062,
+          "gradientNorm": 0.008651527833202173,
+          "step": 1
+        },
+        {
+          "iteration": 55,
+          "loss": 0.47358002667487525,
+          "gradientNorm": 0.008410136255543346,
+          "step": 1
+        },
+        {
+          "iteration": 56,
+          "loss": 0.4735102746971032,
+          "gradientNorm": 0.008178054162935556,
+          "step": 1
+        },
+        {
+          "iteration": 57,
+          "loss": 0.4734443092813585,
+          "gradientNorm": 0.007954807889114585,
+          "step": 1
+        },
+        {
+          "iteration": 58,
+          "loss": 0.4733818869898596,
+          "gradientNorm": 0.0077399529059538575,
+          "step": 1
+        },
+        {
+          "iteration": 59,
+          "loss": 0.47332278268937417,
+          "gradientNorm": 0.007533071729120685,
+          "step": 1
+        },
+        {
+          "iteration": 60,
+          "loss": 0.47326678798162086,
+          "gradientNorm": 0.007333772003820652,
+          "step": 1
+        },
+        {
+          "iteration": 61,
+          "loss": 0.47321370978403954,
+          "gradientNorm": 0.007141684751729117,
+          "step": 1
+        },
+        {
+          "iteration": 62,
+          "loss": 0.4731633690449928,
+          "gradientNorm": 0.006956462762520784,
+          "step": 1
+        },
+        {
+          "iteration": 63,
+          "loss": 0.4731155995792899,
+          "gradientNorm": 0.006777779115418868,
+          "step": 1
+        },
+        {
+          "iteration": 64,
+          "loss": 0.47307024701161765,
+          "gradientNorm": 0.006605325817943175,
+          "step": 1
+        },
+        {
+          "iteration": 65,
+          "loss": 0.4730271678168082,
+          "gradientNorm": 0.006438812550563323,
+          "step": 1
+        },
+        {
+          "iteration": 66,
+          "loss": 0.47298622844719695,
+          "gradientNorm": 0.006277965507289114,
+          "step": 1
+        },
+        {
+          "iteration": 67,
+          "loss": 0.4729473045383358,
+          "gradientNorm": 0.0061225263233760764,
+          "step": 1
+        },
+        {
+          "iteration": 68,
+          "loss": 0.47291028018534653,
+          "gradientNorm": 0.005972251082318887,
+          "step": 1
+        },
+        {
+          "iteration": 69,
+          "loss": 0.4728750472829837,
+          "gradientNorm": 0.005826909395167194,
+          "step": 1
+        },
+        {
+          "iteration": 70,
+          "loss": 0.4728415049232613,
+          "gradientNorm": 0.0056862835459492505,
+          "step": 1
+        },
+        {
+          "iteration": 71,
+          "loss": 0.4728095588451128,
+          "gradientNorm": 0.00555016769764146,
+          "step": 1
+        },
+        {
+          "iteration": 72,
+          "loss": 0.47277912093115765,
+          "gradientNorm": 0.005418367153693967,
+          "step": 1
+        },
+        {
+          "iteration": 73,
+          "loss": 0.47275041448275346,
+          "gradientNorm": 0.015905272682748713,
+          "step": 1
+        },
+        {
+          "iteration": 74,
+          "loss": 0.4727380381027675,
+          "gradientNorm": 0.005281118634103029,
+          "step": 1
+        },
+        {
+          "iteration": 75,
+          "loss": 0.4727105287182291,
+          "gradientNorm": 0.005137903265981932,
+          "step": 1
+        },
+        {
+          "iteration": 76,
+          "loss": 0.472684481320178,
+          "gradientNorm": 0.0050022703967641125,
+          "step": 1
+        },
+        {
+          "iteration": 77,
+          "loss": 0.4726597827953604,
+          "gradientNorm": 0.004873398324933395,
+          "step": 1
+        },
+        {
+          "iteration": 78,
+          "loss": 0.47263633359242313,
+          "gradientNorm": 0.004750590056700524,
+          "step": 1
+        },
+        {
+          "iteration": 79,
+          "loss": 0.4726140455213637,
+          "gradientNorm": 0.004633249545362175,
+          "step": 1
+        },
+        {
+          "iteration": 80,
+          "loss": 0.47259283998585777,
+          "gradientNorm": 0.004520865290383002,
+          "step": 1
+        },
+        {
+          "iteration": 81,
+          "loss": 0.4725726465371262,
+          "gradientNorm": 0.004412997195112683,
+          "step": 1
+        },
+        {
+          "iteration": 82,
+          "loss": 0.47255340168294624,
+          "gradientNorm": 0.004309265544912531,
+          "step": 1
+        },
+        {
+          "iteration": 83,
+          "loss": 0.47253504790322276,
+          "gradientNorm": 0.0042093416718524835,
+          "step": 1
+        },
+        {
+          "iteration": 84,
+          "loss": 0.47251753283380776,
+          "gradientNorm": 0.004112940048142948,
+          "step": 1
+        },
+        {
+          "iteration": 85,
+          "loss": 0.472500808587638,
+          "gradientNorm": 0.004019811604961481,
+          "step": 1
+        },
+        {
+          "iteration": 86,
+          "loss": 0.4724848311881122,
+          "gradientNorm": 0.003929738100676574,
+          "step": 1
+        },
+        {
+          "iteration": 87,
+          "loss": 0.47246956009430263,
+          "gradientNorm": 0.0038425273837061438,
+          "step": 1
+        },
+        {
+          "iteration": 88,
+          "loss": 0.4724609205331921,
+          "gradientNorm": 0.015172857537517577,
+          "step": 1
+        },
+        {
+          "iteration": 89,
+          "loss": 0.47245892527015715,
+          "gradientNorm": 0.00393658610371568,
+          "step": 1
+        },
+        {
+          "iteration": 90,
+          "loss": 0.4724436557675719,
+          "gradientNorm": 0.0038224096662887756,
+          "step": 1
+        },
+        {
+          "iteration": 91,
+          "loss": 0.47242925016230136,
+          "gradientNorm": 0.0037161049723679566,
+          "step": 1
+        },
+        {
+          "iteration": 92,
+          "loss": 0.4724156272318112,
+          "gradientNorm": 0.003616635251096152,
+          "step": 1
+        },
+        {
+          "iteration": 93,
+          "loss": 0.4724027176677414,
+          "gradientNorm": 0.0035231268004947336,
+          "step": 1
+        },
+        {
+          "iteration": 94,
+          "loss": 0.4723904619205684,
+          "gradientNorm": 0.003434840020308757,
+          "step": 1
+        },
+        {
+          "iteration": 95,
+          "loss": 0.4723789678671567,
+          "gradientNorm": 0.0032667300315267337,
+          "step": 1
+        },
+        {
+          "iteration": 96,
+          "loss": 0.4723684255392793,
+          "gradientNorm": 0.003188694184821047,
+          "step": 1
+        },
+        {
+          "iteration": 97,
+          "loss": 0.4723583752876127,
+          "gradientNorm": 0.003115522875270617,
+          "step": 1
+        },
+        {
+          "iteration": 98,
+          "loss": 0.4723487780154723,
+          "gradientNorm": 0.0030457857461123417,
+          "step": 1
+        },
+        {
+          "iteration": 99,
+          "loss": 0.4723396034935212,
+          "gradientNorm": 0.0029789124618014315,
+          "step": 1
+        },
+        {
+          "iteration": 100,
+          "loss": 0.47233082577188457,
+          "gradientNorm": 0.0029145724848688302,
+          "step": 1
+        },
+        {
+          "iteration": 101,
+          "loss": 0.47232242176973066,
+          "gradientNorm": 0.0028525216591807315,
+          "step": 0.25
+        },
+        {
+          "iteration": 102,
+          "loss": 0.4723218343078292,
+          "gradientNorm": 0.01488525564127703,
+          "step": 0.125
+        },
+        {
+          "iteration": 103,
+          "loss": 0.472321065014967,
+          "gradientNorm": 0.002857710141044746,
+          "step": 1
+        },
+        {
+          "iteration": 104,
+          "loss": 0.47231298826311213,
+          "gradientNorm": 0.0027951742888189194,
+          "step": 1
+        },
+        {
+          "iteration": 105,
+          "loss": 0.47230630052998385,
+          "gradientNorm": 0.014844063800697143,
+          "step": 0.125
+        },
+        {
+          "iteration": 106,
+          "loss": 0.4723060416849062,
+          "gradientNorm": 0.002758017695299239,
+          "step": 1
+        },
+        {
+          "iteration": 107,
+          "loss": 0.4722985201572984,
+          "gradientNorm": 0.0026966053859544727,
+          "step": 1
+        },
+        {
+          "iteration": 108,
+          "loss": 0.47229259405044416,
+          "gradientNorm": 0.014810437852179371,
+          "step": 0.125
+        },
+        {
+          "iteration": 109,
+          "loss": 0.4722922056263643,
+          "gradientNorm": 0.002663286050298685,
+          "step": 1
+        },
+        {
+          "iteration": 110,
+          "loss": 0.4722851933937849,
+          "gradientNorm": 0.002602926868397641,
+          "step": 1
+        },
+        {
+          "iteration": 111,
+          "loss": 0.4722804671606801,
+          "gradientNorm": 0.0147829795718192,
+          "step": 0.125
+        },
+        {
+          "iteration": 112,
+          "loss": 0.4722794542312468,
+          "gradientNorm": 0.0025731962516655324,
+          "step": 1
+        },
+        {
+          "iteration": 113,
+          "loss": 0.47227290978290154,
+          "gradientNorm": 0.002513832371914719,
+          "step": 1
+        },
+        {
+          "iteration": 114,
+          "loss": 0.47226971284491653,
+          "gradientNorm": 0.014760567563729104,
+          "step": 0.25
+        },
+        {
+          "iteration": 115,
+          "loss": 0.47226892639610024,
+          "gradientNorm": 0.00252359482076146,
+          "step": 1
+        },
+        {
+          "iteration": 116,
+          "loss": 0.47226263898588866,
+          "gradientNorm": 0.0024599087081565766,
+          "step": 1
+        },
+        {
+          "iteration": 117,
+          "loss": 0.4722566621263601,
+          "gradientNorm": 0.002400015697871595,
+          "step": 1
+        },
+        {
+          "iteration": 118,
+          "loss": 0.4722509704754634,
+          "gradientNorm": 0.0023434243511686902,
+          "step": 0.5
+        },
+        {
+          "iteration": 119,
+          "loss": 0.4722497692549301,
+          "gradientNorm": 0.01471103611714753,
+          "step": 0.125
+        },
+        {
+          "iteration": 120,
+          "loss": 0.47224940040375635,
+          "gradientNorm": 0.0023508559034799152,
+          "step": 1
+        },
+        {
+          "iteration": 121,
+          "loss": 0.47224394181022405,
+          "gradientNorm": 0.002293557810845721,
+          "step": 1
+        },
+        {
+          "iteration": 122,
+          "loss": 0.47224233033420804,
+          "gradientNorm": 0.014700628453213073,
+          "step": 0.25
+        },
+        {
+          "iteration": 123,
+          "loss": 0.47224135808616535,
+          "gradientNorm": 0.0023182608672860914,
+          "step": 1
+        },
+        {
+          "iteration": 124,
+          "loss": 0.47223605696972965,
+          "gradientNorm": 0.0022557998386885446,
+          "step": 1
+        },
+        {
+          "iteration": 125,
+          "loss": 0.47223103468222727,
+          "gradientNorm": 0.0021975730712479958,
+          "step": 1
+        },
+        {
+          "iteration": 126,
+          "loss": 0.47222626586470245,
+          "gradientNorm": 0.0021430058088997652,
+          "step": 0.25
+        },
+        {
+          "iteration": 127,
+          "loss": 0.47222512121603777,
+          "gradientNorm": 0.0021300787322107847,
+          "step": 0.03125
+        },
+        {
+          "iteration": 128,
+          "loss": 0.4722251054898073,
+          "gradientNorm": 0.01465113765566537,
+          "step": 0.0078125
+        },
+        {
+          "iteration": 129,
+          "loss": 0.4722250560031787,
+          "gradientNorm": 0.002130820001599971,
+          "step": 0.125
+        },
+        {
+          "iteration": 130,
+          "loss": 0.47222465954257414,
+          "gradientNorm": 0.014650059274184635,
+          "step": 0.015625
+        },
+        {
+          "iteration": 131,
+          "loss": 0.4722246435181538,
+          "gradientNorm": 0.0021291288147984697,
+          "step": 0.25
+        },
+        {
+          "iteration": 132,
+          "loss": 0.4722238001286692,
+          "gradientNorm": 0.014648120471076194,
+          "step": 0.015625
+        },
+        {
+          "iteration": 133,
+          "loss": 0.4722236686397826,
+          "gradientNorm": 0.0021209973348173235,
+          "step": 0.25
+        },
+        {
+          "iteration": 134,
+          "loss": 0.47222295393213987,
+          "gradientNorm": 0.014646234277640344,
+          "step": 0.03125
+        },
+        {
+          "iteration": 135,
+          "loss": 0.47222286192487284,
+          "gradientNorm": 0.002117808584094875,
+          "step": 0.5
+        },
+        {
+          "iteration": 136,
+          "loss": 0.4722213894190819,
+          "gradientNorm": 0.014643319792949723,
+          "step": 0.0625
+        },
+        {
+          "iteration": 137,
+          "loss": 0.47222127990083207,
+          "gradientNorm": 0.002111846743331834,
+          "step": 1
+        },
+        {
+          "iteration": 138,
+          "loss": 0.47221876032396864,
+          "gradientNorm": 0.014640836111432657,
+          "step": 0.125
+        },
+        {
+          "iteration": 139,
+          "loss": 0.4722182362006465,
+          "gradientNorm": 0.0021014326184428406,
+          "step": 1
+        },
+        {
+          "iteration": 140,
+          "loss": 0.47221387942085147,
+          "gradientNorm": 0.0020456645421085685,
+          "step": 0.5
+        },
+        {
+          "iteration": 141,
+          "loss": 0.47221180049572353,
+          "gradientNorm": 0.0020194992057660345,
+          "step": 0.25
+        },
+        {
+          "iteration": 142,
+          "loss": 0.4722118000084916,
+          "gradientNorm": 0.014621552532809917,
+          "step": 0.0625
+        },
+        {
+          "iteration": 143,
+          "loss": 0.4722114620575504,
+          "gradientNorm": 0.0020283575801625106,
+          "step": 1
+        },
+        {
+          "iteration": 144,
+          "loss": 0.47220970528944917,
+          "gradientNorm": 0.01462104138228159,
+          "step": 0.125
+        },
+        {
+          "iteration": 145,
+          "loss": 0.47220881993566316,
+          "gradientNorm": 0.0020213700427624513,
+          "step": 1
+        },
+        {
+          "iteration": 146,
+          "loss": 0.4722047907410367,
+          "gradientNorm": 0.0019658796850092904,
+          "step": 0.5
+        },
+        {
+          "iteration": 147,
+          "loss": 0.4722028712153491,
+          "gradientNorm": 0.0019399393301873478,
+          "step": 0.125
+        },
+        {
+          "iteration": 148,
+          "loss": 0.472202401558764,
+          "gradientNorm": 0.0019336459462695364,
+          "step": 0.015625
+        },
+        {
+          "iteration": 149,
+          "loss": 0.472202394322839,
+          "gradientNorm": 0.014596182344183892,
+          "step": 0.00390625
+        },
+        {
+          "iteration": 150,
+          "loss": 0.4722023859958616,
+          "gradientNorm": 0.0019342583459340606,
+          "step": 0.0625
+        },
+        {
+          "iteration": 151,
+          "loss": 0.47220224927583776,
+          "gradientNorm": 0.014595934727438465,
+          "step": 0.0078125
+        },
+        {
+          "iteration": 152,
+          "loss": 0.47220223829899494,
+          "gradientNorm": 0.0019339242106256001,
+          "step": 0.125
+        },
+        {
+          "iteration": 153,
+          "loss": 0.4722019665531435,
+          "gradientNorm": 0.014595490334923746,
+          "step": 0.015625
+        },
+        {
+          "iteration": 154,
+          "loss": 0.4722019444580372,
+          "gradientNorm": 0.0019332795909118602,
+          "step": 0.25
+        },
+        {
+          "iteration": 155,
+          "loss": 0.47220143042707374,
+          "gradientNorm": 0.014594803638077827,
+          "step": 0.03125
+        },
+        {
+          "iteration": 156,
+          "loss": 0.4722013629149019,
+          "gradientNorm": 0.0019320824023659963,
+          "step": 0.5
+        },
+        {
+          "iteration": 157,
+          "loss": 0.472200474145909,
+          "gradientNorm": 0.014594228523316563,
+          "step": 0.0625
+        },
+        {
+          "iteration": 158,
+          "loss": 0.4722002238227132,
+          "gradientNorm": 0.0019300365595812208,
+          "step": 1
+        },
+        {
+          "iteration": 159,
+          "loss": 0.4721990153432253,
+          "gradientNorm": 0.014596192876756606,
+          "step": 0.125
+        },
+        {
+          "iteration": 160,
+          "loss": 0.4721980373924613,
+          "gradientNorm": 0.0019271932359122927,
+          "step": 1
+        },
+        {
+          "iteration": 161,
+          "loss": 0.47219437742430276,
+          "gradientNorm": 0.0018717477934529867,
+          "step": 0.5
+        },
+        {
+          "iteration": 162,
+          "loss": 0.47219263784518845,
+          "gradientNorm": 0.0018459497616508498,
+          "step": 0.125
+        },
+        {
+          "iteration": 163,
+          "loss": 0.4721924913726992,
+          "gradientNorm": 0.01457367537685467,
+          "step": 0.015625
+        },
+        {
+          "iteration": 164,
+          "loss": 0.4721923931289707,
+          "gradientNorm": 0.0018457890209872669,
+          "step": 0.25
+        },
+        {
+          "iteration": 165,
+          "loss": 0.472192086424651,
+          "gradientNorm": 0.01457347498196709,
+          "step": 0.03125
+        },
+        {
+          "iteration": 166,
+          "loss": 0.4721919090456346,
+          "gradientNorm": 0.001845551806938031,
+          "step": 0.5
+        },
+        {
+          "iteration": 167,
+          "loss": 0.4721913876343753,
+          "gradientNorm": 0.014573849014184709,
+          "step": 0.0625
+        },
+        {
+          "iteration": 168,
+          "loss": 0.47219096176834213,
+          "gradientNorm": 0.0018453949368465363,
+          "step": 1
+        },
+        {
+          "iteration": 169,
+          "loss": 0.4721904249248015,
+          "gradientNorm": 0.014577620796927555,
+          "step": 0.125
+        },
+        {
+          "iteration": 170,
+          "loss": 0.47218914696225445,
+          "gradientNorm": 0.0018462072988885776,
+          "step": 1
+        },
+        {
+          "iteration": 171,
+          "loss": 0.47218579035178815,
+          "gradientNorm": 0.0017907605921059528,
+          "step": 0.5
+        },
+        {
+          "iteration": 172,
+          "loss": 0.47218419851454285,
+          "gradientNorm": 0.0017650630322169516,
+          "step": 0.0625
+        },
+        {
+          "iteration": 173,
+          "loss": 0.4721840039705925,
+          "gradientNorm": 0.0017619556740906153,
+          "step": 0.0078125
+        },
+        {
+          "iteration": 174,
+          "loss": 0.4721839975570953,
+          "gradientNorm": 0.01455323395741983,
+          "step": 0.0009765625
+        },
+        {
+          "iteration": 175,
+          "loss": 0.47218399133272,
+          "gradientNorm": 0.0017619729991420767,
+          "step": 0.015625
+        },
+        {
+          "iteration": 176,
+          "loss": 0.47218397663587974,
+          "gradientNorm": 0.014553227249906932,
+          "step": 0.001953125
+        },
+        {
+          "iteration": 177,
+          "loss": 0.4721839660755298,
+          "gradientNorm": 0.0017620079658290692,
+          "step": 0.03125
+        },
+        {
+          "iteration": 178,
+          "loss": 0.47218393521867547,
+          "gradientNorm": 0.014553216845864296,
+          "step": 0.00390625
+        },
+        {
+          "iteration": 179,
+          "loss": 0.472183915635246,
+          "gradientNorm": 0.0017620791604365269,
+          "step": 0.0625
+        },
+        {
+          "iteration": 180,
+          "loss": 0.4721838540828307,
+          "gradientNorm": 0.014553208063044425,
+          "step": 0.0078125
+        },
+        {
+          "iteration": 181,
+          "loss": 0.47218381505012724,
+          "gradientNorm": 0.0017622265539681276,
+          "step": 0.125
+        },
+        {
+          "iteration": 182,
+          "loss": 0.4721836985867372,
+          "gradientNorm": 0.014553238449614389,
+          "step": 0.015625
+        },
+        {
+          "iteration": 183,
+          "loss": 0.47218361505415035,
+          "gradientNorm": 0.001762541036626653,
+          "step": 0.25
+        },
+        {
+          "iteration": 184,
+          "loss": 0.4721834145488803,
+          "gradientNorm": 0.014553489848487559,
+          "step": 0.03125
+        },
+        {
+          "iteration": 185,
+          "loss": 0.4721832197000011,
+          "gradientNorm": 0.0017632462626797857,
+          "step": 0.5
+        },
+        {
+          "iteration": 186,
+          "loss": 0.4721829531248564,
+          "gradientNorm": 0.014554745806108852,
+          "step": 0.0625
+        },
+        {
+          "iteration": 187,
+          "loss": 0.4721824470841095,
+          "gradientNorm": 0.0017649423946857197,
+          "step": 0.5
+        },
+        {
+          "iteration": 188,
+          "loss": 0.47218090124617523,
+          "gradientNorm": 0.0017386558021633134,
+          "step": 0.25
+        },
+        {
+          "iteration": 189,
+          "loss": 0.4721801482762243,
+          "gradientNorm": 0.0017259901876814884,
+          "step": 0.0625
+        },
+        {
+          "iteration": 190,
+          "loss": 0.4721799622540981,
+          "gradientNorm": 0.001722877629339868,
+          "step": 0.001953125
+        },
+        {
+          "iteration": 191,
+          "loss": 0.47217995645678584,
+          "gradientNorm": 0.0017227807554041023,
+          "step": 0.00048828125
+        },
+        {
+          "iteration": 192,
+          "loss": 0.4721799550075897,
+          "gradientNorm": 0.0017227565400945192,
+          "step": 0.000244140625
+        },
+        {
+          "iteration": 193,
+          "loss": 0.4721799544143623,
+          "gradientNorm": 0.014542944372966275,
+          "step": 0.00000762939453125
+        },
+        {
+          "iteration": 194,
+          "loss": 0.4721799543753478,
+          "gradientNorm": 0.0017227477061107605,
+          "step": 0.0001220703125
+        },
+        {
+          "iteration": 195,
+          "loss": 0.4721799542781662,
+          "gradientNorm": 0.014542944429304601,
+          "step": 0.0000152587890625
+        },
+        {
+          "iteration": 196,
+          "loss": 0.47217995419773584,
+          "gradientNorm": 0.0017227481990940185,
+          "step": 0.000244140625
+        },
+        {
+          "iteration": 197,
+          "loss": 0.47217995400580004,
+          "gradientNorm": 0.014542944542162234,
+          "step": 0.000030517578125
+        },
+        {
+          "iteration": 198,
+          "loss": 0.4721799538425158,
+          "gradientNorm": 0.0017227491851337158,
+          "step": 0.00048828125
+        },
+        {
+          "iteration": 199,
+          "loss": 0.4721799534611659,
+          "gradientNorm": 0.014542944768601742,
+          "step": 0.00006103515625
+        },
+        {
+          "iteration": 200,
+          "loss": 0.4721799531320937,
+          "gradientNorm": 0.0017227511575058092,
+          "step": 0
+        }
+      ],
+      "featureCounts": [
+        1422,
+        0,
+        0,
+        788,
+        0,
+        0,
+        333,
+        301,
+        788,
+        353,
+        281,
+        0,
+        569,
+        285,
+        568,
+        161,
+        489,
+        772,
+        207,
+        1098,
+        117,
+        153,
+        60
+      ]
+    },
+    {
+      "converged": true,
+      "model": {
+        "version": 1,
+        "kind": "contextual",
+        "features": [
+          "intercept",
+          "support:001",
+          "support:010",
+          "support:011",
+          "support:100",
+          "support:101",
+          "support:110",
+          "support:111",
+          "size:free",
+          "size:small",
+          "size:medium",
+          "size:large",
+          "depth:short",
+          "depth:medium",
+          "depth:deep",
+          "position:button",
+          "position:blind",
+          "position:field",
+          "players:heads-up",
+          "players:few",
+          "players:many",
+          "paired",
+          "three-suited"
+        ],
+        "coefficients": [
+          [
+            -0.4684635838352957,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -0.3014113308900858,
+            -0.1670522529452099,
+            0,
+            -0.31193036288109655,
+            -0.15653322095419922,
+            0,
+            -0.31326315470794547,
+            -0.08954891149950825,
+            -0.06565151762784202,
+            -0.10701843028611789,
+            -0.07963758134184287,
+            -0.28180757220733493,
+            -0.10836328461456769,
+            -0.30637919505066363,
+            -0.05372110417006443,
+            -0.020351479064559523,
+            -0.027042072962765364
+          ],
+          [
+            -0.03657387741907843,
+            0,
+            0,
+            0.2879029802001815,
+            0,
+            0,
+            0,
+            -0.3244768576192601,
+            0.2879029802001815,
+            -0.02862204618023384,
+            -0.2958548114390263,
+            0,
+            0.21158613339446447,
+            -0.12913460712588254,
+            -0.11902540368766026,
+            -0.0011775621397805058,
+            -0.06651885832191434,
+            0.03112254304261642,
+            -0.010522153587944281,
+            -0.06438914940495748,
+            0.03833742557382333,
+            0.010531193705386528,
+            -0.022821298587344056
+          ]
+        ],
+        "supports": [
+          "011",
+          "110",
+          "111"
+        ],
+        "lambda": 0.1
+      },
+      "trace": [
+        {
+          "iteration": 0,
+          "loss": 0.733602687686074,
+          "gradientNorm": 0.2978333379544571,
+          "step": 1
+        },
+        {
+          "iteration": 1,
+          "loss": 0.6600202132953168,
+          "gradientNorm": 0.19986280144739016,
+          "step": 1
+        },
+        {
+          "iteration": 2,
+          "loss": 0.6259248643483294,
+          "gradientNorm": 0.14288364991263214,
+          "step": 1
+        },
+        {
+          "iteration": 3,
+          "loss": 0.6081835961258286,
+          "gradientNorm": 0.10613807185105674,
+          "step": 1
+        },
+        {
+          "iteration": 4,
+          "loss": 0.5982815475001895,
+          "gradientNorm": 0.08082167519119286,
+          "step": 1
+        },
+        {
+          "iteration": 5,
+          "loss": 0.5924915378890698,
+          "gradientNorm": 0.06268618820012672,
+          "step": 1
+        },
+        {
+          "iteration": 6,
+          "loss": 0.5889849262731072,
+          "gradientNorm": 0.04934324571689258,
+          "step": 1
+        },
+        {
+          "iteration": 7,
+          "loss": 0.5867999747424217,
+          "gradientNorm": 0.039321269958975384,
+          "step": 1
+        },
+        {
+          "iteration": 8,
+          "loss": 0.585405771554504,
+          "gradientNorm": 0.03166410018984311,
+          "step": 1
+        },
+        {
+          "iteration": 9,
+          "loss": 0.5844979437717374,
+          "gradientNorm": 0.025727870950972936,
+          "step": 1
+        },
+        {
+          "iteration": 10,
+          "loss": 0.5838964425172303,
+          "gradientNorm": 0.02106712928420298,
+          "step": 1
+        },
+        {
+          "iteration": 11,
+          "loss": 0.5834918700586844,
+          "gradientNorm": 0.01736689296766567,
+          "step": 1
+        },
+        {
+          "iteration": 12,
+          "loss": 0.5832161855002115,
+          "gradientNorm": 0.01440029741949415,
+          "step": 1
+        },
+        {
+          "iteration": 13,
+          "loss": 0.5830261895874921,
+          "gradientNorm": 0.012001282987681161,
+          "step": 1
+        },
+        {
+          "iteration": 14,
+          "loss": 0.5828939497497686,
+          "gradientNorm": 0.010046503745934179,
+          "step": 1
+        },
+        {
+          "iteration": 15,
+          "loss": 0.5828011098851302,
+          "gradientNorm": 0.008443087496262904,
+          "step": 1
+        },
+        {
+          "iteration": 16,
+          "loss": 0.5827354327609449,
+          "gradientNorm": 0.007120211579264074,
+          "step": 1
+        },
+        {
+          "iteration": 17,
+          "loss": 0.5826886561621375,
+          "gradientNorm": 0.00602322088766719,
+          "step": 1
+        },
+        {
+          "iteration": 18,
+          "loss": 0.5826551388722008,
+          "gradientNorm": 0.00510946795633848,
+          "step": 1
+        },
+        {
+          "iteration": 19,
+          "loss": 0.5826309909882101,
+          "gradientNorm": 0.004345335194006441,
+          "step": 1
+        },
+        {
+          "iteration": 20,
+          "loss": 0.5826135067193785,
+          "gradientNorm": 0.0037040778337622277,
+          "step": 1
+        },
+        {
+          "iteration": 21,
+          "loss": 0.5826007893215113,
+          "gradientNorm": 0.0031642426199821115,
+          "step": 1
+        },
+        {
+          "iteration": 22,
+          "loss": 0.5825914999908035,
+          "gradientNorm": 0.0027084945182359386,
+          "step": 1
+        },
+        {
+          "iteration": 23,
+          "loss": 0.5825846878781865,
+          "gradientNorm": 0.002322735642306243,
+          "step": 1
+        },
+        {
+          "iteration": 24,
+          "loss": 0.5825796738793592,
+          "gradientNorm": 0.00199543577584644,
+          "step": 1
+        },
+        {
+          "iteration": 25,
+          "loss": 0.5825759704896644,
+          "gradientNorm": 0.0017171178822577022,
+          "step": 1
+        },
+        {
+          "iteration": 26,
+          "loss": 0.5825732260986874,
+          "gradientNorm": 0.0014799584926407784,
+          "step": 1
+        },
+        {
+          "iteration": 27,
+          "loss": 0.582571186001094,
+          "gradientNorm": 0.0012774742645376503,
+          "step": 1
+        },
+        {
+          "iteration": 28,
+          "loss": 0.5825696649358334,
+          "gradientNorm": 0.001104273941088581,
+          "step": 1
+        },
+        {
+          "iteration": 29,
+          "loss": 0.5825685276349143,
+          "gradientNorm": 0.0009558605084303529,
+          "step": 1
+        },
+        {
+          "iteration": 30,
+          "loss": 0.5825676749739719,
+          "gradientNorm": 0.0008284722908992461,
+          "step": 1
+        },
+        {
+          "iteration": 31,
+          "loss": 0.5825670340641116,
+          "gradientNorm": 0.0007189545423387359,
+          "step": 1
+        },
+        {
+          "iteration": 32,
+          "loss": 0.5825665511319603,
+          "gradientNorm": 0.0006246551299590483,
+          "step": 1
+        },
+        {
+          "iteration": 33,
+          "loss": 0.5825661863819632,
+          "gradientNorm": 0.0005433393984305601,
+          "step": 1
+        },
+        {
+          "iteration": 34,
+          "loss": 0.5825659102745346,
+          "gradientNorm": 0.0004731204063432889,
+          "step": 1
+        },
+        {
+          "iteration": 35,
+          "loss": 0.5825657008198372,
+          "gradientNorm": 0.00041240155520742784,
+          "step": 1
+        },
+        {
+          "iteration": 36,
+          "loss": 0.5825655416030636,
+          "gradientNorm": 0.00035982925937396294,
+          "step": 1
+        },
+        {
+          "iteration": 37,
+          "loss": 0.5825654203386162,
+          "gradientNorm": 0.00031425378721973305,
+          "step": 1
+        },
+        {
+          "iteration": 38,
+          "loss": 0.5825653278080752,
+          "gradientNorm": 0.00027469677754037735,
+          "step": 1
+        },
+        {
+          "iteration": 39,
+          "loss": 0.5825652570776478,
+          "gradientNorm": 0.00024032422738297552,
+          "step": 1
+        },
+        {
+          "iteration": 40,
+          "loss": 0.5825652029198134,
+          "gradientNorm": 0.0002104239781093549,
+          "step": 1
+        },
+        {
+          "iteration": 41,
+          "loss": 0.5825651613846492,
+          "gradientNorm": 0.0001843869096360765,
+          "step": 1
+        },
+        {
+          "iteration": 42,
+          "loss": 0.5825651294812045,
+          "gradientNorm": 0.00016169119919166088,
+          "step": 1
+        },
+        {
+          "iteration": 43,
+          "loss": 0.5825651049400459,
+          "gradientNorm": 0.00014188911854989844,
+          "step": 1
+        },
+        {
+          "iteration": 44,
+          "loss": 0.5825650860358327,
+          "gradientNorm": 0.0001245959386239038,
+          "step": 1
+        },
+        {
+          "iteration": 45,
+          "loss": 0.5825650714544082,
+          "gradientNorm": 0.00010948058720043284,
+          "step": 1
+        },
+        {
+          "iteration": 46,
+          "loss": 0.5825650601930137,
+          "gradientNorm": 0.00009625776810054314,
+          "step": 1
+        },
+        {
+          "iteration": 47,
+          "loss": 0.5825650514851994,
+          "gradientNorm": 0.00008468130099599209,
+          "step": 1
+        },
+        {
+          "iteration": 48,
+          "loss": 0.5825650447441573,
+          "gradientNorm": 0.00007453848274803691,
+          "step": 1
+        },
+        {
+          "iteration": 49,
+          "loss": 0.5825650395199319,
+          "gradientNorm": 0.00006564530524157381,
+          "step": 1
+        },
+        {
+          "iteration": 50,
+          "loss": 0.5825650354669717,
+          "gradientNorm": 0.000057842392681759064,
+          "step": 1
+        },
+        {
+          "iteration": 51,
+          "loss": 0.5825650323195376,
+          "gradientNorm": 0.00005099154435238411,
+          "step": 1
+        },
+        {
+          "iteration": 52,
+          "loss": 0.5825650298729818,
+          "gradientNorm": 0.000044972787815656525,
+          "step": 1
+        },
+        {
+          "iteration": 53,
+          "loss": 0.5825650279694987,
+          "gradientNorm": 0.000039681863205841247,
+          "step": 1
+        },
+        {
+          "iteration": 54,
+          "loss": 0.5825650264872546,
+          "gradientNorm": 0.00003502807223653811,
+          "step": 1
+        },
+        {
+          "iteration": 55,
+          "loss": 0.5825650253320744,
+          "gradientNorm": 0.000030932436287214236,
+          "step": 1
+        },
+        {
+          "iteration": 56,
+          "loss": 0.5825650244310736,
+          "gradientNorm": 0.000027326116858824465,
+          "step": 1
+        },
+        {
+          "iteration": 57,
+          "loss": 0.5825650237277951,
+          "gradientNorm": 0.000024149059109822436,
+          "step": 1
+        },
+        {
+          "iteration": 58,
+          "loss": 0.5825650231784498,
+          "gradientNorm": 0.00002134882536922329,
+          "step": 1
+        },
+        {
+          "iteration": 59,
+          "loss": 0.5825650227490515,
+          "gradientNorm": 0.000018879590688190418,
+          "step": 1
+        },
+        {
+          "iteration": 60,
+          "loss": 0.582565022413189,
+          "gradientNorm": 0.000016701276807866628,
+          "step": 1
+        },
+        {
+          "iteration": 61,
+          "loss": 0.5825650221503196,
+          "gradientNorm": 0.00001477880454065456,
+          "step": 1
+        },
+        {
+          "iteration": 62,
+          "loss": 0.5825650219444556,
+          "gradientNorm": 0.000013081447597064951,
+          "step": 1
+        },
+        {
+          "iteration": 63,
+          "loss": 0.5825650217831424,
+          "gradientNorm": 0.000011582273443593874,
+          "step": 1
+        },
+        {
+          "iteration": 64,
+          "loss": 0.5825650216566667,
+          "gradientNorm": 0.000010257658925461063,
+          "step": 1
+        },
+        {
+          "iteration": 65,
+          "loss": 0.5825650215574568,
+          "gradientNorm": 0.000009086870202105194,
+          "step": 1
+        },
+        {
+          "iteration": 66,
+          "loss": 0.5825650214795917,
+          "gradientNorm": 0.000008051698074602387,
+          "step": 1
+        },
+        {
+          "iteration": 67,
+          "loss": 0.5825650214184476,
+          "gradientNorm": 0.0000071361410807417824,
+          "step": 1
+        },
+        {
+          "iteration": 68,
+          "loss": 0.5825650213704151,
+          "gradientNorm": 0.000006326129832151411,
+          "step": 1
+        },
+        {
+          "iteration": 69,
+          "loss": 0.5825650213326641,
+          "gradientNorm": 0.000005609287001180494,
+          "step": 1
+        },
+        {
+          "iteration": 70,
+          "loss": 0.582565021302979,
+          "gradientNorm": 0.000004974718157380238,
+          "step": 1
+        },
+        {
+          "iteration": 71,
+          "loss": 0.58256502127963,
+          "gradientNorm": 0.0000044128293298401825,
+          "step": 1
+        },
+        {
+          "iteration": 72,
+          "loss": 0.5825650212612558,
+          "gradientNorm": 0.00000391516774645353,
+          "step": 1
+        },
+        {
+          "iteration": 73,
+          "loss": 0.5825650212467908,
+          "gradientNorm": 0.0000034742826932979334,
+          "step": 1
+        },
+        {
+          "iteration": 74,
+          "loss": 0.5825650212353992,
+          "gradientNorm": 0.0000030836038579743063,
+          "step": 1
+        },
+        {
+          "iteration": 75,
+          "loss": 0.5825650212264242,
+          "gradientNorm": 0.0000027373348798327664,
+          "step": 1
+        },
+        {
+          "iteration": 76,
+          "loss": 0.5825650212193498,
+          "gradientNorm": 0.0000024303601399207345,
+          "step": 1
+        },
+        {
+          "iteration": 77,
+          "loss": 0.5825650212137768,
+          "gradientNorm": 0.000002158163086758041,
+          "step": 1
+        },
+        {
+          "iteration": 78,
+          "loss": 0.5825650212093785,
+          "gradientNorm": 0.0000019167546233497122,
+          "step": 1
+        },
+        {
+          "iteration": 79,
+          "loss": 0.5825650212059099,
+          "gradientNorm": 0.000001702610275795255,
+          "step": 1
+        },
+        {
+          "iteration": 80,
+          "loss": 0.5825650212031719,
+          "gradientNorm": 0.0000015126150330336619,
+          "step": 1
+        },
+        {
+          "iteration": 81,
+          "loss": 0.5825650212010108,
+          "gradientNorm": 0.000001344014892221904,
+          "step": 1
+        },
+        {
+          "iteration": 82,
+          "loss": 0.5825650211993078,
+          "gradientNorm": 0.0000011943742713704155,
+          "step": 1
+        },
+        {
+          "iteration": 83,
+          "loss": 0.5825650211979588,
+          "gradientNorm": 0.0000010615385579106573,
+          "step": 1
+        },
+        {
+          "iteration": 84,
+          "loss": 0.5825650211968944,
+          "gradientNorm": 9.436011573503186e-7,
+          "step": 0
+        }
+      ],
+      "featureCounts": [
+        1422,
+        0,
+        0,
+        788,
+        0,
+        0,
+        333,
+        301,
+        788,
+        353,
+        281,
+        0,
+        569,
+        285,
+        568,
+        161,
+        489,
+        772,
+        207,
+        1098,
+        117,
+        153,
+        60
+      ]
+    },
+    {
+      "converged": true,
+      "model": {
+        "version": 1,
+        "kind": "contextual",
+        "features": [
+          "intercept",
+          "support:001",
+          "support:010",
+          "support:011",
+          "support:100",
+          "support:101",
+          "support:110",
+          "support:111",
+          "size:free",
+          "size:small",
+          "size:medium",
+          "size:large",
+          "depth:short",
+          "depth:medium",
+          "depth:deep",
+          "position:button",
+          "position:blind",
+          "position:field",
+          "players:heads-up",
+          "players:few",
+          "players:many",
+          "paired",
+          "three-suited"
+        ],
+        "coefficients": [
+          [
+            -0.11254643067920513,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -0.07102279220652923,
+            -0.041523638472676046,
+            0,
+            -0.0738700800505119,
+            -0.03867635062869336,
+            0,
+            -0.07692152242335047,
+            -0.02471742698136112,
+            -0.010907481274493687,
+            -0.021356670541876073,
+            -0.022760469191923312,
+            -0.0684292909454059,
+            -0.0165800943497593,
+            -0.08269087913985534,
+            -0.013275457189590589,
+            -0.006584907148170489,
+            -0.004779725684527752
+          ],
+          [
+            0.013016727605103154,
+            0,
+            0,
+            0.059408063282236606,
+            0,
+            0,
+            0,
+            -0.04639133567713345,
+            0.059408063282236606,
+            -0.003311963460615773,
+            -0.043079372216517677,
+            0,
+            0.033716879443034406,
+            -0.02008578059071468,
+            -0.0006143712472165381,
+            -0.0008756498691853936,
+            -0.00009845601127538456,
+            0.013990833485563924,
+            0.0006322782885720443,
+            0.005789531854830068,
+            0.0065949174617010425,
+            0.0008714759356508497,
+            -0.0021401444585161552
+          ]
+        ],
+        "supports": [
+          "011",
+          "110",
+          "111"
+        ],
+        "lambda": 1
+      },
+      "trace": [
+        {
+          "iteration": 0,
+          "loss": 0.733602687686074,
+          "gradientNorm": 0.2978333379544571,
+          "step": 1
+        },
+        {
+          "iteration": 1,
+          "loss": 0.6999373270340083,
+          "gradientNorm": 0.07936007609963072,
+          "step": 1
+        },
+        {
+          "iteration": 2,
+          "loss": 0.6978925480147666,
+          "gradientNorm": 0.029993023935761885,
+          "step": 1
+        },
+        {
+          "iteration": 3,
+          "loss": 0.6976449533209338,
+          "gradientNorm": 0.013918600830858666,
+          "step": 1
+        },
+        {
+          "iteration": 4,
+          "loss": 0.6975960864698232,
+          "gradientNorm": 0.006939454970743476,
+          "step": 1
+        },
+        {
+          "iteration": 5,
+          "loss": 0.6975841562411392,
+          "gradientNorm": 0.003509646901902955,
+          "step": 1
+        },
+        {
+          "iteration": 6,
+          "loss": 0.6975811271367965,
+          "gradientNorm": 0.0017834192047835515,
+          "step": 1
+        },
+        {
+          "iteration": 7,
+          "loss": 0.6975803448667276,
+          "gradientNorm": 0.0009064020247325943,
+          "step": 1
+        },
+        {
+          "iteration": 8,
+          "loss": 0.6975801429743103,
+          "gradientNorm": 0.0004608808946163629,
+          "step": 1
+        },
+        {
+          "iteration": 9,
+          "loss": 0.6975800907619885,
+          "gradientNorm": 0.00023431780912129584,
+          "step": 1
+        },
+        {
+          "iteration": 10,
+          "loss": 0.6975800772682843,
+          "gradientNorm": 0.00011914030922184885,
+          "step": 1
+        },
+        {
+          "iteration": 11,
+          "loss": 0.6975800737795056,
+          "gradientNorm": 0.000060575317011688285,
+          "step": 1
+        },
+        {
+          "iteration": 12,
+          "loss": 0.6975800728776689,
+          "gradientNorm": 0.00003079934761591213,
+          "step": 1
+        },
+        {
+          "iteration": 13,
+          "loss": 0.6975800726445205,
+          "gradientNorm": 0.000015659682127767537,
+          "step": 1
+        },
+        {
+          "iteration": 14,
+          "loss": 0.6975800725842506,
+          "gradientNorm": 0.00000796208160287646,
+          "step": 1
+        },
+        {
+          "iteration": 15,
+          "loss": 0.697580072568669,
+          "gradientNorm": 0.000004048267139631976,
+          "step": 1
+        },
+        {
+          "iteration": 16,
+          "loss": 0.6975800725646419,
+          "gradientNorm": 0.000002058317111396719,
+          "step": 1
+        },
+        {
+          "iteration": 17,
+          "loss": 0.6975800725636,
+          "gradientNorm": 0.0000010465382592052463,
+          "step": 1
+        },
+        {
+          "iteration": 18,
+          "loss": 0.6975800725633321,
+          "gradientNorm": 5.321059137271266e-7,
+          "step": 0
+        }
+      ],
+      "featureCounts": [
+        1422,
+        0,
+        0,
+        788,
+        0,
+        0,
+        333,
+        301,
+        788,
+        353,
+        281,
+        0,
+        569,
+        285,
+        568,
+        161,
+        489,
+        772,
+        207,
+        1098,
+        117,
+        153,
+        60
+      ]
+    }
+  ],
+  "models": {
+    "current": {
+      "version": 1,
+      "kind": "current"
+    },
+    "uniform": {
+      "version": 1,
+      "kind": "uniform"
+    },
+    "frequency": {
+      "version": 1,
+      "kind": "frequency",
+      "frequencies": {
+        "110": [
+          0.01791044776119403,
+          0.982089552238806,
+          0
+        ],
+        "111": [
+          0.11842105263157894,
+          0.8717105263157895,
+          0.009868421052631578
+        ],
+        "011": [
+          0,
+          0.5835443037974684,
+          0.41645569620253164
+        ]
+      }
+    },
+    "contextual:0.1": {
+      "version": 1,
+      "kind": "contextual",
+      "features": [
+        "intercept",
+        "support:001",
+        "support:010",
+        "support:011",
+        "support:100",
+        "support:101",
+        "support:110",
+        "support:111",
+        "size:free",
+        "size:small",
+        "size:medium",
+        "size:large",
+        "depth:short",
+        "depth:medium",
+        "depth:deep",
+        "position:button",
+        "position:blind",
+        "position:field",
+        "players:heads-up",
+        "players:few",
+        "players:many",
+        "paired",
+        "three-suited"
+      ],
+      "coefficients": [
+        [
+          -0.4684635838352957,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -0.3014113308900858,
+          -0.1670522529452099,
+          0,
+          -0.31193036288109655,
+          -0.15653322095419922,
+          0,
+          -0.31326315470794547,
+          -0.08954891149950825,
+          -0.06565151762784202,
+          -0.10701843028611789,
+          -0.07963758134184287,
+          -0.28180757220733493,
+          -0.10836328461456769,
+          -0.30637919505066363,
+          -0.05372110417006443,
+          -0.020351479064559523,
+          -0.027042072962765364
+        ],
+        [
+          -0.03657387741907843,
+          0,
+          0,
+          0.2879029802001815,
+          0,
+          0,
+          0,
+          -0.3244768576192601,
+          0.2879029802001815,
+          -0.02862204618023384,
+          -0.2958548114390263,
+          0,
+          0.21158613339446447,
+          -0.12913460712588254,
+          -0.11902540368766026,
+          -0.0011775621397805058,
+          -0.06651885832191434,
+          0.03112254304261642,
+          -0.010522153587944281,
+          -0.06438914940495748,
+          0.03833742557382333,
+          0.010531193705386528,
+          -0.022821298587344056
+        ]
+      ],
+      "supports": [
+        "011",
+        "110",
+        "111"
+      ],
+      "lambda": 0.1
+    },
+    "contextual:1": {
+      "version": 1,
+      "kind": "contextual",
+      "features": [
+        "intercept",
+        "support:001",
+        "support:010",
+        "support:011",
+        "support:100",
+        "support:101",
+        "support:110",
+        "support:111",
+        "size:free",
+        "size:small",
+        "size:medium",
+        "size:large",
+        "depth:short",
+        "depth:medium",
+        "depth:deep",
+        "position:button",
+        "position:blind",
+        "position:field",
+        "players:heads-up",
+        "players:few",
+        "players:many",
+        "paired",
+        "three-suited"
+      ],
+      "coefficients": [
+        [
+          -0.11254643067920513,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -0.07102279220652923,
+          -0.041523638472676046,
+          0,
+          -0.0738700800505119,
+          -0.03867635062869336,
+          0,
+          -0.07692152242335047,
+          -0.02471742698136112,
+          -0.010907481274493687,
+          -0.021356670541876073,
+          -0.022760469191923312,
+          -0.0684292909454059,
+          -0.0165800943497593,
+          -0.08269087913985534,
+          -0.013275457189590589,
+          -0.006584907148170489,
+          -0.004779725684527752
+        ],
+        [
+          0.013016727605103154,
+          0,
+          0,
+          0.059408063282236606,
+          0,
+          0,
+          0,
+          -0.04639133567713345,
+          0.059408063282236606,
+          -0.003311963460615773,
+          -0.043079372216517677,
+          0,
+          0.033716879443034406,
+          -0.02008578059071468,
+          -0.0006143712472165381,
+          -0.0008756498691853936,
+          -0.00009845601127538456,
+          0.013990833485563924,
+          0.0006322782885720443,
+          0.005789531854830068,
+          0.0065949174617010425,
+          0.0008714759356508497,
+          -0.0021401444585161552
+        ]
+      ],
+      "supports": [
+        "011",
+        "110",
+        "111"
+      ],
+      "lambda": 1
+    }
+  },
+  "metrics": {
+    "current": {
+      "training": {
+        "id": "current",
+        "scores": {
+          "count": 1422,
+          "brier": 0.5049951375537612,
+          "logLoss": 0.7336026876860722
+        },
+        "groups": {
+          "011:false": {
+            "count": 788,
+            "brier": 0.495638933306151,
+            "logLoss": 0.6883777763224871
+          },
+          "110:true": {
+            "count": 333,
+            "brier": 0.4563318278715954,
+            "logLoss": 0.6471404704410889
+          },
+          "111:true": {
+            "count": 301,
+            "brier": 0.5833259384550201,
+            "logLoss": 0.9476530149189143
+          }
+        }
+      },
+      "validation": {
+        "id": "current",
+        "scores": {
+          "count": 422,
+          "brier": 0.6160020929099291,
+          "logLoss": 0.8793835100901605
+        },
+        "groups": {
+          "011:false": {
+            "count": 215,
+            "brier": 0.687148538222302,
+            "logLoss": 0.8917234961759555
+          },
+          "110:true": {
+            "count": 56,
+            "brier": 0.40271350558258007,
+            "logLoss": 0.5903199317148903
+          },
+          "111:true": {
+            "count": 151,
+            "brier": 0.5938012660766245,
+            "logLoss": 0.9690157179084987
+          }
+        }
+      }
+    },
+    "uniform": {
+      "training": {
+        "id": "uniform",
+        "scores": {
+          "count": 1422,
+          "brier": 0.5352789498359096,
+          "logLoss": 0.7789734798149063
+        },
+        "groups": {
+          "011:false": {
+            "count": 788,
+            "brier": 0.5,
+            "logLoss": 0.6931471805599463
+          },
+          "110:true": {
+            "count": 333,
+            "brier": 0.5,
+            "logLoss": 0.6931471805599444
+          },
+          "111:true": {
+            "count": 301,
+            "brier": 0.6666666666666644,
+            "logLoss": 1.0986122886681071
+          }
+        }
+      },
+      "validation": {
+        "id": "uniform",
+        "scores": {
+          "count": 422,
+          "brier": 0.5596366508688772,
+          "logLoss": 0.8382306671104978
+        },
+        "groups": {
+          "011:false": {
+            "count": 215,
+            "brier": 0.5,
+            "logLoss": 0.6931471805599453
+          },
+          "110:true": {
+            "count": 56,
+            "brier": 0.5,
+            "logLoss": 0.693147180559948
+          },
+          "111:true": {
+            "count": 151,
+            "brier": 0.6666666666666677,
+            "logLoss": 1.0986122886681113
+          }
+        }
+      }
+    },
+    "frequency": {
+      "training": {
+        "id": "frequency",
+        "scores": {
+          "count": 1422,
+          "brier": 0.32220929214228605,
+          "logLoss": 0.47910543117721155
+        },
+        "groups": {
+          "011:false": {
+            "count": 788,
+            "brier": 0.4859698392080548,
+            "logLoss": 0.6790506586216005
+          },
+          "110:true": {
+            "count": 333,
+            "brier": 0.029595895739802862,
+            "logLoss": 0.07819737988157528
+          },
+          "111:true": {
+            "count": 301,
+            "brier": 0.21721577026256172,
+            "logLoss": 0.39919028783923777
+          }
+        }
+      },
+      "validation": {
+        "id": "frequency",
+        "scores": {
+          "count": 422,
+          "brier": 0.3553335956955643,
+          "logLoss": 0.5120159344831002
+        },
+        "groups": {
+          "011:false": {
+            "count": 215,
+            "brier": 0.5706917123448475,
+            "logLoss": 0.7645744470286217
+          },
+          "110:true": {
+            "count": 56,
+            "brier": 0.0006415682780128139,
+            "logLoss": 0.018072781059691546
+          },
+          "111:true": {
+            "count": 151,
+            "brier": 0.1802392808332269,
+            "logLoss": 0.3355969702077616
+          }
+        }
+      }
+    },
+    "contextual:0.1": {
+      "training": {
+        "id": "contextual:0.1",
+        "scores": {
+          "count": 1422,
+          "brier": 0.32734353565128965,
+          "logLoss": 0.5211716320501971
+        },
+        "groups": {
+          "011:false": {
+            "count": 788,
+            "brier": 0.4406475500561543,
+            "logLoss": 0.6302459441513854
+          },
+          "110:true": {
+            "count": 333,
+            "brier": 0.07512628158184606,
+            "logLoss": 0.19913430670007082
+          },
+          "111:true": {
+            "count": 301,
+            "brier": 0.3097514501167089,
+            "logLoss": 0.5918954573188182
+          }
+        }
+      },
+      "validation": {
+        "id": "contextual:0.1",
+        "scores": {
+          "count": 422,
+          "brier": 0.3988537448863891,
+          "logLoss": 0.6196836063934194
+        },
+        "groups": {
+          "011:false": {
+            "count": 215,
+            "brier": 0.5572366821389716,
+            "logLoss": 0.7506917142723379
+          },
+          "110:true": {
+            "count": 56,
+            "brier": 0.045989757401170436,
+            "logLoss": 0.15554730486956642
+          },
+          "111:true": {
+            "count": 151,
+            "brier": 0.3042050812431226,
+            "logLoss": 0.6052789023627452
+          }
+        }
+      }
+    },
+    "contextual:1": {
+      "training": {
+        "id": "contextual:1",
+        "scores": {
+          "count": 1422,
+          "brier": 0.4453723985664596,
+          "logLoss": 0.668047191029088
+        },
+        "groups": {
+          "011:false": {
+            "count": 788,
+            "brier": 0.47780619591159085,
+            "logLoss": 0.6685531522669214
+          },
+          "110:true": {
+            "count": 333,
+            "brier": 0.3089707853378711,
+            "logLoss": 0.49444945955714587
+          },
+          "111:true": {
+            "count": 301,
+            "brier": 0.5113654380918916,
+            "logLoss": 0.8587759190182702
+          }
+        }
+      },
+      "validation": {
+        "id": "contextual:1",
+        "scores": {
+          "count": 422,
+          "brier": 0.5488177180959724,
+          "logLoss": 0.8027555909887724
+        },
+        "groups": {
+          "011:false": {
+            "count": 215,
+            "brier": 0.6432632941261919,
+            "logLoss": 0.8419468801638612
+          },
+          "110:true": {
+            "count": 56,
+            "brier": 0.26342188812134537,
+            "logLoss": 0.44279669936048854
+          },
+          "111:true": {
+            "count": 151,
+            "brier": 0.5201843911561167,
+            "logLoss": 0.8804481125685059
+          }
+        }
+      }
+    }
+  },
+  "freeze": {
+    "selected": "frequency",
+    "model": {
+      "version": 1,
+      "kind": "frequency",
+      "frequencies": {
+        "110": [
+          0.01791044776119403,
+          0.982089552238806,
+          0
+        ],
+        "111": [
+          0.11842105263157894,
+          0.8717105263157895,
+          0.009868421052631578
+        ],
+        "011": [
+          0,
+          0.5835443037974684,
+          0.41645569620253164
+        ]
+      }
+    },
+    "modelHash": "78bd7ff1eacf01b079a95ce4553586de9c900d6eb495658a9f88dec464ea759f",
+    "scores": [
+      {
+        "id": "current",
+        "scores": {
+          "count": 422,
+          "brier": 0.6160020929099291,
+          "logLoss": 0.8793835100901605
+        },
+        "groups": {
+          "011:false": {
+            "count": 215,
+            "brier": 0.687148538222302,
+            "logLoss": 0.8917234961759555
+          },
+          "110:true": {
+            "count": 56,
+            "brier": 0.40271350558258007,
+            "logLoss": 0.5903199317148903
+          },
+          "111:true": {
+            "count": 151,
+            "brier": 0.5938012660766245,
+            "logLoss": 0.9690157179084987
+          }
+        }
+      },
+      {
+        "id": "uniform",
+        "scores": {
+          "count": 422,
+          "brier": 0.5596366508688772,
+          "logLoss": 0.8382306671104978
+        },
+        "groups": {
+          "011:false": {
+            "count": 215,
+            "brier": 0.5,
+            "logLoss": 0.6931471805599453
+          },
+          "110:true": {
+            "count": 56,
+            "brier": 0.5,
+            "logLoss": 0.693147180559948
+          },
+          "111:true": {
+            "count": 151,
+            "brier": 0.6666666666666677,
+            "logLoss": 1.0986122886681113
+          }
+        }
+      },
+      {
+        "id": "frequency",
+        "scores": {
+          "count": 422,
+          "brier": 0.3553335956955643,
+          "logLoss": 0.5120159344831002
+        },
+        "groups": {
+          "011:false": {
+            "count": 215,
+            "brier": 0.5706917123448475,
+            "logLoss": 0.7645744470286217
+          },
+          "110:true": {
+            "count": 56,
+            "brier": 0.0006415682780128139,
+            "logLoss": 0.018072781059691546
+          },
+          "111:true": {
+            "count": 151,
+            "brier": 0.1802392808332269,
+            "logLoss": 0.3355969702077616
+          }
+        }
+      },
+      {
+        "id": "contextual:0.1",
+        "scores": {
+          "count": 422,
+          "brier": 0.3988537448863891,
+          "logLoss": 0.6196836063934194
+        },
+        "groups": {
+          "011:false": {
+            "count": 215,
+            "brier": 0.5572366821389716,
+            "logLoss": 0.7506917142723379
+          },
+          "110:true": {
+            "count": 56,
+            "brier": 0.045989757401170436,
+            "logLoss": 0.15554730486956642
+          },
+          "111:true": {
+            "count": 151,
+            "brier": 0.3042050812431226,
+            "logLoss": 0.6052789023627452
+          }
+        }
+      },
+      {
+        "id": "contextual:1",
+        "scores": {
+          "count": 422,
+          "brier": 0.5488177180959724,
+          "logLoss": 0.8027555909887724
+        },
+        "groups": {
+          "011:false": {
+            "count": 215,
+            "brier": 0.6432632941261919,
+            "logLoss": 0.8419468801638612
+          },
+          "110:true": {
+            "count": 56,
+            "brier": 0.26342188812134537,
+            "logLoss": 0.44279669936048854
+          },
+          "111:true": {
+            "count": 151,
+            "brier": 0.5201843911561167,
+            "logLoss": 0.8804481125685059
+          }
+        }
+      }
+    ],
+    "frozenAt": "2026-11-05T09:27:55.791Z",
+    "sourceFingerprint": "adfb6f523ebe76141c3b2858c28931e2052f2e8339d5d31d18fce305c9a884f3"
+  },
+  "results": {
+    "selected": "frequency",
+    "aliases": {},
+    "summaries": [
+      {
+        "id": "frequency",
+        "profit": {
+          "meanBb100": 736.8799603174604,
+          "standardError": 274.4247170719227,
+          "interval95": null,
+          "seeds": [
+            53001,
+            53002,
+            53003,
+            53004
+          ],
+          "seedScores": [
+            417.68353174603163,
+            668.4771825396825,
+            1531.5228174603174,
+            329.8363095238095
+          ],
+          "cellScores": [
+            {
+              "cell": "6:evaluate-learner",
+              "meanBb100": 378.1250000000001
+            },
+            {
+              "cell": "6:evaluate-multiway",
+              "meanBb100": 1164.5833333333333
+            },
+            {
+              "cell": "7:evaluate-learner",
+              "meanBb100": 586.6071428571429
+            },
+            {
+              "cell": "7:evaluate-multiway",
+              "meanBb100": 785.7142857142858
+            },
+            {
+              "cell": "8:evaluate-learner",
+              "meanBb100": 1742.1875
+            },
+            {
+              "cell": "8:evaluate-multiway",
+              "meanBb100": -235.9375
+            }
+          ],
+          "worstCellBb100": -235.9375
+        },
+        "scores": {
+          "count": 916,
+          "brier": 0.474770748343684,
+          "logLoss": 0.7053682853598519
+        },
+        "supportGroups": {
+          "011:false": {
+            "count": 573,
+            "brier": 0.489173033251651,
+            "logLoss": 0.6822841717566175
+          },
+          "110:true": {
+            "count": 22,
+            "brier": 0.8771680268940191,
+            "logLoss": 1.8382083635766528
+          },
+          "111:true": {
+            "count": 321,
+            "brier": 0.4214833670964193,
+            "logLoss": 0.6689343768672744
+          }
+        },
+        "reliability": [
+          {
+            "action": "fold",
+            "bin": 0,
+            "count": 595,
+            "meanPrediction": 0.0006622350432710421,
+            "observedFrequency": 0.01680672268907563
+          },
+          {
+            "action": "fold",
+            "bin": 1,
+            "count": 321,
+            "meanPrediction": 0.11842105263157957,
+            "observedFrequency": 0.2523364485981308
+          },
+          {
+            "action": "fold",
+            "bin": 2,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "fold",
+            "bin": 3,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "fold",
+            "bin": 4,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "fold",
+            "bin": 5,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "fold",
+            "bin": 6,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "fold",
+            "bin": 7,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "fold",
+            "bin": 8,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "fold",
+            "bin": 9,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 0,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 1,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 2,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 3,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 4,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 5,
+            "count": 573,
+            "meanPrediction": 0.5835443037974691,
+            "observedFrequency": 0.5741710296684118
+          },
+          {
+            "action": "passive",
+            "bin": 6,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 7,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 8,
+            "count": 321,
+            "meanPrediction": 0.8717105263157888,
+            "observedFrequency": 0.7414330218068536
+          },
+          {
+            "action": "passive",
+            "bin": 9,
+            "count": 22,
+            "meanPrediction": 0.9820895522388013,
+            "observedFrequency": 0.5454545454545454
+          },
+          {
+            "action": "aggressive",
+            "bin": 0,
+            "count": 343,
+            "meanPrediction": 0.009235461101733903,
+            "observedFrequency": 0.0058309037900874635
+          },
+          {
+            "action": "aggressive",
+            "bin": 1,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 2,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 3,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 4,
+            "count": 573,
+            "meanPrediction": 0.41645569620253253,
+            "observedFrequency": 0.4258289703315881
+          },
+          {
+            "action": "aggressive",
+            "bin": 5,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 6,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 7,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 8,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 9,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          }
+        ],
+        "computeMs": 27908.690291999956
+      },
+      {
+        "id": "current",
+        "profit": {
+          "meanBb100": 701.9903273809523,
+          "standardError": 249.32409486181515,
+          "interval95": null,
+          "seeds": [
+            53001,
+            53002,
+            53003,
+            53004
+          ],
+          "seedScores": [
+            655.2579365079364,
+            578.1498015873017,
+            1384.7222222222224,
+            189.83134920634916
+          ],
+          "cellScores": [
+            {
+              "cell": "6:evaluate-learner",
+              "meanBb100": 882.2916666666667
+            },
+            {
+              "cell": "6:evaluate-multiway",
+              "meanBb100": 527.0833333333333
+            },
+            {
+              "cell": "7:evaluate-learner",
+              "meanBb100": 686.6071428571428
+            },
+            {
+              "cell": "7:evaluate-multiway",
+              "meanBb100": 1177.6785714285713
+            },
+            {
+              "cell": "8:evaluate-learner",
+              "meanBb100": 1038.28125
+            },
+            {
+              "cell": "8:evaluate-multiway",
+              "meanBb100": -100
+            }
+          ],
+          "worstCellBb100": -100
+        },
+        "scores": {
+          "count": 916,
+          "brier": 0.5256632535066841,
+          "logLoss": 0.7796565180406978
+        },
+        "supportGroups": {
+          "011:false": {
+            "count": 573,
+            "brier": 0.49538584499472116,
+            "logLoss": 0.6863724731298066
+          },
+          "110:true": {
+            "count": 22,
+            "brier": 0.5448997548711378,
+            "logLoss": 0.740005355707316
+          },
+          "111:true": {
+            "count": 321,
+            "brier": 0.5783914530310981,
+            "logLoss": 0.9488904224185056
+          }
+        },
+        "reliability": [
+          {
+            "action": "fold",
+            "bin": 0,
+            "count": 573,
+            "meanPrediction": 0,
+            "observedFrequency": 0
+          },
+          {
+            "action": "fold",
+            "bin": 1,
+            "count": 61,
+            "meanPrediction": 0.18395372815627475,
+            "observedFrequency": 0.03278688524590164
+          },
+          {
+            "action": "fold",
+            "bin": 2,
+            "count": 31,
+            "meanPrediction": 0.22023582713540926,
+            "observedFrequency": 0.6129032258064516
+          },
+          {
+            "action": "fold",
+            "bin": 3,
+            "count": 54,
+            "meanPrediction": 0.36293526075930366,
+            "observedFrequency": 0.25925925925925924
+          },
+          {
+            "action": "fold",
+            "bin": 4,
+            "count": 185,
+            "meanPrediction": 0.44466326763678654,
+            "observedFrequency": 0.2864864864864865
+          },
+          {
+            "action": "fold",
+            "bin": 5,
+            "count": 12,
+            "meanPrediction": 0.514101816101547,
+            "observedFrequency": 0.25
+          },
+          {
+            "action": "fold",
+            "bin": 6,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "fold",
+            "bin": 7,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "fold",
+            "bin": 8,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "fold",
+            "bin": 9,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 0,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 1,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 2,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 3,
+            "count": 224,
+            "meanPrediction": 0.36479392444938175,
+            "observedFrequency": 0.7366071428571429
+          },
+          {
+            "action": "passive",
+            "bin": 4,
+            "count": 95,
+            "meanPrediction": 0.47534394553928955,
+            "observedFrequency": 0.7894736842105263
+          },
+          {
+            "action": "passive",
+            "bin": 5,
+            "count": 20,
+            "meanPrediction": 0.5287427964093726,
+            "observedFrequency": 0.45
+          },
+          {
+            "action": "passive",
+            "bin": 6,
+            "count": 177,
+            "meanPrediction": 0.673413937672806,
+            "observedFrequency": 0.3050847457627119
+          },
+          {
+            "action": "passive",
+            "bin": 7,
+            "count": 369,
+            "meanPrediction": 0.7402128816181411,
+            "observedFrequency": 0.6639566395663956
+          },
+          {
+            "action": "passive",
+            "bin": 8,
+            "count": 31,
+            "meanPrediction": 0.8092865534086102,
+            "observedFrequency": 1
+          },
+          {
+            "action": "passive",
+            "bin": 9,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 0,
+            "count": 22,
+            "meanPrediction": 0,
+            "observedFrequency": 0
+          },
+          {
+            "action": "aggressive",
+            "bin": 1,
+            "count": 152,
+            "meanPrediction": 0.1847957084405735,
+            "observedFrequency": 0
+          },
+          {
+            "action": "aggressive",
+            "bin": 2,
+            "count": 506,
+            "meanPrediction": 0.25446034636652953,
+            "observedFrequency": 0.2450592885375494
+          },
+          {
+            "action": "aggressive",
+            "bin": 3,
+            "count": 233,
+            "meanPrediction": 0.3298162980612335,
+            "observedFrequency": 0.51931330472103
+          },
+          {
+            "action": "aggressive",
+            "bin": 4,
+            "count": 3,
+            "meanPrediction": 0.45364262987242765,
+            "observedFrequency": 0.3333333333333333
+          },
+          {
+            "action": "aggressive",
+            "bin": 5,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 6,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 7,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 8,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 9,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          }
+        ],
+        "computeMs": 27762.282084000064
+      },
+      {
+        "id": "equity",
+        "profit": {
+          "meanBb100": 446.5339781746032,
+          "standardError": 260.67613097294037,
+          "interval95": null,
+          "seeds": [
+            53001,
+            53002,
+            53003,
+            53004
+          ],
+          "seedScores": [
+            685.2182539682539,
+            261.8551587301588,
+            1020.7341269841271,
+            -181.671626984127
+          ],
+          "cellScores": [
+            {
+              "cell": "6:evaluate-learner",
+              "meanBb100": -277.0833333333333
+            },
+            {
+              "cell": "6:evaluate-multiway",
+              "meanBb100": 554.1666666666666
+            },
+            {
+              "cell": "7:evaluate-learner",
+              "meanBb100": 170.53571428571422
+            },
+            {
+              "cell": "7:evaluate-multiway",
+              "meanBb100": 1177.6785714285713
+            },
+            {
+              "cell": "8:evaluate-learner",
+              "meanBb100": 1153.90625
+            },
+            {
+              "cell": "8:evaluate-multiway",
+              "meanBb100": -100
+            }
+          ],
+          "worstCellBb100": -277.0833333333333
+        },
+        "scores": {
+          "count": 916,
+          "brier": 0.5256519407417916,
+          "logLoss": 0.7796406210699289
+        },
+        "supportGroups": {
+          "011:false": {
+            "count": 573,
+            "brier": 0.4953799707671756,
+            "logLoss": 0.6863644995350343
+          },
+          "110:true": {
+            "count": 22,
+            "brier": 0.5448997548711378,
+            "logLoss": 0.740005355707316
+          },
+          "111:true": {
+            "count": 321,
+            "brier": 0.578369656893223,
+            "logLoss": 0.9488592923393163
+          }
+        },
+        "reliability": [
+          {
+            "action": "fold",
+            "bin": 0,
+            "count": 573,
+            "meanPrediction": 0,
+            "observedFrequency": 0
+          },
+          {
+            "action": "fold",
+            "bin": 1,
+            "count": 61,
+            "meanPrediction": 0.18395372815627475,
+            "observedFrequency": 0.03278688524590164
+          },
+          {
+            "action": "fold",
+            "bin": 2,
+            "count": 31,
+            "meanPrediction": 0.22023582713540926,
+            "observedFrequency": 0.6129032258064516
+          },
+          {
+            "action": "fold",
+            "bin": 3,
+            "count": 54,
+            "meanPrediction": 0.36293526075930366,
+            "observedFrequency": 0.25925925925925924
+          },
+          {
+            "action": "fold",
+            "bin": 4,
+            "count": 185,
+            "meanPrediction": 0.44468863818468246,
+            "observedFrequency": 0.2864864864864865
+          },
+          {
+            "action": "fold",
+            "bin": 5,
+            "count": 12,
+            "meanPrediction": 0.514101816101547,
+            "observedFrequency": 0.25
+          },
+          {
+            "action": "fold",
+            "bin": 6,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "fold",
+            "bin": 7,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "fold",
+            "bin": 8,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "fold",
+            "bin": 9,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 0,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 1,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 2,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "passive",
+            "bin": 3,
+            "count": 224,
+            "meanPrediction": 0.3647893404179291,
+            "observedFrequency": 0.7366071428571429
+          },
+          {
+            "action": "passive",
+            "bin": 4,
+            "count": 95,
+            "meanPrediction": 0.47534394553928955,
+            "observedFrequency": 0.7894736842105263
+          },
+          {
+            "action": "passive",
+            "bin": 5,
+            "count": 20,
+            "meanPrediction": 0.5287427964093726,
+            "observedFrequency": 0.45
+          },
+          {
+            "action": "passive",
+            "bin": 6,
+            "count": 177,
+            "meanPrediction": 0.673413937672806,
+            "observedFrequency": 0.3050847457627119
+          },
+          {
+            "action": "passive",
+            "bin": 7,
+            "count": 369,
+            "meanPrediction": 0.7402222491259227,
+            "observedFrequency": 0.6639566395663956
+          },
+          {
+            "action": "passive",
+            "bin": 8,
+            "count": 31,
+            "meanPrediction": 0.8092865534086102,
+            "observedFrequency": 1
+          },
+          {
+            "action": "passive",
+            "bin": 9,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 0,
+            "count": 22,
+            "meanPrediction": 0,
+            "observedFrequency": 0
+          },
+          {
+            "action": "aggressive",
+            "bin": 1,
+            "count": 152,
+            "meanPrediction": 0.18477158522797274,
+            "observedFrequency": 0
+          },
+          {
+            "action": "aggressive",
+            "bin": 2,
+            "count": 506,
+            "meanPrediction": 0.25445351512073616,
+            "observedFrequency": 0.2450592885375494
+          },
+          {
+            "action": "aggressive",
+            "bin": 3,
+            "count": 233,
+            "meanPrediction": 0.3298162980612335,
+            "observedFrequency": 0.51931330472103
+          },
+          {
+            "action": "aggressive",
+            "bin": 4,
+            "count": 3,
+            "meanPrediction": 0.45364262987242765,
+            "observedFrequency": 0.3333333333333333
+          },
+          {
+            "action": "aggressive",
+            "bin": 5,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 6,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 7,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 8,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          },
+          {
+            "action": "aggressive",
+            "bin": 9,
+            "count": 0,
+            "meanPrediction": null,
+            "observedFrequency": null
+          }
+        ],
+        "computeMs": 27651.609917000053
+      }
+    ],
+    "deltas": [
+      {
+        "versus": "current",
+        "meanBb100": 34.889632936507944,
+        "standardError": 91.68937201118493,
+        "interval95": null,
+        "seeds": [
+          53001,
+          53002,
+          53003,
+          53004
+        ],
+        "seedScores": [
+          -237.5744047619047,
+          90.32738095238089,
+          146.80059523809518,
+          140.0049603174604
+        ],
+        "cellScores": [
+          {
+            "cell": "6:evaluate-learner",
+            "meanBb100": -504.16666666666663
+          },
+          {
+            "cell": "6:evaluate-multiway",
+            "meanBb100": 637.5
+          },
+          {
+            "cell": "7:evaluate-learner",
+            "meanBb100": -99.99999999999991
+          },
+          {
+            "cell": "7:evaluate-multiway",
+            "meanBb100": -391.96428571428567
+          },
+          {
+            "cell": "8:evaluate-learner",
+            "meanBb100": 703.90625
+          },
+          {
+            "cell": "8:evaluate-multiway",
+            "meanBb100": -135.9375
+          }
+        ],
+        "worstCellBb100": -504.16666666666663
+      },
+      {
+        "versus": "equity",
+        "meanBb100": 290.34598214285717,
+        "standardError": 187.5852241614599,
+        "interval95": null,
+        "seeds": [
+          53001,
+          53002,
+          53003,
+          53004
+        ],
+        "seedScores": [
+          -267.5347222222221,
+          406.6220238095237,
+          510.78869047619054,
+          511.50793650793656
+        ],
+        "cellScores": [
+          {
+            "cell": "6:evaluate-learner",
+            "meanBb100": 655.2083333333335
+          },
+          {
+            "cell": "6:evaluate-multiway",
+            "meanBb100": 610.4166666666665
+          },
+          {
+            "cell": "7:evaluate-learner",
+            "meanBb100": 416.07142857142867
+          },
+          {
+            "cell": "7:evaluate-multiway",
+            "meanBb100": -391.96428571428567
+          },
+          {
+            "cell": "8:evaluate-learner",
+            "meanBb100": 588.28125
+          },
+          {
+            "cell": "8:evaluate-multiway",
+            "meanBb100": -135.9375
+          }
+        ],
+        "worstCellBb100": -391.96428571428567
+      }
+    ],
+    "limitations": [
+      "Four seed batches: exploratory; conventional intervals omitted.",
+      "Heuristic opponents only; prediction improvement is not poker strength."
+    ]
+  },
+  "error": null,
+  "accounting": {
+    "hands": 1680,
+    "matches": 840,
+    "fallbacks": 0,
+    "nonconserving": 0
+  }
+}

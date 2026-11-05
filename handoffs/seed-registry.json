@@ -1,18 +1,276 @@
 {
   "purpose": "Prevent inspected evidence from becoming a fresh holdout; update before each tracked experiment.",
   "retired_inspected_ranges": [
-    {"start": 0, "end": 10004, "reason": "Conservative retirement of legacy prototype/test and initial screening seed space; not all values were run."},
-    {"start": 20001, "end": 20002, "reason": "No-memory tuning and historical profiling reuse"},
-    {"start": 30001, "end": 30003, "reason": "No-memory held-out evaluation"},
-    {"start": 41000, "end": 41002, "reason": "Flop instrumentation test and training screen"},
-    {"start": 42001, "end": 42001, "reason": "Flop validation screen"},
-    {"start": 43001, "end": 43002, "reason": "Flop held-out evaluation screen"}
+    {
+      "start": 0,
+      "end": 10004,
+      "reason": "Conservative retirement of legacy prototype/test and initial screening seed space; not all values were run."
+    },
+    {
+      "start": 20001,
+      "end": 20002,
+      "reason": "No-memory tuning and historical profiling reuse"
+    },
+    {
+      "start": 30001,
+      "end": 30003,
+      "reason": "No-memory held-out evaluation"
+    },
+    {
+      "start": 41000,
+      "end": 41002,
+      "reason": "Flop instrumentation test and training screen"
+    },
+    {
+      "start": 42001,
+      "end": 42001,
+      "reason": "Flop validation screen"
+    },
+    {
+      "start": 43001,
+      "end": 43002,
+      "reason": "Flop held-out evaluation screen"
+    },
+    {
+      "start": 51001,
+      "end": 51004,
+      "reason": "Contextual training; run contextual-adfb6f523ebe completed"
+    },
+    {
+      "start": 52001,
+      "end": 52002,
+      "reason": "Contextual common-panel validation; run contextual-adfb6f523ebe completed"
+    },
+    {
+      "start": 53001,
+      "end": 53004,
+      "reason": "Contextual frozen on-policy evaluation; run contextual-adfb6f523ebe completed"
+    }
   ],
   "reserved_not_run": [
-    {"start": 51001, "end": 51004, "role": "Contextual flop training"},
-    {"start": 51005, "end": 51008, "role": "Prespecified training-only quota top-up"},
-    {"start": 52001, "end": 52002, "role": "Contextual flop validation"},
-    {"start": 53001, "end": 53004, "role": "Contextual flop evaluation"}
+    {
+      "start": 51005,
+      "end": 51008,
+      "role": "Prespecified training-only quota top-up"
+    }
   ],
-  "reservation_spec": "docs/superpowers/specs/2026-11-05-contextual-flop-model-design.md"
+  "reservation_spec": "docs/superpowers/specs/2026-11-05-contextual-flop-model-design.md",
+  "started_batches": [
+    {
+      "seed": 51001,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:23:12.481Z",
+      "reservation": {
+        "start": 51001,
+        "end": 51004,
+        "role": "Contextual flop training"
+      }
+    },
+    {
+      "seed": 51002,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:23:23.197Z",
+      "reservation": {
+        "start": 51001,
+        "end": 51004,
+        "role": "Contextual flop training"
+      }
+    },
+    {
+      "seed": 51003,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:23:33.576Z",
+      "reservation": {
+        "start": 51001,
+        "end": 51004,
+        "role": "Contextual flop training"
+      }
+    },
+    {
+      "seed": 51004,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:23:44.711Z",
+      "reservation": {
+        "start": 51001,
+        "end": 51004,
+        "role": "Contextual flop training"
+      }
+    },
+    {
+      "seed": 52001,
+      "phase": "validation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:24:06.060Z",
+      "reservation": {
+        "start": 52001,
+        "end": 52002,
+        "role": "Contextual flop validation"
+      }
+    },
+    {
+      "seed": 52002,
+      "phase": "validation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:24:12.783Z",
+      "reservation": {
+        "start": 52001,
+        "end": 52002,
+        "role": "Contextual flop validation"
+      }
+    },
+    {
+      "seed": 53001,
+      "phase": "evaluation",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:27:55.944Z",
+      "reservation": {
+        "start": 53001,
+        "end": 53004,
+        "role": "Contextual flop evaluation"
+      }
+    },
+    {
+      "seed": 53002,
+      "phase": "evaluation",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:28:02.919Z",
+      "reservation": {
+        "start": 53001,
+        "end": 53004,
+        "role": "Contextual flop evaluation"
+      }
+    },
+    {
+      "seed": 53003,
+      "phase": "evaluation",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:28:10.240Z",
+      "reservation": {
+        "start": 53001,
+        "end": 53004,
+        "role": "Contextual flop evaluation"
+      }
+    },
+    {
+      "seed": 53004,
+      "phase": "evaluation",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:28:17.262Z",
+      "reservation": {
+        "start": 53001,
+        "end": 53004,
+        "role": "Contextual flop evaluation"
+      }
+    },
+    {
+      "seed": 53001,
+      "phase": "evaluation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:28:24.533Z",
+      "reservation": {
+        "start": 53001,
+        "end": 53004,
+        "role": "Contextual flop evaluation"
+      }
+    },
+    {
+      "seed": 53002,
+      "phase": "evaluation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:28:31.551Z",
+      "reservation": {
+        "start": 53001,
+        "end": 53004,
+        "role": "Contextual flop evaluation"
+      }
+    },
+    {
+      "seed": 53003,
+      "phase": "evaluation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:28:38.798Z",
+      "reservation": {
+        "start": 53001,
+        "end": 53004,
+        "role": "Contextual flop evaluation"
+      }
+    },
+    {
+      "seed": 53004,
+      "phase": "evaluation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:28:45.860Z",
+      "reservation": {
+        "start": 53001,
+        "end": 53004,
+        "role": "Contextual flop evaluation"
+      }
+    },
+    {
+      "seed": 53001,
+      "phase": "evaluation",
+      "id": "equity",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:28:53.094Z",
+      "reservation": {
+        "start": 53001,
+        "end": 53004,
+        "role": "Contextual flop evaluation"
+      }
+    },
+    {
+      "seed": 53002,
+      "phase": "evaluation",
+      "id": "equity",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:29:00.029Z",
+      "reservation": {
+        "start": 53001,
+        "end": 53004,
+        "role": "Contextual flop evaluation"
+      }
+    },
+    {
+      "seed": 53003,
+      "phase": "evaluation",
+      "id": "equity",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:29:07.355Z",
+      "reservation": {
+        "start": 53001,
+        "end": 53004,
+        "role": "Contextual flop evaluation"
+      }
+    },
+    {
+      "seed": 53004,
+      "phase": "evaluation",
+      "id": "equity",
+      "directory": "handoffs/runs/2026-11-05-contextual-adfb6f523ebe",
+      "startedAt": "2026-11-05T09:29:14.493Z",
+      "reservation": {
+        "start": 53001,
+        "end": 53004,
+        "role": "Contextual flop evaluation"
+      }
+    }
+  ]
 }

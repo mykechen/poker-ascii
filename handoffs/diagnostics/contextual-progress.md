@@ -13,3 +13,5 @@ Tasks 2–3 implemented: optional component/replay capture, shared inference mod
 Runner implemented with exact fixed partitions/lineups, quota stop, hashed freeze, alias deduplication, raw accounting, durable partial artifacts and before-batch seed tracking. Independent review in progress. Review found replay retained historical ranges: fixed by clearing on hand/match boundary and rejecting out-of-order streams (regression RED→GREEN). No experiment seeds consumed.
 
 Independent review completed: one important retention issue fixed and covered; no further blocking model/privacy/partition findings. Added held-out support/facing counts and scores requested by review. Full suite 146/146, lint, tsc and diff checks passed. Runner ready for bounded collection. Author review confirms no live defaults changed.
+
+Tasks 1–5 complete. Run contextual-adfb6f523ebe completed with frequency selected, profit superiority unproven. 146 tests and all static checks pass. Raw audit 840 matches / 1680 hands passed. See handoffs/0007-contextual-flop-pilot.md.

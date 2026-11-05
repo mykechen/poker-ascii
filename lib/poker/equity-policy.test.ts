@@ -1,0 +1,31 @@
+import { expect, it } from "vitest";
+import { createEquityPolicy } from "./equity-policy";
+import { playMatch } from "./train";
+import { simplePolicy } from "./bot";
+it("plays legal six-player hands without accessing hidden information",()=>{
+ const policy=createEquityPolicy({samples:50,seed:4});
+ const report=playMatch({seats:Array.from({length:6},(_,i)=>({name:`P${i}`,policy:i===0?policy:simplePolicy})),hands:3,invalidAction:"throw"});
+ expect(report.fallbacks.every(n=>n===0)).toBe(true);
+ expect(report.net.reduce((a,b)=>a+b,0)).toBe(0);
+});
+
+it("values a short-stack call only against eligible pot layers including folded money", async()=>{
+ const {createTable,apply}=await import("./engine");
+ const {projectForPlayer}=await import("./view");
+ let state=createTable();
+ for(let seat=0;seat<4;seat++) state=apply(state,{type:"sit",seat,name:`P${seat}`,stack:200});
+ state=apply(state,{type:"startHand"});
+ const view=projectForPlayer(state,state.toAct);
+ const actor=view.toAct!;
+ const others=view.seats.filter(s=>s.inHand&&s.seat!==actor);
+ view.board=["2c","3d","7h","9s","Jc"]; view.street="river";
+ view.seats[actor]!.hole=["Ah","Ad"];
+ others[2]!.folded=true;
+ view.validActions=[{action:"fold"},{action:"call",amount:3}];
+ view.seats[actor]!.stack=3;
+ view.log=[{seat:null,name:null,action:"deal",amount:null,raiseTo:null,street:"preflop",stackAfter:null,potAfter:0,text:"deal"},...others.map((s,i)=>({seat:s.seat,name:s.name,action:"all_in" as const,amount:i===2?3:10,raiseTo:i===2?3:10,street:"river" as const,stackAfter:0,potAfter:23,text:"contribution"}))];
+ let value=0;
+ const policy=createEquityPolicy({rangeFor:(_v,seat)=>[{cards:seat===others[0]!.seat?["Kh","Kd"]:["Qh","Qd"],weight:1}],onDecision:d=>{value=d.showdownCallValue;}});
+ expect(policy(view).action).toBe("call");
+ expect(value).toBe(9);
+});

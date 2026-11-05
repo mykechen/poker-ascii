@@ -1,3 +1,4 @@
+import {blendResponse} from "./forecast-diagnostics";
 import { uniformRange, type WeightedHand } from "./equity";
 import { handFeatures } from "./hand-features";
 import type { ActionClass } from "./opponent";
@@ -34,7 +35,7 @@ const comboKey = (cards: [Card, Card]) => [...cards].sort().join("");
 export class RangeBeliefs {
   private weights = [1 / 3, 1 / 3, 1 / 3];
   private ranges: WeightedHand[][] = [];
-  constructor(private readonly initial: WeightedHand[] = uniformRange()) { this.newHand(); }
+  constructor(private readonly initial: WeightedHand[] = uniformRange(), private readonly flopUniformWeight = 0) { blendResponse([0,1,0],flopUniformWeight); this.newHand(); }
   newHand(resetTypes = false, retention = 1): void {
     if (!Number.isFinite(retention) || retention < 0 || retention > 1) throw new Error("Style retention must be between zero and one.");
     this.weights = this.weights.map(p => retention * p + (1 - retention) / 3);
@@ -53,7 +54,8 @@ export class RangeBeliefs {
     const features = new Map(this.ranges[0]!.map(h => [comboKey(h.cards), handFeatures(h.cards, board)]));
     const prediction: [number, number, number] = [0, 0, 0];
     const weighted = this.ranges.map((range, style) => range.map(h => {
-      const probabilities = probabilitiesForFeatures(features.get(comboKey(h.cards))!, context, style);
+      const raw = probabilitiesForFeatures(features.get(comboKey(h.cards))!, context, style);
+      const probabilities = board.length===3 && this.flopUniformWeight>0 ? blendResponse(raw,this.flopUniformWeight) : raw;
       probabilities.forEach((p, i) => { prediction[i] += this.weights[style]! * h.weight * p; });
       return { ...h, weight: h.weight * probabilities[index]! };
     }));

@@ -58,3 +58,14 @@ it("returns pre-action predictive probabilities before conditioning",()=>{
 it("assigns no aggression probability when public rules close raising",()=>{
  expect(actionProbabilities(["Ah","Ad"],[],{...context,canRaise:false},1)[2]).toBe(0);
 });
+it("applies the global uniform likelihood on flop only without remembering hands",()=>{
+ const fitted=new RangeBeliefs(range,1);
+ const before=fitted.mixture();
+ const prediction=fitted.observe(["3c","8d","Js"],{...context,canRaise:false},"passive");
+ expect(prediction[0]).toBeCloseTo(.5);expect(prediction[1]).toBeCloseTo(.5);expect(prediction[2]).toBe(0);
+ expect(fitted.mixture()).toEqual(before);
+ const original=new RangeBeliefs(range);
+ fitted.newHand(true);
+ expect(fitted.observe([],context,"aggressive")).toEqual(original.observe([],context,"aggressive"));
+ expect(()=>new RangeBeliefs(range,2)).toThrow();
+});

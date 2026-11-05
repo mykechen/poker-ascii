@@ -1,3 +1,4 @@
+import {seedRange} from "../lib/poker/forecast-diagnostics";
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from "node:fs";
@@ -20,7 +21,7 @@ const outputIndex = process.argv.indexOf("--output");
 const output = outputIndex < 0 ? "data/no-memory-calibration.json" : process.argv[outputIndex + 1];
 if (!output || output.startsWith("--")) throw new Error("--output requires a path.");
 const plan: LeaguePlan = {
-  hands, tableSizes: [6, 7, 8], tuningSeeds: Array.from({ length: tuningCount }, (_, i) => 20001 + i), evaluationSeeds: Array.from({ length: evaluationCount }, (_, i) => 30001 + i),
+  hands, tableSizes: [6, 7, 8], tuningSeeds: seedRange(flag("tuning-seed-start",20001),tuningCount), evaluationSeeds: seedRange(flag("evaluation-seed-start",30001),evaluationCount),
   tuningFields: [{ id: "balanced-train", opponents: ["chart", "tight", "station", "position"] }, { id: "pressure-train", opponents: ["aggressor", "position", "chart"] }],
   evaluationFields: [{ id: "unseen-mix", opponents: ["multiway", "learner", "maniac", "station", "tight"] }, { id: "unseen-pressure", opponents: ["maniac", "learner", "multiway"] }],
 };

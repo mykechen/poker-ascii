@@ -35,3 +35,15 @@ it("rejects empty or invalid standalone batch inputs before simulation",async()=
  expect(()=>runLeagueBatch(config,1,[],[6],1)).toThrow(/field/);
  expect(()=>runLeagueBatch(config,1,[{id:"field",opponents:["chart"]}],[2],1)).toThrow(/table/);
 });
+it("collects public forecast contexts and maps rotated opponents by participant name",async()=>{
+ const {runLeagueBatch}=await import("./league");
+ const batch=runLeagueBatch({id:"diagnostic",mode:"equity",styleRetention:1,riverRiskPenalty:1,equitySamples:2,riverSamples:2},41000,[{id:"field",opponents:["station","tight"]}],[6],1,true);
+ expect(batch.forecasts!.length).toBeGreaterThan(0);
+ for(const row of batch.forecasts!){
+  const participant=Number(row.opponentName!.replace("opponent-",""));
+  expect(row.family).toBe(participant%2===1?"station":"tight");
+  expect(row.probabilities.reduce((a,b)=>a+b,0)).toBeCloseTo(1);
+  expect(row).not.toHaveProperty("hole");expect(row).not.toHaveProperty("cards");
+  expect(row.observerGroup).not.toBe("unknown");
+ }
+},30000);

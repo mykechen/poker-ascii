@@ -1,14 +1,15 @@
 import type { Policy } from "./bot";
 import { createEquityPolicy, type EquityPolicyOptions } from "./equity-policy";
 import { OpponentModel, type ActionClass } from "./opponent";
-import { decisionContext } from "./hand-features";
+import type { ForecastRecord } from "./forecast-diagnostics";
+import { handFeatures, decisionContext } from "./hand-features";
 import { RangeBeliefs } from "./range-beliefs";
 import { evaluateRiverActions, type RiverResult } from "./river-ev";
 import type { Card, Street } from "./types";
 import type { PublicView } from "./view";
 
 type Evidence = { seat: number; street: Street; board: Card[]; facing: boolean; action: ActionClass };
-export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor"> & { priorStrength?: number; learn?: boolean; styleRetention?: number; riverRiskPenalty?: number; riverSamples?: number | false; onRiverDecision?: (result: RiverResult) => void; onPrediction?: (record: {street: Street; probabilities: [number, number, number]; actual: ActionClass; facing: boolean}) => void } = {}) {
+export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor"> & { priorStrength?: number; learn?: boolean; styleRetention?: number; riverRiskPenalty?: number; riverSamples?: number | false; onRiverDecision?: (result: RiverResult) => void; flopUniformWeight?: number; onPrediction?: (record: ForecastRecord & {facing:boolean}) => void } = {}) {
   const learn=options.learn??false;
   const retention=options.styleRetention??1;
   if(!Number.isFinite(retention)||retention<0||retention>1)throw new Error("Style retention must be between zero and one.");
@@ -21,7 +22,7 @@ export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor
   const knownCards=(view:PublicView)=>[...view.board,...view.seats.flatMap(s=>Array.isArray(s.hole)?s.hole:[])];
   const beliefFor=(seat:number)=>{
     let belief=beliefs.get(seat);
-    if(!belief) {belief=new RangeBeliefs();beliefs.set(seat,belief);}
+    if(!belief) {belief=new RangeBeliefs(undefined,options.flopUniformWeight??0);beliefs.set(seat,belief);}
     return belief;
   };
   const ensureHand=(view:PublicView)=>{
@@ -59,7 +60,14 @@ export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor
       const belief=beliefFor(seat);
       belief.condition(knownCards(before));
       const probabilities=belief.observe(before.board,decisionContext(before,seat),action);
-      options.onPrediction?.({street:before.street,probabilities,actual:action,facing});
+      if(options.onPrediction) {
+        const observer=before.seats.find(s=>s.seat!==seat&&Array.isArray(s.hole)&&s.hole.length===2);
+        const hole=observer?.hole;
+        const features=Array.isArray(hole)?handFeatures([hole[0]!,hole[1]!],before.board):null;
+        const paired=new Set(before.board.map(c=>c[0])).size<before.board.length;
+        const suited=["c","d","h","s"].some(suit=>before.board.filter(c=>c[1]===suit).length>=3);
+        options.onPrediction({street:before.street,probabilities,actual:action,facing,seat,opponentName:before.seats[seat]!.name,hand:before.handNumber,context:decisionContext(before,seat),observerGroup:features?.group??"unknown",observerDraw:features?.draw??false,boardTexture:`${paired?"paired":"unpaired"}:${suited?"three-suited":"mixed"}`,livePlayers:before.seats.filter(s=>s.inHand&&!s.folded).length});
+      }
       inferences++;
       if(learn) {model.record(ids[seat]!,before.street,facing,action);count++;}
       if(learn)evidence.push(event);

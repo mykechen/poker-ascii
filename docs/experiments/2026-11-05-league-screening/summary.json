@@ -1,0 +1,571 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "319c58cfd958fc6680ff1f84b717d00248951e2d69a866875f38af1b7433269b",
+  "sourceHash": "cc45abb7e90fefbc3e190d120c0cde0534c58fdaa635710f0fd7ec2e13c1a133",
+  "sourceCommit": "f6756673c6a4bbf774916e3a81903d0a449fb75c",
+  "plan": {
+    "hands": 12,
+    "tableSizes": [
+      6,
+      7,
+      8
+    ],
+    "tuningSeeds": [
+      101,
+      102
+    ],
+    "evaluationSeeds": [
+      10001,
+      10002,
+      10003
+    ],
+    "tuningFields": [
+      {
+        "id": "balanced-train",
+        "opponents": [
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "id": "pressure-train",
+        "opponents": [
+          "aggressor",
+          "position",
+          "chart"
+        ]
+      }
+    ],
+    "evaluationFields": [
+      {
+        "id": "unseen-mix",
+        "opponents": [
+          "multiway",
+          "learner",
+          "maniac",
+          "station",
+          "tight"
+        ]
+      },
+      {
+        "id": "unseen-pressure",
+        "opponents": [
+          "maniac",
+          "learner",
+          "multiway"
+        ]
+      }
+    ]
+  },
+  "grid": [
+    {
+      "mode": "adaptive",
+      "equitySamples": 50,
+      "riverSamples": 16,
+      "styleRetention": 1,
+      "riverRiskPenalty": 0,
+      "id": "full-memory"
+    },
+    {
+      "mode": "adaptive",
+      "equitySamples": 50,
+      "riverSamples": 16,
+      "styleRetention": 0.8,
+      "riverRiskPenalty": 0,
+      "id": "tempered"
+    },
+    {
+      "mode": "adaptive",
+      "equitySamples": 50,
+      "riverSamples": 16,
+      "styleRetention": 0.8,
+      "riverRiskPenalty": 1,
+      "id": "tempered-cautious"
+    }
+  ],
+  "selected": {
+    "mode": "adaptive",
+    "equitySamples": 50,
+    "riverSamples": 16,
+    "styleRetention": 1,
+    "riverRiskPenalty": 0,
+    "id": "full-memory"
+  },
+  "complete": true,
+  "results": {
+    "tuningScores": [
+      {
+        "id": "full-memory",
+        "meanBb100": 629.7288359788361,
+        "standardError": 147.56531084656098,
+        "interval95": null,
+        "seeds": [
+          101,
+          102
+        ],
+        "seedScores": [
+          482.163525132275,
+          777.294146825397
+        ],
+        "cellScores": [
+          {
+            "cell": "6:balanced-train",
+            "meanBb100": 1073.2638888888887
+          },
+          {
+            "cell": "6:pressure-train",
+            "meanBb100": 203.47222222222217
+          },
+          {
+            "cell": "7:balanced-train",
+            "meanBb100": 682.7380952380952
+          },
+          {
+            "cell": "7:pressure-train",
+            "meanBb100": -511.3095238095238
+          },
+          {
+            "cell": "8:balanced-train",
+            "meanBb100": 2360.4166666666665
+          },
+          {
+            "cell": "8:pressure-train",
+            "meanBb100": -30.208333333333314
+          }
+        ],
+        "worstCellBb100": -511.3095238095238
+      },
+      {
+        "id": "tempered",
+        "meanBb100": 490.0297619047619,
+        "standardError": 108.79216269841277,
+        "interval95": null,
+        "seeds": [
+          101,
+          102
+        ],
+        "seedScores": [
+          381.23759920634916,
+          598.8219246031747
+        ],
+        "cellScores": [
+          {
+            "cell": "6:balanced-train",
+            "meanBb100": 1082.2916666666667
+          },
+          {
+            "cell": "6:pressure-train",
+            "meanBb100": 305.20833333333337
+          },
+          {
+            "cell": "7:balanced-train",
+            "meanBb100": 588.0952380952382
+          },
+          {
+            "cell": "7:pressure-train",
+            "meanBb100": -187.49999999999994
+          },
+          {
+            "cell": "8:balanced-train",
+            "meanBb100": 1410.9375
+          },
+          {
+            "cell": "8:pressure-train",
+            "meanBb100": -258.85416666666663
+          }
+        ],
+        "worstCellBb100": -258.85416666666663
+      },
+      {
+        "id": "tempered-cautious",
+        "meanBb100": 514.300181878307,
+        "standardError": 101.04786706349208,
+        "interval95": null,
+        "seeds": [
+          101,
+          102
+        ],
+        "seedScores": [
+          413.25231481481484,
+          615.348048941799
+        ],
+        "cellScores": [
+          {
+            "cell": "6:balanced-train",
+            "meanBb100": 987.1527777777778
+          },
+          {
+            "cell": "6:pressure-train",
+            "meanBb100": 226.73611111111111
+          },
+          {
+            "cell": "7:balanced-train",
+            "meanBb100": 684.2261904761904
+          },
+          {
+            "cell": "7:pressure-train",
+            "meanBb100": -146.42857142857144
+          },
+          {
+            "cell": "8:balanced-train",
+            "meanBb100": 1505.2083333333335
+          },
+          {
+            "cell": "8:pressure-train",
+            "meanBb100": -171.09375
+          }
+        ],
+        "worstCellBb100": -171.09375
+      }
+    ],
+    "summaries": [
+      {
+        "id": "full-memory",
+        "configuration": {
+          "mode": "adaptive",
+          "equitySamples": 50,
+          "riverSamples": 16,
+          "styleRetention": 1,
+          "riverRiskPenalty": 0,
+          "id": "full-memory"
+        },
+        "meanBb100": 1188.7607473544974,
+        "standardError": 227.05454870520828,
+        "interval95": null,
+        "seeds": [
+          10001,
+          10002,
+          10003
+        ],
+        "seedScores": [
+          989.0170304232803,
+          1641.8154761904761,
+          935.4497354497356
+        ],
+        "cellScores": [
+          {
+            "cell": "6:unseen-mix",
+            "meanBb100": 1168.9814814814815
+          },
+          {
+            "cell": "6:unseen-pressure",
+            "meanBb100": 967.824074074074
+          },
+          {
+            "cell": "7:unseen-mix",
+            "meanBb100": 1681.547619047619
+          },
+          {
+            "cell": "7:unseen-pressure",
+            "meanBb100": 958.1349206349205
+          },
+          {
+            "cell": "8:unseen-mix",
+            "meanBb100": 818.75
+          },
+          {
+            "cell": "8:unseen-pressure",
+            "meanBb100": 1537.3263888888887
+          }
+        ],
+        "worstCellBb100": 818.75
+      },
+      {
+        "id": "frozen-control",
+        "configuration": {
+          "mode": "frozen",
+          "equitySamples": 50,
+          "riverSamples": 16,
+          "styleRetention": 1,
+          "riverRiskPenalty": 0,
+          "id": "frozen-control"
+        },
+        "meanBb100": 1244.123401675485,
+        "standardError": 261.9390774062583,
+        "interval95": null,
+        "seeds": [
+          10001,
+          10002,
+          10003
+        ],
+        "seedScores": [
+          1428.6003637566137,
+          1576.5170304232804,
+          727.2528108465607
+        ],
+        "cellScores": [
+          {
+            "cell": "6:unseen-mix",
+            "meanBb100": 1217.1296296296296
+          },
+          {
+            "cell": "6:unseen-pressure",
+            "meanBb100": 777.5462962962962
+          },
+          {
+            "cell": "7:unseen-mix",
+            "meanBb100": 1718.2539682539682
+          },
+          {
+            "cell": "7:unseen-pressure",
+            "meanBb100": 963.0952380952381
+          },
+          {
+            "cell": "8:unseen-mix",
+            "meanBb100": 1454.6875
+          },
+          {
+            "cell": "8:unseen-pressure",
+            "meanBb100": 1334.0277777777776
+          }
+        ],
+        "worstCellBb100": 777.5462962962962
+      },
+      {
+        "id": "equity-control",
+        "configuration": {
+          "mode": "equity",
+          "equitySamples": 50,
+          "riverSamples": 16,
+          "styleRetention": 1,
+          "riverRiskPenalty": 0,
+          "id": "equity-control"
+        },
+        "meanBb100": 1202.8935185185185,
+        "standardError": 204.9176788361797,
+        "interval95": null,
+        "seeds": [
+          10001,
+          10002,
+          10003
+        ],
+        "seedScores": [
+          1100.0454695767194,
+          1597.8877314814815,
+          910.7473544973545
+        ],
+        "cellScores": [
+          {
+            "cell": "6:unseen-mix",
+            "meanBb100": 619.675925925926
+          },
+          {
+            "cell": "6:unseen-pressure",
+            "meanBb100": 967.824074074074
+          },
+          {
+            "cell": "7:unseen-mix",
+            "meanBb100": 2202.9761904761904
+          },
+          {
+            "cell": "7:unseen-pressure",
+            "meanBb100": 958.1349206349205
+          },
+          {
+            "cell": "8:unseen-mix",
+            "meanBb100": 931.423611111111
+          },
+          {
+            "cell": "8:unseen-pressure",
+            "meanBb100": 1537.3263888888887
+          }
+        ],
+        "worstCellBb100": 619.675925925926
+      },
+      {
+        "id": "chart-control",
+        "configuration": {
+          "mode": "chart",
+          "equitySamples": 50,
+          "riverSamples": 16,
+          "styleRetention": 1,
+          "riverRiskPenalty": 0,
+          "id": "chart-control"
+        },
+        "meanBb100": 453.97238756613757,
+        "standardError": 74.05331382949284,
+        "interval95": null,
+        "seeds": [
+          10001,
+          10002,
+          10003
+        ],
+        "seedScores": [
+          412.4131944444444,
+          597.86292989418,
+          351.64103835978835
+        ],
+        "cellScores": [
+          {
+            "cell": "6:unseen-mix",
+            "meanBb100": 593.9814814814815
+          },
+          {
+            "cell": "6:unseen-pressure",
+            "meanBb100": 366.4351851851852
+          },
+          {
+            "cell": "7:unseen-mix",
+            "meanBb100": 421.23015873015873
+          },
+          {
+            "cell": "7:unseen-pressure",
+            "meanBb100": 202.77777777777774
+          },
+          {
+            "cell": "8:unseen-mix",
+            "meanBb100": 750.0000000000001
+          },
+          {
+            "cell": "8:unseen-pressure",
+            "meanBb100": 389.4097222222222
+          }
+        ],
+        "worstCellBb100": 202.77777777777774
+      }
+    ],
+    "deltas": [
+      {
+        "versus": "frozen-control",
+        "meanBb100": -55.3626543209877,
+        "standardError": 196.48930543326455,
+        "interval95": null,
+        "seeds": [
+          10001,
+          10002,
+          10003
+        ],
+        "seedScores": [
+          -439.5833333333334,
+          65.29844576719574,
+          208.19692460317458
+        ],
+        "cellScores": [
+          {
+            "cell": "6:unseen-mix",
+            "meanBb100": -48.14814814814804
+          },
+          {
+            "cell": "6:unseen-pressure",
+            "meanBb100": 190.27777777777774
+          },
+          {
+            "cell": "7:unseen-mix",
+            "meanBb100": -36.70634920634939
+          },
+          {
+            "cell": "7:unseen-pressure",
+            "meanBb100": -4.960317460317583
+          },
+          {
+            "cell": "8:unseen-mix",
+            "meanBb100": -635.9375
+          },
+          {
+            "cell": "8:unseen-pressure",
+            "meanBb100": 203.2986111111109
+          }
+        ],
+        "worstCellBb100": -635.9375
+      },
+      {
+        "versus": "equity-control",
+        "meanBb100": -14.132771164021156,
+        "standardError": 48.76467816370835,
+        "interval95": null,
+        "seeds": [
+          10001,
+          10002,
+          10003
+        ],
+        "seedScores": [
+          -111.02843915343908,
+          43.92774470899466,
+          24.702380952380963
+        ],
+        "cellScores": [
+          {
+            "cell": "6:unseen-mix",
+            "meanBb100": 549.3055555555555
+          },
+          {
+            "cell": "6:unseen-pressure",
+            "meanBb100": 0
+          },
+          {
+            "cell": "7:unseen-mix",
+            "meanBb100": -521.4285714285714
+          },
+          {
+            "cell": "7:unseen-pressure",
+            "meanBb100": 0
+          },
+          {
+            "cell": "8:unseen-mix",
+            "meanBb100": -112.67361111111109
+          },
+          {
+            "cell": "8:unseen-pressure",
+            "meanBb100": 0
+          }
+        ],
+        "worstCellBb100": -521.4285714285714
+      },
+      {
+        "versus": "chart-control",
+        "meanBb100": 734.7883597883597,
+        "standardError": 154.59608465314082,
+        "interval95": null,
+        "seeds": [
+          10001,
+          10002,
+          10003
+        ],
+        "seedScores": [
+          576.6038359788358,
+          1043.9525462962963,
+          583.808697089947
+        ],
+        "cellScores": [
+          {
+            "cell": "6:unseen-mix",
+            "meanBb100": 575
+          },
+          {
+            "cell": "6:unseen-pressure",
+            "meanBb100": 601.3888888888888
+          },
+          {
+            "cell": "7:unseen-mix",
+            "meanBb100": 1260.3174603174605
+          },
+          {
+            "cell": "7:unseen-pressure",
+            "meanBb100": 755.3571428571428
+          },
+          {
+            "cell": "8:unseen-mix",
+            "meanBb100": 68.74999999999993
+          },
+          {
+            "cell": "8:unseen-pressure",
+            "meanBb100": 1147.9166666666663
+          }
+        ],
+        "worstCellBb100": 68.74999999999993
+      }
+    ],
+    "label": "Exploratory fixed-stack screening; selection uses tuning partition only; no promotion or superiority claim"
+  },
+  "verification": {
+    "hands": 9072,
+    "matches": 756,
+    "illegalFallbacks": 0,
+    "nonzeroNetTotals": 0,
+    "elapsedSeconds": 939.436668295,
+    "riverDecisions": 1477,
+    "riverComputeSeconds": 29.496298241999952
+  }
+}

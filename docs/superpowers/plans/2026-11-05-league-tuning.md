@@ -1,0 +1,9 @@
+# League evaluation and tuning
+
+Implements the approved evaluation stage. Keep 100bb fixed-stack experiments separate from persistent sessions. No live-policy promotion or merge is authorized by this stage.
+
+1. Expose two real policy parameters: styleRetention in [0,1] mixes learned response-type weights toward uniform between hands; riverRiskPenalty >=0 subtracts a configurable multiple of sampling SE when ranking river candidates. Defaults preserve current behavior. Test parameter validation and actual decision/memory effects.
+2. Build league.ts with immutable candidate configurations and explicit tuning/evaluation seed and field partitions. Reject overlapping normalized seed streams and overlapping field IDs. Rotate candidate through every seat. Preserve raw session net chips and mappings, strict legality, per-field/table metrics, equal-weight summary, worst cell, and compute timings. Aggregate seed batches across all field/table cells before estimating uncertainty. Omit intervals below 30 independent batches.
+3. Tune on tuning seeds/fields only; freeze selected configuration, then evaluate selected, frozen-learning, equity-only, and chart controls on held-out seeds/fields. Select by equal-weight mean bb/100 with deterministic tie-breaking; report worst-cell tradeoffs separately. Do not select from held-out results or promote on a small screening run.
+4. Add a CLI with persisted checkpoint/results, source fingerprint and exact configuration. Validate CLI before running, record intermediate completed batches, and explicitly label reduced-compute screening settings.
+5. Run a bounded screening experiment with multiple fields and disjoint seeds, inspect legality/accounting and results, review code and verify tests/lint/types. Commit and push infrastructure first, then result artifacts and interpretation separately. Large confirmatory evaluation follows only after screening identifies weaknesses.

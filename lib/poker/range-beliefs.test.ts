@@ -40,3 +40,9 @@ it("conditions response style on the sampled hand",()=>{
  beliefs.reveal(range[1]!.cards);
  expect(conditional).toEqual(beliefs.typeWeights());
 });
+it("tempers learned hypotheses between hands with configurable retention",()=>{
+ const beliefs=new RangeBeliefs(range);beliefs.observe([],context,"aggressive");
+ const before=beliefs.typeWeights();beliefs.newHand(false,0.5);
+ beliefs.typeWeights().forEach((p,i)=>expect(p).toBeCloseTo(0.5*before[i]!+0.5/3));
+ expect(()=>beliefs.newHand(false,-1)).toThrow(/retention/);
+});

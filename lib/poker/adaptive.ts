@@ -8,7 +8,9 @@ import type { Card, Street } from "./types";
 import type { PublicView } from "./view";
 
 type Evidence = { seat: number; street: Street; board: Card[]; facing: boolean; action: ActionClass };
-export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor"> & { priorStrength?: number; learn?: boolean; riverSamples?: number | false; onRiverDecision?: (result: RiverResult) => void } = {}) {
+export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor"> & { priorStrength?: number; learn?: boolean; styleRetention?: number; riverRiskPenalty?: number; riverSamples?: number | false; onRiverDecision?: (result: RiverResult) => void } = {}) {
+  const retention=options.styleRetention??1;
+  if(!Number.isFinite(retention)||retention<0||retention>1)throw new Error("Style retention must be between zero and one.");
   const model=new OpponentModel(options.priorStrength);
   let ids:string[]=[];
   let hand=-1, count=0, reveals=0, inferences=0;
@@ -23,7 +25,7 @@ export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor
   };
   const ensureHand=(view:PublicView)=>{
     if(hand===view.handNumber)return;
-    hand=view.handNumber;for(const belief of beliefs.values())belief.newHand(options.learn===false);evidence=[];
+    hand=view.handNumber;for(const belief of beliefs.values())belief.newHand(options.learn===false,retention);evidence=[];
   };
   const control=createEquityPolicy({...options,rangeFor:(view,seat)=>{
     ensureHand(view);const belief=beliefFor(seat);belief.condition(knownCards(view));return belief.mixture();
@@ -32,7 +34,7 @@ export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor
     ensureHand(view);
     if(view.street==="river" && options.riverSamples!==false) {
       for(const opponent of view.seats.filter(s=>s.inHand&&!s.folded&&s.seat!==view.toAct))beliefFor(opponent.seat).condition(knownCards(view));
-      const result=evaluateRiverActions(view,{samples:options.riverSamples??64,seed:(options.seed??1)^Math.imul(view.handNumber,31)^view.log.length,
+      const result=evaluateRiverActions(view,{samples:options.riverSamples??64,riskPenalty:options.riverRiskPenalty,seed:(options.seed??1)^Math.imul(view.handNumber,31)^view.log.length,
         rangeFor:seat=>beliefFor(seat).mixture(),styleFor:(seat,cards)=>beliefFor(seat).typeWeightsGiven(cards)});
       options.onRiverDecision?.(result);return result.best;
     }

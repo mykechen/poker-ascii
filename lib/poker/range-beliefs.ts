@@ -34,7 +34,9 @@ export class RangeBeliefs {
   private weights = [1 / 3, 1 / 3, 1 / 3];
   private ranges: WeightedHand[][] = [];
   constructor(private readonly initial: WeightedHand[] = uniformRange()) { this.newHand(); }
-  newHand(resetTypes = false): void {
+  newHand(resetTypes = false, retention = 1): void {
+    if (!Number.isFinite(retention) || retention < 0 || retention > 1) throw new Error("Style retention must be between zero and one.");
+    this.weights = this.weights.map(p => retention * p + (1 - retention) / 3);
     if (resetTypes) this.weights = [1 / 3, 1 / 3, 1 / 3];
     const probabilities = normalized(this.initial.map(h => h.weight));
     this.ranges = this.weights.map(() => this.initial.map((h, i) => ({ cards: [...h.cards], weight: probabilities[i]! })));

@@ -82,3 +82,13 @@ it("handles six-way raise/reraise continuations with exact engine payouts",()=>{
  expect(result.candidates.find(c=>c.action.action==="all_in")!.ev).toBe(1002);
  expect(result.candidates.every(c=>Number.isFinite(c.ev))).toBe(true);
 });
+it("rejects invalid river risk penalties",()=>{
+ expect(()=>evaluateRiverActions(projectForPlayer(riverFixture(),1),{riskPenalty:-1})).toThrow(/penalty/);
+});
+it("can prefer a lower but more certain estimate when explicitly configured",async()=>{
+ const {chooseRiverCandidate}=await import("./river-ev");
+ const risky={action:{action:"raise" as const,amount:10,reason:"risky"},ev:10,standardError:8,samples:4};
+ const certain={action:{action:"check" as const,reason:"certain"},ev:5,standardError:0,samples:4};
+ expect(chooseRiverCandidate([risky,certain],0)).toBe(risky);
+ expect(chooseRiverCandidate([risky,certain],1)).toBe(certain);
+});

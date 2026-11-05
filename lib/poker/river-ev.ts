@@ -10,6 +10,7 @@ import { projectForPlayer, type PublicView } from "./view";
 
 export type RiverOptions = {
   samples?: number;
+  riskPenalty?: number;
   seed?: number;
   rangeFor?: (seat: number) => WeightedHand[];
   styleFor?: (seat: number, cards: [Card, Card]) => number[];
@@ -79,6 +80,8 @@ function responsePolicy(random: () => number, styles: Map<number, number>): Poli
 
 export function evaluateRiverActions(view: PublicView, options: RiverOptions = {}): RiverResult {
   const started = performance.now();
+  const riskPenalty = options.riskPenalty ?? 0;
+  if (!Number.isFinite(riskPenalty) || riskPenalty < 0) throw new Error("River risk penalty must be nonnegative.");
   const samples = options.samples ?? 64;
   const seed = options.seed ?? 1;
   if (view.street !== "river" || view.board.length !== 5 || view.phase !== "betting" || view.toAct === null) throw new Error("River search requires a live river decision.");
@@ -139,6 +142,11 @@ export function evaluateRiverActions(view: PublicView, options: RiverOptions = {
     const ev = sum / samples;
     return { action, ev, standardError: Math.sqrt(Math.max(0, (squares - samples * ev * ev) / (samples - 1)) / samples), samples };
   });
-  const best = estimates.reduce((a, b) => b.ev > a.ev ? b : a);
+  const best = chooseRiverCandidate(estimates, riskPenalty);
   return { best: { ...best.action, reason: `River rollout EV ${best.ev.toFixed(1)} chips. SE ${best.standardError.toFixed(1)}.` }, candidates: estimates, elapsedMs: performance.now() - started, assumption: "sampled river response-policy EV" };
+}
+
+export function chooseRiverCandidate(estimates: RiverCandidate[], riskPenalty: number): RiverCandidate {
+  if (!estimates.length || !Number.isFinite(riskPenalty) || riskPenalty < 0) throw new Error("Invalid river ranking inputs.");
+  return estimates.reduce((a, b) => b.ev - riskPenalty * b.standardError > a.ev - riskPenalty * a.standardError ? b : a);
 }

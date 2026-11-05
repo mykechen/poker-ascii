@@ -14,7 +14,8 @@
     "benchmark": "vite-node scripts/benchmark.ts",
     "benchmark:equity": "vite-node scripts/equity-benchmark.ts",
     "benchmark:adaptive": "vite-node scripts/adaptive-benchmark.ts",
-    "benchmark:river": "vite-node scripts/river-benchmark.ts"
+    "benchmark:river": "vite-node scripts/river-benchmark.ts",
+    "league": "vite-node scripts/league.ts"
   },
   "dependencies": {
     "next": "15.5.28",

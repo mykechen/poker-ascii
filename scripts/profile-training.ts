@@ -31,13 +31,15 @@ function workload():Repetition {
  for(const {report}of reports)if(report.fallbacks.some(n=>n!==0)||report.net.reduce((a,b)=>a+b,0)!==0)throw new Error("Profile workload failed action/accounting checks.");
  return {elapsedMs:(end-start)/1000,traceHash:trace.digest("hex"),outcomeHash:createHash("sha256").update(JSON.stringify(reports)).digest("hex"),hands:reports.reduce((n,r)=>n+r.report.hands,0),decisions:reports.reduce((n,r)=>n+r.report.decisions.reduce((a,b)=>a+b,0),0),batches,window:{start,end}};
 }
+function warmupWorkload(){return workload();}
+function measuredWorkload(){return workload();}
 let stop=false;for(const signal of ["SIGINT","SIGTERM"]as const)process.once(signal,()=>{stop=true;});
 async function checkpoint(){save();await new Promise<void>(resolve=>setImmediate(resolve));if(stop){state.status="interrupted";save();process.exit(130);}}
 save();
 try{
- state.warmup=workload();await checkpoint();
+ state.warmup=warmupWorkload();await checkpoint();
  for(let i=0;i<settings.repetitions;i++){
-  state.stage=`measured-${i+1}`;const result=workload();
+  state.stage=`measured-${i+1}`;const result=measuredWorkload();
   if(result.traceHash!==state.warmup.traceHash||result.outcomeHash!==state.warmup.outcomeHash)throw new Error("Identical workload produced different deterministic actions or outcomes.");
   state.repetitions.push(result);console.error(`${phase} repetition ${i+1}: ${result.elapsedMs.toFixed(1)}ms, ${(result.hands/(result.elapsedMs/1000)).toFixed(2)} hands/sec`);await checkpoint();
  }

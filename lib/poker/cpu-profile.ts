@@ -28,3 +28,26 @@ export function summarizeCpuProfile(profile:CpuProfile,window:{start:number;end:
   for(const frame of frames.values())sources.set(frame.source,(sources.get(frame.source)??0)+frame.selfMicros);
   return {windowMicros:window.end-window.start,sampledMicros,frames:[...frames.values()].sort((a,b)=>b.selfMicros-a.selfMicros),sourceSelf:[...sources].map(([source,selfMicros])=>({source,selfMicros})).sort((a,b)=>b.selfMicros-a.selfMicros)};
 }
+
+/** Use the marker to bound one synchronous workload, retaining intervening GC samples. */
+export function findCpuMarkerWindow(profile:CpuProfile,marker:string):{start:number;end:number} {
+  if(profile.samples.length!==profile.timeDeltas.length)throw new Error("Invalid profile samples.");
+  const nodes=new Map(profile.nodes.map(n=>[n.id,n]));
+  const parents=new Map<number,number>();
+  for(const node of profile.nodes)for(const child of node.children??[])parents.set(child,node.id);
+  const marked=new Set<number>();
+  for(const node of profile.nodes){
+    let id:number|undefined=node.id;const seen=new Set<number>();
+    while(id!==undefined){
+      if(seen.has(id)||!nodes.has(id))throw new Error("Invalid CPU profile call tree.");
+      seen.add(id);if(nodes.get(id)!.callFrame.functionName===marker){marked.add(node.id);break;}id=parents.get(id);
+    }
+  }
+  let time=profile.startTime,start=Infinity,end=-Infinity;
+  profile.samples.forEach((id,i)=>{
+    const delta=profile.timeDeltas[i]!;if(!Number.isFinite(delta)||delta<0)throw new Error("Invalid profile sample duration.");
+    if(marked.has(id)){start=Math.min(start,time);end=time+delta;}time+=delta;
+  });
+  if(!Number.isFinite(start)||end<=start)throw new Error("No measured workload marker in CPU samples.");
+  return {start,end};
+}

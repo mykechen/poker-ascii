@@ -9,3 +9,5 @@ Ruling: the league interface gains a callback-only tracing option so exact polic
 Independent review found no important issue. Real-profile clock overlap/sample coverage must be checked before interpreting CPU costs.
 
 Next: baseline warm-up plus three repetitions, then a separate profiled warm-up plus one repetition on historical seed 20001 with two hands/match, 50 equity samples and 16 river worlds. Both modes/fields and every 6/7/8-player seat rotation. No fresh-strategy evidence or policy promotion.
+
+Ruling after real run: V8 CPU timestamps and process.hrtime use different origins on this machine, so the absolute-window analyzer correctly rejected the first profile. Preserve that run and lossless compressed CPU data. Use named measuredWorkload stack samples to bound a V8-clock interval, then include all interior samples (including GC) and require 95–105% duration coverage. New clock-domain/GC regressions pass. This changes measurement only, not poker policy. Re-record baseline/profile under one instrumentation source before interpretation.

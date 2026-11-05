@@ -1,0 +1,560 @@
+{
+  "id": "5a4690bf0ef2ce9ad6714a0dd4c77d1871aced7501b3460bca45061184a729df",
+  "status": "complete",
+  "sourceCommit": "0f9d2885c84ec88b8fea65d2d47ccff294421bb4",
+  "sourceHash": "dd12589ab66bd328f29be5064b60e1996f9f5eb37c78f2035c86bdc644332158",
+  "updatedAt": "2026-11-05T06:47:49.440Z",
+  "completedBatches": 15,
+  "scheduledBatches": 15,
+  "plan": {
+    "hands": 24,
+    "tableSizes": [
+      6,
+      7,
+      8
+    ],
+    "tuningSeeds": [
+      20001,
+      20002
+    ],
+    "evaluationSeeds": [
+      30001,
+      30002,
+      30003
+    ],
+    "tuningFields": [
+      {
+        "id": "balanced-train",
+        "opponents": [
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "id": "pressure-train",
+        "opponents": [
+          "aggressor",
+          "position",
+          "chart"
+        ]
+      }
+    ],
+    "evaluationFields": [
+      {
+        "id": "unseen-mix",
+        "opponents": [
+          "multiway",
+          "learner",
+          "maniac",
+          "station",
+          "tight"
+        ]
+      },
+      {
+        "id": "unseen-pressure",
+        "opponents": [
+          "maniac",
+          "learner",
+          "multiway"
+        ]
+      }
+    ]
+  },
+  "configurations": [
+    {
+      "mode": "frozen",
+      "equitySamples": 50,
+      "riverSamples": 16,
+      "styleRetention": 1,
+      "riverRiskPenalty": 0,
+      "id": "no-memory-risk-0"
+    },
+    {
+      "mode": "frozen",
+      "equitySamples": 50,
+      "riverSamples": 16,
+      "styleRetention": 1,
+      "riverRiskPenalty": 1,
+      "id": "no-memory-risk-1"
+    },
+    {
+      "mode": "frozen",
+      "equitySamples": 50,
+      "riverSamples": 16,
+      "styleRetention": 1,
+      "riverRiskPenalty": 2,
+      "id": "no-memory-risk-2"
+    }
+  ],
+  "selected": {
+    "mode": "frozen",
+    "equitySamples": 50,
+    "riverSamples": 16,
+    "styleRetention": 1,
+    "riverRiskPenalty": 1,
+    "id": "no-memory-risk-1"
+  },
+  "results": {
+    "accounting": {
+      "hands": 15120,
+      "matches": 630,
+      "illegalFallbacks": 0,
+      "nonconservingMatches": 0
+    },
+    "tuningScores": [
+      {
+        "id": "no-memory-risk-0",
+        "meanBb100": 729.5076884920634,
+        "standardError": 6.557953042328052,
+        "interval95": null,
+        "seeds": [
+          20001,
+          20002
+        ],
+        "seedScores": [
+          736.0656415343915,
+          722.9497354497354
+        ],
+        "cellScores": [
+          {
+            "cell": "6:balanced-train",
+            "meanBb100": 1119.7916666666667
+          },
+          {
+            "cell": "6:pressure-train",
+            "meanBb100": 457.8125
+          },
+          {
+            "cell": "7:balanced-train",
+            "meanBb100": 845.3869047619047
+          },
+          {
+            "cell": "7:pressure-train",
+            "meanBb100": 25.14880952380952
+          },
+          {
+            "cell": "8:balanced-train",
+            "meanBb100": 1893.8802083333333
+          },
+          {
+            "cell": "8:pressure-train",
+            "meanBb100": 35.02604166666666
+          }
+        ],
+        "worstCellBb100": 25.14880952380952
+      },
+      {
+        "id": "no-memory-risk-1",
+        "meanBb100": 755.2176339285716,
+        "standardError": 34.88446593915336,
+        "interval95": null,
+        "seeds": [
+          20001,
+          20002
+        ],
+        "seedScores": [
+          720.3331679894181,
+          790.1020998677249
+        ],
+        "cellScores": [
+          {
+            "cell": "6:balanced-train",
+            "meanBb100": 1001.7361111111111
+          },
+          {
+            "cell": "6:pressure-train",
+            "meanBb100": 216.49305555555554
+          },
+          {
+            "cell": "7:balanced-train",
+            "meanBb100": 1134.375
+          },
+          {
+            "cell": "7:pressure-train",
+            "meanBb100": 53.571428571428584
+          },
+          {
+            "cell": "8:balanced-train",
+            "meanBb100": 2116.40625
+          },
+          {
+            "cell": "8:pressure-train",
+            "meanBb100": 8.723958333333332
+          }
+        ],
+        "worstCellBb100": 8.723958333333332
+      },
+      {
+        "id": "no-memory-risk-2",
+        "meanBb100": 710.6450479497355,
+        "standardError": 38.05493551587307,
+        "interval95": null,
+        "seeds": [
+          20001,
+          20002
+        ],
+        "seedScores": [
+          672.5901124338624,
+          748.6999834656085
+        ],
+        "cellScores": [
+          {
+            "cell": "6:balanced-train",
+            "meanBb100": 927.9513888888889
+          },
+          {
+            "cell": "6:pressure-train",
+            "meanBb100": 66.14583333333334
+          },
+          {
+            "cell": "7:balanced-train",
+            "meanBb100": 1044.1964285714284
+          },
+          {
+            "cell": "7:pressure-train",
+            "meanBb100": 44.196428571428555
+          },
+          {
+            "cell": "8:balanced-train",
+            "meanBb100": 2180.989583333333
+          },
+          {
+            "cell": "8:pressure-train",
+            "meanBb100": 0.39062500000001066
+          }
+        ],
+        "worstCellBb100": 0.39062500000001066
+      }
+    ],
+    "summaries": [
+      {
+        "id": "no-memory-risk-1",
+        "configuration": {
+          "mode": "frozen",
+          "equitySamples": 50,
+          "riverSamples": 16,
+          "styleRetention": 1,
+          "riverRiskPenalty": 1,
+          "id": "no-memory-risk-1"
+        },
+        "meanBb100": 685.5324074074074,
+        "standardError": 279.37002886341344,
+        "interval95": null,
+        "seeds": [
+          30001,
+          30002,
+          30003
+        ],
+        "seedScores": [
+          325.7667824074074,
+          495.1864252645503,
+          1235.6440145502645
+        ],
+        "cellScores": [
+          {
+            "cell": "6:unseen-mix",
+            "meanBb100": 998.3796296296296
+          },
+          {
+            "cell": "6:unseen-pressure",
+            "meanBb100": 309.2592592592592
+          },
+          {
+            "cell": "7:unseen-mix",
+            "meanBb100": 1250.3968253968253
+          },
+          {
+            "cell": "7:unseen-pressure",
+            "meanBb100": 253.07539682539678
+          },
+          {
+            "cell": "8:unseen-mix",
+            "meanBb100": 888.8888888888888
+          },
+          {
+            "cell": "8:unseen-pressure",
+            "meanBb100": 413.1944444444444
+          }
+        ],
+        "worstCellBb100": 253.07539682539678
+      },
+      {
+        "id": "equity-control",
+        "configuration": {
+          "mode": "equity",
+          "equitySamples": 50,
+          "riverSamples": 16,
+          "styleRetention": 1,
+          "riverRiskPenalty": 1,
+          "id": "equity-control"
+        },
+        "meanBb100": 710.9326774691358,
+        "standardError": 292.4796869569438,
+        "interval95": null,
+        "seeds": [
+          30001,
+          30002,
+          30003
+        ],
+        "seedScores": [
+          350.5270337301586,
+          492.11929563492066,
+          1290.151703042328
+        ],
+        "cellScores": [
+          {
+            "cell": "6:unseen-mix",
+            "meanBb100": 1194.0972222222222
+          },
+          {
+            "cell": "6:unseen-pressure",
+            "meanBb100": 309.2592592592592
+          },
+          {
+            "cell": "7:unseen-mix",
+            "meanBb100": 1201.09126984127
+          },
+          {
+            "cell": "7:unseen-pressure",
+            "meanBb100": 253.07539682539678
+          },
+          {
+            "cell": "8:unseen-mix",
+            "meanBb100": 894.8784722222223
+          },
+          {
+            "cell": "8:unseen-pressure",
+            "meanBb100": 413.1944444444444
+          }
+        ],
+        "worstCellBb100": 253.07539682539678
+      },
+      {
+        "id": "chart-control",
+        "configuration": {
+          "mode": "chart",
+          "equitySamples": 50,
+          "riverSamples": 16,
+          "styleRetention": 1,
+          "riverRiskPenalty": 0,
+          "id": "chart-control"
+        },
+        "meanBb100": 210.26647927689592,
+        "standardError": 76.86758989050479,
+        "interval95": null,
+        "seeds": [
+          30001,
+          30002,
+          30003
+        ],
+        "seedScores": [
+          114.052166005291,
+          154.53249007936506,
+          362.21478174603175
+        ],
+        "cellScores": [
+          {
+            "cell": "6:unseen-mix",
+            "meanBb100": 313.0787037037037
+          },
+          {
+            "cell": "6:unseen-pressure",
+            "meanBb100": 129.74537037037035
+          },
+          {
+            "cell": "7:unseen-mix",
+            "meanBb100": 417.6587301587301
+          },
+          {
+            "cell": "7:unseen-pressure",
+            "meanBb100": 28.373015873015902
+          },
+          {
+            "cell": "8:unseen-mix",
+            "meanBb100": 209.9826388888889
+          },
+          {
+            "cell": "8:unseen-pressure",
+            "meanBb100": 162.76041666666666
+          }
+        ],
+        "worstCellBb100": 28.373015873015902
+      }
+    ],
+    "deltas": [
+      {
+        "versus": "equity-control",
+        "meanBb100": -25.400270061728403,
+        "standardError": 16.62349881368934,
+        "interval95": null,
+        "seeds": [
+          30001,
+          30002,
+          30003
+        ],
+        "seedScores": [
+          -24.760251322751298,
+          3.067129629629619,
+          -54.50768849206353
+        ],
+        "cellScores": [
+          {
+            "cell": "6:unseen-mix",
+            "meanBb100": -195.7175925925925
+          },
+          {
+            "cell": "6:unseen-pressure",
+            "meanBb100": 0
+          },
+          {
+            "cell": "7:unseen-mix",
+            "meanBb100": 49.30555555555554
+          },
+          {
+            "cell": "7:unseen-pressure",
+            "meanBb100": 0
+          },
+          {
+            "cell": "8:unseen-mix",
+            "meanBb100": -5.989583333333466
+          },
+          {
+            "cell": "8:unseen-pressure",
+            "meanBb100": 0
+          }
+        ],
+        "worstCellBb100": -195.7175925925925
+      },
+      {
+        "versus": "chart-control",
+        "meanBb100": 475.26592813051144,
+        "standardError": 202.5313554930729,
+        "interval95": null,
+        "seeds": [
+          30001,
+          30002,
+          30003
+        ],
+        "seedScores": [
+          211.71461640211638,
+          340.6539351851852,
+          873.4292328042328
+        ],
+        "cellScores": [
+          {
+            "cell": "6:unseen-mix",
+            "meanBb100": 685.3009259259261
+          },
+          {
+            "cell": "6:unseen-pressure",
+            "meanBb100": 179.51388888888883
+          },
+          {
+            "cell": "7:unseen-mix",
+            "meanBb100": 832.7380952380954
+          },
+          {
+            "cell": "7:unseen-pressure",
+            "meanBb100": 224.70238095238088
+          },
+          {
+            "cell": "8:unseen-mix",
+            "meanBb100": 678.9062499999999
+          },
+          {
+            "cell": "8:unseen-pressure",
+            "meanBb100": 250.4340277777778
+          }
+        ],
+        "worstCellBb100": 179.51388888888883
+      }
+    ],
+    "calibration": [
+      {
+        "id": "no-memory-risk-1",
+        "streets": [
+          {
+            "street": "preflop",
+            "count": 25410,
+            "brier": 0.6359702609407453,
+            "logLoss": 1.0589690172786652,
+            "uniformBrier": 0.6518693427784589,
+            "uniformLogLoss": 1.062613497487689
+          },
+          {
+            "street": "flop",
+            "count": 4789,
+            "brier": 0.6587750188372521,
+            "logLoss": 0.9324217976303022,
+            "uniformBrier": 0.5659845479223188,
+            "uniformLogLoss": 0.8536737717006906
+          },
+          {
+            "street": "turn",
+            "count": 2983,
+            "brier": 0.5604709073851792,
+            "logLoss": 0.8087031821320384,
+            "uniformBrier": 0.562073974745783,
+            "uniformLogLoss": 0.8441601658459502
+          },
+          {
+            "street": "river",
+            "count": 2329,
+            "brier": 0.31592327593110753,
+            "logLoss": 0.49247711078177725,
+            "uniformBrier": 0.5023615285530271,
+            "uniformLogLoss": 0.6988922851402655
+          }
+        ]
+      },
+      {
+        "id": "equity-control",
+        "streets": [
+          {
+            "street": "preflop",
+            "count": 25412,
+            "brier": 0.6358068173689971,
+            "logLoss": 1.0587327572566214,
+            "uniformBrier": 0.6518442730468796,
+            "uniformLogLoss": 1.062552508079139
+          },
+          {
+            "street": "flop",
+            "count": 4788,
+            "brier": 0.6589672786544375,
+            "logLoss": 0.9329030661611354,
+            "uniformBrier": 0.5662419938735695,
+            "uniformLogLoss": 0.8543000838034263
+          },
+          {
+            "street": "turn",
+            "count": 2988,
+            "brier": 0.5589725927112079,
+            "logLoss": 0.8065848944043664,
+            "uniformBrier": 0.561579651941099,
+            "uniformLogLoss": 0.8429575819493008
+          },
+          {
+            "street": "river",
+            "count": 2316,
+            "brier": 0.3309974123397946,
+            "logLoss": 0.5088770127789847,
+            "uniformBrier": 0.5015112262521589,
+            "uniformLogLoss": 0.6968236776541891
+          }
+        ]
+      },
+      {
+        "id": "chart-control",
+        "streets": []
+      }
+    ],
+    "label": "Exploratory fixed-stack screening; selection uses tuning partition only; no promotion or superiority claim"
+  },
+  "nextSteps": [
+    "Inspect held-out profit and prediction scores before choosing the next experiment.",
+    "Use fresh held-out seeds for future selection; no automatic promotion."
+  ]
+}

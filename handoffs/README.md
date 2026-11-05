@@ -25,3 +25,10 @@ The first league screen is recorded in [0001-league-screening.md](0001-league-sc
 Candidate memory is disabled; benchmark opponents keep their prescribed strategies. The grid varies only river sampling-noise penalties (0, 1, 2). Controls are no-memory equity-only and chart policies. Fresh seed ranges start at 20001 for tuning and 30001 for evaluation.
 
 Calibration reports multiclass Brier score and log loss, with lower scores better, against a uniform forecast over supported legal action classes on the same observations. Scores are measured before each observed action updates the range. Different policies generate different trajectories, so their prediction scores are descriptive and should not be treated as a paired forecasting contest. Measuring calibration does not itself fit or improve the model.
+
+## Completed tracked experiments
+
+- [0001 — original memory/river screen](0001-league-screening.md).
+- [0002 — no-memory calibration and 24-hand matches](0002-no-memory-calibration.md).
+
+Folders for the one-hand development smoke checks are retained under runs/ and explicitly labelled in their interpretation files. They are integration tests, not independent strategy evidence.

@@ -47,3 +47,14 @@ it("collects public forecast contexts and maps rotated opponents by participant 
   expect(row.observerGroup).not.toBe("unknown");
  }
 },30000);
+it("traces actual policy decisions without changing seeded outcomes",async()=>{
+ const {runLeagueBatch}=await import("./league");
+ const config={id:"trace-test",mode:"chart" as const,styleRetention:1,riverRiskPenalty:0,equitySamples:10,riverSamples:2};
+ const fields=[{id:"field",opponents:["station" as const]}];
+ const traces:unknown[]=[];
+ const plain=runLeagueBatch(config,20001,fields,[6],2);
+ const traced=runLeagueBatch(config,20001,fields,[6],2,false,event=>traces.push(event));
+ expect(traces.length).toBe(traced.cells.flatMap(c=>c.report.runs).reduce((sum,r)=>sum+r.report.decisions.reduce((a,b)=>a+b,0),0));
+ expect(traced.rows).toEqual(plain.rows);expect(traced.cells).toEqual(plain.cells);
+ expect(traces[0]).not.toHaveProperty("hole");
+});

@@ -1,0 +1,18 @@
+import {readFileSync,readdirSync,writeFileSync,renameSync} from "node:fs";
+import {summarizeCpuProfile,type CpuProfile} from "../lib/poker/cpu-profile";
+const directory=process.argv[2];if(!directory)throw new Error("Provide a profiling run directory.");
+type Run={status:string;settings:{sourceFingerprint:string;sourceCommit:string};repetitions:{elapsedMs:number;traceHash:string;outcomeHash:string;hands:number;decisions:number;window:{start:number;end:number}}[]};
+const baseline=JSON.parse(readFileSync(`${directory}/baseline.json`,"utf8"))as Run;
+const profiled=JSON.parse(readFileSync(`${directory}/profile.json`,"utf8"))as Run;
+if(baseline.status!=="complete"||profiled.status!=="complete"||baseline.settings.sourceFingerprint!==profiled.settings.sourceFingerprint||baseline.repetitions.length!==3||profiled.repetitions.length!==1)throw new Error("Incomplete or mismatched profile runs.");
+const all=[...baseline.repetitions,...profiled.repetitions];
+if(new Set(all.map(r=>r.traceHash)).size!==1||new Set(all.map(r=>r.outcomeHash)).size!==1)throw new Error("Profile actions/outcomes differ across repetitions.");
+const files=readdirSync(directory).filter(f=>f.endsWith(".cpuprofile"));if(files.length!==1)throw new Error("Expected exactly one raw CPU profile.");
+const raw=JSON.parse(readFileSync(`${directory}/${files[0]}`,"utf8"))as CpuProfile;
+const result=summarizeCpuProfile(raw,profiled.repetitions[0]!.window);
+if(result.sampledMicros<=0)throw new Error("No CPU samples overlap measured poker workload.");
+const timings=baseline.repetitions.map(r=>r.elapsedMs).sort((a,b)=>a-b);
+const median=timings[1]!;
+const summary={sourceCommit:baseline.settings.sourceCommit,sourceFingerprint:baseline.settings.sourceFingerprint,traceHash:all[0]!.traceHash,outcomeHash:all[0]!.outcomeHash,baselineMs:timings,medianMs:median,profiledMs:profiled.repetitions[0]!.elapsedMs,profilerOverheadFraction:profiled.repetitions[0]!.elapsedMs/median-1,handsPerRepetition:all[0]!.hands,decisionsPerRepetition:all[0]!.decisions,rawProfile:files[0],...result,topInclusive:[...result.frames].sort((a,b)=>b.inclusiveMicros-a.inclusiveMicros).slice(0,40)};
+writeFileSync(`${directory}/cpu-summary.json.tmp`,JSON.stringify(summary,null,2)+"\n");renameSync(`${directory}/cpu-summary.json.tmp`,`${directory}/cpu-summary.json`);
+console.log(JSON.stringify({baselineMs:timings,profiledMs:summary.profiledMs,profilerOverheadFraction:summary.profilerOverheadFraction,sourceSelf:result.sourceSelf.slice(0,12),topSelf:result.frames.slice(0,15)},null,2));

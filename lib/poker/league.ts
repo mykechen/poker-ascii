@@ -1,3 +1,5 @@
+import type {ReplayObservation} from "./contextual-replay";
+import type {ResponseModel} from "./contextual-response";
 import type {ForecastRecord} from "./forecast-diagnostics";
 import { createAdaptivePolicy } from "./adaptive";
 import { runBenchmark, type BenchmarkReport } from "./benchmark";
@@ -9,7 +11,7 @@ import { strategyById, type StrategyId } from "./strategies";
 export type ActionTrace = {field:string;players:number;hand:number;seat:number;participant:string;action:string;amount?:number};
 export type LeagueField = { id: string; opponents: StrategyId[] };
 export type LeaguePlan = { tuningSeeds: number[]; evaluationSeeds: number[]; tuningFields: LeagueField[]; evaluationFields: LeagueField[]; tableSizes: number[]; hands: number };
-export type LeagueConfiguration = { id: string; mode: "frozen" | "equity" | "chart"; styleRetention: number; riverRiskPenalty: number; equitySamples: number; riverSamples: number; flopUniformWeight?:number };
+export type LeagueConfiguration = { id: string; mode: "frozen" | "equity" | "chart"; styleRetention: number; riverRiskPenalty: number; equitySamples: number; riverSamples: number; flopUniformWeight?:number;responseModel?:ResponseModel };
 export type LeagueRow = { seed: number; players: number; field: string; bb100: number };
 export type LeagueBatch = { configuration: LeagueConfiguration; seed: number; rows: LeagueRow[]; cells: { players: number; field: string; report: BenchmarkReport }[]; elapsedMs: number; riverDecisions: number; riverComputeMs: number; forecasts?: (ForecastRecord & {family:string;players:number;field:string})[]; calibration: Record<string, {count:number;brierSum:number;logLossSum:number;uniformBrierSum:number;uniformLogLossSum:number}> };
 
@@ -52,12 +54,13 @@ export function selectConfiguration(scores: { id: string; meanBb100: number }[])
   return [...scores].sort((a, b) => b.meanBb100 - a.meanBb100 || a.id.localeCompare(b.id))[0]!.id;
 }
 
-export function runLeagueBatch(configuration: LeagueConfiguration, seed: number, fields: LeagueField[], tableSizes: number[], hands: number, collectForecasts = false, onAction?: (event:ActionTrace)=>void): LeagueBatch {
+export function runLeagueBatch(configuration: LeagueConfiguration, seed: number, fields: LeagueField[], tableSizes: number[], hands: number, collectForecasts = false, onAction?: (event:ActionTrace)=>void, onReplay?: (event:ReplayObservation)=>void): LeagueBatch {
   if (!configuration.id || !["frozen", "equity", "chart"].includes(configuration.mode) || !Number.isFinite(configuration.styleRetention) || configuration.styleRetention < 0 || configuration.styleRetention > 1 || !Number.isFinite(configuration.riverRiskPenalty) || configuration.riverRiskPenalty < 0 || !Number.isSafeInteger(configuration.equitySamples) || configuration.equitySamples < 2 || configuration.equitySamples > 1000000 || !Number.isSafeInteger(configuration.riverSamples) || configuration.riverSamples < 2 || configuration.riverSamples > 10000) throw new Error("Invalid league configuration.");
   if(!fields.length || fields.some(f=>!f.id || !f.opponents.length) || new Set(fields.map(f=>f.id)).size!==fields.length)throw new Error("Provide nonempty unique league fields.");
   fields.forEach(field=>field.opponents.forEach(strategyById));
   if(!tableSizes.length || new Set(tableSizes).size!==tableSizes.length || tableSizes.some(n=>![6,7,8].includes(n)))throw new Error("Use distinct league table sizes 6, 7, 8.");
   if(!Number.isSafeInteger(seed) || !Number.isSafeInteger(hands) || hands<1 || hands>100000)throw new Error("Invalid league seed or hand count.");
+  let match=0;
   const started = performance.now();
   let riverDecisions = 0, riverComputeMs = 0;
   const forecasts: NonNullable<LeagueBatch["forecasts"]> = [];
@@ -66,12 +69,12 @@ export function runLeagueBatch(configuration: LeagueConfiguration, seed: number,
   const rows: LeagueRow[] = [];
   for (const field of fields) for (const players of tableSizes) {
     const seats: TrainSeat[] = Array.from({ length: players }, (_, i) => i === 0
-      ? { name: configuration.id.slice(0, 16), policy: simplePolicy, policyFactory: () => configuration.mode === "chart" ? simplePolicy : createAdaptivePolicy({ samples: configuration.equitySamples, riverSamples: configuration.mode === "equity" ? false : configuration.riverSamples, learn: false, styleRetention: configuration.styleRetention, riverRiskPenalty: configuration.riverRiskPenalty, seed: 42, flopUniformWeight:configuration.flopUniformWeight, onRiverDecision: r => { riverDecisions++; riverComputeMs += r.elapsedMs; }, onPrediction: record => { if(collectForecasts) {
+      ? { name: configuration.id.slice(0, 16), policy: simplePolicy, policyFactory: () => {const matchId=match++;return configuration.mode === "chart" ? simplePolicy : createAdaptivePolicy({ samples: configuration.equitySamples, riverSamples: configuration.mode === "equity" ? false : configuration.riverSamples, learn: false, styleRetention: configuration.styleRetention, riverRiskPenalty: configuration.riverRiskPenalty, seed: 42, flopUniformWeight:configuration.flopUniformWeight,responseModel:configuration.responseModel,onReplay:onReplay?event=>onReplay({...event,match:matchId}):undefined, onRiverDecision: r => { riverDecisions++; riverComputeMs += r.elapsedMs; }, onPrediction: record => { if(collectForecasts) {
         const participant=Number(record.opponentName?.replace("opponent-",""));
         if(!Number.isInteger(participant)||participant<1||participant>=players)throw new Error("Unknown diagnostic participant.");
         forecasts.push({...record,family:field.opponents[(participant-1)%field.opponents.length]!,players,field:field.id});
       }
-      const score=scorePrediction(record.probabilities,record.actual);const cell=calibration[record.street]??{count:0,brierSum:0,logLossSum:0,uniformBrierSum:0,uniformLogLossSum:0};cell.count++;cell.brierSum+=score.brier;cell.logLossSum+=score.logLoss;cell.uniformBrierSum+=score.uniformBrier;cell.uniformLogLossSum+=score.uniformLogLoss;calibration[record.street]=cell; } }).policy }
+      const score=scorePrediction(record.probabilities,record.actual);const cell=calibration[record.street]??{count:0,brierSum:0,logLossSum:0,uniformBrierSum:0,uniformLogLossSum:0};cell.count++;cell.brierSum+=score.brier;cell.logLossSum+=score.logLoss;cell.uniformBrierSum+=score.uniformBrier;cell.uniformLogLossSum+=score.uniformLogLoss;calibration[record.street]=cell; } }).policy; } }
       : { name: `opponent-${i}`, policy: strategyById(field.opponents[(i - 1) % field.opponents.length]!).policy });
     const tracedSeats = !onAction ? seats : seats.map(player=>({...player,policyFactory:(random:()=>number)=>{
       const original=player.policyFactory?.(random)??player.policy;

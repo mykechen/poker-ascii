@@ -26,3 +26,8 @@ it("rejects incompatible contextual artifacts before use",async()=>{
  expect(()=>validateResponseModel({version:1,kind:"contextual",features:[],coefficients:[[],[]],supports:[],lambda:1})).toThrow();
  expect(()=>validateResponseModel({version:1,kind:"frequency",frequencies:{"011":[.2,.4,.4]}})).toThrow();
 });
+it("transform before marginalization differs from transforming the marginal",()=>{
+ const first=transformResponse([.1,.3,.6],[1,-1]);const second=transformResponse([.6,.3,.1],[1,-1]);
+ const marginal=transformResponse([.35,.3,.35],[1,-1]);
+ expect(Math.abs((first[0]+second[0])/2-marginal[0])).toBeGreaterThan(.01);
+});

@@ -1,3 +1,5 @@
+import type {ReplayObservation,ResponseComponent} from "./contextual-replay";
+import type {ResponseModel} from "./contextual-response";
 import type { Policy } from "./bot";
 import { createEquityPolicy, type EquityPolicyOptions } from "./equity-policy";
 import { OpponentModel, type ActionClass } from "./opponent";
@@ -9,12 +11,13 @@ import type { Card, Street } from "./types";
 import type { PublicView } from "./view";
 
 type Evidence = { seat: number; street: Street; board: Card[]; facing: boolean; action: ActionClass };
-export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor"> & { priorStrength?: number; learn?: boolean; styleRetention?: number; riverRiskPenalty?: number; riverSamples?: number | false; onRiverDecision?: (result: RiverResult) => void; flopUniformWeight?: number; onPrediction?: (record: ForecastRecord & {facing:boolean}) => void } = {}) {
+export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor"> & { priorStrength?: number; learn?: boolean; styleRetention?: number; riverRiskPenalty?: number; riverSamples?: number | false; onRiverDecision?: (result: RiverResult) => void; flopUniformWeight?: number; responseModel?:ResponseModel; onReplay?: (event:ReplayObservation)=>void; onPrediction?: (record: ForecastRecord & {facing:boolean}) => void } = {}) {
   const learn=options.learn??false;
   const retention=options.styleRetention??1;
   if(!Number.isFinite(retention)||retention<0||retention>1)throw new Error("Style retention must be between zero and one.");
   const model=new OpponentModel(options.priorStrength);
   let ids:string[]=[];
+  let replayOrder=0;
   let hand=-1, count=0, reveals=0, inferences=0;
   const beliefs=new Map<number,RangeBeliefs>();
   let evidence:Evidence[]=[];
@@ -22,7 +25,7 @@ export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor
   const knownCards=(view:PublicView)=>[...view.board,...view.seats.flatMap(s=>Array.isArray(s.hole)?s.hole:[])];
   const beliefFor=(seat:number)=>{
     let belief=beliefs.get(seat);
-    if(!belief) {belief=new RangeBeliefs(undefined,options.flopUniformWeight??0);beliefs.set(seat,belief);}
+    if(!belief) {belief=new RangeBeliefs(undefined,options.flopUniformWeight??0,options.responseModel);beliefs.set(seat,belief);}
     return belief;
   };
   const ensureHand=(view:PublicView)=>{
@@ -43,7 +46,7 @@ export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor
     return control(view);
   },{
     startSession:(joinIds:string[])=>{
-      ids=[...joinIds];model.startSession(ids);hand=-1;count=0;reveals=0;inferences=0;beliefs.clear();evidence=[];revealedEvidence.length=0;
+      replayOrder=0;ids=[...joinIds];model.startSession(ids);hand=-1;count=0;reveals=0;inferences=0;beliefs.clear();evidence=[];revealedEvidence.length=0;
     },
     observe:(before:PublicView,after:PublicView)=>{
       ensureHand(before);
@@ -59,7 +62,13 @@ export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor
       const event:Evidence={seat,street:before.street,board:[...before.board],facing,action};
       const belief=beliefFor(seat);
       belief.condition(knownCards(before));
-      const probabilities=belief.observe(before.board,decisionContext(before,seat),action);
+      let components:ResponseComponent[]|undefined;
+      const probabilities=belief.observe(before.board,decisionContext(before,seat),action,options.onReplay&&before.street==="flop"?c=>{components=c;}:undefined);
+      if(options.onReplay){
+        const observer=before.seats.find(s=>s.seat!==seat&&Array.isArray(s.hole)&&s.hole.length===2);
+        if(!observer||!Array.isArray(observer.hole))throw new Error("Observer blockers missing.");
+        options.onReplay({match:0,hand:before.handNumber,seat,order:replayOrder++,board:[...before.board],known:[...before.board,...observer.hole],context:decisionContext(before,seat),actual:action,...(components?{components}:{})});
+      }
       if(options.onPrediction) {
         const observer=before.seats.find(s=>s.seat!==seat&&Array.isArray(s.hole)&&s.hole.length===2);
         const hole=observer?.hole;

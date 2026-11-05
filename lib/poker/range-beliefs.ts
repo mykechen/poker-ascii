@@ -1,3 +1,5 @@
+import {modelResponse,validateResponseModel,type ResponseModel} from "./contextual-response";
+import type {ResponseComponent} from "./contextual-replay";
 import {blendResponse} from "./forecast-diagnostics";
 import { uniformRange, type WeightedHand } from "./equity";
 import { handFeatures } from "./hand-features";
@@ -7,8 +9,9 @@ import type { Card } from "./types";
 export type ResponseContext = { facing: boolean; canRaise?: boolean; position: string; size: string; depth: string; players: string };
 
 /** Provisional tight/balanced/loose response hypotheses, not labels assigned to players. */
-export function actionProbabilities(cards: [Card, Card], board: Card[], context: ResponseContext, style: number): [number, number, number] {
-  return probabilitiesForFeatures(handFeatures(cards, board), context, style);
+export function actionProbabilities(cards: [Card, Card], board: Card[], context: ResponseContext, style: number, model?: ResponseModel): [number, number, number] {
+  const p=probabilitiesForFeatures(handFeatures(cards, board), context, style);
+  return board.length===3&&model?modelResponse(p,context,board,model):p;
 }
 function probabilitiesForFeatures(features: ReturnType<typeof handFeatures>, c: ResponseContext, style: number): [number, number, number] {
   const base = features.group === "strong" ? [0.05, 0.35, 0.6] : features.group === "medium" ? [0.25, 0.55, 0.2] : [0.65, 0.25, 0.1];
@@ -35,7 +38,7 @@ const comboKey = (cards: [Card, Card]) => [...cards].sort().join("");
 export class RangeBeliefs {
   private weights = [1 / 3, 1 / 3, 1 / 3];
   private ranges: WeightedHand[][] = [];
-  constructor(private readonly initial: WeightedHand[] = uniformRange(), private readonly flopUniformWeight = 0) { blendResponse([0,1,0],flopUniformWeight); this.newHand(); }
+  constructor(private readonly initial: WeightedHand[] = uniformRange(), private readonly flopUniformWeight = 0, private readonly responseModel?:ResponseModel) { blendResponse([0,1,0],flopUniformWeight); if(responseModel)validateResponseModel(responseModel); this.newHand(); }
   newHand(resetTypes = false, retention = 1): void {
     if (!Number.isFinite(retention) || retention < 0 || retention > 1) throw new Error("Style retention must be between zero and one.");
     this.weights = this.weights.map(p => retention * p + (1 - retention) / 3);
@@ -49,16 +52,19 @@ export class RangeBeliefs {
     this.ranges = this.ranges.map((range, i) => range.filter(h => h.cards.every(c => !known.includes(c))).map(h => ({ ...h, weight: h.weight / masses[i]! })));
     this.weights = posterior;
   }
-  observe(board: Card[], context: ResponseContext, action: ActionClass): [number, number, number] {
+  observe(board: Card[], context: ResponseContext, action: ActionClass, onComponents?: (components:ResponseComponent[])=>void): [number, number, number] {
     const index = action === "fold" ? 0 : action === "passive" ? 1 : 2;
     const features = new Map(this.ranges[0]!.map(h => [comboKey(h.cards), handFeatures(h.cards, board)]));
     const prediction: [number, number, number] = [0, 0, 0];
+    const components=new Map<string,ResponseComponent>();
     const weighted = this.ranges.map((range, style) => range.map(h => {
       const raw = probabilitiesForFeatures(features.get(comboKey(h.cards))!, context, style);
-      const probabilities = board.length===3 && this.flopUniformWeight>0 ? blendResponse(raw,this.flopUniformWeight) : raw;
+      if(onComponents){const f=features.get(comboKey(h.cards))!;const key=`${style}:${f.group}:${f.draw}`;const component=components.get(key)??{weight:0,probabilities:raw,group:f.group,draw:f.draw,style};component.weight+=this.weights[style]!*h.weight;components.set(key,component);}
+      const probabilities = board.length===3&&this.responseModel?modelResponse(raw,context,board,this.responseModel):board.length===3 && this.flopUniformWeight>0 ? blendResponse(raw,this.flopUniformWeight) : raw;
       probabilities.forEach((p, i) => { prediction[i] += this.weights[style]! * h.weight * p; });
       return { ...h, weight: h.weight * probabilities[index]! };
     }));
+    onComponents?.([...components.values()]);
     const masses = weighted.map(range => range.reduce((sum, h) => sum + h.weight, 0));
     const posterior = normalized(this.weights.map((p, i) => p * masses[i]!));
     this.ranges = weighted.map((range, i) => range.map(h => ({ ...h, weight: h.weight / masses[i]! })));

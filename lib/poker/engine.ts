@@ -500,8 +500,8 @@ function commit(seat: SeatState, chips: number) {
 
 function canRaise(state: TableState, seat: SeatState): boolean {
   const toCall = state.currentBet - seat.streetCommitted;
-  if (seat.stack <= toCall) return false;
-  if (seat.acted && !state.raiseOpen) return false;
+  if (seat.stack <= toCall || canBetCount(state) < 2) return false;
+  if (seat.acted && !state.raiseOpen && toCall < state.minRaise) return false;
   return true;
 }
 

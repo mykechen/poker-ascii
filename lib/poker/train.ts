@@ -15,6 +15,7 @@ export type TrainSeat = {
   /** 1 to 16 characters, the same limit as a seat at the table. */
   name: string;
   policy: Policy;
+  policyFactory?: (random: () => number) => Policy;
 };
 
 export type TrainOptions = {
@@ -28,6 +29,7 @@ export type TrainOptions = {
   /** Same seed deals the same cards. */
   seed?: number;
   /** Called after each finished hand with the chips won so far. */
+  invalidAction?: "throw" | "fallback";
   onHand?: (finished: number, net: number[]) => void;
 };
 
@@ -62,7 +64,7 @@ export function playMatch(options: TrainOptions): TrainReport {
   const smallBlind = options.smallBlind ?? DEFAULT_SMALL_BLIND;
   const bigBlind = options.bigBlind ?? DEFAULT_BIG_BLIND;
   const seed = options.seed ?? DEFAULT_SEED;
-  const seats = options.seats;
+  const seats = options.seats.map((seat, index) => ({ ...seat, policy: seat.policyFactory?.(mulberry32((options.seed ?? DEFAULT_SEED) ^ Math.imul(index + 1, 0x9e3779b9))) ?? seat.policy }));
   if (!Number.isSafeInteger(hands) || hands < 1 || hands > MAX_HANDS) {
     throw new Error(`Play from 1 to ${MAX_HANDS} hands.`);
   }
@@ -99,7 +101,7 @@ export function playMatch(options: TrainOptions): TrainReport {
     if (table.error) throw new Error(table.error);
     const button = table.button;
     if (button !== null && button < count) buttons[button] += 1;
-    table = playHand(table, seats, decisions, fallbacks);
+    table = playHand(table, seats, decisions, fallbacks, options.invalidAction ?? "fallback", seed);
     const after = stacks(table, count);
     for (let seat = 0; seat < count; seat++) net[seat] += after[seat]! - before[seat]!;
     options.onHand?.(finished, [...net]);
@@ -139,7 +141,7 @@ export function formatReport(report: TrainReport): string {
   return [title, "", head, ...rows].join("\n");
 }
 
-function playHand(table: TableState, seats: TrainSeat[], decisions: number[], fallbacks: number[]): TableState {
+export function playHand(table: TableState, seats: TrainSeat[], decisions: number[], fallbacks: number[], invalidAction: "throw" | "fallback" = "throw", seed = 1): TableState {
   let state = table;
   for (let step = 0; step < MAX_ACTIONS && state.phase === "betting" && state.toAct !== null; step++) {
     const seat = state.toAct;
@@ -153,6 +155,7 @@ function playHand(table: TableState, seats: TrainSeat[], decisions: number[], fa
       state = next;
       continue;
     }
+    if (invalidAction === "throw") throw new Error(`Invalid policy action: seed ${seed}, hand ${state.handNumber}, seat ${seat}, street ${state.street}, log ${state.log.length}.`);
     fallbacks[seat] = (fallbacks[seat] ?? 0) + 1;
     const offered = legalActions(state);
     const action = offered.some((item) => item.action === "check")
@@ -197,7 +200,7 @@ function signed(value: number, digits: number): string {
   return value > 0 ? `+${text}` : text;
 }
 
-function mulberry32(seed: number): () => number {
+export function mulberry32(seed: number): () => number {
   let state = seed >>> 0;
   return () => {
     state = (state + 0x6d2b79f5) >>> 0;

@@ -82,6 +82,21 @@
       "start": 51005,
       "end": 51008,
       "role": "Prespecified training-only quota top-up"
+    },
+    {
+      "start": 91001,
+      "end": 91030,
+      "role": "Balanced equal-population fixed training"
+    },
+    {
+      "start": 92001,
+      "end": 92020,
+      "role": "Balanced stratified fixed validation"
+    },
+    {
+      "start": 93001,
+      "end": 93010,
+      "role": "Independent equity-opponent diagnostic challenge"
     }
   ],
   "reservation_spec": "docs/superpowers/specs/2026-11-05-contextual-flop-model-design.md",
@@ -2545,5 +2560,6 @@
   ],
   "confirmation_spec": "docs/superpowers/specs/2026-11-06-frequency-confirmation-design.md",
   "support_offset_spec": "docs/superpowers/specs/2026-11-06-support-offset-remedy-design.md",
-  "offset_confirmation_spec": "docs/superpowers/specs/2026-11-06-offset-confirmation-design.md"
+  "offset_confirmation_spec": "docs/superpowers/specs/2026-11-06-offset-confirmation-design.md",
+  "population_spec": "docs/superpowers/specs/2026-11-06-population-coverage-design.md"
 }

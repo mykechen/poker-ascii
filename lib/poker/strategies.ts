@@ -1,9 +1,10 @@
 import { simplePolicy, type Policy, type PolicyAction } from "./bot";
 import { candidate } from "./candidate";
 import { learner } from "./learner";
+import { createBenchmarkOpponent } from "./benchmark-opponents";
 import type { PublicView } from "./view";
 
-export type StrategyId = "chart" | "multiway" | "tight" | "station" | "aggressor" | "position" | "maniac" | "learner";
+export type StrategyId = "chart" | "multiway" | "tight" | "station" | "aggressor" | "position" | "maniac" | "learner" | "equity-defender" | "equity-pressure";
 
 export type Strategy = {
   id: StrategyId;
@@ -64,6 +65,7 @@ export const maniac: Policy = (view) =>
   baseFallback(view);
 
 export const strategies: readonly Strategy[] = [
+
   {
     id: "chart",
     name: "Chart",
@@ -114,8 +116,13 @@ export const strategies: readonly Strategy[] = [
   },
 ];
 
+export const benchmarkStrategies: readonly Strategy[] = [
+  {id:"equity-defender",name:"Equity defender",rule:"Uniform-range showdown equity; check/call/fold on incremental value. Unproven benchmark strength.",policy:createBenchmarkOpponent("equity-defender")},
+  {id:"equity-pressure",name:"Equity pressure",rule:"Independent equity policy plus conservative value raises. Unproven benchmark strength.",policy:createBenchmarkOpponent("equity-pressure")},
+];
+
 export function strategyById(id: StrategyId): Strategy {
-  const found = strategies.find((item) => item.id === id);
+  const found = [...strategies,...benchmarkStrategies].find((item) => item.id === id);
   if (!found) throw new Error(`Unknown strategy ${id}.`);
   return found;
 }

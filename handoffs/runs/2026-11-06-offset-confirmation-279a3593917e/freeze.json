@@ -1,0 +1,105 @@
+{
+  "decision": {
+    "status": "selected",
+    "selected": "offset:0.1",
+    "sparse": {
+      "observations": 563,
+      "hands": 326,
+      "batches": 10,
+      "actions": {
+        "passive": 558,
+        "fold": 5
+      }
+    }
+  },
+  "model": {
+    "version": 1,
+    "kind": "contextual",
+    "features": [
+      "intercept",
+      "support:001",
+      "support:010",
+      "support:011",
+      "support:100",
+      "support:101",
+      "support:110",
+      "support:111",
+      "size:free",
+      "size:small",
+      "size:medium",
+      "size:large",
+      "depth:short",
+      "depth:medium",
+      "depth:deep",
+      "position:button",
+      "position:blind",
+      "position:field",
+      "players:heads-up",
+      "players:few",
+      "players:many",
+      "paired",
+      "three-suited"
+    ],
+    "coefficients": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1.5553810419064025,
+        -1.0899662293369514,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0.5566889709350467,
+        0,
+        0,
+        0,
+        -1.1445986197672129,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "supports": [
+      "011",
+      "110",
+      "111"
+    ],
+    "lambda": 0.1
+  },
+  "modelHash": "0e6bf741dacad60f8e221090ad90269c0d948d65dad1ec8a1038e8a2adea442f",
+  "frozenAt": "2026-11-06T05:06:12.262Z",
+  "fingerprint": "c41816d9698f1c59aa0c5dab216decc0923638006c7529f8f0f767b30bc842e7"
+}

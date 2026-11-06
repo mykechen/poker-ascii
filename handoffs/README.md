@@ -53,3 +53,5 @@ Canonical league seed starts are configurable with `--tuning-seed-start` and `--
 - [0010 — builder-reviewed support-offset remedy design](0010-support-offset-remedy-design.md). Design only; no fresh runs or implementation.
 
 - [0011 — completed support-offset training/validation](0011-support-offset-validation.md). Offset .1 selected; sparse quotas and validation gates pass. No fresh profit/shifted-field confirmation or live promotion.
+
+- [0012 — complete frozen offset confirmation](0012-offset-confirmation.md). +2.03bb/100,95%[-50.18,54.24],inconclusive; sparse coverage passed but forecast/downside gates failed. Folding is valid; no live promotion.

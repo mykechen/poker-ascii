@@ -65,6 +65,16 @@
       "start": 72001,
       "end": 72010,
       "reason": "Completed support-offset common-history validation and selection; inspected"
+    },
+    {
+      "start": 81001,
+      "end": 81100,
+      "reason": "Completed frozen offset paired profit confirmation; inspected"
+    },
+    {
+      "start": 82001,
+      "end": 82020,
+      "reason": "Completed frozen offset shifted-field common-history confirmation; inspected"
     }
   ],
   "reserved_not_run": [
@@ -72,16 +82,6 @@
       "start": 51005,
       "end": 51008,
       "role": "Prespecified training-only quota top-up"
-    },
-    {
-      "start": 81001,
-      "end": 81100,
-      "role": "Frozen offset fixed100 paired profit confirmation"
-    },
-    {
-      "start": 82001,
-      "end": 82020,
-      "role": "Frozen offset shifted-opponent fixed20 common histories"
     }
   ],
   "reservation_spec": "docs/superpowers/specs/2026-11-05-contextual-flop-model-design.md",
@@ -1001,6 +1001,1546 @@
       "id": "current",
       "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
       "startedAt": "2026-11-06T04:54:27.137Z"
+    },
+    {
+      "seed": 82001,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:27:30.372Z"
+    },
+    {
+      "seed": 82002,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:28:18.275Z"
+    },
+    {
+      "seed": 82003,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:29:02.936Z"
+    },
+    {
+      "seed": 82004,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:29:51.106Z"
+    },
+    {
+      "seed": 82005,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:30:39.941Z"
+    },
+    {
+      "seed": 82006,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:31:30.316Z"
+    },
+    {
+      "seed": 82007,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:32:20.409Z"
+    },
+    {
+      "seed": 82008,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:33:10.949Z"
+    },
+    {
+      "seed": 82009,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:34:02.100Z"
+    },
+    {
+      "seed": 82010,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:34:54.297Z"
+    },
+    {
+      "seed": 82011,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:35:45.226Z"
+    },
+    {
+      "seed": 82012,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:36:36.792Z"
+    },
+    {
+      "seed": 82013,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:37:26.674Z"
+    },
+    {
+      "seed": 82014,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:38:17.968Z"
+    },
+    {
+      "seed": 82015,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:39:11.052Z"
+    },
+    {
+      "seed": 82016,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:40:00.862Z"
+    },
+    {
+      "seed": 82017,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:40:50.457Z"
+    },
+    {
+      "seed": 82018,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:41:41.816Z"
+    },
+    {
+      "seed": 82019,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:42:33.543Z"
+    },
+    {
+      "seed": 82020,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:43:24.348Z"
+    },
+    {
+      "seed": 81001,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:44:12.571Z"
+    },
+    {
+      "seed": 81001,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:44:31.984Z"
+    },
+    {
+      "seed": 81002,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:44:49.880Z"
+    },
+    {
+      "seed": 81002,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:45:09.592Z"
+    },
+    {
+      "seed": 81003,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:45:31.287Z"
+    },
+    {
+      "seed": 81003,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:45:51.224Z"
+    },
+    {
+      "seed": 81004,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:46:09.974Z"
+    },
+    {
+      "seed": 81004,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:46:28.427Z"
+    },
+    {
+      "seed": 81005,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:46:49.981Z"
+    },
+    {
+      "seed": 81005,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:47:11.752Z"
+    },
+    {
+      "seed": 81006,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:47:31.112Z"
+    },
+    {
+      "seed": 81006,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:47:50.397Z"
+    },
+    {
+      "seed": 81007,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:48:10.911Z"
+    },
+    {
+      "seed": 81007,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:48:31.392Z"
+    },
+    {
+      "seed": 81008,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:48:50.365Z"
+    },
+    {
+      "seed": 81008,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:49:09.308Z"
+    },
+    {
+      "seed": 81009,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:49:29.712Z"
+    },
+    {
+      "seed": 81009,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:49:50.120Z"
+    },
+    {
+      "seed": 81010,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:50:08.850Z"
+    },
+    {
+      "seed": 81010,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:50:27.893Z"
+    },
+    {
+      "seed": 81011,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:50:47.972Z"
+    },
+    {
+      "seed": 81011,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:51:08.554Z"
+    },
+    {
+      "seed": 81012,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:51:27.360Z"
+    },
+    {
+      "seed": 81012,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:51:45.429Z"
+    },
+    {
+      "seed": 81013,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:52:04.793Z"
+    },
+    {
+      "seed": 81013,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:52:25.436Z"
+    },
+    {
+      "seed": 81014,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:52:44.530Z"
+    },
+    {
+      "seed": 81014,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:53:03.582Z"
+    },
+    {
+      "seed": 81015,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:53:24.172Z"
+    },
+    {
+      "seed": 81015,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:53:44.895Z"
+    },
+    {
+      "seed": 81016,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:54:04.071Z"
+    },
+    {
+      "seed": 81016,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:54:22.775Z"
+    },
+    {
+      "seed": 81017,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:54:43.065Z"
+    },
+    {
+      "seed": 81017,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:55:03.550Z"
+    },
+    {
+      "seed": 81018,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:55:23.015Z"
+    },
+    {
+      "seed": 81018,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:55:42.133Z"
+    },
+    {
+      "seed": 81019,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:56:02.976Z"
+    },
+    {
+      "seed": 81019,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:56:23.798Z"
+    },
+    {
+      "seed": 81020,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:56:43.129Z"
+    },
+    {
+      "seed": 81020,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:57:02.717Z"
+    },
+    {
+      "seed": 81021,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:57:24.058Z"
+    },
+    {
+      "seed": 81021,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:57:45.717Z"
+    },
+    {
+      "seed": 81022,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:58:05.744Z"
+    },
+    {
+      "seed": 81022,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:58:25.299Z"
+    },
+    {
+      "seed": 81023,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:58:46.487Z"
+    },
+    {
+      "seed": 81023,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:59:08.177Z"
+    },
+    {
+      "seed": 81024,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:59:28.064Z"
+    },
+    {
+      "seed": 81024,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T05:59:47.032Z"
+    },
+    {
+      "seed": 81025,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:00:08.160Z"
+    },
+    {
+      "seed": 81025,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:00:28.900Z"
+    },
+    {
+      "seed": 81026,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:00:48.564Z"
+    },
+    {
+      "seed": 81026,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:01:08.768Z"
+    },
+    {
+      "seed": 81027,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:01:30.750Z"
+    },
+    {
+      "seed": 81027,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:01:51.734Z"
+    },
+    {
+      "seed": 81028,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:02:11.438Z"
+    },
+    {
+      "seed": 81028,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:02:31.372Z"
+    },
+    {
+      "seed": 81029,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:02:52.616Z"
+    },
+    {
+      "seed": 81029,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:03:13.161Z"
+    },
+    {
+      "seed": 81030,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:03:32.229Z"
+    },
+    {
+      "seed": 81030,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:03:51.000Z"
+    },
+    {
+      "seed": 81031,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:04:11.331Z"
+    },
+    {
+      "seed": 81031,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:04:32.071Z"
+    },
+    {
+      "seed": 81032,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:04:51.221Z"
+    },
+    {
+      "seed": 81032,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:05:10.115Z"
+    },
+    {
+      "seed": 81033,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:05:30.324Z"
+    },
+    {
+      "seed": 81033,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:05:50.695Z"
+    },
+    {
+      "seed": 81034,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:06:09.559Z"
+    },
+    {
+      "seed": 81034,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:06:29.286Z"
+    },
+    {
+      "seed": 81035,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:06:50.551Z"
+    },
+    {
+      "seed": 81035,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:07:12.192Z"
+    },
+    {
+      "seed": 81036,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:07:32.239Z"
+    },
+    {
+      "seed": 81036,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:07:52.097Z"
+    },
+    {
+      "seed": 81037,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:08:13.762Z"
+    },
+    {
+      "seed": 81037,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:08:34.910Z"
+    },
+    {
+      "seed": 81038,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:08:54.577Z"
+    },
+    {
+      "seed": 81038,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:09:14.614Z"
+    },
+    {
+      "seed": 81039,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:09:35.995Z"
+    },
+    {
+      "seed": 81039,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:09:57.762Z"
+    },
+    {
+      "seed": 81040,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:10:17.635Z"
+    },
+    {
+      "seed": 81040,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:10:37.800Z"
+    },
+    {
+      "seed": 81041,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:10:59.893Z"
+    },
+    {
+      "seed": 81041,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:11:20.829Z"
+    },
+    {
+      "seed": 81042,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:11:40.269Z"
+    },
+    {
+      "seed": 81042,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:11:59.926Z"
+    },
+    {
+      "seed": 81043,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:12:20.785Z"
+    },
+    {
+      "seed": 81043,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:12:41.823Z"
+    },
+    {
+      "seed": 81044,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:13:01.257Z"
+    },
+    {
+      "seed": 81044,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:13:20.292Z"
+    },
+    {
+      "seed": 81045,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:13:40.800Z"
+    },
+    {
+      "seed": 81045,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:14:02.531Z"
+    },
+    {
+      "seed": 81046,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:14:22.194Z"
+    },
+    {
+      "seed": 81046,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:14:42.617Z"
+    },
+    {
+      "seed": 81047,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:15:04.537Z"
+    },
+    {
+      "seed": 81047,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:15:25.516Z"
+    },
+    {
+      "seed": 81048,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:15:44.909Z"
+    },
+    {
+      "seed": 81048,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:16:04.910Z"
+    },
+    {
+      "seed": 81049,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:16:26.183Z"
+    },
+    {
+      "seed": 81049,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:16:46.422Z"
+    },
+    {
+      "seed": 81050,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:17:05.346Z"
+    },
+    {
+      "seed": 81050,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:17:24.648Z"
+    },
+    {
+      "seed": 81051,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:17:45.470Z"
+    },
+    {
+      "seed": 81051,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:18:06.084Z"
+    },
+    {
+      "seed": 81052,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:18:24.987Z"
+    },
+    {
+      "seed": 81052,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:18:45.109Z"
+    },
+    {
+      "seed": 81053,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:19:06.960Z"
+    },
+    {
+      "seed": 81053,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:19:28.350Z"
+    },
+    {
+      "seed": 81054,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:19:48.220Z"
+    },
+    {
+      "seed": 81054,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:20:07.216Z"
+    },
+    {
+      "seed": 81055,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:20:27.689Z"
+    },
+    {
+      "seed": 81055,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:20:48.767Z"
+    },
+    {
+      "seed": 81056,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:21:08.184Z"
+    },
+    {
+      "seed": 81056,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:21:27.455Z"
+    },
+    {
+      "seed": 81057,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:21:48.710Z"
+    },
+    {
+      "seed": 81057,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:22:09.445Z"
+    },
+    {
+      "seed": 81058,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:22:28.515Z"
+    },
+    {
+      "seed": 81058,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:22:49.136Z"
+    },
+    {
+      "seed": 81059,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:23:11.283Z"
+    },
+    {
+      "seed": 81059,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:23:32.898Z"
+    },
+    {
+      "seed": 81060,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:23:52.547Z"
+    },
+    {
+      "seed": 81060,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:24:12.149Z"
+    },
+    {
+      "seed": 81061,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:24:33.971Z"
+    },
+    {
+      "seed": 81061,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:24:54.511Z"
+    },
+    {
+      "seed": 81062,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:25:13.624Z"
+    },
+    {
+      "seed": 81062,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:25:32.871Z"
+    },
+    {
+      "seed": 81063,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:25:53.817Z"
+    },
+    {
+      "seed": 81063,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:26:14.975Z"
+    },
+    {
+      "seed": 81064,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:26:34.810Z"
+    },
+    {
+      "seed": 81064,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:26:54.643Z"
+    },
+    {
+      "seed": 81065,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:27:15.762Z"
+    },
+    {
+      "seed": 81065,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:27:36.787Z"
+    },
+    {
+      "seed": 81066,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:27:56.153Z"
+    },
+    {
+      "seed": 81066,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:28:15.834Z"
+    },
+    {
+      "seed": 81067,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:28:37.125Z"
+    },
+    {
+      "seed": 81067,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:28:58.569Z"
+    },
+    {
+      "seed": 81068,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:29:18.241Z"
+    },
+    {
+      "seed": 81068,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:29:37.417Z"
+    },
+    {
+      "seed": 81069,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:29:57.973Z"
+    },
+    {
+      "seed": 81069,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:30:18.803Z"
+    },
+    {
+      "seed": 81070,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:30:38.169Z"
+    },
+    {
+      "seed": 81070,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:30:58.079Z"
+    },
+    {
+      "seed": 81071,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:31:19.517Z"
+    },
+    {
+      "seed": 81071,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:31:40.422Z"
+    },
+    {
+      "seed": 81072,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:31:59.624Z"
+    },
+    {
+      "seed": 81072,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:32:18.481Z"
+    },
+    {
+      "seed": 81073,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:32:39.126Z"
+    },
+    {
+      "seed": 81073,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:33:00.583Z"
+    },
+    {
+      "seed": 81074,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:33:20.233Z"
+    },
+    {
+      "seed": 81074,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:33:39.690Z"
+    },
+    {
+      "seed": 81075,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:34:00.294Z"
+    },
+    {
+      "seed": 81075,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:34:21.507Z"
+    },
+    {
+      "seed": 81076,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:34:40.958Z"
+    },
+    {
+      "seed": 81076,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:35:00.596Z"
+    },
+    {
+      "seed": 81077,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:35:21.649Z"
+    },
+    {
+      "seed": 81077,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:35:42.970Z"
+    },
+    {
+      "seed": 81078,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:36:02.700Z"
+    },
+    {
+      "seed": 81078,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:36:22.133Z"
+    },
+    {
+      "seed": 81079,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:36:43.308Z"
+    },
+    {
+      "seed": 81079,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:37:04.230Z"
+    },
+    {
+      "seed": 81080,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:37:23.477Z"
+    },
+    {
+      "seed": 81080,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:37:42.862Z"
+    },
+    {
+      "seed": 81081,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:38:03.799Z"
+    },
+    {
+      "seed": 81081,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:38:24.813Z"
+    },
+    {
+      "seed": 81082,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:38:44.224Z"
+    },
+    {
+      "seed": 81082,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:39:04.049Z"
+    },
+    {
+      "seed": 81083,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:39:25.497Z"
+    },
+    {
+      "seed": 81083,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:39:46.338Z"
+    },
+    {
+      "seed": 81084,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:40:05.509Z"
+    },
+    {
+      "seed": 81084,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:40:25.075Z"
+    },
+    {
+      "seed": 81085,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:40:46.022Z"
+    },
+    {
+      "seed": 81085,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:41:06.969Z"
+    },
+    {
+      "seed": 81086,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:41:26.429Z"
+    },
+    {
+      "seed": 81086,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:41:45.604Z"
+    },
+    {
+      "seed": 81087,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:42:06.492Z"
+    },
+    {
+      "seed": 81087,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:42:26.994Z"
+    },
+    {
+      "seed": 81088,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:42:46.135Z"
+    },
+    {
+      "seed": 81088,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:43:05.788Z"
+    },
+    {
+      "seed": 81089,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:43:26.836Z"
+    },
+    {
+      "seed": 81089,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:43:49.143Z"
+    },
+    {
+      "seed": 81090,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:44:09.555Z"
+    },
+    {
+      "seed": 81090,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:44:29.420Z"
+    },
+    {
+      "seed": 81091,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:44:51.047Z"
+    },
+    {
+      "seed": 81091,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:45:11.691Z"
+    },
+    {
+      "seed": 81092,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:45:31.129Z"
+    },
+    {
+      "seed": 81092,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:45:49.595Z"
+    },
+    {
+      "seed": 81093,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:46:09.074Z"
+    },
+    {
+      "seed": 81093,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:46:30.535Z"
+    },
+    {
+      "seed": 81094,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:46:49.811Z"
+    },
+    {
+      "seed": 81094,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:47:08.285Z"
+    },
+    {
+      "seed": 81095,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:47:28.214Z"
+    },
+    {
+      "seed": 81095,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:47:47.748Z"
+    },
+    {
+      "seed": 81096,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:48:05.753Z"
+    },
+    {
+      "seed": 81096,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:48:24.559Z"
+    },
+    {
+      "seed": 81097,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:48:44.606Z"
+    },
+    {
+      "seed": 81097,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:49:04.439Z"
+    },
+    {
+      "seed": 81098,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:49:22.632Z"
+    },
+    {
+      "seed": 81098,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:49:40.763Z"
+    },
+    {
+      "seed": 81099,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:50:00.477Z"
+    },
+    {
+      "seed": 81099,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:50:20.665Z"
+    },
+    {
+      "seed": 81100,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:50:39.296Z"
+    },
+    {
+      "seed": 81100,
+      "phase": "profit",
+      "id": "offset",
+      "directory": "handoffs/runs/2026-11-06-offset-confirmation-279a3593917e",
+      "startedAt": "2026-11-06T06:50:57.571Z"
     }
   ],
   "confirmation_spec": "docs/superpowers/specs/2026-11-06-frequency-confirmation-design.md",

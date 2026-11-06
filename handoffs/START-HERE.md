@@ -1,6 +1,10 @@
 # Continue the poker-bot project
 
-## Latest work — support-offset experiment
+## Latest work — two-hour offset confirmation
+
+Read `handoffs/0012-offset-confirmation.md` first. Fixed20panels/100profitpairs completed in83.79minutes. Profit+2.03bb/100,95%[-50.18,54.24],inconclusive. Sparsecoverage passed but forecast gate/downside veto failed. No promotion. Next: training-population coverage/model-validation redesign, no reruns or fitting to inspected confirmation seeds.
+
+## Previous work — support-offset experiment
 
 Training/validation completed; offset:0.1 selected, with improved prediction scores. No profit/shifted-field generalization evidence yet. Read `handoffs/0011-support-offset-validation.md` and newest support-offset run progress first. Source 81ee2ca; fixed fresh train/validation only. No profit test/live promotion. Do not duplicate the completed run or reuse its seeds. Next is a separate fresh shifted-field/sparse-support and profit confirmation design.
 

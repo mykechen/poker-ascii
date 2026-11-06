@@ -24,7 +24,11 @@ See [Step 0010](0010-support-offset-remedy-design.md). Builder-reviewed design u
 
 See [Step 0011](0011-support-offset-validation.md). All fits converged; offset .1 selected, log loss .87485 to .60278 and Brier .61306 to .39289. Sparse quotas met, all group loss gates passed. No profit or shifted-field generalization evidence; frequency diagnostic had lower validation loss but was ineligible.
 
-## Next decision — frozen offset shifted-field and profit confirmation design
+## Completed — frozen offset shifted-field and profit confirmation
+
+See [Step0012](0012-offset-confirmation.md). Full20panels/100pairs in83.79minutes. Profit+2.03bb/100,95%[-50.18,54.24],inconclusive. Minorityfold quota passed70/216 but sparse forecast loss worsened beyond+.02 guard; downside veto failed. No promotion.
+
+## Next decision — training-population coverage and model-validation redesign
 
 Do not extend the completed confirmation or reuse inspected seeds as fresh evidence. Diagnose sparse-support mismatch using inspected data, then consider a training-only remedy or more efficient evaluation design before another powered fresh test.
 

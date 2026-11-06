@@ -1,0 +1,76 @@
+{
+  "matches": 9240,
+  "hands": 36960,
+  "fallbacks": 0,
+  "zeroSum": true,
+  "freezeHashVerified": true,
+  "rotationMeansRecomputed": true,
+  "pairedMean": 2.032366071428572,
+  "pairedSE": 26.312571520786072,
+  "interval95": [
+    -50.177564591545575,
+    54.242296734402714
+  ],
+  "coverage": {
+    "observations": 216,
+    "hands": 108,
+    "batches": 18,
+    "folds": 70,
+    "foldHands": 70,
+    "foldBatches": 18
+  },
+  "forecastScoresRecomputed": true,
+  "gatesRecomputed": true,
+  "sparseActionConditionalScores": {
+    "current": {
+      "passive": {
+        "count": 146,
+        "logLoss": 0.5707131633836627,
+        "brier": 0.3859379732115461
+      },
+      "fold": {
+        "count": 70,
+        "logLoss": 0.8955516786212223,
+        "brier": 0.6900550583839054
+      }
+    },
+    "offset": {
+      "passive": {
+        "count": 146,
+        "logLoss": 0.19112008150621818,
+        "brier": 0.06683370524838397
+      },
+      "fold": {
+        "count": 70,
+        "logLoss": 1.856011207428131,
+        "brier": 1.4005364000078184
+      }
+    }
+  },
+  "pairedSeedBootstrap": {
+    "all": {
+      "resamples": 10000,
+      "zeroCountReplicates": 0,
+      "lossDifference95": [
+        -0.13473161411111406,
+        -0.11407230266341208
+      ],
+      "brierDifference95": [
+        -0.10537990588269412,
+        -0.088549105075373
+      ]
+    },
+    "110:true": {
+      "resamples": 10000,
+      "zeroCountReplicates": 0,
+      "lossDifference95": [
+        -0.014783026272614578,
+        0.1294406081898849
+      ],
+      "brierDifference95": [
+        -0.03376936999163002,
+        0.06499237385556485
+      ]
+    }
+  }
+}

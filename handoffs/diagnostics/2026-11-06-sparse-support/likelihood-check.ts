@@ -1,0 +1,13 @@
+import {actionProbabilities} from '../../../lib/poker/range-beliefs';
+import {readFileSync,writeFileSync} from 'node:fs';
+import type {ResponseModel} from '../../../lib/poker/contextual-response';
+const frozen=JSON.parse(readFileSync('handoffs/runs/2026-11-05-contextual-adfb6f523ebe/freeze.json','utf8')).model as ResponseModel;
+const context={facing:true,canRaise:false,position:'field',size:'small',depth:'short',players:'few'};
+const strong=actionProbabilities(['Ah','Ad'],['Ac','7s','2d'],context,1);
+const weak=actionProbabilities(['Kh','Qd'],['Ac','7s','2d'],context,1);
+const frequencyStrong=actionProbabilities(['Ah','Ad'],['Ac','7s','2d'],context,1,frozen);
+const frequencyWeak=actionProbabilities(['Kh','Qd'],['Ac','7s','2d'],context,1,frozen);
+if(Math.abs(strong[1]-weak[1])<.1||JSON.stringify(frequencyStrong)!==JSON.stringify(frequencyWeak))throw new Error('Hypothesis failed.');
+const result={strong,weak,frequencyStrong,frequencyWeak,passiveLikelihoodRatioCurrent:strong[1]/weak[1],passiveLikelihoodRatioFrequency:frequencyStrong[1]/frequencyWeak[1]};
+writeFileSync('handoffs/diagnostics/2026-11-06-sparse-support/likelihood-check.json',JSON.stringify(result,null,2)+'\n');
+console.log(result);

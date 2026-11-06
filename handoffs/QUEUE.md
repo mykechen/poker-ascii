@@ -12,7 +12,11 @@ See [Step 0007](0007-contextual-flop-pilot.md). Implementation, independent revi
 
 See [Step 0008](0008-frequency-confirmation.md). Thirty paired batches completed: +13.45 bb/100, primary 95% interval [-131.07, 157.96]; inconclusive. Cell downside veto failed; sparse support had 63 observations, below quota, and worse log loss. No promotion.
 
-## Next decision — sparse-support diagnosis and evaluation precision
+## Completed — sparse-support diagnosis
+
+See [Step 0009](0009-sparse-support-diagnosis.md). Action-mix shift and support-only overconfidence reproduced; frequency replacement also removes flop likelihood discrimination between latent hands. No runtime changes.
+
+## Next decision — training-only offset remedy design and evaluation precision
 
 Do not extend the completed confirmation or reuse inspected seeds as fresh evidence. Diagnose sparse-support mismatch using inspected data, then consider a training-only remedy or more efficient evaluation design before another powered fresh test.
 

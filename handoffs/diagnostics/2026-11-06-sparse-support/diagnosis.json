@@ -1,0 +1,229 @@
+{
+  "warning": "All inspected data; descriptive only, no new independent evidence. Context comparisons are post hoc.",
+  "frozen110": [
+    0.01791044776119403,
+    0.982089552238806,
+    0
+  ],
+  "training": {
+    "count": 333,
+    "actions": {
+      "passive": 328,
+      "fold": 5
+    },
+    "frequencyLogLoss": 0.07819737988157616,
+    "foldLossShare": 0.7723527564775318,
+    "distinctHands": 123,
+    "foldDistinctHands": 5,
+    "foldBatches": {
+      "0": 5
+    },
+    "context": {
+      "size": {
+        "medium": {
+          "count": 3,
+          "actions": {
+            "passive": 3
+          }
+        },
+        "small": {
+          "count": 330,
+          "actions": {
+            "passive": 325,
+            "fold": 5
+          }
+        }
+      },
+      "depth": {
+        "short": {
+          "count": 333,
+          "actions": {
+            "passive": 328,
+            "fold": 5
+          }
+        }
+      },
+      "position": {
+        "blind": {
+          "count": 57,
+          "actions": {
+            "fold": 5,
+            "passive": 52
+          }
+        },
+        "button": {
+          "count": 60,
+          "actions": {
+            "passive": 60
+          }
+        },
+        "field": {
+          "count": 216,
+          "actions": {
+            "passive": 216
+          }
+        }
+      },
+      "players": {
+        "few": {
+          "count": 267,
+          "actions": {
+            "passive": 262,
+            "fold": 5
+          }
+        },
+        "heads-up": {
+          "count": 6,
+          "actions": {
+            "passive": 6
+          }
+        },
+        "many": {
+          "count": 60,
+          "actions": {
+            "passive": 60
+          }
+        }
+      }
+    }
+  },
+  "validation": {
+    "count": 56,
+    "actions": {
+      "passive": 56
+    },
+    "frequencyLogLoss": 0.018072781059694506,
+    "foldLossShare": 0.0,
+    "distinctHands": 34,
+    "foldDistinctHands": 0,
+    "foldBatches": {},
+    "context": {
+      "size": {
+        "medium": {
+          "count": 7,
+          "actions": {
+            "passive": 7
+          }
+        },
+        "small": {
+          "count": 49,
+          "actions": {
+            "passive": 49
+          }
+        }
+      },
+      "depth": {
+        "short": {
+          "count": 56,
+          "actions": {
+            "passive": 56
+          }
+        }
+      },
+      "position": {
+        "blind": {
+          "count": 5,
+          "actions": {
+            "passive": 5
+          }
+        },
+        "button": {
+          "count": 12,
+          "actions": {
+            "passive": 12
+          }
+        },
+        "field": {
+          "count": 39,
+          "actions": {
+            "passive": 39
+          }
+        }
+      },
+      "players": {
+        "few": {
+          "count": 45,
+          "actions": {
+            "passive": 45
+          }
+        },
+        "heads-up": {
+          "count": 11,
+          "actions": {
+            "passive": 11
+          }
+        }
+      }
+    }
+  },
+  "confirmation": {
+    "count": 63,
+    "actions": {
+      "passive": 50,
+      "fold": 13
+    },
+    "frequencyLogLoss": 0.8443565534404108,
+    "foldLossShare": 0.9830125354353445,
+    "distinctHands": 31,
+    "foldDistinctHands": 13,
+    "foldBatches": {
+      "2": 2,
+      "6": 4,
+      "7": 1,
+      "8": 5,
+      "9": 1
+    },
+    "context": {
+      "size": {
+        "small": {
+          "count": 63,
+          "actions": {
+            "passive": 50,
+            "fold": 13
+          }
+        }
+      },
+      "depth": {
+        "short": {
+          "count": 63,
+          "actions": {
+            "passive": 50,
+            "fold": 13
+          }
+        }
+      },
+      "position": {
+        "blind": {
+          "count": 14,
+          "actions": {
+            "passive": 11,
+            "fold": 3
+          }
+        },
+        "button": {
+          "count": 7,
+          "actions": {
+            "passive": 4,
+            "fold": 3
+          }
+        },
+        "field": {
+          "count": 42,
+          "actions": {
+            "passive": 35,
+            "fold": 7
+          }
+        }
+      },
+      "players": {
+        "few": {
+          "count": 63,
+          "actions": {
+            "passive": 50,
+            "fold": 13
+          }
+        }
+      }
+    }
+  }
+}

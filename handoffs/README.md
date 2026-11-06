@@ -47,3 +47,5 @@ Canonical league seed starts are configurable with `--tuning-seed-start` and `--
 - [0007 — completed contextual response pilot](0007-contextual-flop-pilot.md). Frequency selected; on-policy profit improvement remains unproven.
 
 - [0008 — bounded frozen frequency confirmation](0008-frequency-confirmation.md). Profit inconclusive; downside veto failed and sparse-support quota unmet. No promotion.
+
+- [0009 — sparse-support diagnosis](0009-sparse-support-diagnosis.md). Reproduced fold overconfidence and loss of latent discrimination; no runtime change.

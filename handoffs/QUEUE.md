@@ -32,7 +32,11 @@ See [Step0012](0012-offset-confirmation.md). Full20panels/100pairs in83.79minute
 
 See [Step 0013](0013-population-coverage-design.md). Builder-reviewed design adds expanded heuristic lineups, equal-stratum support fitting, minority coverage and per-stratum validation vetoes. No implementation or fresh reservations.
 
-## Next decision — approve population coverage design, then implementation plan
+## Completed — harness/opponent audit
+
+See [Step 0014](0014-harness-opponent-audit.md). Existing evaluation is against eight related heuristics; stronger independent opponents remain untested in confirmations. Fixed five-entry lists overweight leading types at larger tables.
+
+## Next decision — balance lineup multiplicity in population design, approve, then implement
 
 Do not extend the completed confirmation or reuse inspected seeds as fresh evidence. Diagnose sparse-support mismatch using inspected data, then consider a training-only remedy or more efficient evaluation design before another powered fresh test.
 

@@ -57,3 +57,5 @@ Canonical league seed starts are configurable with `--tuning-seed-start` and `--
 - [0012 — complete frozen offset confirmation](0012-offset-confirmation.md). +2.03bb/100,95%[-50.18,54.24],inconclusive; sparse coverage passed but forecast/downside gates failed. Folding is valid; no live promotion.
 
 - [0013 — builder-reviewed population coverage redesign](0013-population-coverage-design.md). Equal-stratum training/validation safeguards; design only.
+
+- [0014 — harness/opponent audit](0014-harness-opponent-audit.md). Eight related heuristic styles; asymmetric lineup repetition and limited opponent strength documented. No runtime changes.

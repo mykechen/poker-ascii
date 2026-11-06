@@ -1,6 +1,10 @@
 # Continue the poker-bot project
 
-## Latest work — population coverage design
+## Latest work — harness/opponent audit
+
+Read `handoffs/0014-harness-opponent-audit.md`. Existing opponents are eight related heuristics; no strong external/solver opponent test in tracked confirmations. Five-entry lists repeat their first types at larger tables; all-seat rotation does not balance family counts. Address lineup multiplicity in the pending population design before implementation. No runtime changes.
+
+## Pending work — population coverage design
 
 Read `handoffs/0013-population-coverage-design.md` and its linked specification first. Builder-reviewed redesign complete; no implementation or fresh reservations yet. Equal legacy/expanded population weighting, per-stratum/minority coverage and validation gates, same offset family. Next: concrete design approval then implementation plan. No profit run/live promotion.
 

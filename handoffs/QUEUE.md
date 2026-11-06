@@ -16,7 +16,11 @@ See [Step 0008](0008-frequency-confirmation.md). Thirty paired batches completed
 
 See [Step 0009](0009-sparse-support-diagnosis.md). Action-mix shift and support-only overconfidence reproduced; frequency replacement also removes flop likelihood discrimination between latent hands. No runtime changes.
 
-## Next decision — training-only offset remedy design and evaluation precision
+## Completed — training-only support-offset remedy design
+
+See [Step 0010](0010-support-offset-remedy-design.md). Builder-reviewed design uses four regularized support-offset parameters, current fallback on inadequate flop hand/batch coverage, and fixed fresh training/validation before any separate profit confirmation. No implementation yet.
+
+## Next decision — approve concrete offset design, then implementation plan
 
 Do not extend the completed confirmation or reuse inspected seeds as fresh evidence. Diagnose sparse-support mismatch using inspected data, then consider a training-only remedy or more efficient evaluation design before another powered fresh test.
 

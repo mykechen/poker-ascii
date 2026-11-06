@@ -49,3 +49,5 @@ Canonical league seed starts are configurable with `--tuning-seed-start` and `--
 - [0008 — bounded frozen frequency confirmation](0008-frequency-confirmation.md). Profit inconclusive; downside veto failed and sparse-support quota unmet. No promotion.
 
 - [0009 — sparse-support diagnosis](0009-sparse-support-diagnosis.md). Reproduced fold overconfidence and loss of latent discrimination; no runtime change.
+
+- [0010 — builder-reviewed support-offset remedy design](0010-support-offset-remedy-design.md). Design only; no fresh runs or implementation.

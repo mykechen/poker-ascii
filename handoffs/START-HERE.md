@@ -1,6 +1,10 @@
 # Continue the poker-bot project
 
-## Latest work — sparse-support diagnosis
+## Latest work — support-offset design
+
+Read `handoffs/0010-support-offset-remedy-design.md` and its linked specification. Builder-reviewed design is complete; no implementation or fresh reservations yet. Next: review the concrete design with the user, then write the implementation plan.
+
+## Previous work — sparse-support diagnosis
 
 Read `handoffs/0009-sparse-support-diagnosis.md` first. Diagnosis completed using inspected evidence: sparse fold rate shifted, validation coverage was inadequate, and frequency replacement removes latent action discrimination. No runtime change. Next: design a training-only regularized offset remedy preserving within-hand inference, with fresh training/validation/evaluation partitions.
 

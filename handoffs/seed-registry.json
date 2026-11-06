@@ -62,6 +62,16 @@
       "start": 51005,
       "end": 51008,
       "role": "Prespecified training-only quota top-up"
+    },
+    {
+      "start": 71001,
+      "end": 71020,
+      "role": "Support-offset fixed current-policy training"
+    },
+    {
+      "start": 72001,
+      "end": 72010,
+      "role": "Support-offset fixed common-history validation"
     }
   ],
   "reservation_spec": "docs/superpowers/specs/2026-11-05-contextual-flop-model-design.md",
@@ -773,5 +783,6 @@
       "startedAt": "2026-11-06T03:31:54.872Z"
     }
   ],
-  "confirmation_spec": "docs/superpowers/specs/2026-11-06-frequency-confirmation-design.md"
+  "confirmation_spec": "docs/superpowers/specs/2026-11-06-frequency-confirmation-design.md",
+  "support_offset_spec": "docs/superpowers/specs/2026-11-06-support-offset-remedy-design.md"
 }

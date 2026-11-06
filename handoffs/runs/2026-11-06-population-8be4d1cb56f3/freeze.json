@@ -1,0 +1,214 @@
+{
+  "selection": {
+    "status": "selected",
+    "selected": "offset:0.1",
+    "coverage": {
+      "legacy": {
+        "110": {
+          "observations": 1661,
+          "hands": 874,
+          "batches": 20,
+          "actions": {
+            "fold": {
+              "observations": 24,
+              "hands": 24,
+              "batches": 7
+            },
+            "passive": {
+              "observations": 1637,
+              "hands": 874,
+              "batches": 20
+            }
+          }
+        },
+        "111": {
+          "observations": 2737,
+          "hands": 1990,
+          "batches": 20,
+          "actions": {
+            "aggressive": {
+              "observations": 18,
+              "hands": 18,
+              "batches": 6
+            },
+            "fold": {
+              "observations": 226,
+              "hands": 223,
+              "batches": 20
+            },
+            "passive": {
+              "observations": 2493,
+              "hands": 1989,
+              "batches": 20
+            }
+          }
+        },
+        "011": {
+          "observations": 4092,
+          "hands": 2863,
+          "batches": 20,
+          "actions": {
+            "aggressive": {
+              "observations": 2863,
+              "hands": 2863,
+              "batches": 20
+            },
+            "passive": {
+              "observations": 1229,
+              "hands": 1039,
+              "batches": 20
+            }
+          }
+        }
+      },
+      "expanded": {
+        "110": {
+          "observations": 637,
+          "hands": 296,
+          "batches": 18,
+          "actions": {
+            "fold": {
+              "observations": 55,
+              "hands": 54,
+              "batches": 15
+            },
+            "passive": {
+              "observations": 582,
+              "hands": 296,
+              "batches": 18
+            }
+          }
+        },
+        "111": {
+          "observations": 3360,
+          "hands": 2128,
+          "batches": 20,
+          "actions": {
+            "aggressive": {
+              "observations": 33,
+              "hands": 33,
+              "batches": 12
+            },
+            "fold": {
+              "observations": 593,
+              "hands": 531,
+              "batches": 20
+            },
+            "passive": {
+              "observations": 2734,
+              "hands": 2127,
+              "batches": 20
+            }
+          }
+        },
+        "011": {
+          "observations": 5955,
+          "hands": 3116,
+          "batches": 20,
+          "actions": {
+            "aggressive": {
+              "observations": 2423,
+              "hands": 2423,
+              "batches": 20
+            },
+            "passive": {
+              "observations": 3532,
+              "hands": 1947,
+              "batches": 20
+            }
+          }
+        }
+      }
+    }
+  },
+  "model": {
+    "version": 1,
+    "kind": "contextual",
+    "features": [
+      "intercept",
+      "support:001",
+      "support:010",
+      "support:011",
+      "support:100",
+      "support:101",
+      "support:110",
+      "support:111",
+      "size:free",
+      "size:small",
+      "size:medium",
+      "size:large",
+      "depth:short",
+      "depth:medium",
+      "depth:deep",
+      "position:button",
+      "position:blind",
+      "position:field",
+      "players:heads-up",
+      "players:few",
+      "players:many",
+      "paired",
+      "three-suited"
+    ],
+    "coefficients": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1.2692996649425925,
+        -0.7624534222351395,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0.6074332774796127,
+        0,
+        0,
+        0,
+        -1.0813907575491126,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "supports": [
+      "011",
+      "110",
+      "111"
+    ],
+    "lambda": 0.1
+  },
+  "modelHash": "df943f898f0944386c96901b8a40abaac4ec14c6ab154cdbe5177f0c937dfb54",
+  "frozenAt": "2026-11-06T08:49:43.959Z",
+  "fingerprint": "8be4d1cb56f39c5a285b56e3ccd6a9fa7eda089d5c7f7f2c33674e913c060694"
+}

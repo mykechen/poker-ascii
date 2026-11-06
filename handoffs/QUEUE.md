@@ -36,7 +36,11 @@ See [Step 0013](0013-population-coverage-design.md). Builder-reviewed design add
 
 See [Step 0014](0014-harness-opponent-audit.md). Existing evaluation is against eight related heuristics; stronger independent opponents remain untested in confirmations. Fixed five-entry lists overweight leading types at larger tables.
 
-## Next decision — balance lineup multiplicity in population design, approve, then implement
+## Completed — balanced population experiment and computational opponents
+
+See [Step 0015](0015-balanced-population-experiment.md) and the [consolidated findings](../docs/experiments/2026-11-06-consolidated-findings.md). Full97.23minute run,177tests/independent raw audit. Forecast gates pass for both populations; actual-fold conditional loss still worsens. Ten-pair new-opponent challenge delta-98.38bb/100,SE58.10: adverse/inconclusive,not proven regression. No promotion.
+
+## Next decision — posterior-range quality and downstream action-value diagnosis
 
 Do not extend the completed confirmation or reuse inspected seeds as fresh evidence. Diagnose sparse-support mismatch using inspected data, then consider a training-only remedy or more efficient evaluation design before another powered fresh test.
 

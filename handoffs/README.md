@@ -59,3 +59,6 @@ Canonical league seed starts are configurable with `--tuning-seed-start` and `--
 - [0013 — builder-reviewed population coverage redesign](0013-population-coverage-design.md). Equal-stratum training/validation safeguards; design only.
 
 - [0014 — harness/opponent audit](0014-harness-opponent-audit.md). Eight related heuristic styles; asymmetric lineup repetition and limited opponent strength documented. No runtime changes.
+
+- [0015 — balanced population experiment and independent-opponent challenge](0015-balanced-population-experiment.md). Completed; selected forecasts improve but challenge adverse/inconclusive. No promotion.
+- [Consolidated findings through Step0015](../docs/experiments/2026-11-06-consolidated-findings.md). Full historical evidence, limitations and current next decision.

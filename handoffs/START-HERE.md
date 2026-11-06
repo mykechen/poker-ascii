@@ -1,6 +1,10 @@
 # Continue the poker-bot project
 
-## Latest work — harness/opponent audit
+## Latest work — balanced population experiment
+
+Read `handoffs/0015-balanced-population-experiment.md` and `docs/experiments/2026-11-06-consolidated-findings.md` first. Full balanced experiment completed in97.23minutes. Forecast gates selected newly fittedoffset.1; ten-pair independent-policy challenge delta-98.38bb/100,SE58.10 (descriptive only). No promotion/established5bbgain. All raw audits passed; source16d6fbc and initial push failures recorded. Next decision: diagnose posterior-range quality and downstream action value. Do not rerun inspected seeds or automatically extend the challenge.
+
+## Previous work — harness/opponent audit
 
 Read `handoffs/0014-harness-opponent-audit.md`. Existing opponents are eight related heuristics; no strong external/solver opponent test in tracked confirmations. Five-entry lists repeat their first types at larger tables; all-seat rotation does not balance family counts. Address lineup multiplicity in the pending population design before implementation. No runtime changes.
 

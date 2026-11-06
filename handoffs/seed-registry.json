@@ -45,6 +45,16 @@
       "start": 53001,
       "end": 53004,
       "reason": "Contextual frozen on-policy evaluation; run contextual-adfb6f523ebe completed"
+    },
+    {
+      "start": 61001,
+      "end": 61030,
+      "reason": "Completed fixed frozen frequency confirmation; inspected profit evidence"
+    },
+    {
+      "start": 62001,
+      "end": 62010,
+      "reason": "Completed independent common-history confirmation panels; inspected evidence"
     }
   ],
   "reserved_not_run": [
@@ -52,16 +62,6 @@
       "start": 51005,
       "end": 51008,
       "role": "Prespecified training-only quota top-up"
-    },
-    {
-      "start": 61001,
-      "end": 61030,
-      "role": "Fixed frozen frequency confirmation profit; 30 paired batches"
-    },
-    {
-      "start": 62001,
-      "end": 62010,
-      "role": "Fixed current-policy common-history confirmation panel; no fitting"
     }
   ],
   "reservation_spec": "docs/superpowers/specs/2026-11-05-contextual-flop-model-design.md",
@@ -281,6 +281,496 @@
         "end": 53004,
         "role": "Contextual flop evaluation"
       }
+    },
+    {
+      "seed": 61001,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:15:57.219Z"
+    },
+    {
+      "seed": 61001,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:16:04.436Z"
+    },
+    {
+      "seed": 61002,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:16:11.453Z"
+    },
+    {
+      "seed": 61002,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:16:18.328Z"
+    },
+    {
+      "seed": 61003,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:16:25.094Z"
+    },
+    {
+      "seed": 61003,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:16:32.170Z"
+    },
+    {
+      "seed": 61004,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:16:39.154Z"
+    },
+    {
+      "seed": 61004,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:16:45.871Z"
+    },
+    {
+      "seed": 61005,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:16:52.847Z"
+    },
+    {
+      "seed": 61005,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:16:59.484Z"
+    },
+    {
+      "seed": 61006,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:17:05.966Z"
+    },
+    {
+      "seed": 61006,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:17:12.536Z"
+    },
+    {
+      "seed": 61007,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:17:19.052Z"
+    },
+    {
+      "seed": 61007,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:17:25.672Z"
+    },
+    {
+      "seed": 61008,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:17:32.473Z"
+    },
+    {
+      "seed": 61008,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:17:39.329Z"
+    },
+    {
+      "seed": 61009,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:17:46.143Z"
+    },
+    {
+      "seed": 61009,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:17:53.296Z"
+    },
+    {
+      "seed": 61010,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:18:00.380Z"
+    },
+    {
+      "seed": 61010,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:18:06.947Z"
+    },
+    {
+      "seed": 61011,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:18:13.450Z"
+    },
+    {
+      "seed": 61011,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:18:20.525Z"
+    },
+    {
+      "seed": 61012,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:18:27.435Z"
+    },
+    {
+      "seed": 61012,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:18:34.002Z"
+    },
+    {
+      "seed": 61013,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:18:40.637Z"
+    },
+    {
+      "seed": 61013,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:18:47.409Z"
+    },
+    {
+      "seed": 61014,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:18:54.376Z"
+    },
+    {
+      "seed": 61014,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:19:01.499Z"
+    },
+    {
+      "seed": 61015,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:19:08.446Z"
+    },
+    {
+      "seed": 61015,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:19:15.572Z"
+    },
+    {
+      "seed": 61016,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:19:22.418Z"
+    },
+    {
+      "seed": 61016,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:19:29.273Z"
+    },
+    {
+      "seed": 61017,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:19:36.118Z"
+    },
+    {
+      "seed": 61017,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:19:43.673Z"
+    },
+    {
+      "seed": 61018,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:19:51.155Z"
+    },
+    {
+      "seed": 61018,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:19:58.311Z"
+    },
+    {
+      "seed": 61019,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:20:05.389Z"
+    },
+    {
+      "seed": 61019,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:20:12.398Z"
+    },
+    {
+      "seed": 61020,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:20:19.429Z"
+    },
+    {
+      "seed": 61020,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:20:26.478Z"
+    },
+    {
+      "seed": 61021,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:20:33.383Z"
+    },
+    {
+      "seed": 61021,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:20:40.599Z"
+    },
+    {
+      "seed": 61022,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:20:47.692Z"
+    },
+    {
+      "seed": 61022,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:20:54.810Z"
+    },
+    {
+      "seed": 61023,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:21:02.138Z"
+    },
+    {
+      "seed": 61023,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:21:09.089Z"
+    },
+    {
+      "seed": 61024,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:21:15.848Z"
+    },
+    {
+      "seed": 61024,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:27:46.770Z"
+    },
+    {
+      "seed": 61025,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:27:53.860Z"
+    },
+    {
+      "seed": 61025,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:28:01.708Z"
+    },
+    {
+      "seed": 61026,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:28:08.730Z"
+    },
+    {
+      "seed": 61026,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:28:15.373Z"
+    },
+    {
+      "seed": 61027,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:28:21.866Z"
+    },
+    {
+      "seed": 61027,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:28:28.827Z"
+    },
+    {
+      "seed": 61028,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:28:35.612Z"
+    },
+    {
+      "seed": 61028,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:28:42.907Z"
+    },
+    {
+      "seed": 61029,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:28:50.120Z"
+    },
+    {
+      "seed": 61029,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:28:57.014Z"
+    },
+    {
+      "seed": 61030,
+      "phase": "profit",
+      "id": "frequency",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:29:04.288Z"
+    },
+    {
+      "seed": 61030,
+      "phase": "profit",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:29:11.367Z"
+    },
+    {
+      "seed": 62001,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:29:18.332Z"
+    },
+    {
+      "seed": 62002,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:29:35.630Z"
+    },
+    {
+      "seed": 62003,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:29:52.241Z"
+    },
+    {
+      "seed": 62004,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:30:08.824Z"
+    },
+    {
+      "seed": 62005,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:30:25.609Z"
+    },
+    {
+      "seed": 62006,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:30:41.852Z"
+    },
+    {
+      "seed": 62007,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:30:59.322Z"
+    },
+    {
+      "seed": 62008,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:31:18.000Z"
+    },
+    {
+      "seed": 62009,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:31:36.302Z"
+    },
+    {
+      "seed": 62010,
+      "phase": "panel",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
+      "startedAt": "2026-11-06T03:31:54.872Z"
     }
   ],
   "confirmation_spec": "docs/superpowers/specs/2026-11-06-frequency-confirmation-design.md"

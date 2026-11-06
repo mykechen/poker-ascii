@@ -45,3 +45,5 @@ Canonical league seed starts are configurable with `--tuning-seed-start` and `--
 - [0006 — builder-reviewed contextual population-model specification](0006-contextual-model-spec.md). Design and seed reservations only; fitting has not run.
 
 - [0007 — completed contextual response pilot](0007-contextual-flop-pilot.md). Frequency selected; on-policy profit improvement remains unproven.
+
+- [0008 — bounded frozen frequency confirmation](0008-frequency-confirmation.md). Profit inconclusive; downside veto failed and sparse-support quota unmet. No promotion.

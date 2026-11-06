@@ -1,5 +1,10 @@
 # Continue the poker-bot project
 
+## Latest work — confirmation
+
+The 5 bb/100 confirmation is complete: +13.45 bb/100, primary 95% interval [-131.07, 157.96]; inconclusive. Downside veto failed and sparse quota was unmet. Both independent audits passed. Fixed 30 paired batches plus 10 common-history panel batches are specified in `docs/superpowers/specs/2026-11-06-frequency-confirmation-design.md`; source commit `2f661ba`. Check `handoffs/0008-frequency-confirmation.md` and run progress before taking any action. This run is deliberately bounded and underpowered for a true 5 bb/100 effect. Never rerun inspected seeds or change the frozen frequency model. No live promotion.
+
+
 Read this file as instructions to continue the work, not merely summarize it.
 
 ## Repository and workspace

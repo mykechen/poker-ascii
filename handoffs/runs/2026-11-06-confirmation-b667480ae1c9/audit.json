@@ -1,0 +1,14 @@
+{
+  "matches": 2940,
+  "hands": 5880,
+  "fallbacks": 0,
+  "zeroSum": true,
+  "freezeHashVerified": true,
+  "rotationMeansRecomputed": true,
+  "pairedMean": 13.44576719576718,
+  "pairedSE": 70.65795803012567,
+  "interval95": [
+    -131.06600830618675,
+    157.95754269772112
+  ]
+}

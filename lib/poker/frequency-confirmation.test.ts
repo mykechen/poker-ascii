@@ -8,8 +8,8 @@ describe('confirmation gates',()=>{
   expect(()=>confirmDecision(Array(30).fill(NaN),[0],score(1),score(1))).toThrow();
  });
  it('distinguishes target estimate from a guaranteed five-point gain',()=>{
-  const result=confirmDecision(Array.from({length:30},(_,i)=>i%2?8:4),[0,1],score(1),score(1));
-  expect(result.targetSignal).toBe(true);expect(result.lower95).toBeLessThan(6);
+  const result=confirmDecision(Array.from({length:30},(_,i)=>i%2?11:1),[0,1],score(1),score(1));
+  expect(result.targetSignal).toBe(true);expect(result.lower95).toBeLessThan(5);expect(result.trueGainAboveFive).toBe(false);
   expect(result.allGatesPass).toBe(true);
  });
  it('vetoes sparse missing coverage and cell deterioration',()=>{

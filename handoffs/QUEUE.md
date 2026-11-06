@@ -8,7 +8,15 @@ See [Step 0005](0005-training-computation.md). The valid profile identified repe
 
 See [Step 0007](0007-contextual-flop-pilot.md). Implementation, independent review, common-history validation and fresh on-policy evaluation completed. Frequency selected under declared gates. Profit advantage over current remains unproven; worst cell worsened. No live replacement.
 
-## Next decision — independent confirmation design
+## Completed — bounded independent frequency confirmation
+
+See [Step 0008](0008-frequency-confirmation.md). Thirty paired batches completed: +13.45 bb/100, primary 95% interval [-131.07, 157.96]; inconclusive. Cell downside veto failed; sparse support had 63 observations, below quota, and worse log loss. No promotion.
+
+## Next decision — sparse-support diagnosis and evaluation precision
+
+Do not extend the completed confirmation or reuse inspected seeds as fresh evidence. Diagnose sparse-support mismatch using inspected data, then consider a training-only remedy or more efficient evaluation design before another powered fresh test.
+
+## Previous decision — independent confirmation design (completed)
 
 Plan a fresh-batch confirmation of the frozen frequency model and sparse-support robustness before promotion. Do not reuse inspected evaluation seeds or expand this completed pilot. Training top-up reservations 51005–51008 remain unused; they were conditional on a quota that was met.
 

@@ -32,4 +32,4 @@ Initial audit required strictly later millisecond timestamps and failed: trainin
 
 Keep selected artifact frozen. Design a separate fresh evaluation covering the shifted opponent fields, with explicit sparse-support quotas and uncertainty, and paired profit confirmation toward the user target 5 bb/100. Use observed confirmation variance for precision/runtime planning; do not promise a small fixed batch run can resolve a 5 bb/100 effect. No new profit run is authorized by this training/validation result alone. Preserve current live model.
 
-Implementation/reservations were committed/pushed before run as 81ee2ca. Completion evidence and updated handoff/index/registry are committed/pushed with this report; inspect containing git commit.
+Implementation/reservations were committed/pushed before run as 81ee2ca. Completion evidence and updated handoff/index/registry are committed locally as 5c73dfa. Two push attempts failed to connect to github.com:443 after 75-second timeouts; push remains pending. Retry git push origin poker-training-foundation when connectivity returns.

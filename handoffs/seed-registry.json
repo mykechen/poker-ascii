@@ -55,6 +55,16 @@
       "start": 62001,
       "end": 62010,
       "reason": "Completed independent common-history confirmation panels; inspected evidence"
+    },
+    {
+      "start": 71001,
+      "end": 71020,
+      "reason": "Completed support-offset training; inspected"
+    },
+    {
+      "start": 72001,
+      "end": 72010,
+      "reason": "Completed support-offset common-history validation and selection; inspected"
     }
   ],
   "reserved_not_run": [
@@ -62,16 +72,6 @@
       "start": 51005,
       "end": 51008,
       "role": "Prespecified training-only quota top-up"
-    },
-    {
-      "start": 71001,
-      "end": 71020,
-      "role": "Support-offset fixed current-policy training"
-    },
-    {
-      "start": 72001,
-      "end": 72010,
-      "role": "Support-offset fixed common-history validation"
     }
   ],
   "reservation_spec": "docs/superpowers/specs/2026-11-05-contextual-flop-model-design.md",
@@ -781,6 +781,216 @@
       "id": "current",
       "directory": "handoffs/runs/2026-11-06-confirmation-b667480ae1c9",
       "startedAt": "2026-11-06T03:31:54.872Z"
+    },
+    {
+      "seed": 71001,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:42:44.982Z"
+    },
+    {
+      "seed": 71002,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:43:11.391Z"
+    },
+    {
+      "seed": 71003,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:43:36.982Z"
+    },
+    {
+      "seed": 71004,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:44:03.439Z"
+    },
+    {
+      "seed": 71005,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:44:29.493Z"
+    },
+    {
+      "seed": 71006,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:44:56.140Z"
+    },
+    {
+      "seed": 71007,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:45:22.691Z"
+    },
+    {
+      "seed": 71008,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:45:49.219Z"
+    },
+    {
+      "seed": 71009,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:46:16.222Z"
+    },
+    {
+      "seed": 71010,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:46:43.639Z"
+    },
+    {
+      "seed": 71011,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:47:10.233Z"
+    },
+    {
+      "seed": 71012,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:47:36.971Z"
+    },
+    {
+      "seed": 71013,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:48:04.575Z"
+    },
+    {
+      "seed": 71014,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:48:31.500Z"
+    },
+    {
+      "seed": 71015,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:48:58.374Z"
+    },
+    {
+      "seed": 71016,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:49:25.214Z"
+    },
+    {
+      "seed": 71017,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:49:51.858Z"
+    },
+    {
+      "seed": 71018,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:50:19.059Z"
+    },
+    {
+      "seed": 71019,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:50:45.700Z"
+    },
+    {
+      "seed": 71020,
+      "phase": "training",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:51:13.606Z"
+    },
+    {
+      "seed": 72001,
+      "phase": "validation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:51:54.690Z"
+    },
+    {
+      "seed": 72002,
+      "phase": "validation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:52:11.672Z"
+    },
+    {
+      "seed": 72003,
+      "phase": "validation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:52:27.950Z"
+    },
+    {
+      "seed": 72004,
+      "phase": "validation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:52:45.028Z"
+    },
+    {
+      "seed": 72005,
+      "phase": "validation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:53:02.246Z"
+    },
+    {
+      "seed": 72006,
+      "phase": "validation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:53:19.225Z"
+    },
+    {
+      "seed": 72007,
+      "phase": "validation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:53:36.158Z"
+    },
+    {
+      "seed": 72008,
+      "phase": "validation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:53:53.350Z"
+    },
+    {
+      "seed": 72009,
+      "phase": "validation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:54:10.156Z"
+    },
+    {
+      "seed": 72010,
+      "phase": "validation",
+      "id": "current",
+      "directory": "handoffs/runs/2026-11-06-support-offset-c41816d9698f",
+      "startedAt": "2026-11-06T04:54:27.137Z"
     }
   ],
   "confirmation_spec": "docs/superpowers/specs/2026-11-06-frequency-confirmation-design.md",

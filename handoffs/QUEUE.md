@@ -20,7 +20,11 @@ See [Step 0009](0009-sparse-support-diagnosis.md). Action-mix shift and support-
 
 See [Step 0010](0010-support-offset-remedy-design.md). Builder-reviewed design uses four regularized support-offset parameters, current fallback on inadequate flop hand/batch coverage, and fixed fresh training/validation before any separate profit confirmation. No implementation yet.
 
-## Next decision — approve concrete offset design, then implementation plan
+## Completed — support-offset training and validation
+
+See [Step 0011](0011-support-offset-validation.md). All fits converged; offset .1 selected, log loss .87485 to .60278 and Brier .61306 to .39289. Sparse quotas met, all group loss gates passed. No profit or shifted-field generalization evidence; frequency diagnostic had lower validation loss but was ineligible.
+
+## Next decision — frozen offset shifted-field and profit confirmation design
 
 Do not extend the completed confirmation or reuse inspected seeds as fresh evidence. Diagnose sparse-support mismatch using inspected data, then consider a training-only remedy or more efficient evaluation design before another powered fresh test.
 

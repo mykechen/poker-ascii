@@ -1,0 +1,25 @@
+{
+  "matches": 1680,
+  "hands": 6720,
+  "fallbacks": 0,
+  "zeroSum": true,
+  "coverageRecomputed": true,
+  "coefficientMasksVerified": true,
+  "scoreArithmeticRecomputed": true,
+  "selectionRecomputed": true,
+  "freezeHashVerified": true,
+  "trainingFreezeNoLaterThanValidationAtMillisecondPrecision": true,
+  "decision": {
+    "status": "selected",
+    "selected": "offset:0.1",
+    "sparse": {
+      "observations": 563,
+      "hands": 326,
+      "batches": 10,
+      "actions": {
+        "passive": 558,
+        "fold": 5
+      }
+    }
+  }
+}

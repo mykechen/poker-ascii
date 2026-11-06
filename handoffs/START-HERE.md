@@ -1,6 +1,10 @@
 # Continue the poker-bot project
 
-## Latest work — support-offset design
+## Latest work — support-offset experiment
+
+Training/validation completed; offset:0.1 selected, with improved prediction scores. No profit/shifted-field generalization evidence yet. Read `handoffs/0011-support-offset-validation.md` and newest support-offset run progress first. Source 81ee2ca; fixed fresh train/validation only. No profit test/live promotion. Do not duplicate the completed run or reuse its seeds. Next is a separate fresh shifted-field/sparse-support and profit confirmation design.
+
+## Previous work — support-offset design
 
 Read `handoffs/0010-support-offset-remedy-design.md` and its linked specification. Builder-reviewed design is complete; no implementation or fresh reservations yet. Next: review the concrete design with the user, then write the implementation plan.
 

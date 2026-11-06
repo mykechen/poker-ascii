@@ -51,3 +51,5 @@ Canonical league seed starts are configurable with `--tuning-seed-start` and `--
 - [0009 — sparse-support diagnosis](0009-sparse-support-diagnosis.md). Reproduced fold overconfidence and loss of latent discrimination; no runtime change.
 
 - [0010 — builder-reviewed support-offset remedy design](0010-support-offset-remedy-design.md). Design only; no fresh runs or implementation.
+
+- [0011 — completed support-offset training/validation](0011-support-offset-validation.md). Offset .1 selected; sparse quotas and validation gates pass. No fresh profit/shifted-field confirmation or live promotion.

@@ -29,3 +29,35 @@ it("values a short-stack call only against eligible pot layers including folded 
  expect(policy(view).action).toBe("call");
  expect(value).toBe(9);
 });
+it('folds a negative incremental call despite a large sunk commitment',async()=>{
+ const {createTable,apply}=await import('./engine');
+ const {projectForPlayer}=await import('./view');
+ let state=createTable();
+ for(let seat=0;seat<2;seat++)state=apply(state,{type:'sit',seat,name:`P${seat}`,stack:500});
+ state=apply(state,{type:'startHand'});
+ const view=projectForPlayer(state,state.toAct),actor=view.toAct!,opponent=view.seats.find(s=>s.inHand&&s.seat!==actor)!;
+ view.board=['2c','3d','7h','9s','Jc'];view.street='river';view.pot=320;
+ view.seats[actor]!.hole=['Kh','Kd'];view.seats[actor]!.stack=350;
+ opponent.stack=330;
+ view.validActions=[{action:'fold'},{action:'call',amount:20}];
+ view.log=[{seat:null,name:null,action:'deal',amount:null,raiseTo:null,street:'preflop',stackAfter:null,potAfter:0,text:'deal'},...[{seat:actor,amount:150},{seat:opponent.seat,amount:170}].map(x=>({...x,name:'P',action:'bet' as const,raiseTo:x.amount,street:'river' as const,stackAfter:500-x.amount,potAfter:320,text:'commitment'}))];
+ let value=NaN;
+ const policy=createEquityPolicy({rangeFor:()=>[{cards:['Ah','Ad'],weight:1}],onDecision:d=>{value=d.showdownCallValue;}});
+ expect(policy(view).action).toBe('fold');expect(value).toBe(-20);
+});
+it('accepts positive incremental value even when the expected total hand result remains a loss',async()=>{
+ const {createTable,apply}=await import('./engine');
+ const {projectForPlayer}=await import('./view');
+ let state=createTable();
+ for(let seat=0;seat<2;seat++)state=apply(state,{type:'sit',seat,name:`P${seat}`,stack:500});
+ state=apply(state,{type:'startHand'});
+ const view=projectForPlayer(state,state.toAct),actor=view.toAct!,opponent=view.seats.find(s=>s.inHand&&s.seat!==actor)!;
+ view.board=['2c','3d','7h','9s','Jc'];view.street='river';view.pot=320;
+ view.seats[actor]!.hole=['Kh','Kd'];view.seats[actor]!.stack=350;opponent.stack=330;
+ view.validActions=[{action:'fold'},{action:'call',amount:20}];
+ view.log=[{seat:null,name:null,action:'deal',amount:null,raiseTo:null,street:'preflop',stackAfter:null,potAfter:0,text:'deal'},...[{seat:actor,amount:150},{seat:opponent.seat,amount:170}].map(x=>({...x,name:'P',action:'bet' as const,raiseTo:x.amount,street:'river' as const,stackAfter:500-x.amount,potAfter:320,text:'commitment'}))];
+ let value=NaN;
+ const policy=createEquityPolicy({rangeFor:()=>[{cards:['Ah','Ad'],weight:4},{cards:['Qh','Qd'],weight:1}],onDecision:d=>{value=d.showdownCallValue;}});
+ expect(policy(view).action).toBe('call');expect(value).toBeCloseTo(48);
+ expect(value-150).toBeLessThan(0);
+});

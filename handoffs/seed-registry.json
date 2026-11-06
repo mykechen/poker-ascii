@@ -72,6 +72,16 @@
       "start": 51005,
       "end": 51008,
       "role": "Prespecified training-only quota top-up"
+    },
+    {
+      "start": 81001,
+      "end": 81100,
+      "role": "Frozen offset fixed100 paired profit confirmation"
+    },
+    {
+      "start": 82001,
+      "end": 82020,
+      "role": "Frozen offset shifted-opponent fixed20 common histories"
     }
   ],
   "reservation_spec": "docs/superpowers/specs/2026-11-05-contextual-flop-model-design.md",
@@ -994,5 +1004,6 @@
     }
   ],
   "confirmation_spec": "docs/superpowers/specs/2026-11-06-frequency-confirmation-design.md",
-  "support_offset_spec": "docs/superpowers/specs/2026-11-06-support-offset-remedy-design.md"
+  "support_offset_spec": "docs/superpowers/specs/2026-11-06-support-offset-remedy-design.md",
+  "offset_confirmation_spec": "docs/superpowers/specs/2026-11-06-offset-confirmation-design.md"
 }

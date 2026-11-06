@@ -1,6 +1,10 @@
 # Continue the poker-bot project
 
-## Latest work — two-hour offset confirmation
+## Latest work — population coverage design
+
+Read `handoffs/0013-population-coverage-design.md` and its linked specification first. Builder-reviewed redesign complete; no implementation or fresh reservations yet. Equal legacy/expanded population weighting, per-stratum/minority coverage and validation gates, same offset family. Next: concrete design approval then implementation plan. No profit run/live promotion.
+
+## Previous work — two-hour offset confirmation
 
 Read `handoffs/0012-offset-confirmation.md` first. Fixed20panels/100profitpairs completed in83.79minutes. Profit+2.03bb/100,95%[-50.18,54.24],inconclusive. Sparsecoverage passed but forecast gate/downside veto failed. No promotion. Next: training-population coverage/model-validation redesign, no reruns or fitting to inspected confirmation seeds.
 

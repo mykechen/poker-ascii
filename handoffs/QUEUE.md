@@ -28,7 +28,11 @@ See [Step 0011](0011-support-offset-validation.md). All fits converged; offset .
 
 See [Step0012](0012-offset-confirmation.md). Full20panels/100pairs in83.79minutes. Profit+2.03bb/100,95%[-50.18,54.24],inconclusive. Minorityfold quota passed70/216 but sparse forecast loss worsened beyond+.02 guard; downside veto failed. No promotion.
 
-## Next decision — training-population coverage and model-validation redesign
+## Completed — training-population coverage and validation redesign
+
+See [Step 0013](0013-population-coverage-design.md). Builder-reviewed design adds expanded heuristic lineups, equal-stratum support fitting, minority coverage and per-stratum validation vetoes. No implementation or fresh reservations.
+
+## Next decision — approve population coverage design, then implementation plan
 
 Do not extend the completed confirmation or reuse inspected seeds as fresh evidence. Diagnose sparse-support mismatch using inspected data, then consider a training-only remedy or more efficient evaluation design before another powered fresh test.
 

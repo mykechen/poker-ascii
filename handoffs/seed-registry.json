@@ -52,6 +52,16 @@
       "start": 51005,
       "end": 51008,
       "role": "Prespecified training-only quota top-up"
+    },
+    {
+      "start": 61001,
+      "end": 61030,
+      "role": "Fixed frozen frequency confirmation profit; 30 paired batches"
+    },
+    {
+      "start": 62001,
+      "end": 62010,
+      "role": "Fixed current-policy common-history confirmation panel; no fitting"
     }
   ],
   "reservation_spec": "docs/superpowers/specs/2026-11-05-contextual-flop-model-design.md",
@@ -272,5 +282,6 @@
         "role": "Contextual flop evaluation"
       }
     }
-  ]
+  ],
+  "confirmation_spec": "docs/superpowers/specs/2026-11-06-frequency-confirmation-design.md"
 }

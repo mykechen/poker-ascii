@@ -8,6 +8,10 @@
 
 **Evidence:** handoffs/0016-range-value-diagnostic.md; docs/experiments/2026-11-06-consolidated-findings.md. Existing source:02ea102; diagnostic data/results:1098121. The results commit was locally ahead of origin when this plan was written; verify actual git state.
 
+## Execution status — 2026-11-07
+
+Stage0/1 completed; Stage2 collection completed with insufficient first-paid-hand street coverage. No budget scoring, candidate, validation or profit run. See [handoff0018](../../../handoffs/0018-decision-stability-coverage.md). Stage3/4 gates remain closed; revise sampling design before any fresh collection.
+
 ## Binding constraints
 
 - Target6–8-player cash-style games; initial100bb,1/2 blinds,no rake. Objective is expected incremental future chips, not avoiding folds or recovering sunk commitments. Preserve sunk-cost regression tests.

@@ -1,0 +1,13 @@
+{
+  "directory": "/private/tmp/poker-training-foundation/handoffs/diagnostics/2026-11-07-decision-stability-bf8d88654982",
+  "status": "insufficient-coverage",
+  "matches": 2520,
+  "manifest": 9920,
+  "states": 136,
+  "scored": 0,
+  "failures": [],
+  "limits": [
+    "Does not independently replay first-paid ownership or poker equity worlds; checks unique hand assignment and archived arithmetic.",
+    "Privacy check covers snapshot seat holes, not arbitrary log fields."
+  ]
+}

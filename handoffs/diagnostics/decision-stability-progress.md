@@ -6,3 +6,4 @@ Stage1: opt-in decision snapshots, observer exposure and stable total eligible p
 Stage2: bounded script/helper implementation ready; pre-run review pending. No fresh seeds started.
 Ruling: collection timing includes snapshot-copy cost; isolated copy timing omitted and limitation disclosed, avoiding invasive timer instrumentation.
 Pre-run independent review: no collection blockers; corrected final summary status and partial collection cost accounting.
+Collection complete:2520matches/10080hands,1966636ms, insufficient coverage. No scored states or Stage3/4. Independent audit passes; design limitation and no-change result archived in0018.

@@ -1,0 +1,130 @@
+{
+  "status": "insufficient-coverage",
+  "source": "ec11da1c9908810e0eeda6d632edac8cee31a32b",
+  "fingerprint": "bf8d88654982c63fde3b64ec58ad346c8213abd2b29164b62dc88d0c30b51ceb",
+  "settings": {
+    "seeds": [
+      101001,
+      101002,
+      101003,
+      101004,
+      101005,
+      101006,
+      101007,
+      101008,
+      101009,
+      101010,
+      101011,
+      101012,
+      101013,
+      101014,
+      101015,
+      101016,
+      101017,
+      101018,
+      101019,
+      101020
+    ],
+    "fields": {
+      "legacy": [
+        {
+          "id": "train-balanced",
+          "opponents": [
+            "chart",
+            "tight",
+            "station",
+            "position",
+            "aggressor"
+          ]
+        },
+        {
+          "id": "train-pressure",
+          "opponents": [
+            "maniac",
+            "station",
+            "chart",
+            "aggressor",
+            "tight"
+          ]
+        },
+        {
+          "id": "train-passive",
+          "opponents": [
+            "station",
+            "maniac",
+            "position",
+            "tight",
+            "chart"
+          ]
+        }
+      ],
+      "expanded": [
+        {
+          "id": "train-expanded-a",
+          "opponents": [
+            "multiway",
+            "station",
+            "learner",
+            "tight",
+            "maniac"
+          ]
+        },
+        {
+          "id": "train-expanded-b",
+          "opponents": [
+            "learner",
+            "position",
+            "multiway",
+            "aggressor",
+            "station"
+          ]
+        },
+        {
+          "id": "train-expanded-c",
+          "opponents": [
+            "tight",
+            "multiway",
+            "maniac",
+            "learner",
+            "position"
+          ]
+        }
+      ]
+    },
+    "hands": 4,
+    "players": [
+      6,
+      7,
+      8
+    ],
+    "budgets": [
+      50,
+      128,
+      512
+    ],
+    "exactLimit": 10000,
+    "salts": [
+      0,
+      2654435769,
+      2246822507,
+      3266489909,
+      668265263,
+      374761393,
+      3550635116,
+      4251993797
+    ],
+    "budgetMs": 7200000,
+    "quotas": {
+      "legacy:preflop": 54,
+      "legacy:flop": 53,
+      "legacy:turn": 53,
+      "expanded:preflop": 54,
+      "expanded:flop": 53,
+      "expanded:turn": 53
+    }
+  },
+  "completedMatches": 2520,
+  "completedStates": 0,
+  "elapsedMs": 1966635.93425,
+  "error": "Error: Insufficient coverage for legacy:flop: 6/53.\n    at /private/tmp/poker-training-foundation/lib/poker/decision-stability.ts:6:35\n    at Array.flatMap (<anonymous>)\n    at selectStates (/private/tmp/poker-training-foundation/lib/poker/decision-stability.ts:3:32)\n    at /private/tmp/poker-training-foundation/scripts/decision-stability.ts:89:17\n    at ViteNodeRunner.runModule (file:///Users/mykechen/Desktop/APPS/poker-ascii/node_modules/vite-node/dist/client.mjs:397:4)\n    at ViteNodeRunner.directRequest (file:///Users/mykechen/Desktop/APPS/poker-ascii/node_modules/vite-node/dist/client.mjs:375:3)\n    at ViteNodeRunner.cachedRequest (file:///Users/mykechen/Desktop/APPS/poker-ascii/node_modules/vite-node/dist/client.mjs:189:11)\n    at ViteNodeRunner.executeFile (file:///Users/mykechen/Desktop/APPS/poker-ascii/node_modules/vite-node/dist/client.mjs:162:10)\n    at CAC.run (file:///Users/mykechen/Desktop/APPS/poker-ascii/node_modules/vite-node/dist/cli.mjs:102:28)"
+}

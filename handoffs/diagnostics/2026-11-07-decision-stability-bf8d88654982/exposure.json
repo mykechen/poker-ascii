@@ -1,0 +1,123 @@
+{
+  "exposure": {
+    "legacy:preflop:funded": {
+      "count": 23962,
+      "loss": 24584.29257452498
+    },
+    "legacy:preflop:folded": {
+      "count": 15151,
+      "loss": 14745.839988163852
+    },
+    "legacy:flop:folded": {
+      "count": 8983,
+      "loss": 7188.193618906088
+    },
+    "legacy:turn:folded": {
+      "count": 7677,
+      "loss": 5290.513440447298
+    },
+    "legacy:river:folded": {
+      "count": 6585,
+      "loss": 3450.8146571677994
+    },
+    "legacy:flop:funded": {
+      "count": 4914,
+      "loss": 3817.0583219092164
+    },
+    "legacy:turn:funded": {
+      "count": 2877,
+      "loss": 1818.2545483604479
+    },
+    "legacy:river:funded": {
+      "count": 1166,
+      "loss": 694.8095643145713
+    },
+    "legacy:river:all-in": {
+      "count": 742,
+      "loss": 376.4730511968688
+    },
+    "legacy:turn:all-in": {
+      "count": 134,
+      "loss": 57.07475962384712
+    },
+    "legacy:preflop:all-in": {
+      "count": 81,
+      "loss": 37.33092707755806
+    },
+    "legacy:flop:all-in": {
+      "count": 182,
+      "loss": 112.96021027403955
+    },
+    "expanded:preflop:funded": {
+      "count": 23373,
+      "loss": 23705.93452283739
+    },
+    "expanded:preflop:folded": {
+      "count": 13804,
+      "loss": 13317.401640583526
+    },
+    "expanded:flop:folded": {
+      "count": 7153,
+      "loss": 5814.082780463663
+    },
+    "expanded:turn:folded": {
+      "count": 5755,
+      "loss": 4078.677304495867
+    },
+    "expanded:river:folded": {
+      "count": 5163,
+      "loss": 2776.6460368987496
+    },
+    "expanded:flop:funded": {
+      "count": 4609,
+      "loss": 3654.56530712111
+    },
+    "expanded:turn:funded": {
+      "count": 2777,
+      "loss": 1833.0681083224752
+    },
+    "expanded:river:funded": {
+      "count": 1290,
+      "loss": 795.600292036517
+    },
+    "expanded:river:all-in": {
+      "count": 720,
+      "loss": 367.77570854090015
+    },
+    "expanded:flop:all-in": {
+      "count": 120,
+      "loss": 71.60823314925625
+    },
+    "expanded:turn:all-in": {
+      "count": 87,
+      "loss": 34.590372277408925
+    },
+    "expanded:preflop:all-in": {
+      "count": 58,
+      "loss": 21.71645193006499
+    }
+  },
+  "counts": {
+    "legacy:preflop:paid": 6161,
+    "legacy:flop:free": 1209,
+    "legacy:turn:free": 818,
+    "river": 1852,
+    "legacy:flop:paid": 1486,
+    "legacy:turn:paid": 841,
+    "legacy:preflop:free": 95,
+    "expanded:preflop:paid": 6113,
+    "expanded:flop:paid": 1537,
+    "expanded:turn:paid": 986,
+    "expanded:flop:free": 1275,
+    "expanded:turn:free": 891,
+    "expanded:preflop:free": 93
+  },
+  "eligible": {
+    "legacy:preflop": 4945,
+    "legacy:flop": 6,
+    "expanded:preflop": 4947,
+    "expanded:turn": 12,
+    "expanded:flop": 6,
+    "legacy:turn": 4
+  }
+}

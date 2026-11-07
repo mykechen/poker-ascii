@@ -44,9 +44,9 @@ See [Step 0015](0015-balanced-population-experiment.md) and the [consolidated fi
 
 See [Step0016](0016-range-value-diagnostic.md). Exact inspected reproduction; true-hand gain unresolved,55.4%events afterobserverfolded. At512samples models differ2/160choices;50vs512 flips12/160permodel. Privileged reference is not realizable regret. No promotion.
 
-## Next — next-chat decision-quality plan
+## Completed — decision instrumentation and bounded collection
 
-Read [Step0017](0017-next-decision-quality-plan.md) and the [written next plan](../docs/superpowers/plans/2026-11-07-decision-quality-next.md). Start with provenance and instrumentation,hold current range model fixed,then bounded fixed-budget stability screen. No new run yet.
+Read [Step0018](0018-decision-stability-coverage.md). Instrumentation verified;2520matches completed. First-paid-hand street assignment failed later-street quotas, so no budget scoring/selection. Next: redesign outcome-independent sampling before any fresh run. No automatic extension, validation or profit run.
 
 ## Proposed design — decision-relevant validation and sampling stability
 

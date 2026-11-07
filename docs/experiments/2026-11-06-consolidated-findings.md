@@ -111,3 +111,7 @@ Current policy remains in place. Stronger-opponent performance, longer-session b
 Implementation source: `16d6fbc`. Population-stage verification: 177 tests, lint, TypeScript and diff checks passed; raw audit and independent review are linked in the new handoff. Initial GitHub pushes failed before computation, so provenance records the committed source and fingerprint rather than claiming a successful pre-run backup. Completion push status is recorded in the delivery.
 
 Range/value diagnostic provenance: source `02ea102`, 187 tests and lint/TypeScript/diff checks passed. The reused ten-seed histories remain inspected diagnostic evidence, not a new confirmation.
+
+## Decision stability collection: no selection
+
+[Step0018](../../handoffs/0018-decision-stability-coverage.md) adds opt-in public decision snapshots, observer exposure status and stable eligible-payout SE without changing configured actions. The bounded fresh collection completed2520matches/10080hands in32.78minutes with conserved chips and zero fallbacks. Its first-paid-decision-per-hand rule assigned almost all hands to preflop: legacy flop6/turn4 and expanded flop6/turn12 missed53-state quotas despite thousands of paid later-street decisions. This is a sampling-design limitation, not evidence that sampling budgets are equivalent. The coverage gate prevented all budget scoring and selection. Validation and profit testing did not run; current remains. A revised reviewed sampling design is needed before any new reservations.

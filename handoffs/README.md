@@ -66,3 +66,7 @@ Canonical league seed starts are configurable with `--tuning-seed-start` and `--
 - [0016 — inspected range/value diagnostic](0016-range-value-diagnostic.md). Completed; tiny unresolved range gains, much action exposure after folding, substantial sampling sensitivity. No fresh profit evidence or promotion.
 
 - [0017 — current next-chat handoff](0017-next-decision-quality-plan.md) and [next plan](../docs/superpowers/plans/2026-11-07-decision-quality-next.md). Decision-relevant validation/sampling stability; no new run.
+
+## Latest
+
+[0018 — decision instrumentation and insufficient coverage](0018-decision-stability-coverage.md).

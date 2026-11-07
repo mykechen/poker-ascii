@@ -1,6 +1,10 @@
 # Continue the poker-bot project
 
-## Latest work — balanced population experiment
+## Latest work — inspected range/value diagnostic
+
+Read `handoffs/0016-range-value-diagnostic.md` first. Diagnostic completed26.69minutes on inspected data: true-hand range gain unresolved,55.4%actionexposure afterfold,only2/160modelcall/fold differences at512samples versus12/160budgetflips permodel. No fresh profit evidence/promotion. Source02ea102 committed/pushed; next design is decision-relevant validation and sampling stability. Do not rerun inspected data as fresh evidence.
+
+## Previous work — balanced population experiment
 
 Read `handoffs/0015-balanced-population-experiment.md` and `docs/experiments/2026-11-06-consolidated-findings.md` first. Full balanced experiment completed in97.23minutes. Forecast gates selected newly fittedoffset.1; ten-pair independent-policy challenge delta-98.38bb/100,SE58.10 (descriptive only). No promotion/established5bbgain. All raw audits passed; source16d6fbc and initial push failures recorded. Next decision: diagnose posterior-range quality and downstream action value. Do not rerun inspected seeds or automatically extend the challenge.
 

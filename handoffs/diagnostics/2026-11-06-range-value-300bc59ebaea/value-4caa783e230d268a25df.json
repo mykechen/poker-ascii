@@ -1,0 +1,153 @@
+{
+  "id": "4caa783e230d268a25df4c51292441d0f8f091c4a506f95532667158cce36948",
+  "identity": {
+    "seed": 93001,
+    "field": "challenge-equity-b",
+    "players": 7,
+    "rotation": 3,
+    "match": 30,
+    "hand": 4
+  },
+  "street": "flop",
+  "baselineCallValue": 15.119999999999997,
+  "actualAction": "call",
+  "current50": {
+    "callValue": 15.119999999999997,
+    "action": "call",
+    "equity": 0.46,
+    "method": "monte-carlo"
+  },
+  "oracle": {
+    "expectedPayout": 45.09019607843127,
+    "callValue": 17.09019607843127,
+    "outcomes": 595
+  },
+  "models": {
+    "current": {
+      "reference": {
+        "callValue": 6.471354166666671,
+        "action": "call",
+        "equity": 0.35416666666666663,
+        "method": "monte-carlo"
+      },
+      "replicates": [
+        {
+          "callValue": 15.119999999999997,
+          "action": "call",
+          "equity": 0.46,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 5.600000000000001,
+          "action": "call",
+          "equity": 0.34,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 9.333333333333329,
+          "action": "call",
+          "equity": 0.33333333333333337,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -2.8000000000000007,
+          "action": "fold",
+          "equity": 0.26,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 9.893333333333338,
+          "action": "call",
+          "equity": 0.41333333333333333,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 12.04,
+          "action": "call",
+          "equity": 0.41,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 2.2399999999999984,
+          "action": "call",
+          "equity": 0.3,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 5.506666666666668,
+          "action": "call",
+          "equity": 0.31666666666666665,
+          "method": "monte-carlo"
+        }
+      ],
+      "referencePayoff": 17.09019607843127,
+      "privilegedInformationGap": 0,
+      "valueError": -10.618841911764598,
+      "absoluteValueError": 10.618841911764598,
+      "samplingFlipFraction": 0.125
+    },
+    "offset": {
+      "reference": {
+        "callValue": 9.907552083333336,
+        "action": "call",
+        "equity": 0.39290364583333337,
+        "method": "monte-carlo"
+      },
+      "replicates": [
+        {
+          "callValue": 7.840000000000003,
+          "action": "call",
+          "equity": 0.38,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 5.039999999999999,
+          "action": "call",
+          "equity": 0.32,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 3.2666666666666657,
+          "action": "call",
+          "equity": 0.31666666666666665,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 9.706666666666663,
+          "action": "call",
+          "equity": 0.3666666666666667,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 2.986666666666668,
+          "action": "call",
+          "equity": 0.30666666666666664,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 3.6400000000000006,
+          "action": "call",
+          "equity": 0.33,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 2.426666666666666,
+          "action": "call",
+          "equity": 0.30666666666666664,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 10.826666666666668,
+          "action": "call",
+          "equity": 0.4066666666666666,
+          "method": "monte-carlo"
+        }
+      ],
+      "referencePayoff": 17.09019607843127,
+      "privilegedInformationGap": 0,
+      "valueError": -7.1826439950979335,
+      "absoluteValueError": 7.1826439950979335,
+      "samplingFlipFraction": 0
+    }
+  }
+}

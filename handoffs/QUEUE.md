@@ -40,9 +40,13 @@ See [Step 0014](0014-harness-opponent-audit.md). Existing evaluation is against 
 
 See [Step 0015](0015-balanced-population-experiment.md) and the [consolidated findings](../docs/experiments/2026-11-06-consolidated-findings.md). Full97.23minute run,177tests/independent raw audit. Forecast gates pass for both populations; actual-fold conditional loss still worsens. Ten-pair new-opponent challenge delta-98.38bb/100,SE58.10: adverse/inconclusive,not proven regression. No promotion.
 
-## Next decision — posterior-range quality and downstream action-value diagnosis
+## Completed — posterior-range and restricted action-value diagnosis
 
-Do not extend the completed confirmation or reuse inspected seeds as fresh evidence. Diagnose sparse-support mismatch using inspected data, then consider a training-only remedy or more efficient evaluation design before another powered fresh test.
+See [Step0016](0016-range-value-diagnostic.md). Exact inspected reproduction; true-hand gain unresolved,55.4%events afterobserverfolded. At512samples models differ2/160choices;50vs512 flips12/160permodel. Privileged reference is not realizable regret. No promotion.
+
+## Next decision — decision-relevant validation and sampling-stability design
+
+Do not reuse inspected seeds as fresh evidence or automatically extend completed runs. Use the completed diagnostic to design decision-relevant validation and matched-budget sampling-stability tests; retain post-fold data as legitimate population evidence and test weighting changes rather than assuming they help.
 
 ## Previous decision — independent confirmation design (completed)
 

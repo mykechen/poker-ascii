@@ -1,6 +1,6 @@
-# Poker training findings through the balanced population experiment
+# Poker training findings through the range/value diagnostic
 
-The experiments have improved forecast diagnostics and computation, but have not established a profitable policy improvement. Neither the frozen frequency model nor the later support-offset model met the combined promotion requirements. The current live model remains unchanged. This report covers the completed historical studies, harness changes, balanced population experiment, and new independent-opponent challenge.
+The experiments have improved forecast diagnostics and computation, but have not established a profitable policy improvement. Neither the frozen frequency model nor the later support-offset model met the combined promotion requirements. The current live model remains unchanged. This report covers the completed historical studies, harness changes, balanced population experiment, new independent-opponent challenge, and subsequent inspected range/value diagnostic.
 
 ## Goal and what is actually tested
 
@@ -90,12 +90,24 @@ On ten paired seeds, **current averaged 469.38 bb/100 and the selected candidate
 
 The combined result is clear about scope: balancing and broader fitting improved action forecasts on both validation populations; the fresh independent-policy challenge did not demonstrate stronger play. No model was refitted from challenge outcomes, no run was extended, and all unsuccessful results remain archived.
 
+## Inspected range and downstream-value diagnostic
+
+The [range/value diagnostic](../../handoffs/0016-range-value-diagnostic.md) reused all ten inspected current challenge seeds, reproducing 420 matches /1,680 hands exactly. This is not fresh performance evidence. Public-only current/offset belief trackers used reconstructed hidden hands only as offline labels; original cards, boards, archived accounting, public predictions and the selected original50-sample decisions were checked. All160 sampled value states completed in a26.69-minute run.
+
+Better action prediction barely changed inferred true-hand quality: paired seed mean post-update log-loss difference was **−0.00152, SE0.00260**. Equal-hand aggregation was likewise small and unresolved. **55.4% of scored flop actions occurred after the observer folded**. On not-folded observations (which can include all-in players), action-prediction loss worsened by +0.02002,SE0.00581, while true-hand range scores showed no clear improvement. This is a decision-exposure alignment concern on current trajectories, not proof that it caused the full-game loss. Post-fold observations remain legitimate population evidence and can help other decisions or policies; these results do not justify automatically discarding them.
+
+On the fixed lowest-hash sample of160 first paid flop/turn decisions, the two models differed on only **2 decisions at512samples**, compared with **14 at the original50sample seed**. Switching50 to512 flipped12decisions for each model. Equal-seed distance-to-privileged-reference absolute error was slightly worse for offset (+0.84chips,SE0.68), without a demonstrated meaningful improvement in restricted action value.
+
+The reference knows all dealt cards, assumes no further betting and splits ties fractionally rather than awarding engine odd chips. Its information gap is not realizable regret, a GTO benchmark or proof that a particular fold was bad. Preflop actions, raises, other paid decisions and river search remain outside this diagnostic. The results justify designing decision-relevant validation and sampling-stability tests; they do not authorize fitting to the inspected seeds or promoting a model. The diagnostic stage passed187tests and recorded arithmetic/accounting audit checks, with the audit's reference-enumeration limit stated explicitly.
+
 ## What the evidence supports
 
 Forecasting has improved overall on several fixed panels, while sparse fold-heavy situations repeatedly exposed generalization failure. Profit remains unresolved: neither confirmation established the 5 bb/100 target or passed all safeguards. Computation improved with exact action-trace preservation on the measured workload. These are three separate findings.
 
 Archived audits checked raw accounting, rotations, score arithmetic, frozen model identity and declared gates for the completed runs; their handoffs record exact test and source provenance. Clean accounting does not prove opponent realism or strategic quality. Run totals are deliberately not added into one grand total: designs, diagnostics, replays and distinct comparisons are different units of evidence.
 
-Current policy remains in place. Stronger-opponent performance, longer-session behavior, persistent stacks, sampling sensitivity, pre-river raising/future-bet strategy and human/GTO comparisons remain unvalidated. The new challenge adds computational opponents and an adverse point estimate, but does not close the gap to established playing strength. The next research decision should diagnose posterior-range quality and how predictions affect action value, rather than assuming another action-loss improvement will improve profit. Pre-river raise/future-bet search and evaluation precision remain separate substantive gaps.
+Current policy remains in place. Stronger-opponent performance, longer-session behavior, persistent stacks, sampling sensitivity, pre-river raising/future-bet strategy and human/GTO comparisons remain unvalidated. The new challenge adds computational opponents and an adverse point estimate, but does not close the gap to established playing strength. The inspected posterior-range/value diagnostic is now complete. The next proposed design should make validation decision-relevant and test sampling stability near call thresholds, rather than assuming another action-loss improvement will improve profit. Pre-river raise/future-bet search and evaluation precision remain separate substantive gaps.
 
-Implementation source: `16d6fbc`. Final verification: 177 tests, lint, TypeScript and diff checks passed; raw audit and independent review are linked in the new handoff. Initial GitHub pushes failed before computation, so provenance records the committed source and fingerprint rather than claiming a successful pre-run backup. Completion push status is recorded in the delivery.
+Implementation source: `16d6fbc`. Population-stage verification: 177 tests, lint, TypeScript and diff checks passed; raw audit and independent review are linked in the new handoff. Initial GitHub pushes failed before computation, so provenance records the committed source and fingerprint rather than claiming a successful pre-run backup. Completion push status is recorded in the delivery.
+
+Range/value diagnostic provenance: source `02ea102`, 187 tests and lint/TypeScript/diff checks passed. The reused ten-seed histories remain inspected diagnostic evidence, not a new confirmation.

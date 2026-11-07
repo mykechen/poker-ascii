@@ -61,4 +61,6 @@ Canonical league seed starts are configurable with `--tuning-seed-start` and `--
 - [0014 — harness/opponent audit](0014-harness-opponent-audit.md). Eight related heuristic styles; asymmetric lineup repetition and limited opponent strength documented. No runtime changes.
 
 - [0015 — balanced population experiment and independent-opponent challenge](0015-balanced-population-experiment.md). Completed; selected forecasts improve but challenge adverse/inconclusive. No promotion.
-- [Consolidated findings through Step0015](../docs/experiments/2026-11-06-consolidated-findings.md). Full historical evidence, limitations and current next decision.
+- [Consolidated findings through Step0016](../docs/experiments/2026-11-06-consolidated-findings.md). Full historical evidence, limitations and current next decision.
+
+- [0016 — inspected range/value diagnostic](0016-range-value-diagnostic.md). Completed; tiny unresolved range gains, much action exposure after folding, substantial sampling sensitivity. No fresh profit evidence or promotion.

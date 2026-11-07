@@ -1,0 +1,153 @@
+{
+  "id": "03cf5a2546c8a12594985adf996ec1e72ba512cea16ef5814ef9d0e523f17d7c",
+  "identity": {
+    "seed": 93002,
+    "field": "challenge-equity-b",
+    "players": 8,
+    "rotation": 4,
+    "match": 38,
+    "hand": 4
+  },
+  "street": "flop",
+  "baselineCallValue": -14.693333333333339,
+  "actualAction": "fold",
+  "current50": {
+    "callValue": -14.693333333333339,
+    "action": "fold",
+    "equity": 0.13333333333333333,
+    "method": "monte-carlo"
+  },
+  "oracle": {
+    "expectedPayout": 2.015151515151515,
+    "callValue": -35.984848484848484,
+    "outcomes": 528
+  },
+  "models": {
+    "current": {
+      "reference": {
+        "callValue": -22.624348958333336,
+        "action": "fold",
+        "equity": 0.08235677083333334,
+        "method": "monte-carlo"
+      },
+      "replicates": [
+        {
+          "callValue": -14.693333333333339,
+          "action": "fold",
+          "equity": 0.13333333333333333,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -21.533333333333328,
+          "action": "fold",
+          "equity": 0.09333333333333332,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -16.846666666666664,
+          "action": "fold",
+          "equity": 0.13666666666666666,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -19.25333333333333,
+          "action": "fold",
+          "equity": 0.11333333333333333,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -25.206666666666667,
+          "action": "fold",
+          "equity": 0.056666666666666664,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -24.066666666666663,
+          "action": "fold",
+          "equity": 0.08666666666666666,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -17.22666666666667,
+          "action": "fold",
+          "equity": 0.10666666666666667,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -20.52,
+          "action": "fold",
+          "equity": 0.08,
+          "method": "monte-carlo"
+        }
+      ],
+      "referencePayoff": 0,
+      "privilegedInformationGap": 0,
+      "valueError": 13.360499526515149,
+      "absoluteValueError": 13.360499526515149,
+      "samplingFlipFraction": 0
+    },
+    "offset": {
+      "reference": {
+        "callValue": -21.473958333333336,
+        "action": "fold",
+        "equity": 0.09895833333333333,
+        "method": "monte-carlo"
+      },
+      "replicates": [
+        {
+          "callValue": -25.08,
+          "action": "fold",
+          "equity": 0.08,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -26.726666666666667,
+          "action": "fold",
+          "equity": 0.09666666666666666,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -15.833333333333336,
+          "action": "fold",
+          "equity": 0.12333333333333332,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -26.473333333333333,
+          "action": "fold",
+          "equity": 0.04333333333333333,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -19.506666666666664,
+          "action": "fold",
+          "equity": 0.10666666666666666,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -10.38666666666667,
+          "action": "fold",
+          "equity": 0.16666666666666663,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -21.28,
+          "action": "fold",
+          "equity": 0.12,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -17.986666666666668,
+          "action": "fold",
+          "equity": 0.12666666666666665,
+          "method": "monte-carlo"
+        }
+      ],
+      "referencePayoff": 0,
+      "privilegedInformationGap": 0,
+      "valueError": 14.510890151515149,
+      "absoluteValueError": 14.510890151515149,
+      "samplingFlipFraction": 0
+    }
+  }
+}

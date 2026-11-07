@@ -1,0 +1,153 @@
+{
+  "id": "1b6ab8f7c2931cead2b85ce99d5adfb10eebdca2cba00b62777db38855b0180a",
+  "identity": {
+    "seed": 93003,
+    "field": "challenge-equity-b",
+    "players": 6,
+    "rotation": 2,
+    "match": 23,
+    "hand": 3
+  },
+  "street": "flop",
+  "baselineCallValue": -10.853333333333332,
+  "actualAction": "fold",
+  "current50": {
+    "callValue": -10.853333333333332,
+    "action": "fold",
+    "equity": 0.12666666666666665,
+    "method": "monte-carlo"
+  },
+  "oracle": {
+    "expectedPayout": 9.12962962962963,
+    "callValue": -27.87037037037037,
+    "outcomes": 666
+  },
+  "models": {
+    "current": {
+      "reference": {
+        "callValue": -13.971354166666671,
+        "action": "fold",
+        "equity": 0.11848958333333334,
+        "method": "monte-carlo"
+      },
+      "replicates": [
+        {
+          "callValue": -10.853333333333332,
+          "action": "fold",
+          "equity": 0.12666666666666665,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -8.879999999999999,
+          "action": "fold",
+          "equity": 0.1,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -12.95,
+          "action": "fold",
+          "equity": 0.15,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -0.12333333333332774,
+          "action": "fold",
+          "equity": 0.21666666666666667,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -19.486666666666668,
+          "action": "fold",
+          "equity": 0.05333333333333333,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -18.87,
+          "action": "fold",
+          "equity": 0.07,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -16.65,
+          "action": "fold",
+          "equity": 0.05,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -9.496666666666666,
+          "action": "fold",
+          "equity": 0.1433333333333333,
+          "method": "monte-carlo"
+        }
+      ],
+      "referencePayoff": 0,
+      "privilegedInformationGap": 0,
+      "valueError": 13.899016203703699,
+      "absoluteValueError": 13.899016203703699,
+      "samplingFlipFraction": 0
+    },
+    "offset": {
+      "reference": {
+        "callValue": -11.550455729166668,
+        "action": "fold",
+        "equity": 0.13313802083333337,
+        "method": "monte-carlo"
+      },
+      "replicates": [
+        {
+          "callValue": -10.606666666666666,
+          "action": "fold",
+          "equity": 0.11333333333333333,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -2.9599999999999937,
+          "action": "fold",
+          "equity": 0.16,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -15.29333333333333,
+          "action": "fold",
+          "equity": 0.10666666666666667,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -5.18,
+          "action": "fold",
+          "equity": 0.16,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -9.373333333333331,
+          "action": "fold",
+          "equity": 0.14666666666666667,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -11.223333333333336,
+          "action": "fold",
+          "equity": 0.15666666666666665,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -20.22666666666667,
+          "action": "fold",
+          "equity": 0.05333333333333333,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -9.989999999999998,
+          "action": "fold",
+          "equity": 0.11,
+          "method": "monte-carlo"
+        }
+      ],
+      "referencePayoff": 0,
+      "privilegedInformationGap": 0,
+      "valueError": 16.319914641203702,
+      "absoluteValueError": 16.319914641203702,
+      "samplingFlipFraction": 0
+    }
+  }
+}

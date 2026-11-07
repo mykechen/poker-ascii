@@ -3521,5 +3521,30 @@
   "confirmation_spec": "docs/superpowers/specs/2026-11-06-frequency-confirmation-design.md",
   "support_offset_spec": "docs/superpowers/specs/2026-11-06-support-offset-remedy-design.md",
   "offset_confirmation_spec": "docs/superpowers/specs/2026-11-06-offset-confirmation-design.md",
-  "population_spec": "docs/superpowers/specs/2026-11-06-population-coverage-design.md"
+  "population_spec": "docs/superpowers/specs/2026-11-06-population-coverage-design.md",
+  "diagnostic_uses": [
+    {
+      "directory": "handoffs/diagnostics/2026-11-06-range-value-300bc59ebaea",
+      "fingerprint": "300bc59ebaea0be2206f27b3e9f014c42183bcd714390be897f4604831b638df",
+      "seeds": [
+        93001,
+        93002,
+        93003,
+        93004,
+        93005,
+        93006,
+        93007,
+        93008,
+        93009,
+        93010
+      ],
+      "referenceRun": "handoffs/runs/2026-11-06-population-8be4d1cb56f3",
+      "classification": "Inspected-data diagnostic reuse; not fresh confirmation.",
+      "startedAt": "2026-11-06T17:24:13.991Z",
+      "status": "complete",
+      "completedSeeds": 10,
+      "valueStates": 160,
+      "elapsedMs": 1601186.1655
+    }
+  ]
 }

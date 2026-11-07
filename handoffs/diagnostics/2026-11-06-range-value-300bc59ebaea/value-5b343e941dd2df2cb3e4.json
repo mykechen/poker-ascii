@@ -1,0 +1,153 @@
+{
+  "id": "5b343e941dd2df2cb3e4114c8cbc2c39e63effbf611523bd02ed8d7ee6398a58",
+  "identity": {
+    "seed": 93009,
+    "field": "challenge-equity-a",
+    "players": 8,
+    "rotation": 6,
+    "match": 19,
+    "hand": 1
+  },
+  "street": "turn",
+  "baselineCallValue": -4,
+  "actualAction": "fold",
+  "current50": {
+    "callValue": -4,
+    "action": "fold",
+    "equity": 0,
+    "method": "monte-carlo"
+  },
+  "oracle": {
+    "expectedPayout": 0,
+    "callValue": -4,
+    "outcomes": 32
+  },
+  "models": {
+    "current": {
+      "reference": {
+        "callValue": -2.9453125,
+        "action": "fold",
+        "equity": 0.052734375,
+        "method": "monte-carlo"
+      },
+      "replicates": [
+        {
+          "callValue": -4,
+          "action": "fold",
+          "equity": 0,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -3.6,
+          "action": "fold",
+          "equity": 0.02,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -3.2,
+          "action": "fold",
+          "equity": 0.04,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -3.066666666666667,
+          "action": "fold",
+          "equity": 0.04666666666666667,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -2.4,
+          "action": "fold",
+          "equity": 0.08,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -3.6,
+          "action": "fold",
+          "equity": 0.02,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -3.6,
+          "action": "fold",
+          "equity": 0.02,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -3,
+          "action": "fold",
+          "equity": 0.05,
+          "method": "monte-carlo"
+        }
+      ],
+      "referencePayoff": 0,
+      "privilegedInformationGap": 0,
+      "valueError": 1.0546875,
+      "absoluteValueError": 1.0546875,
+      "samplingFlipFraction": 0
+    },
+    "offset": {
+      "reference": {
+        "callValue": -3.127604166666667,
+        "action": "fold",
+        "equity": 0.04361979166666667,
+        "method": "monte-carlo"
+      },
+      "replicates": [
+        {
+          "callValue": -3.6,
+          "action": "fold",
+          "equity": 0.02,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -3.2,
+          "action": "fold",
+          "equity": 0.04,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -2.4,
+          "action": "fold",
+          "equity": 0.08,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -3.2,
+          "action": "fold",
+          "equity": 0.04,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -2.8,
+          "action": "fold",
+          "equity": 0.06,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -3.6,
+          "action": "fold",
+          "equity": 0.02,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -3.6,
+          "action": "fold",
+          "equity": 0.02,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -3.6,
+          "action": "fold",
+          "equity": 0.02,
+          "method": "monte-carlo"
+        }
+      ],
+      "referencePayoff": 0,
+      "privilegedInformationGap": 0,
+      "valueError": 0.872395833333333,
+      "absoluteValueError": 0.872395833333333,
+      "samplingFlipFraction": 0
+    }
+  }
+}

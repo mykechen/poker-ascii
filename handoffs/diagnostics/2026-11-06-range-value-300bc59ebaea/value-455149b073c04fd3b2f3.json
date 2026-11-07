@@ -1,0 +1,153 @@
+{
+  "id": "455149b073c04fd3b2f3979c445a277491debf1f27c2d73fc60919548b098b52",
+  "identity": {
+    "seed": 93002,
+    "field": "challenge-equity-b",
+    "players": 6,
+    "rotation": 3,
+    "match": 24,
+    "hand": 2
+  },
+  "street": "flop",
+  "baselineCallValue": -4.48,
+  "actualAction": "fold",
+  "current50": {
+    "callValue": -4.48,
+    "action": "fold",
+    "equity": 0.2,
+    "method": "monte-carlo"
+  },
+  "oracle": {
+    "expectedPayout": 13.481481481481481,
+    "callValue": -14.518518518518519,
+    "outcomes": 666
+  },
+  "models": {
+    "current": {
+      "reference": {
+        "callValue": 1.1575520833333321,
+        "action": "call",
+        "equity": 0.24837239583333331,
+        "method": "monte-carlo"
+      },
+      "replicates": [
+        {
+          "callValue": -4.48,
+          "action": "fold",
+          "equity": 0.2,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 7,
+          "action": "call",
+          "equity": 0.37,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 8.866666666666667,
+          "action": "call",
+          "equity": 0.3366666666666667,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -6.813333333333329,
+          "action": "fold",
+          "equity": 0.19666666666666668,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -3.1733333333333356,
+          "action": "fold",
+          "equity": 0.22666666666666668,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 8.306666666666665,
+          "action": "call",
+          "equity": 0.2966666666666667,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 7.74666666666667,
+          "action": "call",
+          "equity": 0.37666666666666665,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -1.3999999999999986,
+          "action": "fold",
+          "equity": 0.21,
+          "method": "monte-carlo"
+        }
+      ],
+      "referencePayoff": -14.518518518518519,
+      "privilegedInformationGap": 14.518518518518519,
+      "valueError": 15.676070601851851,
+      "absoluteValueError": 15.676070601851851,
+      "samplingFlipFraction": 0.5
+    },
+    "offset": {
+      "reference": {
+        "callValue": 0.84765625,
+        "action": "call",
+        "equity": 0.2451171875,
+        "method": "monte-carlo"
+      },
+      "replicates": [
+        {
+          "callValue": -1.3999999999999986,
+          "action": "fold",
+          "equity": 0.25,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 6.159999999999997,
+          "action": "call",
+          "equity": 0.36,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 4.106666666666662,
+          "action": "call",
+          "equity": 0.3066666666666667,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -3.7333333333333343,
+          "action": "fold",
+          "equity": 0.20666666666666667,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -1.120000000000001,
+          "action": "fold",
+          "equity": 0.18,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 5.226666666666667,
+          "action": "call",
+          "equity": 0.3066666666666667,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 8.02666666666667,
+          "action": "call",
+          "equity": 0.2866666666666666,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -3.0799999999999983,
+          "action": "fold",
+          "equity": 0.21,
+          "method": "monte-carlo"
+        }
+      ],
+      "referencePayoff": -14.518518518518519,
+      "privilegedInformationGap": 14.518518518518519,
+      "valueError": 15.366174768518519,
+      "absoluteValueError": 15.366174768518519,
+      "samplingFlipFraction": 0.5
+    }
+  }
+}

@@ -1,0 +1,517 @@
+{
+  "classification": "Inspected diagnostic reuse; no new profit evidence.",
+  "reproducedMatches": 420,
+  "reproducedHands": 1680,
+  "fallbacks": 0,
+  "archivedAccountingExact": true,
+  "flopActions": 4807,
+  "rangeDeltaOffsetMinusCurrent": {
+    "beforeLoss": {
+      "count": 10,
+      "mean": 0.0007927339606612627,
+      "seedSE": 0.0006249396522272,
+      "interval95": null
+    },
+    "afterLoss": {
+      "count": 10,
+      "mean": -0.001522413939285716,
+      "seedSE": 0.0026034905145157264,
+      "interval95": null
+    },
+    "informationGain": {
+      "count": 10,
+      "mean": 0.002315147899947097,
+      "seedSE": 0.0021875869159320685,
+      "interval95": null
+    },
+    "actionLoss": {
+      "count": 10,
+      "mean": -0.011862185295104072,
+      "seedSE": 0.004095143560189317,
+      "interval95": null
+    }
+  },
+  "rangeDeltaEqualHand": {
+    "beforeLoss": {
+      "count": 10,
+      "mean": 0.0006316235894860966,
+      "seedSE": 0.00044797423698967904,
+      "interval95": null
+    },
+    "afterLoss": {
+      "count": 10,
+      "mean": -0.003512851823238794,
+      "seedSE": 0.002312035288362685,
+      "interval95": null
+    },
+    "informationGain": {
+      "count": 10,
+      "mean": 0.0041444754127250485,
+      "seedSE": 0.0020028870584089323,
+      "interval95": null
+    },
+    "actionLoss": {
+      "count": 10,
+      "mean": -0.02220142483884774,
+      "seedSE": 0.003126853509153595,
+      "interval95": null
+    }
+  },
+  "rangeDeltaObserverActive": {
+    "beforeLoss": {
+      "count": 10,
+      "mean": 0.0004862896834061381,
+      "seedSE": 0.0002878232406598113,
+      "interval95": null
+    },
+    "afterLoss": {
+      "count": 10,
+      "mean": 0.0008686721493750049,
+      "seedSE": 0.0026997975531928434,
+      "interval95": null
+    },
+    "informationGain": {
+      "count": 10,
+      "mean": -0.000382382465968825,
+      "seedSE": 0.002478357817306701,
+      "interval95": null
+    },
+    "actionLoss": {
+      "count": 10,
+      "mean": 0.020019830419326416,
+      "seedSE": 0.005809305486683433,
+      "interval95": null
+    }
+  },
+  "rangeDeltaByAction": {
+    "fold": {
+      "beforeLoss": {
+        "count": 10,
+        "mean": -0.004453682317651619,
+        "seedSE": 0.0010578887649695255,
+        "interval95": null
+      },
+      "afterLoss": {
+        "count": 10,
+        "mean": -0.0038768189694757815,
+        "seedSE": 0.005434205147002491,
+        "interval95": null
+      },
+      "informationGain": {
+        "count": 10,
+        "mean": -0.000576863348176377,
+        "seedSE": 0.005053183126668012,
+        "interval95": null
+      },
+      "actionLoss": {
+        "count": 10,
+        "mean": 0.31036974582785753,
+        "seedSE": 0.011850529656057878,
+        "interval95": null
+      }
+    },
+    "passive": {
+      "beforeLoss": {
+        "count": 10,
+        "mean": 0.0018698260380579867,
+        "seedSE": 0.0009180175852382299,
+        "interval95": null
+      },
+      "afterLoss": {
+        "count": 10,
+        "mean": -0.0019690351694579,
+        "seedSE": 0.0024995934126453645,
+        "interval95": null
+      },
+      "informationGain": {
+        "count": 10,
+        "mean": 0.0038388612075160164,
+        "seedSE": 0.002031791504579827,
+        "interval95": null
+      },
+      "actionLoss": {
+        "count": 10,
+        "mean": 0.01897428030580115,
+        "seedSE": 0.005168946300376564,
+        "interval95": null
+      }
+    },
+    "aggressive": {
+      "beforeLoss": {
+        "count": 10,
+        "mean": -0.0009004122558681438,
+        "seedSE": 0.00034395478992344566,
+        "interval95": null
+      },
+      "afterLoss": {
+        "count": 10,
+        "mean": 0.0019882555303156304,
+        "seedSE": 0.003592397210110483,
+        "interval95": null
+      },
+      "informationGain": {
+        "count": 10,
+        "mean": -0.002888667786183911,
+        "seedSE": 0.003729409732693272,
+        "interval95": null
+      },
+      "actionLoss": {
+        "count": 10,
+        "mean": -0.2635659803424255,
+        "seedSE": 0.019054213723189103,
+        "interval95": null
+      }
+    }
+  },
+  "rangeDeltaBySupport": {
+    "011": {
+      "beforeLoss": {
+        "count": 10,
+        "mean": 0.0,
+        "seedSE": 0.0,
+        "interval95": null
+      },
+      "afterLoss": {
+        "count": 10,
+        "mean": 0.00013849866441821844,
+        "seedSE": 0.002344852244377739,
+        "interval95": null
+      },
+      "informationGain": {
+        "count": 10,
+        "mean": -0.00013849866441841327,
+        "seedSE": 0.002344852244377762,
+        "interval95": null
+      },
+      "actionLoss": {
+        "count": 10,
+        "mean": 0.04772593477340458,
+        "seedSE": 0.005774925556662671,
+        "interval95": null
+      }
+    },
+    "110": {
+      "beforeLoss": {
+        "count": 10,
+        "mean": 0.0023543360864664463,
+        "seedSE": 0.0028135623778393236,
+        "interval95": null
+      },
+      "afterLoss": {
+        "count": 10,
+        "mean": -0.013516219386679662,
+        "seedSE": 0.0155521092380064,
+        "interval95": null
+      },
+      "informationGain": {
+        "count": 10,
+        "mean": 0.015870555473146006,
+        "seedSE": 0.014418871795160427,
+        "interval95": null
+      },
+      "actionLoss": {
+        "count": 10,
+        "mean": -0.2638604234285477,
+        "seedSE": 0.020189514105421923,
+        "interval95": null
+      }
+    },
+    "111": {
+      "beforeLoss": {
+        "count": 10,
+        "mean": 0.0027252244020677273,
+        "seedSE": 0.0021490560510193085,
+        "interval95": null
+      },
+      "afterLoss": {
+        "count": 10,
+        "mean": 0.0036380638828202192,
+        "seedSE": 0.004372644537052889,
+        "interval95": null
+      },
+      "informationGain": {
+        "count": 10,
+        "mean": -0.0009128394807523625,
+        "seedSE": 0.004546202440662663,
+        "interval95": null
+      },
+      "actionLoss": {
+        "count": 10,
+        "mean": -0.12259029564278534,
+        "seedSE": 0.01760165362287754,
+        "interval95": null
+      }
+    }
+  },
+  "rangeDeltaByFamily": {
+    "aggressor": {
+      "beforeLoss": {
+        "count": 7,
+        "mean": 0.0,
+        "seedSE": 0.0,
+        "interval95": null
+      },
+      "afterLoss": {
+        "count": 7,
+        "mean": 0.023652816482238492,
+        "seedSE": 0.02643891707361716,
+        "interval95": null
+      },
+      "informationGain": {
+        "count": 7,
+        "mean": -0.02365281648223863,
+        "seedSE": 0.026438917073617105,
+        "interval95": null
+      },
+      "actionLoss": {
+        "count": 7,
+        "mean": -0.2320482957828622,
+        "seedSE": 0.07709791899669893,
+        "interval95": null
+      }
+    },
+    "equity-defender": {
+      "beforeLoss": {
+        "count": 10,
+        "mean": 0.0012367213785341668,
+        "seedSE": 0.0008787561338644433,
+        "interval95": null
+      },
+      "afterLoss": {
+        "count": 10,
+        "mean": 0.0006536203154031917,
+        "seedSE": 0.0027239706118199433,
+        "interval95": null
+      },
+      "informationGain": {
+        "count": 10,
+        "mean": 0.0005831010631304776,
+        "seedSE": 0.0022689046047099167,
+        "interval95": null
+      },
+      "actionLoss": {
+        "count": 10,
+        "mean": 0.0062897156032792004,
+        "seedSE": 0.009557828165861856,
+        "interval95": null
+      }
+    },
+    "equity-pressure": {
+      "beforeLoss": {
+        "count": 10,
+        "mean": 0.00209741655138993,
+        "seedSE": 0.000952146465224265,
+        "interval95": null
+      },
+      "afterLoss": {
+        "count": 10,
+        "mean": -0.0007886340806057213,
+        "seedSE": 0.003613820854135969,
+        "interval95": null
+      },
+      "informationGain": {
+        "count": 10,
+        "mean": 0.0028860506319954952,
+        "seedSE": 0.002936391277766098,
+        "interval95": null
+      },
+      "actionLoss": {
+        "count": 10,
+        "mean": -0.007446586798980659,
+        "seedSE": 0.01063566782348311,
+        "interval95": null
+      }
+    },
+    "learner": {
+      "beforeLoss": {
+        "count": 10,
+        "mean": -0.0007112867890051611,
+        "seedSE": 0.00019938770811519236,
+        "interval95": null
+      },
+      "afterLoss": {
+        "count": 10,
+        "mean": 0.005465107228394217,
+        "seedSE": 0.001561688347522139,
+        "interval95": null
+      },
+      "informationGain": {
+        "count": 10,
+        "mean": -0.006176394017399241,
+        "seedSE": 0.0016500279860264663,
+        "interval95": null
+      },
+      "actionLoss": {
+        "count": 10,
+        "mean": 0.13779495456434618,
+        "seedSE": 0.008520072262212075,
+        "interval95": null
+      }
+    },
+    "maniac": {
+      "beforeLoss": {
+        "count": 10,
+        "mean": -0.0009853241777931566,
+        "seedSE": 0.00029791899194228183,
+        "interval95": null
+      },
+      "afterLoss": {
+        "count": 10,
+        "mean": -0.02065416144106482,
+        "seedSE": 0.004847760379795637,
+        "interval95": null
+      },
+      "informationGain": {
+        "count": 10,
+        "mean": 0.019668837263271365,
+        "seedSE": 0.005029691908999749,
+        "interval95": null
+      },
+      "actionLoss": {
+        "count": 10,
+        "mean": -0.2955404410152635,
+        "seedSE": 0.012074654551510284,
+        "interval95": null
+      }
+    },
+    "multiway": {
+      "beforeLoss": {
+        "count": 10,
+        "mean": 0.0006558497330680701,
+        "seedSE": 0.0006139216939499625,
+        "interval95": null
+      },
+      "afterLoss": {
+        "count": 10,
+        "mean": 0.005860760212484983,
+        "seedSE": 0.002412589526921988,
+        "interval95": null
+      },
+      "informationGain": {
+        "count": 10,
+        "mean": -0.005204910479416814,
+        "seedSE": 0.0021651831603935697,
+        "interval95": null
+      },
+      "actionLoss": {
+        "count": 10,
+        "mean": 0.13913643216680466,
+        "seedSE": 0.01061329481116359,
+        "interval95": null
+      }
+    },
+    "position": {
+      "beforeLoss": {
+        "count": 10,
+        "mean": 0.0010164307263775818,
+        "seedSE": 0.0006812500091775659,
+        "interval95": null
+      },
+      "afterLoss": {
+        "count": 10,
+        "mean": 0.0024205852801966188,
+        "seedSE": 0.00323556183627188,
+        "interval95": null
+      },
+      "informationGain": {
+        "count": 10,
+        "mean": -0.0014041545538191786,
+        "seedSE": 0.002940942530239623,
+        "interval95": null
+      },
+      "actionLoss": {
+        "count": 10,
+        "mean": 0.13451233093694545,
+        "seedSE": 0.007425834730344778,
+        "interval95": null
+      }
+    },
+    "tight": {
+      "beforeLoss": {
+        "count": 10,
+        "mean": -0.005823767911143207,
+        "seedSE": 0.004211231408734127,
+        "interval95": null
+      },
+      "afterLoss": {
+        "count": 10,
+        "mean": 0.023241473562471436,
+        "seedSE": 0.015326863808741625,
+        "interval95": null
+      },
+      "informationGain": {
+        "count": 10,
+        "mean": -0.029065241473614688,
+        "seedSE": 0.013747395588458347,
+        "interval95": null
+      },
+      "actionLoss": {
+        "count": 10,
+        "mean": 0.022092516889118303,
+        "seedSE": 0.04830419907522555,
+        "interval95": null
+      }
+    }
+  },
+  "valueStates": 160,
+  "valueMetrics": {
+    "current": {
+      "absoluteValueError": 28.838218416707765,
+      "valueError": -5.8453288617957915,
+      "privilegedInformationGap": 4.808478107655501,
+      "referencePayoff": 39.89364330672465,
+      "samplingFlipFraction": 0.084375,
+      "rootMeanSquaredValueError": 56.88385903430389,
+      "baseline50ReferencePayoff": 38.78594438140394,
+      "baseline50PrivilegedInformationGap": 5.91617703297621,
+      "baseline50Versus512FlipCount": 12
+    },
+    "offset": {
+      "absoluteValueError": 29.704503029613438,
+      "valueError": -4.405863733215062,
+      "privilegedInformationGap": 4.896952910583429,
+      "referencePayoff": 39.80516850379672,
+      "samplingFlipFraction": 0.08203125,
+      "rootMeanSquaredValueError": 56.60830489137394,
+      "baseline50ReferencePayoff": 39.84567358859409,
+      "baseline50PrivilegedInformationGap": 4.856447825786065,
+      "baseline50Versus512FlipCount": 12
+    }
+  },
+  "valueDeltaSeedMeans": {
+    "absoluteValueError": {
+      "count": 10,
+      "mean": 0.8432766320612336,
+      "seedSE": 0.6833260784943723,
+      "interval95": null
+    },
+    "privilegedInformationGap": {
+      "count": 10,
+      "mean": 0.08489455364455364,
+      "seedSE": 0.06551373130984385,
+      "interval95": null
+    },
+    "referencePayoff": {
+      "count": 10,
+      "mean": -0.08489455364455364,
+      "seedSE": 0.06551373130984385,
+      "interval95": null
+    },
+    "samplingFlipFraction": {
+      "count": 10,
+      "mean": -0.0012630485456572413,
+      "seedSE": 0.009575736915227525,
+      "interval95": null
+    }
+  },
+  "baseline50ModelActionDisagreements": 14,
+  "observerNotFoldedFlopActions": 2142,
+  "referenceActionDisagreements": 2,
+  "source50DecisionReproduction": true,
+  "verificationScope": "Archived accounting and recorded metric arithmetic audited; oracle enumeration validated by helper tests/source/runtime assertions, not independently re-enumerated here.",
+  "limitations": [
+    "Ten inspected seed batches; conventional intervals omitted.",
+    "Privileged fractional-share no-future-betting reference is not actionable regret or GTO.",
+    "Restricted sampled paid flop/turn decisions, not whole-policy profit."
+  ]
+}

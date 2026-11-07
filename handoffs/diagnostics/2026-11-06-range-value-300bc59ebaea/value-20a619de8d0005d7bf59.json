@@ -1,0 +1,153 @@
+{
+  "id": "20a619de8d0005d7bf592ef36baad4a7a76c7052d3a338b2c6847a0e8ec324a1",
+  "identity": {
+    "seed": 93008,
+    "field": "challenge-equity-b",
+    "players": 8,
+    "rotation": 6,
+    "match": 40,
+    "hand": 2
+  },
+  "street": "flop",
+  "baselineCallValue": -13.44,
+  "actualAction": "fold",
+  "current50": {
+    "callValue": -13.44,
+    "action": "fold",
+    "equity": 0.08,
+    "method": "monte-carlo"
+  },
+  "oracle": {
+    "expectedPayout": 38.19949494949495,
+    "callValue": 10.199494949494948,
+    "outcomes": 528
+  },
+  "models": {
+    "current": {
+      "reference": {
+        "callValue": -5.286458333333336,
+        "action": "fold",
+        "equity": 0.18033854166666669,
+        "method": "monte-carlo"
+      },
+      "replicates": [
+        {
+          "callValue": -13.44,
+          "action": "fold",
+          "equity": 0.08,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -0.8399999999999999,
+          "action": "fold",
+          "equity": 0.15,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -12.32,
+          "action": "fold",
+          "equity": 0.08,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -2.1466666666666683,
+          "action": "fold",
+          "equity": 0.16333333333333336,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -11.573333333333334,
+          "action": "fold",
+          "equity": 0.10666666666666666,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -4.2933333333333366,
+          "action": "fold",
+          "equity": 0.22666666666666668,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -9.053333333333335,
+          "action": "fold",
+          "equity": 0.1366666666666667,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -5.133333333333336,
+          "action": "fold",
+          "equity": 0.17666666666666667,
+          "method": "monte-carlo"
+        }
+      ],
+      "referencePayoff": 0,
+      "privilegedInformationGap": 10.199494949494948,
+      "valueError": -15.485953282828284,
+      "absoluteValueError": 15.485953282828284,
+      "samplingFlipFraction": 0
+    },
+    "offset": {
+      "reference": {
+        "callValue": -4.147135416666657,
+        "action": "fold",
+        "equity": 0.19759114583333326,
+        "method": "monte-carlo"
+      },
+      "replicates": [
+        {
+          "callValue": -0.37333333333333485,
+          "action": "fold",
+          "equity": 0.18666666666666668,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -7.559999999999999,
+          "action": "fold",
+          "equity": 0.13,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -7,
+          "action": "fold",
+          "equity": 0.17,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 1.9600000000000009,
+          "action": "call",
+          "equity": 0.25,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 5.693333333333328,
+          "action": "call",
+          "equity": 0.2833333333333334,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -5.41333333333333,
+          "action": "fold",
+          "equity": 0.22666666666666668,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": -7.186666666666664,
+          "action": "fold",
+          "equity": 0.1433333333333333,
+          "method": "monte-carlo"
+        },
+        {
+          "callValue": 3.359999999999996,
+          "action": "call",
+          "equity": 0.20000000000000004,
+          "method": "monte-carlo"
+        }
+      ],
+      "referencePayoff": 0,
+      "privilegedInformationGap": 10.199494949494948,
+      "valueError": -14.346630366161605,
+      "absoluteValueError": 14.346630366161605,
+      "samplingFlipFraction": 0.375
+    }
+  }
+}

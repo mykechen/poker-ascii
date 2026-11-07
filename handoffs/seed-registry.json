@@ -97,6 +97,11 @@
       "start": 51005,
       "end": 51008,
       "role": "Prespecified training-only quota top-up"
+    },
+    {
+      "start": 101001,
+      "end": 101020,
+      "purpose": "Decision stability collection only; frozen 2026-11-07 execution spec; 120 minute cap, no top-ups. Validation 102001-102010 remains unreserved."
     }
   ],
   "reservation_spec": "docs/superpowers/specs/2026-11-05-contextual-flop-model-design.md",

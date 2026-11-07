@@ -102,6 +102,11 @@
       "start": 51005,
       "end": 51008,
       "role": "Prespecified training-only quota top-up"
+    },
+    {
+      "start": 103001,
+      "end": 103020,
+      "purpose": "Hash-assigned-street revised stability collection; 2026-11-08 specification; 120minute total cap, no top-ups."
     }
   ],
   "reservation_spec": "docs/superpowers/specs/2026-11-05-contextual-flop-model-design.md",

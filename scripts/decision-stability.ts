@@ -11,14 +11,15 @@ import {balanceFields} from '../lib/poker/population-fields';
 import {estimateEquity} from '../lib/poker/equity';
 import type {DecisionSnapshot} from '../lib/poker/equity-policy';
 import {eligibleCallPots} from '../lib/poker/diagnostic-truth';
-import {selectStates,streamMetrics,clusterSummary,claimPaidHand,pairedSeeds} from '../lib/poker/decision-stability';
+import {selectStates,streamMetrics,clusterSummary,claimPaidHand,pairedSeeds,assignedStreet} from '../lib/poker/decision-stability';
 import {scorePrediction} from '../lib/poker/calibration';
 const fields:Record<'legacy'|'expanded',LeagueField[]>={
  legacy:[{id:'train-balanced',opponents:['chart','tight','station','position','aggressor']},{id:'train-pressure',opponents:['maniac','station','chart','aggressor','tight']},{id:'train-passive',opponents:['station','maniac','position','tight','chart']}],
  expanded:[{id:'train-expanded-a',opponents:['multiway','station','learner','tight','maniac']},{id:'train-expanded-b',opponents:['learner','position','multiway','aggressor','station']},{id:'train-expanded-c',opponents:['tight','multiway','maniac','learner','position']}]
 };
-const settings={seeds:Array.from({length:20},(_,i)=>101001+i),fields,hands:4,players:[6,7,8],budgets:[50,128,512],exactLimit:10000,salts:[0,2654435769,2246822507,3266489909,668265263,374761393,3550635116,4251993797],budgetMs:7200000,quotas:Object.fromEntries(['legacy','expanded'].flatMap(p=>[['preflop',54],['flop',53],['turn',53]].map(([s,n])=>[`${p}:${s}`,n]))) as Record<string,number>};
-const protocol='docs/superpowers/specs/2026-11-07-decision-stability-execution.md';
+const settings={seeds:Array.from({length:20},(_,i)=>103001+i),fields,hands:4,players:[6,7,8],budgets:[50,128,512],exactLimit:10000,salts:[0,2654435769,2246822507,3266489909,668265263,374761393,3550635116,4251993797],budgetMs:7200000,sampling:"hash-assigned-street-v2",quotas:Object.fromEntries(['legacy','expanded'].flatMap(p=>[['preflop',54],['flop',53],['turn',53]].map(([s,n])=>[`${p}:${s}`,n]))) as Record<string,number>};
+const protocol='docs/superpowers/specs/2026-11-08-decision-stability-revision.md';
+const inheritedProtocol='docs/superpowers/specs/2026-11-07-decision-stability-execution.md';
 const registryPath='handoffs/seed-registry.json';
 const registry=JSON.parse(readFileSync(registryPath,'utf8'));
 for(const seed of settings.seeds){
@@ -26,13 +27,14 @@ for(const seed of settings.seeds){
 }
 if(execFileSync('git',['status','--porcelain'],{encoding:'utf8'}).trim())throw new Error('Commit source and registry before starting.');
 const hash=createHash('sha256');
-for(const file of [...readdirSync('lib/poker').filter(f=>f.endsWith('.ts')&&!f.endsWith('.test.ts')).sort().map(f=>`lib/poker/${f}`),'scripts/decision-stability.ts',protocol,'package.json','package-lock.json'])hash.update(file).update(readFileSync(file));
+for(const file of [...readdirSync('lib/poker').filter(f=>f.endsWith('.ts')&&!f.endsWith('.test.ts')).sort().map(f=>`lib/poker/${f}`),'scripts/decision-stability.ts',protocol,inheritedProtocol,'package.json','package-lock.json'])hash.update(file).update(readFileSync(file));
 hash.update(JSON.stringify(settings));
 const fingerprint=hash.digest('hex'),directory=`handoffs/diagnostics/${new Date().toISOString().slice(0,10)}-decision-stability-${fingerprint.slice(0,12)}`;
 if(existsSync(directory))throw new Error('Run already exists; no automatic resume.');
 mkdirSync(directory,{recursive:true});
 function atomic(file:string,value:unknown){writeFileSync(`${directory}/${file}.tmp`,JSON.stringify(value,null,2)+'\n');renameSync(`${directory}/${file}.tmp`,`${directory}/${file}`);}
 writeFileSync(`${directory}/protocol.md`,readFileSync(protocol));
+writeFileSync(`${directory}/inherited-protocol.md`,readFileSync(inheritedProtocol));
 const started=performance.now();
 const progress={status:'running',source:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),fingerprint,settings,completedMatches:0,completedStates:0,elapsedMs:0,error:null as string|null};
 let stopped=false;for(const signal of ['SIGINT','SIGTERM'] as const)process.once(signal,()=>{stopped=true;});
@@ -40,6 +42,7 @@ class CapReached extends Error{}
 function boundary(){if(stopped||performance.now()-started>=settings.budgetMs)throw new CapReached('Stopped at safe boundary.');}
 function save(){progress.elapsedMs=performance.now()-started;atomic('progress.json',progress);}
 type State=DecisionSnapshot&{id:string;cell:string;seed:number;population:string;field:string;players:number;rotation:number;hand:number};
+const assignments:Record<string,unknown>[]= [];
 const manifest:Record<string,unknown>[]= [];
 let collectionMs=0;
 const reservoir:State[]=[],eligible:Record<string,number>={},exposure:Record<string,{count:number;loss:number}>={},counts:Record<string,number>={};
@@ -53,7 +56,7 @@ function score(state:State,samples:number,seed:number){
  const equity=estimateEquity({hero:[own[0]!,own[1]!],board:view.board,opponents:state.ranges,pots,samples,seed,exactLimit:settings.exactLimit});
  return {...equity,callValue:equity.expectedPayout!-cost,elapsedMs:performance.now()-start,seed};
 }
-function archiveStates(){writeFileSync(`${directory}/states.json.gz`,gzipSync(JSON.stringify(reservoir)));}
+function archiveStates(){atomic('assignments.json',assignments);writeFileSync(`${directory}/states.json.gz`,gzipSync(JSON.stringify(reservoir)));}
 save();
 try{
  for(const [index,seed] of settings.seeds.entries())for(const population of ['legacy','expanded'] as const)for(const field of balanceFields(fields[population],index))for(const players of settings.players)for(let rotation=0;rotation<players;rotation++){
@@ -62,12 +65,14 @@ try{
   registry.started_batches.push({seed,phase:'decision-stability',id:'current',stratum:population,directory,match:batchId,startedAt:new Date().toISOString()});
   writeFileSync(`${registryPath}.tmp`,JSON.stringify(registry,null,2)+'\n');renameSync(`${registryPath}.tmp`,registryPath);
   const seen=new Set<number>();
+  for(let hand=1;hand<=settings.hands;hand++)assignments.push({seed,population,field:field.id,players,rotation,hand,street:assignedStreet(JSON.stringify([seed,population,field.id,players,rotation,hand]))});
   const adaptive=createAdaptivePolicy({samples:50,seed:42,riverSamples:16,riverRiskPenalty:1,learn:false,styleRetention:1,responseModel:{version:1,kind:'current'},onRiverDecision:()=>{counts.river=(counts.river??0)+1;},onPrediction:r=>{
    const key=`${population}:${r.street}:${r.observerStatus}`;
    const row=exposure[key]??={count:0,loss:0};row.count++;row.loss+=scorePrediction(r.probabilities,r.actual).logLoss;
   },onDecisionSnapshot:s=>{
    const street=s.view.street;
    const key=`${population}:${street}:${s.callCost>0?'paid':'free'}`;counts[key]=(counts[key]??0)+1;
+   if(street!==assignedStreet(JSON.stringify([seed,population,field.id,players,rotation,s.view.handNumber])))return;
    if(!claimPaidHand(seen,s.view.handNumber,street,s.callCost))return;
    const cell=`${population}:${street}`;eligible[cell]=(eligible[cell]??0)+1;
    const id=createHash('sha256').update(JSON.stringify([seed,population,field.id,players,rotation,s.view.handNumber,street,s.view.log.length])).digest('hex');

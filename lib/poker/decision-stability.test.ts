@@ -40,3 +40,17 @@ it('assigns each hand to its first paid pre-river state and pairs budget seeds',
  expect(pairedSeeds(1,3,0)).toHaveLength(8);
  expect(pairedSeeds(1,3,0)[0]).toBe(54);
 });
+it('assigns hand streets before play without preflop claiming later-street hands',async()=>{
+ const {assignedStreet}=await import('./decision-stability');
+ const assignments=Array.from({length:300},(_,i)=>assignedStreet(`hand-${i}`));
+ const later=assignments.findIndex(s=>s==='turn');
+ const seen=new Set<number>();
+ const {claimPaidHand}=await import('./decision-stability');
+ const capture=(street:string)=>street===assignedStreet(`hand-${later}`)&&claimPaidHand(seen,later,street,2);
+ expect(capture('preflop')).toBe(false);
+ expect(capture('flop')).toBe(false);
+ expect(capture('turn')).toBe(true);
+ expect(capture('turn')).toBe(false);
+ expect(new Set(assignments)).toEqual(new Set(['preflop','flop','turn']));
+ expect(assignments).toEqual(Array.from({length:300},(_,i)=>assignedStreet(`hand-${i}`)));
+});

@@ -1,3 +1,4 @@
+import {createHash} from 'node:crypto';
 export function selectStates<T extends {id:string;cell:string}>(rows:T[],quotas:Record<string,number>):T[]{
  if(new Set(rows.map(r=>r.id)).size!==rows.length)throw new Error('Duplicate state identity.');
  return Object.entries(quotas).flatMap(([cell,quota])=>{
@@ -37,4 +38,8 @@ export function claimPaidHand(seen:Set<number>,hand:number,street:string|null,co
 export function pairedSeeds(hand:number,logLength:number,actor:number):number[]{
  const base=(42^Math.imul(hand,31)^logLength^actor)|0;
  return [0,2654435769,2246822507,3266489909,668265263,374761393,3550635116,4251993797].map(salt=>(base^salt)|0);
+}
+
+export function assignedStreet(identity:string):'preflop'|'flop'|'turn'{
+ return (['preflop','flop','turn'] as const)[createHash('sha256').update(identity).digest().readUInt32BE(0)%3]!;
 }

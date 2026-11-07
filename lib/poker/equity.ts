@@ -5,7 +5,7 @@ import type { Card } from "./types";
 
 export type WeightedHand = { cards: [Card, Card]; weight: number };
 export type EquityInput = { hero: [Card, Card]; board: Card[]; opponents: WeightedHand[][]; pots?: { amount: number; eligible: number[] }[]; samples?: number; seed?: number; exactLimit?: number };
-export type EquityResult = { equity: number; expectedPayout: number | null; standardError: number; method: "exact" | "monte-carlo"; outcomes: number; attempts: number };
+export type EquityResult = { equity: number; expectedPayout: number | null; expectedPayoutStandardError: number | null; standardError: number; method: "exact" | "monte-carlo"; outcomes: number; attempts: number };
 
 export function uniformRange(): WeightedHand[] {
   const deck = freshDeck();
@@ -39,7 +39,7 @@ export function estimateEquity(input: EquityInput): EquityResult {
   const remaining = 52-known.length-2*ranges.length;
   for(let i=1;i<=missing;i++) boards *= (remaining-i+1)/i;
   const upper = ranges.reduce((n,r)=>n*r.length,boards);
-  let sum=0, squares=0, mass=0, outcomes=0, attempts=0, payout=0;
+  let sum=0, squares=0, mass=0, outcomes=0, attempts=0, payout=0, payoutMean=0, payoutM2=0;
   const score = (hands: WeightedHand[], board: Card[], weight: number) => {
     const hero = evaluate([...input.hero,...board]).score;
     let ties=1, lost=false;
@@ -49,13 +49,25 @@ export function estimateEquity(input: EquityInput): EquityResult {
       if(comparison===0) ties++;
     }
     const share=lost?0:1/ties;
+    let worldPayout=0;
     if (input.pots) {
       const scores=[hero,...hands.map(hand=>evaluate([...hand.cards,...board]).score)];
       for(const pot of input.pots) {
         if(!pot.eligible.includes(0)) continue;
         const comparisons=pot.eligible.map(i=>compareScores(scores[i]!,hero));
-        if(!comparisons.some(c=>c>0)) payout+=weight*pot.amount/comparisons.filter(c=>c===0).length;
+        if(!comparisons.some(c=>c>0)) {
+          const won=pot.amount/comparisons.filter(c=>c===0).length;
+          payout+=weight*pot.amount/comparisons.filter(c=>c===0).length;
+          worldPayout+=won;
+        }
       }
+    }
+    if(!Number.isFinite(worldPayout)||!Number.isFinite(payout))throw new Error("Eligible payout exceeds finite chip units.");
+    if(upper>limit){
+    const delta=worldPayout-payoutMean;
+    payoutMean+=delta/(outcomes+1);
+    payoutM2+=delta*(worldPayout-payoutMean);
+    if(!Number.isFinite(payoutM2))throw new Error("Eligible payout variance exceeds finite chip units.");
     }
     sum+=weight*share; squares+=weight*share*share; mass+=weight; outcomes++;
   };
@@ -74,7 +86,7 @@ export function estimateEquity(input: EquityInput): EquityResult {
     };
     visit([],new Set(known),1);
     if(!mass) throw new Error("No compatible joint opponent hands.");
-    return {equity:sum/mass,expectedPayout:input.pots?payout/mass:null,standardError:0,method:"exact",outcomes,attempts:outcomes};
+    return {equity:sum/mass,expectedPayout:input.pots?payout/mass:null,expectedPayoutStandardError:input.pots?0:null,standardError:0,method:"exact",outcomes,attempts:outcomes};
   }
   const random=mulberry32(input.seed??1);
   const cumulative=ranges.map(range=>{let total=0;return range.map(hand=>({hand,cut:total+=hand.weight}));});
@@ -97,5 +109,5 @@ export function estimateEquity(input: EquityInput): EquityResult {
   if(outcomes<samples) throw new Error("Unable to sample compatible joint ranges within budget.");
   const equity=sum/mass;
   const variance=Math.max(0,(squares-outcomes*equity*equity)/(outcomes-1));
-  return {equity,expectedPayout:input.pots?payout/mass:null,standardError:Math.sqrt(variance/outcomes),method:"monte-carlo",outcomes,attempts};
+  return {equity,expectedPayout:input.pots?payout/mass:null,expectedPayoutStandardError:input.pots?Math.sqrt(Math.max(0,payoutM2/(outcomes-1))/outcomes):null,standardError:Math.sqrt(variance/outcomes),method:"monte-carlo",outcomes,attempts};
 }

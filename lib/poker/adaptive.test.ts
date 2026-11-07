@@ -46,3 +46,13 @@ it("starts each hand with the same beliefs as a fresh no-memory model",()=>{
  playMatch({seats:[{name:"bot",policy},{name:"other",policy:simplePolicy}],hands:2,invalidAction:"throw"});
  expect(seen.size).toBe(2);
 });
+it('reports observer exposure and snapshots without changing adaptive seeded play',()=>{
+ const statuses:string[]=[];
+ const run=(capture:boolean)=>{
+ const adaptive=createAdaptivePolicy({samples:30,seed:42,riverSamples:16,learn:false,...(capture?{onPrediction:r=>{statuses.push(r.observerStatus);},onDecisionSnapshot:s=>{expect(s.ranges).toHaveLength(s.opponentSeats.length);}}:{})});
+ return playMatch({seats:Array.from({length:6},(_,i)=>({name:`P${i}`,policy:i===0?adaptive.policy:simplePolicy})),hands:3,seed:9,invalidAction:'throw'});
+ };
+ expect(run(true)).toEqual(run(false));
+ expect(statuses.length).toBeGreaterThan(0);
+ expect(statuses.every(s=>['folded','all-in','funded'].includes(s))).toBe(true);
+});

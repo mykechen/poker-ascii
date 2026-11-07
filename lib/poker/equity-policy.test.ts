@@ -1,4 +1,6 @@
 import { expect, it } from "vitest";
+import {estimateEquity} from "./equity";
+import {eligibleCallPots} from "./diagnostic-truth";
 import { createEquityPolicy } from "./equity-policy";
 import { playMatch } from "./train";
 import { simplePolicy } from "./bot";
@@ -60,4 +62,24 @@ it('accepts positive incremental value even when the expected total hand result 
  const policy=createEquityPolicy({rangeFor:()=>[{cards:['Ah','Ad'],weight:4},{cards:['Qh','Qd'],weight:1}],onDecision:d=>{value=d.showdownCallValue;}});
  expect(policy(view).action).toBe('call');expect(value).toBeCloseTo(48);
  expect(value-150).toBeLessThan(0);
+});
+
+it("captures public decision snapshots without changing seeded actions",()=>{
+ let captured=0;
+ const run=(enabled:boolean)=>playMatch({seats:Array.from({length:6},(_,i)=>({name:`P${i}`,policy:i===0?createEquityPolicy({samples:50,seed:4,...(enabled?{onDecisionSnapshot:s=>{
+ captured++;
+ const {cost,pots}=eligibleCallPots(s.view);
+ const own=s.view.seats[s.view.toAct!]!.hole;
+ if(!Array.isArray(own))throw new Error("Missing own cards");
+ const reproduced=estimateEquity({hero:[own[0]!,own[1]!],board:s.view.board,opponents:s.ranges,pots,samples:50,seed:(4^Math.imul(s.view.handNumber,31)^s.view.log.length^s.view.toAct!)|0});
+ expect(reproduced).toEqual(s.equity);
+ expect(reproduced.expectedPayout!-cost).toBe(s.showdownCallValue);
+ expect(s.view.seats.filter(seat=>Array.isArray(seat.hole))).toHaveLength(1);
+ expect(s.opponentSeats.length).toBe(s.ranges.length);
+ expect(s.equity.expectedPayoutStandardError).toBeGreaterThanOrEqual(0);
+ s.view.board.length=0;
+ }}:{})}):simplePolicy})),hands:3,seed:8,invalidAction:"throw"});
+ const baseline=run(false),instrumented=run(true);
+ expect(captured).toBeGreaterThan(0);
+ expect(instrumented).toEqual(baseline);
 });

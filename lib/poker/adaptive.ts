@@ -1,3 +1,4 @@
+import {observerStatus,type ObserverStatus} from "./decision-diagnostics";
 import type {ReplayObservation,ResponseComponent} from "./contextual-replay";
 import type {ResponseModel} from "./contextual-response";
 import type { Policy } from "./bot";
@@ -11,7 +12,7 @@ import type { Card, Street } from "./types";
 import type { PublicView } from "./view";
 
 type Evidence = { seat: number; street: Street; board: Card[]; facing: boolean; action: ActionClass };
-export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor"> & { priorStrength?: number; learn?: boolean; styleRetention?: number; riverRiskPenalty?: number; riverSamples?: number | false; onRiverDecision?: (result: RiverResult) => void; flopUniformWeight?: number; responseModel?:ResponseModel; onReplay?: (event:ReplayObservation)=>void; onPrediction?: (record: ForecastRecord & {facing:boolean}) => void } = {}) {
+export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor"> & { priorStrength?: number; learn?: boolean; styleRetention?: number; riverRiskPenalty?: number; riverSamples?: number | false; onRiverDecision?: (result: RiverResult) => void; flopUniformWeight?: number; responseModel?:ResponseModel; onReplay?: (event:ReplayObservation)=>void; onPrediction?: (record: ForecastRecord & {facing:boolean;observerStatus:ObserverStatus}) => void } = {}) {
   const learn=options.learn??false;
   const retention=options.styleRetention??1;
   if(!Number.isFinite(retention)||retention<0||retention>1)throw new Error("Style retention must be between zero and one.");
@@ -71,11 +72,12 @@ export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor
       }
       if(options.onPrediction) {
         const observer=before.seats.find(s=>s.seat!==seat&&Array.isArray(s.hole)&&s.hole.length===2);
-        const hole=observer?.hole;
+        if(!observer)throw new Error("Observer missing for forecast exposure.");
+        const hole=observer.hole;
         const features=Array.isArray(hole)?handFeatures([hole[0]!,hole[1]!],before.board):null;
         const paired=new Set(before.board.map(c=>c[0])).size<before.board.length;
         const suited=["c","d","h","s"].some(suit=>before.board.filter(c=>c[1]===suit).length>=3);
-        options.onPrediction({street:before.street,probabilities,actual:action,facing,seat,opponentName:before.seats[seat]!.name,hand:before.handNumber,context:decisionContext(before,seat),observerGroup:features?.group??"unknown",observerDraw:features?.draw??false,boardTexture:`${paired?"paired":"unpaired"}:${suited?"three-suited":"mixed"}`,livePlayers:before.seats.filter(s=>s.inHand&&!s.folded).length});
+        options.onPrediction({observerStatus:observerStatus(observer),street:before.street,probabilities,actual:action,facing,seat,opponentName:before.seats[seat]!.name,hand:before.handNumber,context:decisionContext(before,seat),observerGroup:features?.group??"unknown",observerDraw:features?.draw??false,boardTexture:`${paired?"paired":"unpaired"}:${suited?"three-suited":"mixed"}`,livePlayers:before.seats.filter(s=>s.inHand&&!s.folded).length});
       }
       inferences++;
       if(learn) {model.record(ids[seat]!,before.street,facing,action);count++;}

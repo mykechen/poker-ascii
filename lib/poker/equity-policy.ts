@@ -2,7 +2,10 @@ import type { Policy } from "./bot";
 import { estimateEquity, uniformRange, type EquityResult, type WeightedHand } from "./equity";
 import type { PublicView } from "./view";
 
+export type DecisionSnapshot = { view: PublicView; opponentSeats: number[]; ranges: WeightedHand[][]; equity: EquityResult; callCost: number; showdownCallValue: number };
+
 export type EquityPolicyOptions = {
+  onDecisionSnapshot?: (snapshot: DecisionSnapshot) => void;
   samples?: number;
   seed?: number;
   rangeFor?: (view: PublicView, opponentSeat: number) => WeightedHand[];
@@ -35,9 +38,11 @@ export function createEquityPolicy(options: EquityPolicyOptions = {}): Policy {
       const eligible=indices.flatMap((s,i)=>contributions[s]!>=level?[i]:[]);
       return {amount,eligible};
     }).filter(p=>p.eligible.length>0);
-    const equity=estimateEquity({hero:[hole[0]!,hole[1]!],board:view.board,opponents:opponents.map(s=>options.rangeFor?.(view,s.seat)??uniform),pots,samples:options.samples??500,seed:(options.seed??1)^Math.imul(view.handNumber,31)^view.log.length^seat});
+    const ranges=opponents.map(s=>options.rangeFor?.(view,s.seat)??uniform);
+    const equity=estimateEquity({hero:[hole[0]!,hole[1]!],board:view.board,opponents:ranges,pots,samples:options.samples??500,seed:(options.seed??1)^Math.imul(view.handNumber,31)^view.log.length^seat});
     const value=(equity.expectedPayout??0)-cost;
     options.onDecision?.({hand:view.handNumber,seat,equity,callCost:cost,showdownCallValue:value});
+    options.onDecisionSnapshot?.(structuredClone({view,opponentSeats:opponents.map(s=>s.seat),ranges,equity,callCost:cost,showdownCallValue:value}));
     const detail=`Equity ${(100*equity.equity).toFixed(1)}%. Showdown call value ${value.toFixed(1)}.`;
     if(view.validActions.some(a=>a.action==="check")) return {action:"check",reason:detail};
     if(call && value>=0) return {action:"call",amount:cost,reason:detail};

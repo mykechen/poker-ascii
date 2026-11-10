@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-10T05:44:42.555876+00:00",
+  "status": "incomplete-power-stop",
+  "savedSeedClusters": 661,
+  "physicalHandsPreserved": 55524,
+  "workersStopped": true,
+  "outcomesInspected": false,
+  "v1Frozen": false,
+  "costRunStarted": false,
+  "heuristicImplemented": false,
+  "adapterWatts": 17,
+  "batteryPercentAtStop": 14,
+  "remainingRunHours": 43.75486091069445,
+  "next": "Do not launch another long study on17Wadapter. Establish sustained sufficient power first. All150001\u2013153955 seeds retired. Draft heuristic redtest moved out of active test tree until v1gate.",
+  "verification": {
+    "typescriptTests": 214,
+    "typescriptFiles": 49,
+    "pythonTests": 15,
+    "typecheck": "pass",
+    "diffCheck": "pass",
+    "testDurationSeconds": 113.87
+  },
+  "futureWorkBlockedBy": "Current power connection reports17W; measured battery supplement about65W at14workers. Establish sufficient sustained power before any fresh long study."
+}

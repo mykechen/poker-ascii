@@ -1,0 +1,12 @@
+[
+  {
+    "ExternalConnected": true,
+    "IsCharging": false,
+    "Voltage": 10875,
+    "Amperage": -5994,
+    "InstantAmperage": -5994,
+    "AppleRawCurrentCapacity": 1962,
+    "AppleRawMaxCapacity": 7657,
+    "adapterWatts": 17
+  }
+]

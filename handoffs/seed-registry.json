@@ -170,6 +170,16 @@
       "start": 132841,
       "end": 133955,
       "reason": "Battery/power interruption of pooled study; both full reservations retired conservatively; no automatic retry/top-up; namespace is historical, not evidence outcomes were inspected."
+    },
+    {
+      "start": 150001,
+      "end": 152840,
+      "reason": "Fixed prelaunch power safeguard; pooled study incomplete, no outcomes inspected; entire reservation retired, including unstarted secondbatch; historical namespace does not mean outcomes were inspected."
+    },
+    {
+      "start": 152841,
+      "end": 153955,
+      "reason": "Fixed prelaunch power safeguard; pooled study incomplete, no outcomes inspected; entire reservation retired, including unstarted secondbatch; historical namespace does not mean outcomes were inspected."
     }
   ],
   "reserved_not_run": [
@@ -137224,7 +137234,8 @@
         152840
       ],
       "classification": "adoption-confirmation",
-      "status": "started"
+      "status": "retired-technical-interruption-no-outcome-analysis",
+      "reason": "Fixed prelaunch power safeguard; pooled study incomplete, no outcomes inspected; entire reservation retired, including unstarted secondbatch"
     },
     {
       "id": "adoption-128-fresh-r2",
@@ -138347,7 +138358,8 @@
         153955
       ],
       "classification": "adoption-confirmation",
-      "status": "reserved"
+      "status": "retired-technical-interruption-no-outcome-analysis",
+      "reason": "Fixed prelaunch power safeguard; pooled study incomplete, no outcomes inspected; entire reservation retired, including unstarted secondbatch"
     }
   ]
 }

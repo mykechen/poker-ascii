@@ -1,0 +1,17 @@
+{
+  "totalHours": 48,
+  "phase2ChargeHours": 2.355734347986111,
+  "interruptedRun1Hours": 1.2277442171527777,
+  "interruptedRun2Hours": 0.2932486141666667,
+  "additionalVerificationAllowanceHours": 0.05,
+  "chargedBeforeFreshStudyHours": 3.9267271793055554,
+  "freshStudyPredictedHours": 2.0888460637650725,
+  "freshStudyMaximumSlotsHours": 4,
+  "interruptionEndSource": "controller.json mtime, preserved by worktree move; wall time includes termination overhead",
+  "uninspectedInterruptedResultsExcluded": true,
+  "freshInterruptedRunHours": 0.28341191,
+  "chargedAfterInterruptedRunHours": 4.210139089305556,
+  "remainingRunHours": 43.75486091069445,
+  "postStopVerificationChargeHours": 0.035,
+  "chargedAfterVerificationHours": 4.245139089305556
+}

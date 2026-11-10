@@ -22,7 +22,7 @@ try{
  const updated=reserveSeeds(registry,seeds,protocol.id,hashObject(protocol),protocol.classification);
  mkdirSync(directory);
  atomicJSON(`${directory}/freshness.json`,{registryHashBefore:hashObject(registry),checkedNamespaces:['retired_inspected_ranges','reserved_not_run','started_batches','evaluation_reservations'],fresh:true,seeds,checkedAt:new Date().toISOString()});
- atomicJSON(`${directory}/protocol.json`,protocol);writeFileSync(`${directory}/runner.ts`,readFileSync('scripts/measure-adoption-cost.ts'),{flag:'wx'});atomicJSON(`${directory}/source.json`,sourceSnapshot());
+ atomicJSON(`${directory}/protocol.json`,protocol);writeFileSync(`${directory}/runner.ts.txt`,readFileSync('scripts/measure-adoption-cost.ts'),{flag:'wx'});atomicJSON(`${directory}/source.json`,sourceSnapshot());
  sleep=spawn('/usr/bin/caffeinate',['-is','-w',String(process.pid)],{stdio:'ignore'});
  const start=Date.now(),started=performance.now();
  updated.evaluation_reservations!.at(-1)!.status='started';

@@ -1,0 +1,35 @@
+{
+  "startedAt": "2026-11-10T05:27:42.273Z",
+  "commit": "e6bf0528b0f6a3e5d9a65d8d3c747f8a82bf42a2",
+  "protocolHash": "9814451f4bd4e36af43dae8f23e01cf0abe7077ec55bbfe1f31eb28961ffd5eb",
+  "sourceHash": "d5a1f2534e93b9a35ceb4a0fa1bc45e476d2934b2d9279ed1b16087f05e4dee7",
+  "workers": 14,
+  "hardware": {
+    "model": "Apple M4 Pro",
+    "ramGB": 48,
+    "cores": [
+      10,
+      4
+    ]
+  },
+  "node": "v20.14.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "diagnosticReuse": false,
+  "command": [
+    "/usr/local/bin/node",
+    "/Users/mykechen/Desktop/APPS/poker-ascii/.worktrees/poker-training-foundation/node_modules/.bin/vite-node",
+    "--protocol",
+    "handoffs/protocols/adoption-128-fresh-r1.json",
+    "--workers",
+    "14",
+    "--out",
+    "handoffs/adoption-2026-11-10-fresh/run-1"
+  ],
+  "sleepPrevention": "caffeinate -is -w runnerPID (process-scoped, AC system-sleep assertion)",
+  "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+  "status": "interrupted-power",
+  "maxSeconds": 7140,
+  "endedAt": "2026-11-10T05:44:42.555876+00:00",
+  "interruptionReason": "Fixed power safeguard triggered at14% sampled battery; adapter reports17W. Controller exit143 and no workers remain; no return analysis."
+}

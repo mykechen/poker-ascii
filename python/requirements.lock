@@ -1,0 +1,2 @@
+# Evaluation tooling is Python 3.13 standard-library only; no third-party packages.
+# Simulator and payout authority are TypeScript. PyTorch/model dependencies remain unimplemented.

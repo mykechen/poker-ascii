@@ -1,0 +1,30 @@
+{
+  "frozenAt": "2026-11-10T02:11:11.118900+00:00",
+  "approval": "Owner approved next steps and revised5bb/100noninferiority proposal",
+  "runs": [
+    {
+      "protocol": "handoffs/protocols/adoption-128-r1.json",
+      "protocolHash": "6476a37a41ca218a722c98b3fe2f0730b7cbaa32fb4a6c459a10e989b2ad21d6",
+      "out": "handoffs/adoption-2026-11-10/run-1"
+    },
+    {
+      "protocol": "handoffs/protocols/adoption-128-r2.json",
+      "protocolHash": "4e36f053bcc83465c9c36c3a3586b927eb7f2ed64d9ad9594c9582f1d1a85622",
+      "out": "handoffs/adoption-2026-11-10/run-2"
+    }
+  ],
+  "clusters": 3955,
+  "physicalHands": 332220,
+  "workers": 14,
+  "primary": "128-minus-50 RAW bb/100; equal strata/table/rotation; independent seed clusters",
+  "NI": "95%two-sided Student-t lower bound > -5bb/100; one adoption contrast",
+  "analysis": "ONLY AFTER BOTH RUNS COMPLETE; all cells mandatory; no interim return summaries, no top-ups/retries",
+  "powerAssumedEffectBb100": 30.407523555233695,
+  "costGate": "mean scoring/evaluation cost ratio128/50<=3; fresh fixed-work timing check required before freeze",
+  "costTimingDesign": "20fresh seeds starting140001 after collision check, both arms, two strata,6/7/8seats,all rotations,1hand/match,serialtiming; alternate arm order by seed; record full hero decision durations by arm/street; legality/no-fallback checks; no profit inference from timing seeds",
+  "runtimeCapPerRunSeconds": 7140,
+  "sourceHash": "d5a1f2534e93b9a35ceb4a0fa1bc45e476d2934b2d9279ed1b16087f05e4dee7",
+  "goalReference": "future frozenv1; sampling gain does not count toward later +5 goal",
+  "budgetHoursTotal": 48,
+  "spentBeforeThisSessionHours": 2.355734347986111
+}

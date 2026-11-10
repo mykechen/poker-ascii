@@ -1,0 +1,22 @@
+{
+  "savedAt": "2026-11-10T03:56:14.226345+00:00",
+  "reason": "Owner requested save before imminent power loss",
+  "durableWorktree": "/Users/mykechen/Desktop/APPS/poker-ascii/.worktrees/poker-training-foundation",
+  "branch": "poker-training-foundation",
+  "controller": {
+    "status": "incomplete",
+    "runIndex": 2,
+    "exitCode": 143,
+    "reason": "technical failure/interrupt; no automatic retry or top-up"
+  },
+  "completedSeedClusters": {
+    "run-1": 2840,
+    "run-2": 667
+  },
+  "outcomesInspected": false,
+  "adoptionDecision": "NOT MADE: full fixed-work study incomplete; cost check not started",
+  "sourceChangedSinceFrozenRun": [],
+  "workersVerifiedStopped": true,
+  "tests": "214 TS and12Python passed before new heuristic tests; new value-raise tests intentionally fail because implementation absent; cost script previously typechecked before review guard edits",
+  "nextAction": "Charge computer; read POWER-INTERRUPTION.md. Do not rerun old controller, resume/top-up seeds, freeze v1, or start heuristic screen automatically."
+}

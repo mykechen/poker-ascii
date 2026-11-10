@@ -1,0 +1,11 @@
+# Task4.0 implementation specification (before adoption outcomes)
+
+Existing approved rule: opt-in value raise with conservative eligible payout share >70%, no current bet, >=2live players; legal half-pot size, baseline otherwise. No label/model work. Use whichever50/128 configuration passes the fixed adoption decision as v1; no tuning from the heuristic screen.
+
+Implementation ruling: apply on flop/turn only, leaving the existing river policy unchanged. Read the baseline's cheap public onDecision equity callback (not full private/evaluation state, not terminal data). No privileged scoring or diagnostic-truth imports in the policy. Keep all observer/session hooks unchanged.
+
+Conservative means estimate minus1.96MonteCarlo standard errors, not a guarantee against range-model misspecification. Normalize expected payout lower bound by total currently hero-eligible public pot contributions. Also require the universal showdown-share lower bound against all live opponents >70%; this is conservative for the subset that can contest new money and prevents a favorable locked main pot from masking a bad side-pot value bet. Require at least one live opponent with chips able to respond. Missing public commitments or no eligible pot => baseline; invalid numeric estimates => explicit integrity error. No reliance on opponent policy IDs or actual hidden holdings.
+
+Half-pot comes from engine/view presets and is clipped to the published legal raise interval. No raise menu => baseline. Check exact threshold(strict>70), current-bet, legal-clipping, no-responder, side-pot, session reset, public-only inputs, and actual-engine unbeatable-hand cases. Existing baseline/engine/browser files retain their behavior.
+
+Implementation/source changes only after BOTH adoption runs finish. Smoke: fresh14seed clusters, both strata,6/7/8seats,all rotations,two arms,1hand/match,raw scoring, fixed work; check identity/deck/accounting/legal actions and control exposure. Do not inspect smoke profit for tuning. Then freeze a fresh exploratory screen from measured throughput, <=90min predicted, <=119min hard cap; all screen seeds retired. Screen supplies effect/variance/cost calibration, never a confirmatory gain claim or automatic policy promotion.

@@ -18,6 +18,11 @@ export type TrainSeat = {
   policyFactory?: (random: () => number) => Policy;
 };
 
+export type EvaluationEvent =
+  | { kind: "deal"; hand: number; deck: import("./types").Card[] }
+  | { kind: "action"; before: TableState; after: TableState }
+  | { kind: "hand"; beforeStacks: number[]; state: TableState };
+
 export type TrainOptions = {
   /** Chairs 0, 1, 2, … in order. Two to eight. */
   seats: TrainSeat[];
@@ -31,6 +36,8 @@ export type TrainOptions = {
   /** Called after each finished hand with the chips won so far. */
   invalidAction?: "throw" | "fallback";
   onHand?: (finished: number, net: number[]) => void;
+  /** Privileged evaluation hook. Never feed this data to a policy or feature exporter. */
+  onEvaluation?: (event: EvaluationEvent) => void;
 };
 
 export type TrainReport = {
@@ -98,13 +105,16 @@ export function playMatch(options: TrainOptions): TrainReport {
   for (let finished = 1; finished <= hands; finished++) {
     table = restore(table, count, stack);
     const before = stacks(table, count);
-    table = apply(table, { type: "startHand", deck: shuffleDeck(rng) });
+    const deck = shuffleDeck(rng);
+    options.onEvaluation?.({ kind: "deal", hand: finished, deck: [...deck] });
+    table = apply(table, { type: "startHand", deck });
     if (table.error) throw new Error(table.error);
     const button = table.button;
     if (button !== null && button < count) buttons[button] += 1;
-    table = playHand(table, seats, decisions, fallbacks, options.invalidAction ?? "fallback", seed);
+    table = playHand(table, seats, decisions, fallbacks, options.invalidAction ?? "fallback", seed, options.onEvaluation);
     const after = stacks(table, count);
     for (let seat = 0; seat < count; seat++) net[seat] += after[seat]! - before[seat]!;
+    options.onEvaluation?.({ kind: "hand", beforeStacks: [...before], state: structuredClone(table) });
     options.onHand?.(finished, [...net]);
   }
 
@@ -142,7 +152,7 @@ export function formatReport(report: TrainReport): string {
   return [title, "", head, ...rows].join("\n");
 }
 
-export function playHand(table: TableState, seats: TrainSeat[], decisions: number[], fallbacks: number[], invalidAction: "throw" | "fallback" = "throw", seed = 1): TableState {
+export function playHand(table: TableState, seats: TrainSeat[], decisions: number[], fallbacks: number[], invalidAction: "throw" | "fallback" = "throw", seed = 1, onEvaluation?: (event: EvaluationEvent) => void): TableState {
   let state = table;
   for (let step = 0; step < MAX_ACTIONS && state.phase === "betting" && state.toAct !== null; step++) {
     const seat = state.toAct;
@@ -153,6 +163,7 @@ export function playHand(table: TableState, seats: TrainSeat[], decisions: numbe
     if (decision) {
       const next = apply(state, { type: "act", seat, action: decision.action, amount: decision.amount });
       if (next.error) throw new Error(next.error);
+      onEvaluation?.({ kind: "action", before: structuredClone(state), after: structuredClone(next) });
       observePolicies(seats, state, next);
       state = next;
       continue;

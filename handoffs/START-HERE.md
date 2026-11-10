@@ -1,5 +1,7 @@
 # Continue the poker-bot project
 
+**Latest checkpoint (2026-11-10):** adoption study interrupted for imminent battery loss. All code and outputs are saved in the durable linked worktree `/Users/mykechen/Desktop/APPS/poker-ascii/.worktrees/poker-training-foundation`. Read [power interruption handoff](adoption-2026-11-10/POWER-INTERRUPTION.md) before doing anything. Batch1 complete (2,840 clusters), batch2 partial (667 clusters); no outcomes inspected, no v1 decision, no cost/heuristic run. No computation is running. Historical continuation text below is superseded by this checkpoint.
+
 Read [current handoff0018](0018-decision-stability-coverage.md), then [the decision-quality plan](../docs/superpowers/plans/2026-11-07-decision-quality-next.md) and [execution specification](../docs/superpowers/specs/2026-11-07-decision-stability-execution.md).
 
 Implementation worktree /private/tmp/poker-training-foundation; branch poker-training-foundation. Preserve original workspace changes. No computation running.

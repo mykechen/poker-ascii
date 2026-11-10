@@ -1,0 +1,37 @@
+{
+  "frozenAt": "2026-11-10T05:27:41.862282+00:00",
+  "approval": "Owner said continue after saved power interruption; fresh full recovery study, no outcome inspection or top-up",
+  "runs": [
+    {
+      "protocol": "handoffs/protocols/adoption-128-fresh-r1.json",
+      "protocolHash": "9814451f4bd4e36af43dae8f23e01cf0abe7077ec55bbfe1f31eb28961ffd5eb",
+      "out": "handoffs/adoption-2026-11-10-fresh/run-1"
+    },
+    {
+      "protocol": "handoffs/protocols/adoption-128-fresh-r2.json",
+      "protocolHash": "9fac043d9943bc70482e0253a3a9d75abf0aa99650fcb4327f9ed712ad5b299d",
+      "out": "handoffs/adoption-2026-11-10-fresh/run-2"
+    }
+  ],
+  "clusters": 3955,
+  "physicalHands": 332220,
+  "workers": 14,
+  "primary": "128-minus-50 RAW bb/100; equal strata/table/rotation; independent seed clusters",
+  "NI": "95%two-sided Student-t lower bound > -5bb/100; one adoption contrast",
+  "analysis": "ONLY AFTER BOTH RUNS COMPLETE; all cells mandatory; no interim return summaries, no top-ups/retries",
+  "powerAssumedEffectBb100": 30.407523555233695,
+  "costGate": "mean scoring/evaluation cost ratio128/50<=3; fresh fixed-work timing check required before freeze",
+  "costTimingDesign": "20fresh seeds starting140001 after collision check, both arms, two strata,6/7/8seats,all rotations,1hand/match,serialtiming; alternate arm order by seed; record full hero decision durations by arm/street; legality/no-fallback checks; no profit inference from timing seeds",
+  "runtimeCapPerRunSeconds": 7140,
+  "sourceHash": "d5a1f2534e93b9a35ceb4a0fa1bc45e476d2934b2d9279ed1b16087f05e4dee7",
+  "goalReference": "future frozenv1; sampling gain does not count toward later +5 goal",
+  "budgetHoursTotal": 48,
+  "spentBeforeThisSessionHours": 3.9267271793055554,
+  "recovery": {
+    "excluded": "handoffs/adoption-2026-11-10",
+    "allOldSeedsRetired": true,
+    "noOutcomesInspected": true,
+    "reason": "Outcome-independent battery interruption; no partial-data claim or continuation. Same3955clusters,NI5margin,andunchangedplanningeffect; entirelyfresh150001\u2013153955.",
+    "powerStopRule": "Check every60seconds; stop if battery<=15%, or battery<=20% off AC, or power state unreadable. Technical stop only; no automatic retry/top-up."
+  }
+}

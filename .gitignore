@@ -47,3 +47,7 @@ next-env.d.ts
 .vercel
 
 .superpowers/
+
+# Python analysis bytecode
+__pycache__/
+*.py[cod]

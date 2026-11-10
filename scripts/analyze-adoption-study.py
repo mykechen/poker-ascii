@@ -1,10 +1,10 @@
 """One pooled, prespecified raw-return adoption analysis after both complete runs."""
-import json,hashlib,statistics as st
+import json,hashlib,statistics as st,sys
 from pathlib import Path
 from collections import defaultdict
 from python.evaluation.analyze import load
 from python.evaluation.power import paired_ci
-root=Path('handoffs/adoption-2026-11-10')
+root=Path(sys.argv[1] if len(sys.argv)>1 else 'handoffs/adoption-2026-11-10')
 study=json.loads((root/'study.json').read_text());controller=json.loads((root/'controller.json').read_text())
 if controller['status']!='all-runs-complete-awaiting-pooled-analysis':raise SystemExit('Both runs must complete; no interim return analysis')
 rows=[];seeds=set();pool_hash=None

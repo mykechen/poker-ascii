@@ -6,12 +6,13 @@ import {playMatch} from '../lib/poker/train';
 import type {Policy} from '../lib/poker/bot';
 import {hashObject} from '../lib/poker/evaluation/protocol';
 import {acquireControllerLock,sourceSnapshot,reserveSeeds,atomicJSON} from '../lib/poker/evaluation/provenance';
-const directory='handoffs/adoption-2026-11-10/cost';
+const studyRoot=process.argv[2]??'handoffs/adoption-2026-11-10';
+const directory=`${studyRoot}/cost`;
 const release=acquireControllerLock();let sleep:ReturnType<typeof spawn>|undefined;
 try{
  const pool=JSON.parse(readFileSync('handoffs/protocols/pool-v1.json','utf8')).pool;
- const study=JSON.parse(readFileSync('handoffs/adoption-2026-11-10/study.json','utf8'));
- const controller=JSON.parse(readFileSync('handoffs/adoption-2026-11-10/controller.json','utf8'));
+ const study=JSON.parse(readFileSync(`${studyRoot}/study.json`,'utf8'));
+ const controller=JSON.parse(readFileSync(`${studyRoot}/controller.json`,'utf8'));
  if(controller.status!=='all-runs-complete-awaiting-pooled-analysis')throw new Error('Both adoption runs must finish before the serial cost check');
  const reference=JSON.parse(readFileSync(study.runs[0].protocol,'utf8'));
  if(sourceSnapshot().hash!==study.sourceHash||hashObject(pool)!==reference.poolHash)throw new Error('Cost check must use the frozen adoption source and pool');

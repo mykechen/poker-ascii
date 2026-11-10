@@ -1,5 +1,7 @@
 # Continue the poker-bot project
 
+**Resumed 2026-11-10:** owner authorized continue; a complete fresh adoption study is running from `handoffs/adoption-2026-11-10-fresh/study.json` on seeds150001–153955. Both original batches remain uninspected and excluded. Controller command: `python3 scripts/run-adoption-study.py handoffs/adoption-2026-11-10-fresh`. Do not run another controller or inspect returns before BOTH fresh runs finish. Power checks every60seconds. Read the fresh PROGRESS.md and budget-before.json. Code lives in the durable linked worktree below.
+
 **Latest checkpoint (2026-11-10):** adoption study interrupted for imminent battery loss. All code and outputs are saved in the durable linked worktree `/Users/mykechen/Desktop/APPS/poker-ascii/.worktrees/poker-training-foundation`. Read [power interruption handoff](adoption-2026-11-10/POWER-INTERRUPTION.md) before doing anything. Batch1 complete (2,840 clusters), batch2 partial (667 clusters); no outcomes inspected, no v1 decision, no cost/heuristic run. No computation is running. Historical continuation text below is superseded by this checkpoint.
 
 Read [current handoff0018](0018-decision-stability-coverage.md), then [the decision-quality plan](../docs/superpowers/plans/2026-11-07-decision-quality-next.md) and [execution specification](../docs/superpowers/specs/2026-11-07-decision-stability-execution.md).

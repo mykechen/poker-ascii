@@ -1,0 +1,12 @@
+{
+  "handsPerHour": 39527.409559319705,
+  "planningHandsPerHour": 33598.29812542175,
+  "meanBatteryDischargeWatts": 3.7624727894736845,
+  "elapsedMinutes": 10.200516666666667,
+  "startBatteryPercent": 100,
+  "endBatteryPercent": 100,
+  "adoptionPredictedHours": 9.8880008374183,
+  "chargedBeforeConfirmationHours": 4.859379367083331,
+  "runs": 7,
+  "clustersPerFullBatch": 595
+}

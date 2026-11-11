@@ -7,7 +7,7 @@ import type {Card} from '../types';
 import {adjustedPayout,type AllInPoint} from './all-in';
 export type PoolCell={id:string;opponents:string[]};
 export type Arm={id:string;samples:number};
-export type Protocol={version:1;id:string;classification:string;sourceHash:string;poolHash:string;pool:PoolCell[];arms:Arm[];seeds:number[];hands:number;players:number[];stack:number;smallBlind:number;bigBlind:number;adjustAllIn:boolean;maxSeconds:number};
+export type Protocol={version:1;id:string;classification:string;sourceHash:string;poolHash:string;pool:PoolCell[];arms:Arm[];seeds:number[];hands:number;players:number[];stack:number;smallBlind:number;bigBlind:number;adjustAllIn:boolean;maxSeconds:number;workerIdleMs?:number};
 export type HandRecord={schema:'evaluation-private-v1';id:string;seed:number;cell:string;players:number;rotation:number;hand:number;arm:string;hero:number;deckHash:string;rawChips:number[];rawBb:number;adjustedBb:number;allInPoints:AllInPoint[];terminalBoard:Card[]};
 export function hashObject(value:unknown):string{return createHash('sha256').update(JSON.stringify(value)).digest('hex');}
 export function validateProtocol(p:Protocol):void{
@@ -16,6 +16,7 @@ export function validateProtocol(p:Protocol):void{
  if(!p.seeds.every(s=>Number.isSafeInteger(s)&&s>0&&s<=0xffffffff)||!p.players.every(n=>[6,7,8].includes(n)))throw new Error('Invalid seed/player count');
  for(const [n,min,max] of [[p.hands,1,100000],[p.stack,2,1000000],[p.smallBlind,1,p.bigBlind],[p.bigBlind,p.smallBlind,p.stack],[p.maxSeconds,1,7200]])if(!Number.isSafeInteger(n)||n<min||n>max)throw new Error('Invalid work/blind/stack/runtime bound');
  if(!p.arms.every(a=>a.id&&Number.isSafeInteger(a.samples)&&a.samples>=1))throw new Error('Invalid arms');
+ if(!Number.isSafeInteger(p.workerIdleMs??0)||(p.workerIdleMs??0)<0||(p.workerIdleMs??0)>60000)throw new Error('Invalid fixed worker pause');
  for(const c of p.pool){if(!c.opponents.length)throw new Error('Empty lineup');for(const id of c.opponents)if(id!=='baseline-v0')strategyById(id as StrategyId);}
 }
 function adaptive(samples:number){return createAdaptivePolicy({samples,seed:42,riverSamples:16,riverRiskPenalty:1,learn:false,styleRetention:1,responseModel:{version:1,kind:'current'}}).policy;}

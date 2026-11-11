@@ -9,6 +9,7 @@ const id=get('--id'),seedStart=Number(get('--seed-start')),clusters=Number(get('
 if(!Number.isSafeInteger(clusters)||clusters<2)throw new Error('At least two seed clusters');
 const pool=[{id:'heuristic',opponents:['chart','tight','station','position','aggressor']},{id:'baseline-opponent',opponents:['baseline-v0','tight','station','position','aggressor']}];
 const p:Protocol={version:1,id,classification:get('--classification'),sourceHash:sourceSnapshot().hash,poolHash:hashObject(pool),pool,arms:JSON.parse(get('--arms','[{"id":"50","samples":50},{"id":"128","samples":128}]')),seeds:Array.from({length:clusters},(_,i)=>seedStart+i),hands,players:JSON.parse(get('--players','[6,7,8]')),stack:200,smallBlind:1,bigBlind:2,adjustAllIn:get('--adjust','true')==='true',maxSeconds:Number(get('--max-seconds',get('--classification')==='scaling-diagnostic'?'600':'7200'))};validateProtocol(p);
+p.workerIdleMs=Number(get('--worker-idle-ms','0'));validateProtocol(p);
 const registryPath='handoffs/seed-registry.json',registry=JSON.parse(readFileSync(registryPath,'utf8'));
 const updated=reserveSeeds(registry,p.seeds,id,hashObject(p),p.classification);
 mkdirSync('handoffs/protocols',{recursive:true});

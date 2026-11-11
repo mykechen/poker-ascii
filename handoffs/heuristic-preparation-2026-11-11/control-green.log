@@ -1,0 +1,14 @@
+
+ RUN  v3.2.4 /Users/mykechen/Desktop/APPS/poker-ascii/.worktrees/control-preparation
+
+ ✓ lib/poker/evaluation/protocol.test.ts (5 tests) 30650ms
+   ✓ evaluation protocol > identical arms pair to zero, deck fingerprints are sample-independent, conserved and reproducible  22690ms
+   ✓ evaluation protocol > runs an explicit public value-raise arm and records exposure outside private hand records  790ms
+   ✓ evaluation protocol > keeps privileged scoring outside all non-evaluation modules and feature import closure  7155ms
+ ✓ lib/poker/value-raise.test.ts (7 tests) 34ms
+
+ Test Files  2 passed (2)
+      Tests  12 passed (12)
+   Start at  16:26:19
+   Duration  31.06s (transform 107ms, setup 0ms, collect 155ms, tests 30.68s, environment 0ms, prepare 66ms)
+

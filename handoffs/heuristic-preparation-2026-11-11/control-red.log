@@ -1,0 +1,51 @@
+
+ RUN  v3.2.4 /Users/mykechen/Desktop/APPS/poker-ascii/.worktrees/control-preparation
+
+ ❯ lib/poker/evaluation/protocol.test.ts (5 tests | 2 failed) 31018ms
+   ✓ evaluation protocol > records raw stacks independently of cumulative net without changing play 13ms
+   ✓ evaluation protocol > identical arms pair to zero, deck fingerprints are sample-independent, conserved and reproducible  22841ms
+   × evaluation protocol > rejects malformed protocols and pool tampering 6ms
+     → expected [Function] to throw an error
+   × evaluation protocol > runs an explicit public value-raise arm and records exposure outside private hand records 781ms
+     → Cannot read properties of undefined (reading 'control')
+   ✓ evaluation protocol > keeps privileged scoring outside all non-evaluation modules and feature import closure  7376ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  lib/poker/evaluation/protocol.test.ts > evaluation protocol > rejects malformed protocols and pool tampering
+AssertionError: expected [Function] to throw an error
+
+- Expected: 
+null
+
++ Received: 
+undefined
+
+ ❯ lib/poker/evaluation/protocol.test.ts:27:106
+     25|   expect(()=>validateProtocol({...protocol(),poolHash:'b'.repeat(64)})…
+     26|   expect(()=>validateProtocol({...protocol(),hands:0})).toThrow();
+     27|   expect(()=>validateProtocol({...protocol(),arms:[{id:'bad',samples:5…
+       |                                                                                                          ^
+     28|  });
+     29|  it('runs an explicit public value-raise arm and records exposure outs…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  lib/poker/evaluation/protocol.test.ts > evaluation protocol > runs an explicit public value-raise arm and records exposure outside private hand records
+TypeError: Cannot read properties of undefined (reading 'control')
+ ❯ lib/poker/evaluation/protocol.test.ts:33:19
+     31|   let counters:Record<string,{decisions:number;eligible:number;raises:…
+     32|   const rows=runSeed(p,105001,t=>{counters=t.controlStats;});
+     33|   expect(counters.control!.decisions).toBeGreaterThan(0);
+       |                   ^
+     34|   expect(counters.control!.raises).toBeLessThanOrEqual(counters.contro…
+     35|   expect(rows).toHaveLength(12);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 3 passed (5)
+   Start at  16:25:11
+   Duration  31.25s (transform 92ms, setup 0ms, collect 121ms, tests 31.02s, environment 0ms, prepare 29ms)
+

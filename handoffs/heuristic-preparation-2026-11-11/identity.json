@@ -1,0 +1,17 @@
+{
+  "preparedFileHashes": {
+    "lib/poker/value-raise.ts": "3a35db5841947378ff24a13a4a06d6b1422658240d15d547aade361598bf90b8",
+    "lib/poker/value-raise.test.ts": "4f928bbc4500bff176c8b78206a2057a08fca1b72749ca4ecb2fc3686836e04d",
+    "lib/poker/evaluation/protocol.ts": "aadd925e3537f0ee9b19fc08597581b6f576fae2a63078539c75fc3b56f6ac92",
+    "lib/poker/evaluation/protocol.test.ts": "afd3c6b023889fb04d5cd12fcab85d2efeae4c44843d68f69e87f5645e21a11e",
+    "lib/poker/evaluation/pool.ts": "3992a1db8c64206dade8765c80c70fd7b46a6e3dd2b2860394612113e7023139",
+    "lib/poker/evaluation/pool.test.ts": "ee39a88d0b54685705521555c4f234790f5ee1a9087cb1d4392cf42ca08cf83e",
+    "scripts/evaluate-worker.ts": "d17f775a85f10ee2a0764f17240b26da2e585229368ce1c935f20386bbc54cb9"
+  },
+  "frozenActiveSourceUnchanged": true,
+  "activeSourceHash": "7e5a626b965f4ffe1e94c47fcba7a4bc5663a2710be300c1e1c1733699a092c4",
+  "activeBranchHead": "9fe509e",
+  "installation": "Pending completed adoption NI and cost gates",
+  "engineeringVerificationAllowanceHours": 0.05,
+  "review": "No blocking correctness/leakage findings. Added requested turn-positive and single-contestant tests. Baseline fixture comparison complete and byte-identical."
+}

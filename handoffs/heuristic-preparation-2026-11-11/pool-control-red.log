@@ -1,0 +1,29 @@
+
+ RUN  v3.2.4 /Users/mykechen/Desktop/APPS/poker-ascii/.worktrees/control-preparation
+
+ ❯ lib/poker/evaluation/pool.test.ts (3 tests | 1 failed | 2 skipped) 3007ms
+   ↓ 1 and 4 child workers produce byte-identical non-timing records
+   ↓ fixed pauses preserve serial and parallel records and are validated in the manifest
+   × serial and parallel value-raise arms preserve exposure counters and hand bytes 3006ms
+     → Cannot read properties of undefined (reading 'control')
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  lib/poker/evaluation/pool.test.ts > serial and parallel value-raise arms preserve exposure counters and hand bytes
+TypeError: Cannot read properties of undefined (reading 'control')
+ ❯ lib/poker/evaluation/pool.test.ts:25:47
+     23|  expect(JSON.stringify(a.rows)).toBe(JSON.stringify(b.rows));
+     24|  expect(a.timing.seedTimings.map(t=>t.controlStats)).toEqual(b.timing.…
+     25|  expect(a.timing.seedTimings[0]!.controlStats.control!.decisions).toBe…
+       |                                               ^
+     26| },120000);
+     27| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 skipped (3)
+   Start at  16:26:54
+   Duration  3.23s (transform 93ms, setup 0ms, collect 124ms, tests 3.01s, environment 0ms, prepare 26ms)
+

@@ -1,0 +1,12 @@
+{
+  "plan": "gauntlet-validation-2026-11-12",
+  "planHash": "d5633481f29cb33d0175df3d704dcd240c229b5db42dad548c8e5eeec0c14a58",
+  "commit": "be8ef1aba3cbcdd1e5ec75a682fb5b17ab0b70a5",
+  "dirty": true,
+  "workers": 12,
+  "node": "v22.22.0",
+  "startedAt": "2026-11-12T09:03:23.436Z",
+  "status": "aborted",
+  "endedAt": "2026-11-12T09:21:16.085681Z",
+  "note": "Stopped by hand to save battery (12% and draining). 26 of 96 seeds finished; results not inspected. Seeds stay burned; rerun on a fresh block."
+}

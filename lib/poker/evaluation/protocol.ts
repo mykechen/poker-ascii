@@ -1,12 +1,14 @@
 import {createHash} from 'node:crypto';
 import {createAdaptivePolicy} from '../adaptive';
+import {createValueRaiseControl,type ControlStats} from '../value-raise';
 import {strategyById,type StrategyId} from '../strategies';
 import {playMatch,type EvaluationEvent} from '../train';
 import {describePots} from '../pots';
 import type {Card} from '../types';
 import {adjustedPayout,type AllInPoint} from './all-in';
 export type PoolCell={id:string;opponents:string[]};
-export type Arm={id:string;samples:number};
+export type Arm={id:string;samples:number;kind?:'adaptive'|'value-raise'};
+export type EvaluationTiming={allInMs:number;controlStats:Record<string,ControlStats>};
 export type Protocol={version:1;id:string;classification:string;sourceHash:string;poolHash:string;pool:PoolCell[];arms:Arm[];seeds:number[];hands:number;players:number[];stack:number;smallBlind:number;bigBlind:number;adjustAllIn:boolean;maxSeconds:number;workerIdleMs?:number};
 export type HandRecord={schema:'evaluation-private-v1';id:string;seed:number;cell:string;players:number;rotation:number;hand:number;arm:string;hero:number;deckHash:string;rawChips:number[];rawBb:number;adjustedBb:number;allInPoints:AllInPoint[];terminalBoard:Card[]};
 export function hashObject(value:unknown):string{return createHash('sha256').update(JSON.stringify(value)).digest('hex');}
@@ -15,19 +17,22 @@ export function validateProtocol(p:Protocol):void{
  for(const xs of [p.seeds,p.players,p.arms.map(a=>a.id),p.pool.map(c=>c.id)])if(!xs.length||new Set<unknown>(xs).size!==xs.length)throw new Error('Missing or duplicate protocol entries');
  if(!p.seeds.every(s=>Number.isSafeInteger(s)&&s>0&&s<=0xffffffff)||!p.players.every(n=>[6,7,8].includes(n)))throw new Error('Invalid seed/player count');
  for(const [n,min,max] of [[p.hands,1,100000],[p.stack,2,1000000],[p.smallBlind,1,p.bigBlind],[p.bigBlind,p.smallBlind,p.stack],[p.maxSeconds,1,7200]])if(!Number.isSafeInteger(n)||n<min||n>max)throw new Error('Invalid work/blind/stack/runtime bound');
- if(!p.arms.every(a=>a.id&&Number.isSafeInteger(a.samples)&&a.samples>=1))throw new Error('Invalid arms');
+ if(!p.arms.every(a=>a.id&&Number.isSafeInteger(a.samples)&&a.samples>=1&&(a.kind===undefined||a.kind==='adaptive'||a.kind==='value-raise')))throw new Error('Invalid arms');
  if(!Number.isSafeInteger(p.workerIdleMs??0)||(p.workerIdleMs??0)<0||(p.workerIdleMs??0)>60000)throw new Error('Invalid fixed worker pause');
  for(const c of p.pool){if(!c.opponents.length)throw new Error('Empty lineup');for(const id of c.opponents)if(id!=='baseline-v0')strategyById(id as StrategyId);}
 }
-function adaptive(samples:number){return createAdaptivePolicy({samples,seed:42,riverSamples:16,riverRiskPenalty:1,learn:false,styleRetention:1,responseModel:{version:1,kind:'current'}}).policy;}
-export function runSeed(p:Protocol,seed:number,onTiming?:(timing:{allInMs:number})=>void):HandRecord[]{
+function adaptiveOptions(samples:number){return {samples,seed:42,riverSamples:16,riverRiskPenalty:1,learn:false,styleRetention:1,responseModel:{version:1 as const,kind:'current' as const}};}
+function adaptive(samples:number){return createAdaptivePolicy(adaptiveOptions(samples)).policy;}
+export function runSeed(p:Protocol,seed:number,onTiming?:(timing:EvaluationTiming)=>void):HandRecord[]{
  validateProtocol(p);if(!p.seeds.includes(seed))throw new Error('Seed not in manifest');
- const rows:HandRecord[]=[];let allInMs=0;
+ const rows:HandRecord[]=[];let allInMs=0;const controlStats:Record<string,ControlStats>={};
  for(const cell of p.pool)for(const players of p.players)for(let rotation=0;rotation<players;rotation++)for(const arm of p.arms){
   const hero=(players-rotation)%players;
+  const control=arm.kind==='value-raise'?createValueRaiseControl(adaptiveOptions(arm.samples)):null;
+  const heroPolicy=control?.policy??adaptive(arm.samples);
   const participants=Array.from({length:players},(_,i)=>{
    const id=i===0?'hero':cell.opponents[(i-1+p.seeds.indexOf(seed))%cell.opponents.length]!;
-   return {name:i===0?'hero':`opponent-${i}`,policy:i===0?adaptive(arm.samples):id==='baseline-v0'?adaptive(50):strategyById(id as StrategyId).policy};
+   return {name:i===0?'hero':`opponent-${i}`,policy:i===0?heroPolicy:id==='baseline-v0'?adaptive(50):strategyById(id as StrategyId).policy};
   });
   let deckHash='',points:AllInPoint[]=[];let terminalChance:AllInPoint|null=null;
   function capture(event:EvaluationEvent){
@@ -52,8 +57,12 @@ export function runSeed(p:Protocol,seed:number,onTiming?:(timing:{allInMs:number
   }
   const report=playMatch({seats:participants.map((_,seat)=>participants[(seat+rotation)%players]!),hands:p.hands,stack:p.stack,smallBlind:p.smallBlind,bigBlind:p.bigBlind,seed,invalidAction:'throw',onEvaluation:capture});
   if(report.fallbacks.some(x=>x!==0)||report.net.reduce((a,b)=>a+b,0)!==0)throw new Error('Fallback/accounting failure');
+  if(control){
+   const stats=control.stats();const total=controlStats[arm.id]??{decisions:0,eligible:0,raises:0};
+   total.decisions+=stats.decisions;total.eligible+=stats.eligible;total.raises+=stats.raises;controlStats[arm.id]=total;
+  }
  }
- validateRows(p,seed,rows);onTiming?.({allInMs});return rows;
+ validateRows(p,seed,rows);onTiming?.({allInMs,controlStats});return rows;
 }
 export function validateRows(p:Protocol,seed:number,rows:HandRecord[]):void{
  const expected=p.pool.length*p.players.reduce((a,b)=>a+b,0)*p.hands*p.arms.length;

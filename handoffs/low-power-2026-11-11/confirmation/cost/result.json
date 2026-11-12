@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "50": {
+      "hands": 840,
+      "decisions": 2158,
+      "meanMs": 9.556898383225274,
+      "p95Ms": 17.776500000007218,
+      "p99Ms": 21.142165999975987,
+      "lifecycleMsPerHand": 77.37219277619117
+    },
+    "128": {
+      "hands": 840,
+      "decisions": 2193,
+      "meanMs": 17.340370803921815,
+      "p95Ms": 30.73375000001397,
+      "p99Ms": 36.34299999999985,
+      "lifecycleMsPerHand": 98.1062258845245
+    }
+  },
+  "meanDecisionRatio": 1.814434988066679,
+  "lifecycleRatio": 1.2679778401564648,
+  "passed": true,
+  "elapsedMs": 226981,
+  "hardware": "10\n4",
+  "thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded"
+}

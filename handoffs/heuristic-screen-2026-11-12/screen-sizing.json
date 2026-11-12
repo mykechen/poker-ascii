@@ -1,0 +1,14 @@
+{
+  "smokeHands": 1176,
+  "handsPerHour": 36834.34393301265,
+  "controlExposure": {
+    "decisions": 1555,
+    "eligible": 424,
+    "raises": 43
+  },
+  "fixedScreenClusters": 525,
+  "fixedPhysicalHands": 44100,
+  "predictedHours": 1.4965652734375001,
+  "planningHandsPerHour": 29467.47514641012,
+  "screenSeedStart": 190001
+}

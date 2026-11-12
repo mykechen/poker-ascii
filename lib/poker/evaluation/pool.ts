@@ -1,10 +1,10 @@
 import {spawn,type ChildProcess} from 'node:child_process';
 import {resolve} from 'node:path';
 import {budgetState} from './budget';
-import {validateProtocol,validateRows,type Protocol,type HandRecord} from './protocol';
-export async function runPool(p:Protocol,workers:number,onSeed?:(seed:number,rows:HandRecord[])=>void):Promise<{rows:HandRecord[];timing:{elapsedMs:number;activeElapsedMs:number;clockGapMs:number;workers:number;workerIdleMs:number;peakWorkerRssBytes:number[];workerMemory:{pid:number;peakRssBytes:number}[];seedTimings:{seed:number;elapsedMs:number;allInMs:number}[]}}>{
+import {validateProtocol,validateRows,type Protocol,type HandRecord,type EvaluationTiming} from './protocol';
+export async function runPool(p:Protocol,workers:number,onSeed?:(seed:number,rows:HandRecord[])=>void):Promise<{rows:HandRecord[];timing:{elapsedMs:number;activeElapsedMs:number;clockGapMs:number;workers:number;workerIdleMs:number;peakWorkerRssBytes:number[];workerMemory:{pid:number;peakRssBytes:number}[];seedTimings:({seed:number;elapsedMs:number}&EvaluationTiming)[]}}>{
  validateProtocol(p);if(!Number.isSafeInteger(workers)||workers<1||workers>64)throw new Error('Workers must be 1–64');
- const wallStarted=Date.now(),started=performance.now(),children=new Set<ChildProcess>(),results=new Map<number,HandRecord[]>(),rss:number[]=[],seedTimings:{seed:number;elapsedMs:number;allInMs:number}[]=[];
+ const wallStarted=Date.now(),started=performance.now(),children=new Set<ChildProcess>(),results=new Map<number,HandRecord[]>(),rss:number[]=[],seedTimings:({seed:number;elapsedMs:number}&EvaluationTiming)[]=[];
  const workerMemory=new Map<number,number>();
  const pendingPauses=new Set<ReturnType<typeof setTimeout>>();
  let next=0;
@@ -25,7 +25,7 @@ export async function runPool(p:Protocol,workers:number,onSeed?:(seed:number,row
      // Fixed outcome-independent idle time limits average CPU draw; all assigned work still runs.
      const timer=setTimeout(()=>{pendingPauses.delete(timer);send();},p.workerIdleMs);pendingPauses.add(timer);
     };
-    child.on('message',(message:unknown)=>{const m=message as {seed:number;rows:HandRecord[];rss:number;elapsedMs:number;allInMs:number;error?:string};try{if(m.error)throw new Error(m.error);validateRows(p,m.seed,m.rows);if(results.has(m.seed))throw new Error('Duplicate seed output');results.set(m.seed,m.rows);onSeed?.(m.seed,m.rows);rss.push(m.rss);workerMemory.set(child.pid!,Math.max(workerMemory.get(child.pid!)??0,m.rss));seedTimings.push({seed:m.seed,elapsedMs:m.elapsedMs,allInMs:m.allInMs});schedule();}catch(e){fail(e);child.kill('SIGTERM');}});
+    child.on('message',(message:unknown)=>{const m=message as {seed:number;rows:HandRecord[];rss:number;elapsedMs:number;allInMs:number;controlStats:EvaluationTiming["controlStats"];error?:string};try{if(m.error)throw new Error(m.error);validateRows(p,m.seed,m.rows);if(results.has(m.seed))throw new Error('Duplicate seed output');results.set(m.seed,m.rows);onSeed?.(m.seed,m.rows);rss.push(m.rss);workerMemory.set(child.pid!,Math.max(workerMemory.get(child.pid!)??0,m.rss));seedTimings.push({seed:m.seed,elapsedMs:m.elapsedMs,allInMs:m.allInMs,controlStats:m.controlStats});schedule();}catch(e){fail(e);child.kill('SIGTERM');}});
     child.on('error',fail);child.on('exit',(code,signal)=>{children.delete(child);if(finished&&code===0)done();else fail(new Error(`Worker failed (${code}/${signal}): ${stderr}`));});send();
    });
   }));

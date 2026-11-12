@@ -1,0 +1,26 @@
+{
+  "classification": "Independent fixed-work adoption confirmation, not final model-goal test",
+  "metric": "128-minus-50 raw bb/100, equal seed/stratum/table/rotation weights",
+  "physicalHands": 332220,
+  "handsPerArm": 166110,
+  "independentSeedClusters": 3955,
+  "result": {
+    "mean": 88.92112154596352,
+    "ci95": [
+      65.92883634665647,
+      111.91340674527056
+    ],
+    "nSeedClusters": 3955,
+    "se": 11.727382347557413
+  },
+  "noninferiorityMarginBb100": 5,
+  "passedNoninferiority": true,
+  "alpha": "one contrast95%two-sided CI; one-sided lower-tail alpha.025",
+  "adoptionDecision": "pending fresh cost check",
+  "noOptionalStopping": true,
+  "sourceHash": "7e5a626b965f4ffe1e94c47fcba7a4bc5663a2710be300c1e1c1733699a092c4",
+  "studyHash": "e9c63b6f8ce2ecb6a9af7675158f21c0777efd199da2812beb7ca8ab3260d98f",
+  "analysisScript": "\"\"\"One pooled, prespecified raw-return adoption analysis after both complete runs.\"\"\"\nimport json,hashlib,statistics as st,sys\nfrom pathlib import Path\nfrom collections import defaultdict\nfrom python.evaluation.analyze import load\nfrom python.evaluation.power import paired_ci\nroot=Path(sys.argv[1] if len(sys.argv)>1 else 'handoffs/adoption-2026-11-10')\nstudy=json.loads((root/'study.json').read_text());controller=json.loads((root/'controller.json').read_text())\nif controller['status']!='all-runs-complete-awaiting-pooled-analysis':raise SystemExit('Both runs must complete; no interim return analysis')\nrows=[];seeds=set();pool_hash=None\nfor run in study['runs']:\n d=Path(run['out']);p=json.loads((d/'protocol.json').read_text());prov=json.loads((d/'provenance.json').read_text())\n if prov['protocolHash']!=run['protocolHash'] or p['sourceHash']!=study['sourceHash'] or prov['diagnosticReuse'] or p['adjustAllIn']:raise ValueError('Study/source/scoring identity mismatch')\n if pool_hash is not None and pool_hash!=p['poolHash']:raise ValueError('Pool changed between runs')\n pool_hash=p['poolHash']\n if seeds.intersection(p['seeds']):raise ValueError('Seed reuse across runs')\n seeds.update(p['seeds']);rows.extend(load(d))\nif len(seeds)!=study['clusters'] or len(rows)!=study['physicalHands']:raise ValueError('Incomplete study')\ncells=defaultdict(list)\nfor r in rows:cells[r['seed'],r['arm'],r['cell'],r['players']].append(r['rawBb'])\nmacro=defaultdict(list)\nfor (seed,arm,cell,players),values in cells.items():macro[seed,arm].append(st.mean(values))\ndifferences=[100*(st.mean(macro[s,'128'])-st.mean(macro[s,'50'])) for s in sorted(seeds)]\nci=paired_ci(differences);lower=ci['ci95'][0]\nresult={'classification':'Independent fixed-work adoption confirmation, not final model-goal test','metric':'128-minus-50 raw bb/100, equal seed/stratum/table/rotation weights','physicalHands':len(rows),'handsPerArm':len(rows)//2,'independentSeedClusters':len(seeds),'result':ci,'noninferiorityMarginBb100':5,'passedNoninferiority':lower>-5,'alpha':'one contrast95%two-sided CI; one-sided lower-tail alpha.025','adoptionDecision':'pending fresh cost check','noOptionalStopping':True,'sourceHash':study['sourceHash'],'studyHash':hashlib.sha256((root/'study.json').read_bytes()).hexdigest(),'analysisScript':Path(__file__).read_text(),'statisticsSourceHash':hashlib.sha256(Path('python/evaluation/power.py').read_bytes()).hexdigest(),'reference':'128sampling effect is not counted toward the later +5goal if128 becomesv1'}\nwith (root/'pooled-result.json').open('x') as f:json.dump(result,f,indent=2);f.write('\\n')\nprint(json.dumps({k:v for k,v in result.items() if k!='analysisScript'},indent=2))\n",
+  "statisticsSourceHash": "530c86f96f9ba9b16e6750e2fb27357b87d7fc9a365b860837a4a36ae832c33c",
+  "reference": "128sampling effect is not counted toward the later +5goal if128 becomesv1"
+}

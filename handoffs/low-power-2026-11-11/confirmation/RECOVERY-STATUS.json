@@ -1,0 +1,15 @@
+{
+  "savedAt": "2026-11-11T15:45:59.997196+00:00",
+  "logicalCompleteBatches": 6,
+  "savedSeedClusters": 3570,
+  "physicalHandsSaved": 299880,
+  "remainingOriginalSeedClusters": 385,
+  "sampleCountStill3955": true,
+  "outcomesSummarized": false,
+  "chargedHoursIncludingInterruptedWallTimeAndPreparation": 13.738581033749997,
+  "remainingHours": 34.261418966250005,
+  "controller": "final-continuation/controller.json",
+  "dependency": "AC power connection. The existing continuation controller starts automatically on AC with battery>=45%.",
+  "technicalRecovery": "recovery/provenance-addendum.json",
+  "operationalDeviation": "The OS suspended during original batch6. Termination occurred after wake, exceeding the wall cap. Every retained seed output was completed before the original119minute cap. Original failed provenance is preserved."
+}

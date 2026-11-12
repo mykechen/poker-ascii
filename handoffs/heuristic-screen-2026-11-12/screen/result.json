@@ -1,0 +1,67 @@
+{
+  "classification": "Exploratory heuristic screen; no promotion claim",
+  "physicalHands": 44100,
+  "seedClusters": 525,
+  "controlMinusV1Bb100": {
+    "mean": -37.67743764172336,
+    "ci95": [
+      -52.46563323207005,
+      -22.889242051376666
+    ],
+    "nSeedClusters": 525,
+    "se": 7.527708918798014
+  },
+  "exposure": {
+    "decisions": 56957,
+    "eligible": 15142,
+    "raises": 1046
+  },
+  "rawClusterVariance": 2.974986082222935,
+  "varianceUpperFactor": 1.1103754093452023,
+  "measuredHandsPerHour": 38370.004691117356,
+  "planningHandsPerHour": 32614.503987449752,
+  "conservativePlanningEffectBb100": 0,
+  "threeArmPowerProxies": {
+    "5": {
+      "seedClusters": 13835,
+      "threeArmHands": 1743210,
+      "wallHours": 53.44891955648926,
+      "twoHourRuns": 36
+    },
+    "10": {
+      "seedClusters": 3460,
+      "threeArmHands": 435960,
+      "wallHours": 13.36705902894491,
+      "twoHourRuns": 9
+    },
+    "20": {
+      "seedClusters": 865,
+      "threeArmHands": 108990,
+      "wallHours": 3.3417647572362275,
+      "twoHourRuns": 3
+    },
+    "30": {
+      "seedClusters": 385,
+      "threeArmHands": 48510,
+      "wallHours": 1.487375065359477,
+      "twoHourRuns": 1
+    },
+    "40": {
+      "seedClusters": 220,
+      "threeArmHands": 27720,
+      "wallHours": 0.8499286087768441,
+      "twoHourRuns": 1
+    },
+    "50": {
+      "seedClusters": 140,
+      "threeArmHands": 17640,
+      "wallHours": 0.540863660130719,
+      "twoHourRuns": 1
+    }
+  },
+  "limitations": [
+    "Future model variance and latency remain unmeasured",
+    "Power uses this heuristic contrast as a proxy and80%power withBonferroni3",
+    "Raw scoring; exploratory seeds retired"
+  ]
+}

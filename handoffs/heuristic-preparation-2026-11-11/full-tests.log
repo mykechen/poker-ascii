@@ -1,0 +1,73 @@
+
+ RUN  v3.2.4 /Users/mykechen/Desktop/APPS/poker-ascii/.worktrees/poker-training-foundation
+
+ ✓ lib/poker/evaluation/all-in.test.ts (5 tests) 55477ms
+   ✓ AA vs KK preflop exhausts all 1,712,304 boards and matches frozen exact payout  55465ms
+ ✓ lib/poker/evaluation/pool.test.ts (3 tests) 32045ms
+   ✓ 1 and 4 child workers produce byte-identical non-timing records  22405ms
+   ✓ fixed pauses preserve serial and parallel records and are validated in the manifest  6749ms
+   ✓ serial and parallel value-raise arms preserve exposure counters and hand bytes  2891ms
+ ✓ lib/poker/evaluation/protocol.test.ts (5 tests) 28233ms
+   ✓ evaluation protocol > identical arms pair to zero, deck fingerprints are sample-independent, conserved and reproducible  20856ms
+   ✓ evaluation protocol > runs an explicit public value-raise arm and records exposure outside private hand records  759ms
+   ✓ evaluation protocol > keeps privileged scoring outside all non-evaluation modules and feature import closure  6606ms
+ ✓ lib/poker/adaptive.test.ts (6 tests) 1101ms
+   ✓ reports observer exposure and snapshots without changing adaptive seeded play  569ms
+ ✓ lib/poker/contextual-replay.test.ts (4 tests) 910ms
+   ✓ league capture excludes target cards and reproduces observer forecasts  862ms
+ ✓ lib/poker/equity-policy.test.ts (5 tests) 794ms
+   ✓ captures public decision snapshots without changing seeded actions  674ms
+ ✓ lib/poker/league.test.ts (9 tests) 449ms
+   ✓ collects public forecast contexts and maps rotated opponents by participant name  421ms
+ ✓ lib/poker/benchmark-opponents.test.ts (7 tests) 357ms
+ ✓ lib/poker/population-fit.test.ts (6 tests) 148ms
+ ✓ lib/poker/diagnostic-beliefs.test.ts (5 tests) 97ms
+ ✓ lib/poker/support-offset.test.ts (7 tests) 99ms
+ ✓ lib/poker/diagnostic-truth.test.ts (5 tests) 94ms
+ ✓ lib/poker/session.test.ts (2 tests) 72ms
+ ✓ lib/poker/equity.test.ts (7 tests) 45ms
+ ✓ lib/poker/value-raise.test.ts (8 tests) 32ms
+ ✓ lib/poker/river-ev.test.ts (9 tests) 31ms
+ ✓ lib/poker/contextual-fit.test.ts (4 tests) 31ms
+ ✓ lib/poker/train.test.ts (7 tests) 27ms
+ ✓ lib/poker/benchmark.test.ts (5 tests) 27ms
+ ✓ lib/poker/hand-features.test.ts (4 tests) 17ms
+stderr | lib/poker/rooms.test.ts > bot seats > acts only for a bot, after the pause and the think, and times out if the policy fails
+Bot did not return a legal action. 0
+
+ ✓ lib/poker/rooms.test.ts (13 tests) 11ms
+ ✓ lib/poker/engine.test.ts (17 tests) 7ms
+ ✓ lib/poker/training-strict.test.ts (2 tests) 10ms
+ ✓ lib/poker/decision-stability.test.ts (6 tests) 9ms
+ ✓ lib/poker/observations.test.ts (1 test) 5ms
+ ✓ lib/poker/bot.test.ts (8 tests) 5ms
+ ✓ lib/poker/range-beliefs.test.ts (9 tests) 4ms
+ ✓ lib/poker/evaluation/lock.test.ts (1 test) 2ms
+ ✓ lib/poker/local.test.ts (2 tests) 3ms
+ ✓ lib/poker/contextual-response.test.ts (7 tests) 3ms
+ ✓ lib/poker/forecast-diagnostics.test.ts (4 tests) 2ms
+ ✓ lib/poker/learner.test.ts (3 tests) 2ms
+ ✓ lib/poker/cpu-profile.test.ts (3 tests) 2ms
+ ✓ lib/poker/reopening.test.ts (2 tests) 2ms
+ ✓ lib/poker/view-reconstruction.test.ts (1 test) 2ms
+ ✓ lib/poker/offset-confirmation.test.ts (3 tests) 2ms
+ ✓ lib/poker/calibration.test.ts (3 tests) 2ms
+ ✓ lib/poker/frequency-confirmation.test.ts (4 tests) 2ms
+ ✓ lib/poker/strategies.test.ts (4 tests) 2ms
+ ✓ lib/poker/contextual-experiment.test.ts (3 tests) 2ms
+ ✓ lib/poker/candidate.test.ts (2 tests) 2ms
+ ✓ lib/poker/evaluation/provenance.test.ts (1 test) 2ms
+ ✓ lib/poker/population-fields.test.ts (2 tests) 2ms
+ ✓ lib/poker/handoff.test.ts (2 tests) 2ms
+ ✓ lib/poker/pots.test.ts (2 tests) 1ms
+ ✓ lib/poker/evaluation/identity.test.ts (1 test) 2ms
+ ✓ lib/poker/decision-diagnostics.test.ts (1 test) 1ms
+ ✓ lib/poker/opponent.test.ts (1 test) 1ms
+ ✓ lib/poker/evaluation/budget.test.ts (2 tests) 1ms
+ ✓ lib/poker/contextual-selection.test.ts (2 tests) 2ms
+
+ Test Files  50 passed (50)
+      Tests  225 passed (225)
+   Start at  09:54:23
+   Duration  125.32s (transform 287ms, setup 0ms, collect 681ms, tests 120.18s, environment 4ms, prepare 1.25s)
+

@@ -1,0 +1,20 @@
+{
+  "classification": "fixed-manifest technical continuation",
+  "protocolHash": "a0178ed81a430e24ae49b278b12a9a457103dc9b94cab11e214bfa3f537f743b",
+  "sourceHash": "7e5a626b965f4ffe1e94c47fcba7a4bc5663a2710be300c1e1c1733699a092c4",
+  "missingSeeds": [
+    183565,
+    183566,
+    183567,
+    183568,
+    183569,
+    183570
+  ],
+  "cachedSeedClusters": 589,
+  "freshnessCheck": "Each seed belongs exclusively to the original started reservation. Completed records retained once. Missing original seeds resumed with the entire original protocol, preserving seed-index lineup assignment.",
+  "outcomeInspection": false,
+  "startedAt": "2026-11-11T14:40:10.113Z",
+  "endedAt": "2026-11-11T14:41:31.436Z",
+  "recoveryElapsedMs": 81323,
+  "logicalSeedClusters": 595
+}

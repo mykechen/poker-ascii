@@ -1,0 +1,48 @@
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
+import {spawn} from 'node:child_process';
+import {runSeed,validateRows,hashObject,type Protocol} from '../lib/poker/evaluation/protocol';
+import {sourceSnapshot,acquireControllerLock,atomicJSON} from '../lib/poker/evaluation/provenance';
+const root='handoffs/low-power-2026-11-11/confirmation';
+const directory=root+'/run-6';
+const p=JSON.parse(readFileSync(directory+'/protocol.json','utf8')) as Protocol;
+const snapshot=sourceSnapshot();
+if(snapshot.hash!==p.sourceHash)throw new Error('Frozen source mismatch');
+const existing=JSON.parse(readFileSync(directory+'/provenance.json','utf8'));
+if(existing.status==='complete'&&existing.logicalBatchReconstructed===true){
+ const completed=JSON.parse(readFileSync(root+'/recovery/completed.json','utf8'));
+ if(completed.protocolHash!==hashObject(p)||completed.sourceHash!==snapshot.hash||completed.logicalSeedClusters!==p.seeds.length)throw new Error('Completed recovery identity mismatch');
+ if(!existsSync(directory+'/hands.jsonl'))throw new Error('Completed recovery aggregate missing');
+ for(const seed of p.seeds)validateRows(p,seed,JSON.parse(readFileSync(directory+'/seed-'+seed+'.json','utf8')));
+ console.log('Completed technical recovery verified; no simulation needed');
+}else{
+const release=acquireControllerLock();
+const assertion=spawn('/usr/bin/caffeinate',['-is','-w',String(process.pid)],{stdio:'ignore'});
+try {
+ const original=JSON.parse(readFileSync(directory+'/provenance.json','utf8'));
+ if(original.status!=='failed')throw new Error('Recovery requires the preserved failed execution');
+ const registry=JSON.parse(readFileSync('handoffs/seed-registry.json','utf8'));
+ const reservation=registry.evaluation_reservations.find((r:{protocolHash:string})=>r.protocolHash===hashObject(p));
+ if(!reservation||reservation.status!=='started')throw new Error('Original reservation mismatch');
+ const missing=p.seeds.filter(seed=>!existsSync(directory+'/seed-'+seed+'.json'));
+ if(missing.length!==6)throw new Error('Unexpected missing seed count');
+ for(const seed of p.seeds)if(!missing.includes(seed))validateRows(p,seed,JSON.parse(readFileSync(directory+'/seed-'+seed+'.json','utf8')));
+ mkdirSync(root+'/recovery');
+ writeFileSync(root+'/recovery/original-run-6-provenance.json',JSON.stringify(original,null,2)+'\n',{flag:'wx'});
+ const manifest={classification:'fixed-manifest technical continuation',protocolHash:hashObject(p),sourceHash:snapshot.hash,missingSeeds:missing,cachedSeedClusters:p.seeds.length-missing.length,freshnessCheck:'Each seed belongs exclusively to the original started reservation. Completed records retained once. Missing original seeds resumed with the entire original protocol, preserving seed-index lineup assignment.',outcomeInspection:false,startedAt:new Date().toISOString()};
+ atomicJSON(root+'/recovery/manifest.json',manifest);
+ const start=Date.now();
+ for(const seed of missing){
+  if(Date.now()-start>600000)throw new Error('Recovery work cap');
+  const rows=runSeed(p,seed);
+  writeFileSync(directory+'/seed-'+seed+'.json',JSON.stringify(rows)+'\n',{flag:'wx'});
+ }
+ if(Date.now()-start>600000)throw new Error('Recovery final work cap');
+ const rows=p.seeds.flatMap(seed=>{const records=JSON.parse(readFileSync(directory+'/seed-'+seed+'.json','utf8'));validateRows(p,seed,records);return records;});
+ writeFileSync(directory+'/hands.jsonl',rows.map(r=>JSON.stringify(r)).join('\n')+'\n',{flag:'wx'});
+ atomicJSON(root+'/recovery/completed.json',{...manifest,endedAt:new Date().toISOString(),recoveryElapsedMs:Date.now()-start,logicalSeedClusters:p.seeds.length});
+ atomicJSON(directory+'/provenance.json',{...original,status:'complete',endedAt:new Date().toISOString(),logicalBatchReconstructed:true,originalExecutionStatus:'failed',originalExecutionProvenance:root+'/recovery/original-run-6-provenance.json',recoveryManifest:root+'/recovery/manifest.json',wallClockOverrunDuringSystemSleep:true});
+ registry.evaluation_recoveries=[...(registry.evaluation_recoveries??[]),{...manifest,status:'complete'}];
+ atomicJSON('handoffs/seed-registry.json',registry);
+} finally {assertion.kill();release();}
+
+}

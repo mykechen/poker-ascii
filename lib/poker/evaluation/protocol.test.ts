@@ -24,7 +24,17 @@ describe('evaluation protocol',()=>{
   expect(()=>validateProtocol({...protocol(),seeds:[1,1]})).toThrow();
   expect(()=>validateProtocol({...protocol(),poolHash:'b'.repeat(64)})).toThrow();
   expect(()=>validateProtocol({...protocol(),hands:0})).toThrow();
+  expect(()=>validateProtocol({...protocol(),arms:[{id:'bad',samples:5,kind:'unknown' as 'adaptive'}]})).toThrow(/arm/i);
  });
+ it('runs an explicit public value-raise arm and records exposure outside private hand records',()=>{
+  const p={...protocol(),players:[6],hands:1,arms:[{id:'base',samples:5},{id:'control',samples:5,kind:'value-raise' as const}]};
+  let counters:Record<string,{decisions:number;eligible:number;raises:number}>={};
+  const rows=runSeed(p,105001,t=>{counters=t.controlStats;});
+  expect(counters.control!.decisions).toBeGreaterThan(0);
+  expect(counters.control!.raises).toBeLessThanOrEqual(counters.control!.eligible);
+  expect(rows).toHaveLength(12);
+  expect(rows.every(row=>!('controlStats' in row))).toBe(true);
+ },120000);
  it('keeps privileged scoring outside all non-evaluation modules and feature import closure',()=>{
   function walk(dir:string):string[]{return readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);}
   const files=walk('lib').filter(f=>f.endsWith('.ts')&&!f.endsWith('.test.ts')&&!f.includes('/evaluation/'));

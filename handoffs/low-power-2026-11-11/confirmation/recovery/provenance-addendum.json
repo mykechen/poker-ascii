@@ -1,0 +1,24 @@
+{
+  "classification": "fixed-manifest technical continuation",
+  "protocolHash": "a0178ed81a430e24ae49b278b12a9a457103dc9b94cab11e214bfa3f537f743b",
+  "sourceHash": "7e5a626b965f4ffe1e94c47fcba7a4bc5663a2710be300c1e1c1733699a092c4",
+  "missingSeeds": [
+    183565,
+    183566,
+    183567,
+    183568,
+    183569,
+    183570
+  ],
+  "cachedSeedClusters": 589,
+  "freshnessCheck": "Each seed belongs exclusively to the original started reservation. Completed records retained once. Missing original seeds resumed with the entire original protocol, preserving seed-index lineup assignment.",
+  "outcomeInspection": false,
+  "startedAt": "2026-11-11T14:40:10.113Z",
+  "recoveryRunnerHash": "804f9efd0aa08ef6aee78b914bd0498d5490bc410217723277e74c3a4212ba6a",
+  "recoveryWorkers": 1,
+  "recoveryWorkerIdleMs": 0,
+  "recoveryMaxSeconds": 600,
+  "cachedRecordsCompletedBeforeOriginalCap": true,
+  "interruption": "OS suspended after AC disconnected. Watchdog termination was delayed beyond119minutes by suspension. All cached seed outputs were written before119minutes. Full interrupted wall time will be charged.",
+  "statisticalRuling": "Continue only missing original planned seeds with the same source and original full seed list. Preserve all successful records once. No additional samples and no outcome-based stopping. Prior blanket prohibition on technical continuation was an agent precaution."
+}

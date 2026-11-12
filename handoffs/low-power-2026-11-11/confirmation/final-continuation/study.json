@@ -1,0 +1,49 @@
+{
+  "frozenAt": "2026-11-11T02:01:03.167186+00:00",
+  "approval": "Owner said continue after saved power interruption; fresh full recovery study, no outcome inspection or top-up",
+  "runs": [
+    {
+      "protocol": "handoffs/protocols/adoption-low-power-r7.json",
+      "protocolHash": "9f40e356422c9a68bed1167f429300c7a8cf4d54e386364c1195eb3d9f7f2470",
+      "out": "handoffs/low-power-2026-11-11/confirmation/run-7"
+    }
+  ],
+  "clusters": 385,
+  "physicalHands": 32340,
+  "workers": 2,
+  "primary": "128-minus-50 RAW bb/100; equal strata/table/rotation; independent seed clusters",
+  "NI": "95%two-sided Student-t lower bound > -5bb/100; one adoption contrast",
+  "analysis": "Analyze only after every fixed batch completes",
+  "powerAssumedEffectBb100": 30.407523555233695,
+  "costGate": "mean scoring/evaluation cost ratio128/50<=3; fresh fixed-work timing check required before freeze",
+  "costTimingDesign": "20fresh seeds starting140001 after collision check, both arms, two strata,6/7/8seats,all rotations,1hand/match,serialtiming; alternate arm order by seed; record full hero decision durations by arm/street; legality/no-fallback checks; no profit inference from timing seeds",
+  "runtimeCapPerRunSeconds": 7140,
+  "sourceHash": "7e5a626b965f4ffe1e94c47fcba7a4bc5663a2710be300c1e1c1733699a092c4",
+  "goalReference": "future frozenv1; sampling gain does not count toward later +5 goal",
+  "budgetHoursTotal": 48,
+  "spentBeforeThisSessionHours": 4.859379367083331,
+  "recovery": {
+    "excluded": [
+      "handoffs/adoption-2026-11-10",
+      "handoffs/adoption-2026-11-10-fresh"
+    ],
+    "reason": "Prior power interruptions. Both studies excluded without inspecting returns."
+  },
+  "qos": "normal",
+  "collectBatteryDraw": true,
+  "powerSampleSeconds": 15,
+  "stopBatteryPercent": 25,
+  "minStartBatteryPercent": 45,
+  "planning": {
+    "handsPerHour": 39527.409559319705,
+    "planningHandsPerHour": 33598.29812542175,
+    "meanBatteryDischargeWatts": 3.7624727894736845,
+    "elapsedMinutes": 10.200516666666667,
+    "startBatteryPercent": 100,
+    "endBatteryPercent": 100,
+    "adoptionPredictedHours": 9.8880008374183,
+    "chargedBeforeConfirmationHours": 4.859379367083331,
+    "runs": 7,
+    "clustersPerFullBatch": 595
+  }
+}

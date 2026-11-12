@@ -1,0 +1,7 @@
+   PreventSystemSleep             1
+   PreventUserIdleSystemSleep     1
+   pid 62145(caffeinate): [0x000d006b00019ef2] 00:00:14 PreventUserIdleSystemSleep named: "caffeinate command-line tool"  
+	Details: caffeinate asserting on behalf of Process ID 62134
+   pid 62145(caffeinate): [0x000d006b00079ef3] 00:00:14 PreventSystemSleep named: "caffeinate command-line tool"  
+	Details: caffeinate asserting on behalf of Process ID 62134
+   pid 345(powerd): [0x000c9db700018b21] 07:14:12 PreventUserIdleSystemSleep named: "Powerd - Prevent sleep while display is on"  

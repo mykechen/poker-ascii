@@ -1,0 +1,53 @@
+import {createAdaptivePolicy} from './adaptive';
+import type {EquityResult} from './equity';
+import type {Policy,PolicyAction} from './bot';
+import type {PublicView} from './view';
+
+export type ControlEstimate=Pick<EquityResult,'equity'|'standardError'|'expectedPayout'|'expectedPayoutStandardError'>;
+export type ControlDecision={decision:PolicyAction;eligible:boolean;lowerShare:number|null};
+
+/** Public contribution accounting only; never import privileged scoring/label helpers. */
+function eligiblePot(view:PublicView,actor:number):number|null{
+ const contributions=view.seats.map(s=>s.handCommitted);
+ if(contributions.some(n=>n===undefined||!Number.isSafeInteger(n)||n!<0))return null;
+ const chips=contributions as number[];let previous=0,total=0;
+ for(const level of [...new Set(chips.filter(n=>n>0))].sort((a,b)=>a-b)){
+  const amount=(level-previous)*chips.filter(n=>n>=level).length;
+  if(chips[actor]!>=level)total+=amount;
+  previous=level;
+ }
+ return total;
+}
+
+export function valueRaiseDecision(view:PublicView,estimate:ControlEstimate|null,baseline:PolicyAction):ControlDecision{
+ const fallback={decision:baseline,eligible:false,lowerShare:null};
+ const actor=view.toAct;
+ if(actor===null||view.phase!=='betting'||!['flop','turn'].includes(view.street??'')||baseline.action!=='check'||view.betting?.currentBet!==0)return fallback;
+ const live=view.seats.filter(s=>s.inHand&&!s.folded);
+ const responder=live.some(s=>s.seat!==actor&&!s.allIn&&s.stack>0);
+ const raise=view.validActions.find(a=>a.action==='raise');
+ if(live.length<2||!responder||raise?.action!=='raise'||!view.presets)return fallback;
+ const pot=eligiblePot(view,actor);
+ if(pot===null||pot<=0)return fallback;
+ if(!estimate||estimate.expectedPayout===null||estimate.expectedPayoutStandardError===null)throw new Error('Missing public equity estimate for value-raise control');
+ const {equity,standardError,expectedPayout,expectedPayoutStandardError}=estimate;
+ if(![equity,standardError,expectedPayout,expectedPayoutStandardError].every(Number.isFinite)||equity<0||equity>1+1e-9||standardError<0||expectedPayout<0||expectedPayout>pot+1e-9||expectedPayoutStandardError<0)throw new Error('Invalid public value-raise estimate');
+ // Superset showdown share protects against main-pot value masking weak new-money side-pot equity.
+ const lowerShare=Math.max(0,Math.min((expectedPayout-1.96*expectedPayoutStandardError)/pot,equity-1.96*standardError));
+ if(lowerShare<=.70)return {decision:baseline,eligible:true,lowerShare};
+ const half=view.presets.half;
+ if(![half,raise.min,raise.max].every(Number.isSafeInteger)||raise.min>raise.max)throw new Error('Invalid legal half-pot menu');
+ const amount=Math.max(raise.min,Math.min(raise.max,half));
+ return {decision:{action:'raise',amount,reason:`Value raise. Conservative share ${(100*lowerShare).toFixed(1)}%. Half pot.`},eligible:true,lowerShare};
+}
+
+export function createValueRaiseControl(options:Parameters<typeof createAdaptivePolicy>[0]={}){
+ let last:ControlEstimate|null=null;let decisions=0,eligible=0,raises=0;
+ const base=createAdaptivePolicy({...options,onDecision:d=>{last={...d.equity};options.onDecision?.(d);}});
+ const policy:Policy=Object.assign((view:PublicView)=>{
+  last=null;const fallback=base.policy(view);const result=valueRaiseDecision(view,last,fallback);
+  decisions++;if(result.eligible)eligible++;if(result.decision!==fallback)raises++;
+  return result.decision;
+ },{startSession:(ids:string[])=>{last=null;decisions=0;eligible=0;raises=0;base.policy.startSession?.(ids);},observe:base.policy.observe});
+ return {policy,stats:()=>({decisions,eligible,raises})};
+}

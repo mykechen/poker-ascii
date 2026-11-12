@@ -1,0 +1,56 @@
+{
+  "classification": "Exploratory variance pilot only; no adoption/profit claim",
+  "protocol": "handoffs/protocols/variance-pilot-r2.json",
+  "analysisSourceHash": "3b210c0d8607570b610c364fc2c080f1c8877ade8b360bd0d7968e968bf0d959",
+  "plannedClusters": 840,
+  "plannedPhysicalHands": 70560,
+  "metricUnits": "chip delta /2 = bb/hand; multiply mean by100 for bb/100",
+  "primaryWeighting": "equal seed, equal pool stratum, equal table size, equal rotation, equal within-match hand",
+  "designs": {
+    "unpaired": "one preassigned balanced rotation/cell/table per seed, independent arm seeds; variance sum of arm cluster means",
+    "paired": "same preassigned rotations, paired seed clusters; variance of cluster differences",
+    "rotated": "all rotations, paired seed clusters; variance of macro cluster differences"
+  },
+  "rotationRule": "(sortedSeedIndex+int(sha256(cell:players)[:8],16)%players)%players",
+  "power": {
+    "alphaFamily": 0.05,
+    "comparisons": 3,
+    "twoSided": true,
+    "power": 0.8,
+    "trueEffectsBb100": [
+      5,
+      10,
+      20,
+      30
+    ],
+    "primaryNullThresholdBb100": 0,
+    "atLeastFiveThresholdBb100": 5,
+    "method": "normal planning approximation; also one-sided95% variance upper bound under approximately normal independent cluster means"
+  },
+  "cost": "Use separate measured raw-only and adjusted rates at chosen14 workers; conservative planning rates80% of relevant measured minimum; no worker-count extrapolation",
+  "samplingNIProposal": {
+    "marginBb100": 5,
+    "comparisons": 1,
+    "assumedEffectRule": "If pilot adjusted macro mean is nonnegative, max(0,min(mean/2,nominal95% lower bound)); if negative, use mean. Planning assumption only, independent confirmation required."
+  },
+  "futureABC": "Scenario counts are variance/cost proxies, not final N for unimplemented policies. Size primary model-v1 superiority; secondary effects need coherent policy-specific pilot before any power guarantee. No default test sized at true+5.",
+  "frozenAt": "2026-11-09T14:10:33.052970+00:00",
+  "seedCountBalancing": "Power counts/packing round to full5-offset cycles for rotation, lcm(5,6,7,8)=840 for single-rotation counterfactual designs.",
+  "matchedScoringCostRun": "raw-cost-matched",
+  "launchPrediction": {
+    "workers": 14,
+    "selectedRun": "sustained-14-awake",
+    "sustainedHandsPerHour": 186394.0133782085,
+    "sustainedSeconds": 540.249110875,
+    "serialHandsPerHour": 13856.239513467592,
+    "observedSpeedup": 13.451991299446187,
+    "conservativeLaunchRate": 141523.93535189843,
+    "pilotClusters": 840,
+    "pilotPhysicalHands": 70560,
+    "predictedPilotMinutes": 29.91437448,
+    "pilotMaxSeconds": 7140,
+    "rawCostClusters": 332,
+    "rawCostPhysicalHands": 27888,
+    "note": "Best completed sustained throughput; actual fixed-work windows near ten minutes, not exactly ten. Fourteen-worker sleep-interrupted attempt excluded; replay source affects runtime guards only."
+  }
+}

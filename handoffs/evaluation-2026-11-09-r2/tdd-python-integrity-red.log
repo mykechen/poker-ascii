@@ -1,0 +1,14 @@
+F.......
+======================================================================
+FAIL: test_foreign_paired_cells_are_rejected (python.tests.test_evaluation.InputIntegrityTests.test_foreign_paired_cells_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/poker-training-foundation/python/tests/test_evaluation.py", line 49, in test_foreign_paired_cells_are_rejected
+    with self.assertRaises(ValueError):load(directory)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.032s
+
+FAILED (failures=1)

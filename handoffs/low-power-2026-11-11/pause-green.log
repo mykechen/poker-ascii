@@ -1,0 +1,12 @@
+
+ RUN  v3.2.4 /Users/mykechen/Desktop/APPS/poker-ascii/.worktrees/poker-training-foundation
+
+ ✓ lib/poker/evaluation/pool.test.ts (2 tests) 31121ms
+   ✓ 1 and 4 child workers produce byte-identical non-timing records  24198ms
+   ✓ fixed pauses preserve serial and parallel records and are validated in the manifest  6923ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  01:23:19
+   Duration  31.31s (transform 85ms, setup 0ms, collect 106ms, tests 31.12s, environment 0ms, prepare 26ms)
+

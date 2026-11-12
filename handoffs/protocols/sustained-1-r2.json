@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "id": "sustained-1-r2",
+  "classification": "scaling-diagnostic",
+  "sourceHash": "3b0dfbd8a722ffa49c36b8b66707dcbb762fd530ae72e8ca457436b1383bd945",
+  "poolHash": "66ab6591ed2ce837a9092d6959d1964de7fe6089486c14b4d22e18292df087d8",
+  "pool": [
+    {
+      "id": "heuristic",
+      "opponents": [
+        "chart",
+        "tight",
+        "station",
+        "position",
+        "aggressor"
+      ]
+    },
+    {
+      "id": "baseline-opponent",
+      "opponents": [
+        "baseline-v0",
+        "tight",
+        "station",
+        "position",
+        "aggressor"
+      ]
+    }
+  ],
+  "arms": [
+    {
+      "id": "50",
+      "samples": 50
+    },
+    {
+      "id": "128",
+      "samples": 128
+    }
+  ],
+  "seeds": [
+    110001,
+    110002,
+    110003,
+    110004,
+    110005,
+    110006,
+    110007,
+    110008,
+    110009,
+    110010,
+    110011,
+    110012,
+    110013,
+    110014,
+    110015,
+    110016,
+    110017,
+    110018,
+    110019,
+    110020,
+    110021,
+    110022,
+    110023,
+    110024,
+    110025,
+    110026
+  ],
+  "hands": 1,
+  "players": [
+    6,
+    7,
+    8
+  ],
+  "stack": 200,
+  "smallBlind": 1,
+  "bigBlind": 2,
+  "adjustAllIn": true,
+  "maxSeconds": 600
+}

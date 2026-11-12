@@ -1,0 +1,35 @@
+{
+  "sourceHash": "2bc38733eed93b5c349817e5d1231cc42cb0065c4b7b15623bc8c50d03f7e4e9",
+  "poolHash": "66ab6591ed2ce837a9092d6959d1964de7fe6089486c14b4d22e18292df087d8",
+  "protocolHash": "5704d5c0a0a0dd03b90e5d43d3d82f85b80b24f58d7d35e914f8a85616857ba9",
+  "configHash": "3cad28c8344a682babb42d6faac042e46ca0d56143c96449e3b078094a885e12",
+  "config": {
+    "arms": [
+      {
+        "id": "a",
+        "samples": 50
+      },
+      {
+        "id": "b",
+        "samples": 50
+      }
+    ],
+    "stack": 200,
+    "smallBlind": 1,
+    "bigBlind": 2,
+    "adjustAllIn": false,
+    "fixedAdaptiveSettings": {
+      "seed": 42,
+      "riverSamples": 16,
+      "riverRiskPenalty": 1,
+      "learn": false,
+      "styleRetention": 1,
+      "responseModel": {
+        "version": 1,
+        "kind": "current"
+      }
+    },
+    "semanticsSourceHash": "2bc38733eed93b5c349817e5d1231cc42cb0065c4b7b15623bc8c50d03f7e4e9"
+  },
+  "note": "Derived from executed protocol and its archived executable source; full protocolHash remains the authoritative combined execution/configuration identity."
+}

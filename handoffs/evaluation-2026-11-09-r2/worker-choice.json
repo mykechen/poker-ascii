@@ -1,0 +1,16 @@
+{
+  "workers": 14,
+  "selectedRun": "sustained-14-awake",
+  "sustainedHandsPerHour": 186394.0133782085,
+  "sustainedSeconds": 540.249110875,
+  "serialHandsPerHour": 13856.239513467592,
+  "observedSpeedup": 13.451991299446187,
+  "conservativeLaunchRate": 141523.93535189843,
+  "pilotClusters": 840,
+  "pilotPhysicalHands": 70560,
+  "predictedPilotMinutes": 29.91437448,
+  "pilotMaxSeconds": 7140,
+  "rawCostClusters": 332,
+  "rawCostPhysicalHands": 27888,
+  "note": "Best completed sustained throughput; actual fixed-work windows near ten minutes, not exactly ten. Fourteen-worker sleep-interrupted attempt excluded; replay source affects runtime guards only."
+}

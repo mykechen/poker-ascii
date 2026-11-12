@@ -1,0 +1,95 @@
+{
+  "elapsedMs": 305309.678541,
+  "workers": 1,
+  "peakWorkerRssBytes": [
+    308592640,
+    308592640,
+    308592640,
+    308592640,
+    321257472,
+    327991296,
+    327991296,
+    327991296,
+    327991296,
+    327991296,
+    327991296,
+    327991296,
+    327991296,
+    327991296
+  ],
+  "seedTimings": [
+    {
+      "seed": 108101,
+      "elapsedMs": 13871.638125,
+      "allInMs": 3.4810820000038802
+    },
+    {
+      "seed": 108102,
+      "elapsedMs": 10381.224916000001,
+      "allInMs": 5.077585000006366
+    },
+    {
+      "seed": 108103,
+      "elapsedMs": 11005.521958999998,
+      "allInMs": 0.05558900001415168
+    },
+    {
+      "seed": 108104,
+      "elapsedMs": 9443.098250000003,
+      "allInMs": 3.4640879999569734
+    },
+    {
+      "seed": 108105,
+      "elapsedMs": 11951.787334,
+      "allInMs": 0.03986600002099294
+    },
+    {
+      "seed": 108106,
+      "elapsedMs": 13413.433749999997,
+      "allInMs": 12.9759549999726
+    },
+    {
+      "seed": 108107,
+      "elapsedMs": 10416.388292000003,
+      "allInMs": 0.051212999984272756
+    },
+    {
+      "seed": 108108,
+      "elapsedMs": 11816.420624999999,
+      "allInMs": 26.385534999906668
+    },
+    {
+      "seed": 108109,
+      "elapsedMs": 10752.861667000005,
+      "allInMs": 4.1732459999475395
+    },
+    {
+      "seed": 108110,
+      "elapsedMs": 154437.537833,
+      "allInMs": 16.59895999984292
+    },
+    {
+      "seed": 108111,
+      "elapsedMs": 13952.307499999995,
+      "allInMs": 5.108956999931252
+    },
+    {
+      "seed": 108112,
+      "elapsedMs": 11657.515332999988,
+      "allInMs": 0.055582000175490975
+    },
+    {
+      "seed": 108113,
+      "elapsedMs": 11806.112708,
+      "allInMs": 14.584746000531595
+    },
+    {
+      "seed": 108114,
+      "elapsedMs": 10178.126499999955,
+      "allInMs": 5.079001999925822
+    }
+  ],
+  "physicalHands": 1176,
+  "handsPerHour": 13866.576455195705,
+  "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded"
+}

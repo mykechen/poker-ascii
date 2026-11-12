@@ -1,0 +1,17 @@
+E
+======================================================================
+ERROR: test_evaluation (unittest.loader._FailedTest.test_evaluation)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_evaluation
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+  File "/private/tmp/poker-training-foundation/python/tests/test_evaluation.py", line 2, in <module>
+    from python.evaluation.power import required_units, design_rows
+ModuleNotFoundError: No module named 'python.evaluation.power'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

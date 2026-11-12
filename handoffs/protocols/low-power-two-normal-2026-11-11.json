@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "low-power-two-normal-2026-11-11",
+  "classification": "engineering-smoke",
+  "sourceHash": "d5a1f2534e93b9a35ceb4a0fa1bc45e476d2934b2d9279ed1b16087f05e4dee7",
+  "poolHash": "66ab6591ed2ce837a9092d6959d1964de7fe6089486c14b4d22e18292df087d8",
+  "pool": [
+    {
+      "id": "heuristic",
+      "opponents": [
+        "chart",
+        "tight",
+        "station",
+        "position",
+        "aggressor"
+      ]
+    },
+    {
+      "id": "baseline-opponent",
+      "opponents": [
+        "baseline-v0",
+        "tight",
+        "station",
+        "position",
+        "aggressor"
+      ]
+    }
+  ],
+  "arms": [
+    {
+      "id": "50",
+      "samples": 50
+    },
+    {
+      "id": "128",
+      "samples": 128
+    }
+  ],
+  "seeds": [
+    172001,
+    172002,
+    172003,
+    172004,
+    172005,
+    172006,
+    172007,
+    172008,
+    172009,
+    172010,
+    172011,
+    172012,
+    172013,
+    172014,
+    172015,
+    172016,
+    172017,
+    172018,
+    172019,
+    172020
+  ],
+  "hands": 1,
+  "players": [
+    6,
+    7,
+    8
+  ],
+  "stack": 200,
+  "smallBlind": 1,
+  "bigBlind": 2,
+  "adjustAllIn": false,
+  "maxSeconds": 900
+}

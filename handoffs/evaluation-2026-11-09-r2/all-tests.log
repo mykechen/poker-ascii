@@ -1,0 +1,76 @@
+
+> nlhe@0.1.0 test
+> vitest run --config vitest.config.mts
+
+
+ RUN  v3.2.4 /private/tmp/poker-training-foundation
+
+ ✓ lib/poker/equity.test.ts (7 tests) 112ms
+ ✓ lib/poker/session.test.ts (2 tests) 126ms
+ ✓ lib/poker/support-offset.test.ts (7 tests) 211ms
+ ✓ lib/poker/diagnostic-truth.test.ts (5 tests) 222ms
+ ✓ lib/poker/diagnostic-beliefs.test.ts (5 tests) 218ms
+ ✓ lib/poker/population-fit.test.ts (6 tests) 330ms
+   ✓ converges deterministically and masks minority actions  326ms
+ ✓ lib/poker/train.test.ts (7 tests) 90ms
+ ✓ lib/poker/benchmark.test.ts (5 tests) 77ms
+ ✓ lib/poker/hand-features.test.ts (4 tests) 60ms
+ ✓ lib/poker/contextual-fit.test.ts (4 tests) 68ms
+ ✓ lib/poker/river-ev.test.ts (9 tests) 74ms
+stderr | lib/poker/rooms.test.ts > bot seats > acts only for a bot, after the pause and the think, and times out if the policy fails
+Bot did not return a legal action. 0
+
+ ✓ lib/poker/rooms.test.ts (13 tests) 23ms
+ ✓ lib/poker/training-strict.test.ts (2 tests) 22ms
+ ✓ lib/poker/decision-stability.test.ts (6 tests) 11ms
+ ✓ lib/poker/engine.test.ts (17 tests) 8ms
+ ✓ lib/poker/bot.test.ts (8 tests) 10ms
+ ✓ lib/poker/observations.test.ts (1 test) 6ms
+ ✓ lib/poker/range-beliefs.test.ts (9 tests) 4ms
+ ✓ lib/poker/local.test.ts (2 tests) 4ms
+ ✓ lib/poker/contextual-response.test.ts (7 tests) 4ms
+ ✓ lib/poker/view-reconstruction.test.ts (1 test) 2ms
+ ✓ lib/poker/benchmark-opponents.test.ts (7 tests) 861ms
+   ✓ equity-defender completes legal conserving six-player matches  390ms
+   ✓ equity-pressure completes legal conserving six-player matches  307ms
+ ✓ lib/poker/forecast-diagnostics.test.ts (4 tests) 3ms
+ ✓ lib/poker/learner.test.ts (3 tests) 3ms
+ ✓ lib/poker/decision-diagnostics.test.ts (1 test) 2ms
+ ✓ lib/poker/calibration.test.ts (3 tests) 2ms
+ ✓ lib/poker/strategies.test.ts (4 tests) 2ms
+ ✓ lib/poker/reopening.test.ts (2 tests) 2ms
+ ✓ lib/poker/cpu-profile.test.ts (3 tests) 2ms
+ ✓ lib/poker/league.test.ts (9 tests) 943ms
+   ✓ collects public forecast contexts and maps rotated opponents by participant name  904ms
+ ✓ lib/poker/offset-confirmation.test.ts (3 tests) 2ms
+ ✓ lib/poker/frequency-confirmation.test.ts (4 tests) 2ms
+ ✓ lib/poker/candidate.test.ts (2 tests) 5ms
+ ✓ lib/poker/contextual-experiment.test.ts (3 tests) 3ms
+ ✓ lib/poker/population-fields.test.ts (2 tests) 2ms
+ ✓ lib/poker/handoff.test.ts (2 tests) 2ms
+ ✓ lib/poker/pots.test.ts (2 tests) 2ms
+ ✓ lib/poker/evaluation/provenance.test.ts (1 test) 4ms
+ ✓ lib/poker/contextual-selection.test.ts (2 tests) 2ms
+ ✓ lib/poker/opponent.test.ts (1 test) 3ms
+ ✓ lib/poker/evaluation/identity.test.ts (1 test) 2ms
+ ✓ lib/poker/equity-policy.test.ts (5 tests) 1438ms
+   ✓ plays legal six-player hands without accessing hidden information  304ms
+   ✓ captures public decision snapshots without changing seeded actions  1126ms
+ ✓ lib/poker/contextual-replay.test.ts (4 tests) 1552ms
+   ✓ league capture excludes target cards and reproduces observer forecasts  1448ms
+ ✓ lib/poker/adaptive.test.ts (6 tests) 1764ms
+   ✓ learns observed tendencies across hands and clears them in a new session  610ms
+   ✓ reports observer exposure and snapshots without changing adaptive seeded play  667ms
+ ✓ lib/poker/evaluation/pool.test.ts (1 test) 25478ms
+   ✓ 1 and 4 child workers produce byte-identical non-timing records  25477ms
+ ✓ lib/poker/evaluation/protocol.test.ts (4 tests) 30457ms
+   ✓ evaluation protocol > identical arms pair to zero, deck fingerprints are sample-independent, conserved and reproducible  23353ms
+   ✓ evaluation protocol > keeps privileged scoring outside all non-evaluation modules and feature import closure  7087ms
+ ✓ lib/poker/evaluation/all-in.test.ts (5 tests) 57481ms
+   ✓ AA vs KK preflop exhausts all 1,712,304 boards and matches frozen exact payout  57467ms
+
+ Test Files  47 passed (47)
+      Tests  211 passed (211)
+   Start at  12:05:38
+   Duration  58.36s (transform 920ms, setup 0ms, collect 2.31s, tests 121.70s, environment 6ms, prepare 2.05s)
+

@@ -1,0 +1,31 @@
+
+> nlhe@0.1.0 test
+> vitest run --config vitest.config.mts lib/poker/evaluation/protocol.test.ts
+
+
+ RUN  v3.2.4 /private/tmp/poker-training-foundation
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  lib/poker/evaluation/protocol.test.ts [ lib/poker/evaluation/protocol.test.ts ]
+Error: Cannot find module './protocol' imported from '/private/tmp/poker-training-foundation/lib/poker/evaluation/protocol.test.ts'
+ ❯ lib/poker/evaluation/protocol.test.ts:4:1
+      2| import {playMatch} from '../train';
+      3| import {station} from '../strategies';
+      4| import {runSeed,validateProtocol,hashObject,type Protocol} from './pro…
+       | ^
+      5| import {readFileSync,readdirSync} from 'node:fs';
+      6| import path from 'node:path';
+
+Caused by: Error: Failed to load url ./protocol (resolved id: ./protocol) in /private/tmp/poker-training-foundation/lib/poker/evaluation/protocol.test.ts. Does the file exist?
+ ❯ loadAndTransform ../../../Users/mykechen/Desktop/APPS/poker-ascii/node_modules/vite/dist/node/chunks/config.js:22907:33
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  11:46:31
+   Duration  212ms (transform 61ms, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 34ms)
+

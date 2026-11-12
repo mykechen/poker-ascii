@@ -1,0 +1,329 @@
+{
+  "id": "08461dcc510ddc8beb00b2010d877bab31727836bfb32e75320cf17998c16bf3",
+  "cell": "expanded:preflop",
+  "seed": 103008,
+  "field": "train-expanded-c",
+  "players": 8,
+  "rotation": 1,
+  "hand": 2,
+  "budgets": {
+    "50": {
+      "streams": [
+        {
+          "equity": 0.08,
+          "expectedPayout": 6.26,
+          "expectedPayoutStandardError": 1.21480997086216,
+          "standardError": 0.03875617133214439,
+          "method": "monte-carlo",
+          "outcomes": 50,
+          "attempts": 197,
+          "callValue": -2.74,
+          "elapsedMs": 13.715625000186265,
+          "seed": 9
+        },
+        {
+          "equity": 0.09,
+          "expectedPayout": 5.11,
+          "expectedPayoutStandardError": 1.2499216301963307,
+          "standardError": 0.036950049018221603,
+          "method": "monte-carlo",
+          "outcomes": 50,
+          "attempts": 161,
+          "callValue": -3.8899999999999997,
+          "elapsedMs": 12.201000000350177,
+          "seed": -1640531536
+        },
+        {
+          "equity": 0.13,
+          "expectedPayout": 7.52,
+          "expectedPayoutStandardError": 1.3904161761347367,
+          "standardError": 0.04696937777935313,
+          "method": "monte-carlo",
+          "outcomes": 50,
+          "attempts": 188,
+          "callValue": -1.4800000000000004,
+          "elapsedMs": 12.6052919998765,
+          "seed": -2048144798
+        },
+        {
+          "equity": 0.14666666666666667,
+          "expectedPayout": 8.99,
+          "expectedPayoutStandardError": 1.3660975254276657,
+          "standardError": 0.04963357798398241,
+          "method": "monte-carlo",
+          "outcomes": 50,
+          "attempts": 229,
+          "callValue": -0.009999999999999787,
+          "elapsedMs": 12.485583000350744,
+          "seed": -1028477380
+        },
+        {
+          "equity": 0.14,
+          "expectedPayout": 10.3,
+          "expectedPayoutStandardError": 1.4205489022464064,
+          "standardError": 0.0495695759225642,
+          "method": "monte-carlo",
+          "outcomes": 50,
+          "attempts": 183,
+          "callValue": 1.3000000000000007,
+          "elapsedMs": 12.009583000093699,
+          "seed": 668265254
+        },
+        {
+          "equity": 0.13,
+          "expectedPayout": 7.5,
+          "expectedPayoutStandardError": 1.3625456367567652,
+          "standardError": 0.04696937777935313,
+          "method": "monte-carlo",
+          "outcomes": 50,
+          "attempts": 156,
+          "callValue": -1.5,
+          "elapsedMs": 11.889750000089407,
+          "seed": 374761400
+        },
+        {
+          "equity": 0.14,
+          "expectedPayout": 7.51,
+          "expectedPayoutStandardError": 1.3828755901957281,
+          "standardError": 0.0495695759225642,
+          "method": "monte-carlo",
+          "outcomes": 50,
+          "attempts": 160,
+          "callValue": -1.4900000000000002,
+          "elapsedMs": 12.03762499988079,
+          "seed": -744332187
+        },
+        {
+          "equity": 0.11,
+          "expectedPayout": 8.31,
+          "expectedPayoutStandardError": 1.2479280787753426,
+          "standardError": 0.043542144726080485,
+          "method": "monte-carlo",
+          "outcomes": 50,
+          "attempts": 163,
+          "callValue": -0.6899999999999995,
+          "elapsedMs": 11.638541999738663,
+          "seed": -42973492
+        }
+      ],
+      "metrics": {
+        "flipFraction": 0.25,
+        "referenceDisagreement": 0.125,
+        "callValueSD": 1.5894810473862218,
+        "nearZeroFraction": 0.75
+      }
+    },
+    "128": {
+      "streams": [
+        {
+          "equity": 0.1052827380952381,
+          "expectedPayout": 6.751302083333333,
+          "expectedPayoutStandardError": 0.7933312295905027,
+          "standardError": 0.026263247784215123,
+          "method": "monte-carlo",
+          "outcomes": 128,
+          "attempts": 529,
+          "callValue": -2.248697916666667,
+          "elapsedMs": 27.98287499975413,
+          "seed": 9
+        },
+        {
+          "equity": 0.15104166666666669,
+          "expectedPayout": 7.29296875,
+          "expectedPayoutStandardError": 0.8454939207189047,
+          "standardError": 0.030569331356372156,
+          "method": "monte-carlo",
+          "outcomes": 128,
+          "attempts": 443,
+          "callValue": -1.70703125,
+          "elapsedMs": 28.106916000135243,
+          "seed": -1640531536
+        },
+        {
+          "equity": 0.09765625,
+          "expectedPayout": 7.5703125,
+          "expectedPayoutStandardError": 0.822652619219205,
+          "standardError": 0.02604756125872568,
+          "method": "monte-carlo",
+          "outcomes": 128,
+          "attempts": 502,
+          "callValue": -1.4296875,
+          "elapsedMs": 26.684416000265628,
+          "seed": -2048144798
+        },
+        {
+          "equity": 0.12872023809523808,
+          "expectedPayout": 7.4921875,
+          "expectedPayoutStandardError": 0.8264435067213723,
+          "standardError": 0.028290686628075334,
+          "method": "monte-carlo",
+          "outcomes": 128,
+          "attempts": 491,
+          "callValue": -1.5078125,
+          "elapsedMs": 26.422542000189424,
+          "seed": -1028477380
+        },
+        {
+          "equity": 0.11439732142857142,
+          "expectedPayout": 7.63671875,
+          "expectedPayoutStandardError": 0.8312256679685437,
+          "standardError": 0.027835401555001426,
+          "method": "monte-carlo",
+          "outcomes": 128,
+          "attempts": 431,
+          "callValue": -1.36328125,
+          "elapsedMs": 25.199166999664158,
+          "seed": 668265254
+        },
+        {
+          "equity": 0.111328125,
+          "expectedPayout": 7.94140625,
+          "expectedPayoutStandardError": 0.836314773734991,
+          "standardError": 0.027142534223007275,
+          "method": "monte-carlo",
+          "outcomes": 128,
+          "attempts": 440,
+          "callValue": -1.05859375,
+          "elapsedMs": 24.921290999744087,
+          "seed": 374761400
+        },
+        {
+          "equity": 0.12630208333333334,
+          "expectedPayout": 7.08984375,
+          "expectedPayoutStandardError": 0.8313314667939493,
+          "standardError": 0.02874330046648883,
+          "method": "monte-carlo",
+          "outcomes": 128,
+          "attempts": 429,
+          "callValue": -1.91015625,
+          "elapsedMs": 25.698667000047863,
+          "seed": -744332187
+        },
+        {
+          "equity": 0.10546875,
+          "expectedPayout": 7.8984375,
+          "expectedPayoutStandardError": 0.7897784377762719,
+          "standardError": 0.02639579389266247,
+          "method": "monte-carlo",
+          "outcomes": 128,
+          "attempts": 402,
+          "callValue": -1.1015625,
+          "elapsedMs": 25.226957999635488,
+          "seed": -42973492
+        }
+      ],
+      "metrics": {
+        "flipFraction": 0,
+        "referenceDisagreement": 0,
+        "callValueSD": 0.4027717936488343,
+        "nearZeroFraction": 0.875
+      }
+    },
+    "512": {
+      "streams": [
+        {
+          "equity": 0.10863095238095238,
+          "expectedPayout": 6.526692708333333,
+          "expectedPayoutStandardError": 0.39441388816303774,
+          "standardError": 0.013275534747076817,
+          "method": "monte-carlo",
+          "outcomes": 512,
+          "attempts": 1903,
+          "callValue": -2.473307291666667,
+          "elapsedMs": 99.51166700012982,
+          "seed": 9
+        },
+        {
+          "equity": 0.09928385416666667,
+          "expectedPayout": 6.904296875,
+          "expectedPayoutStandardError": 0.3979027785254194,
+          "standardError": 0.01271737693115996,
+          "method": "monte-carlo",
+          "outcomes": 512,
+          "attempts": 1857,
+          "callValue": -2.095703125,
+          "elapsedMs": 97.68862499995157,
+          "seed": -1640531536
+        },
+        {
+          "equity": 0.11583891369047619,
+          "expectedPayout": 7.065755208333333,
+          "expectedPayoutStandardError": 0.39627971201068396,
+          "standardError": 0.013632397077965503,
+          "method": "monte-carlo",
+          "outcomes": 512,
+          "attempts": 1955,
+          "callValue": -1.934244791666667,
+          "elapsedMs": 97.60724999988452,
+          "seed": -2048144798
+        },
+        {
+          "equity": 0.10472470238095238,
+          "expectedPayout": 6.6484375,
+          "expectedPayoutStandardError": 0.3978807240427248,
+          "standardError": 0.013047086184351216,
+          "method": "monte-carlo",
+          "outcomes": 512,
+          "attempts": 1938,
+          "callValue": -2.3515625,
+          "elapsedMs": 102.26100000040606,
+          "seed": -1028477380
+        },
+        {
+          "equity": 0.09951636904761905,
+          "expectedPayout": 6.8984375,
+          "expectedPayoutStandardError": 0.39691893136941686,
+          "standardError": 0.012774092923331811,
+          "method": "monte-carlo",
+          "outcomes": 512,
+          "attempts": 1919,
+          "callValue": -2.1015625,
+          "elapsedMs": 100.25008400017396,
+          "seed": 668265254
+        },
+        {
+          "equity": 0.11307198660714286,
+          "expectedPayout": 7.34375,
+          "expectedPayoutStandardError": 0.40260672531526376,
+          "standardError": 0.013725244543220954,
+          "method": "monte-carlo",
+          "outcomes": 512,
+          "attempts": 1839,
+          "callValue": -1.65625,
+          "elapsedMs": 95.59887500014156,
+          "seed": 374761400
+        },
+        {
+          "equity": 0.10993303571428571,
+          "expectedPayout": 6.7890625,
+          "expectedPayoutStandardError": 0.40070933175918416,
+          "standardError": 0.013358268928029134,
+          "method": "monte-carlo",
+          "outcomes": 512,
+          "attempts": 1831,
+          "callValue": -2.2109375,
+          "elapsedMs": 99.240333000198,
+          "seed": -744332187
+        },
+        {
+          "equity": 0.09077380952380952,
+          "expectedPayout": 6.809895833333333,
+          "expectedPayoutStandardError": 0.3919529741365883,
+          "standardError": 0.01235122731625531,
+          "method": "monte-carlo",
+          "outcomes": 512,
+          "attempts": 1822,
+          "callValue": -2.190104166666667,
+          "elapsedMs": 95.67491700034589,
+          "seed": -42973492
+        }
+      ],
+      "metrics": {
+        "flipFraction": 0,
+        "referenceDisagreement": 0,
+        "callValueSD": 0.2512172402337372,
+        "nearZeroFraction": 0.25
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "classification": "engineering-power-only; returns not read",
+  "handsPerHour": 9490.736018504425,
+  "elapsedMs": 637253,
+  "meanBatteryWattsAfter45s": -16.197558097560975,
+  "medianBatteryWattsAfter45s": -17.542548,
+  "startBatteryPercent": 50,
+  "endBatteryPercent": 53,
+  "positiveWattsMeans": "battery discharge; negative means charging"
+}

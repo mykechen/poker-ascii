@@ -1,0 +1,27 @@
+
+ RUN  v3.2.4 /private/tmp/poker-training-foundation
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  lib/poker/value-raise.test.ts [ lib/poker/value-raise.test.ts ]
+Error: Cannot find module './value-raise' imported from '/private/tmp/poker-training-foundation/lib/poker/value-raise.test.ts'
+ ❯ lib/poker/value-raise.test.ts:4:1
+      2| import {apply,createTable} from './engine';
+      3| import {projectForPlayer,type PublicView} from './view';
+      4| import {createValueRaiseControl,valueRaiseDecision,type ControlEstimat…
+       | ^
+      5| import type {PolicyAction} from './bot';
+      6| 
+
+Caused by: Error: Failed to load url ./value-raise (resolved id: ./value-raise) in /private/tmp/poker-training-foundation/lib/poker/value-raise.test.ts. Does the file exist?
+ ❯ loadAndTransform ../../../Users/mykechen/Desktop/APPS/poker-ascii/node_modules/vite/dist/node/chunks/config.js:22907:33
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  11:14:20
+   Duration  307ms (transform 92ms, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 61ms)
+

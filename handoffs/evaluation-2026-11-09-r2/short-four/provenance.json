@@ -1,0 +1,34 @@
+{
+  "startedAt": "2026-11-09T04:16:24.395Z",
+  "commit": "ea0995522ca3bdc6366a6fcfb357f3d28889d774",
+  "protocolHash": "c6cab9b0db778308e7248fadb4d8e340a33894d92eb0e862e57a86acfc0eb53e",
+  "sourceHash": "3174d13c974ccf6a1e1da9307eb49a460ceb73aefd14da0163cba52d1ad65bf2",
+  "workers": 4,
+  "hardware": {
+    "model": "Apple M4 Pro",
+    "ramGB": 48,
+    "cores": [
+      10,
+      4
+    ]
+  },
+  "node": "v20.14.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "diagnosticReuse": true,
+  "command": [
+    "/usr/local/bin/node",
+    "/private/tmp/poker-training-foundation/node_modules/.bin/vite-node",
+    "--protocol",
+    "handoffs/protocols/scaling-short-locked-r2.json",
+    "--workers",
+    "4",
+    "--out",
+    "handoffs/evaluation-2026-11-09-r2/short-four",
+    "--diagnostic-reuse"
+  ],
+  "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+  "status": "complete",
+  "maxSeconds": 600,
+  "endedAt": "2026-11-09T04:17:17.978Z"
+}

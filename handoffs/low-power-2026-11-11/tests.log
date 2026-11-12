@@ -1,0 +1,83 @@
+
+ RUN  v3.2.4 /Users/mykechen/Desktop/APPS/poker-ascii/.worktrees/poker-training-foundation
+
+ ✓ lib/poker/evaluation/all-in.test.ts (5 tests) 55258ms
+   ✓ AA vs KK preflop exhausts all 1,712,304 boards and matches frozen exact payout  55247ms
+ ❯ lib/poker/evaluation/pool.test.ts (2 tests | 1 failed) 168905ms
+   × 1 and 4 child workers produce byte-identical non-timing records 159787ms
+     → Test timed out in 120000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   ✓ fixed pauses preserve serial and parallel records and are validated in the manifest  9117ms
+ ✓ lib/poker/evaluation/protocol.test.ts (4 tests) 26672ms
+   ✓ evaluation protocol > identical arms pair to zero, deck fingerprints are sample-independent, conserved and reproducible  20159ms
+   ✓ evaluation protocol > keeps privileged scoring outside all non-evaluation modules and feature import closure  6502ms
+ ✓ lib/poker/adaptive.test.ts (6 tests) 1090ms
+   ✓ reports observer exposure and snapshots without changing adaptive seeded play  554ms
+ ✓ lib/poker/contextual-replay.test.ts (4 tests) 877ms
+   ✓ league capture excludes target cards and reproduces observer forecasts  829ms
+ ✓ lib/poker/equity-policy.test.ts (5 tests) 763ms
+   ✓ captures public decision snapshots without changing seeded actions  644ms
+ ✓ lib/poker/league.test.ts (9 tests) 462ms
+   ✓ collects public forecast contexts and maps rotated opponents by participant name  434ms
+ ✓ lib/poker/benchmark-opponents.test.ts (7 tests) 360ms
+ ✓ lib/poker/population-fit.test.ts (6 tests) 140ms
+ ✓ lib/poker/diagnostic-beliefs.test.ts (5 tests) 94ms
+ ✓ lib/poker/diagnostic-truth.test.ts (5 tests) 90ms
+ ✓ lib/poker/support-offset.test.ts (7 tests) 87ms
+ ✓ lib/poker/session.test.ts (2 tests) 69ms
+ ✓ lib/poker/equity.test.ts (7 tests) 45ms
+ ✓ lib/poker/river-ev.test.ts (9 tests) 31ms
+ ✓ lib/poker/contextual-fit.test.ts (4 tests) 31ms
+ ✓ lib/poker/train.test.ts (7 tests) 27ms
+ ✓ lib/poker/benchmark.test.ts (5 tests) 44ms
+ ✓ lib/poker/hand-features.test.ts (4 tests) 18ms
+ ✓ lib/poker/training-strict.test.ts (2 tests) 10ms
+stderr | lib/poker/rooms.test.ts > bot seats > acts only for a bot, after the pause and the think, and times out if the policy fails
+Bot did not return a legal action. 0
+
+ ✓ lib/poker/rooms.test.ts (13 tests) 10ms
+ ✓ lib/poker/decision-stability.test.ts (6 tests) 8ms
+ ✓ lib/poker/engine.test.ts (17 tests) 7ms
+ ✓ lib/poker/observations.test.ts (1 test) 5ms
+ ✓ lib/poker/bot.test.ts (8 tests) 5ms
+ ✓ lib/poker/range-beliefs.test.ts (9 tests) 4ms
+ ✓ lib/poker/local.test.ts (2 tests) 2ms
+ ✓ lib/poker/forecast-diagnostics.test.ts (4 tests) 2ms
+ ✓ lib/poker/contextual-response.test.ts (7 tests) 2ms
+ ✓ lib/poker/learner.test.ts (3 tests) 2ms
+ ✓ lib/poker/evaluation/lock.test.ts (1 test) 2ms
+ ✓ lib/poker/evaluation/provenance.test.ts (1 test) 2ms
+ ✓ lib/poker/reopening.test.ts (2 tests) 2ms
+ ✓ lib/poker/cpu-profile.test.ts (3 tests) 2ms
+ ✓ lib/poker/view-reconstruction.test.ts (1 test) 2ms
+ ✓ lib/poker/offset-confirmation.test.ts (3 tests) 2ms
+ ✓ lib/poker/calibration.test.ts (3 tests) 2ms
+ ✓ lib/poker/frequency-confirmation.test.ts (4 tests) 2ms
+ ✓ lib/poker/candidate.test.ts (2 tests) 2ms
+ ✓ lib/poker/strategies.test.ts (4 tests) 2ms
+ ✓ lib/poker/contextual-experiment.test.ts (3 tests) 2ms
+ ✓ lib/poker/population-fields.test.ts (2 tests) 1ms
+ ✓ lib/poker/handoff.test.ts (2 tests) 1ms
+ ✓ lib/poker/pots.test.ts (2 tests) 1ms
+ ✓ lib/poker/evaluation/identity.test.ts (1 test) 1ms
+ ✓ lib/poker/evaluation/budget.test.ts (2 tests) 1ms
+ ✓ lib/poker/contextual-selection.test.ts (2 tests) 1ms
+ ✓ lib/poker/decision-diagnostics.test.ts (1 test) 1ms
+ ✓ lib/poker/opponent.test.ts (1 test) 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  lib/poker/evaluation/pool.test.ts > 1 and 4 child workers produce byte-identical non-timing records
+Error: Test timed out in 120000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ lib/poker/evaluation/pool.test.ts:4:1
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 48 passed (49)
+      Tests  1 failed | 214 passed (215)
+   Start at  01:24:37
+   Duration  260.60s (transform 272ms, setup 0ms, collect 609ms, tests 255.15s, environment 3ms, prepare 1.08s)
+

@@ -1,0 +1,12 @@
+{
+  "allBaselinePolicySourcesUnchanged": true,
+  "policySourceHashes": {
+    "lib/poker/adaptive.ts": "54d3f2ff761ce71a8bec45d18b271dcf201f3e20b609eb6c16caf1e3acaf6aef",
+    "lib/poker/equity-policy.ts": "fc780e0b8cd008d927765d9e60c3f125833c598f71c51a76aa45837e99afb056",
+    "lib/poker/strategies.ts": "70dfa75b9ddeaa4383e2631655636e648172468c8f30adc1c8c504c84c7fdc94",
+    "lib/poker/equity.ts": "7712df4a9c25e5cfc1483294c0e874e6a4329afb02c3131fd95cb4c819210c28",
+    "lib/poker/river-ev.ts": "10a054b69ccb880e1bb63dead2772b34edc806fb2aaeb3a0f3463ee12def4a44"
+  },
+  "engineTsSha256": "82a39bfb23079e89506b0c149fd23615e869144f9003c3ccb8b875fae03c16f3",
+  "changeScope": "Optionalfixedworkerpausesandpower-safecontrolleronly;simulator,policylogic,RNG,payouts,featuresunchanged"
+}

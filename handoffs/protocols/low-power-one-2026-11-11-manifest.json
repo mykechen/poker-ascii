@@ -1,0 +1,8027 @@
+{
+  "protocolHash": "618aad61427e7e55671e0b700958b0aeef315458c92053b993f2d3b7015fac9b",
+  "weighting": "equal pool cells, equal table sizes, equal rotations, equal seeds; hands within match equal",
+  "matches": [
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:6:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:6:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:6:1",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:6:1",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:6:2",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:6:2",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:6:3",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "chart",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:6:3",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "chart",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:6:4",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "hero-50",
+          "chart",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:6:4",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "hero-128",
+          "chart",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:6:5",
+        "effectiveParticipants": [
+          "aggressor",
+          "hero-50",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:6:5",
+        "effectiveParticipants": [
+          "aggressor",
+          "hero-128",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:7:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:7:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:7:1",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:7:1",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:7:2",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-50",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:7:2",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-128",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:7:3",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-50",
+          "chart",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:7:3",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-128",
+          "chart",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:7:4",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "hero-50",
+          "chart",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:7:4",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "hero-128",
+          "chart",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:7:5",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "hero-50",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:7:5",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "hero-128",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:7:6",
+        "effectiveParticipants": [
+          "chart",
+          "hero-50",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:7:6",
+        "effectiveParticipants": [
+          "chart",
+          "hero-128",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:1",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:1",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:2",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-50",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:2",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-128",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:3",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-50",
+          "chart",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:3",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-128",
+          "chart",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:4",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-50",
+          "chart",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:4",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-128",
+          "chart",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:5",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-50",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:5",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-128",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:6",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "hero-50",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:6",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "hero-128",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 7,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:7",
+        "effectiveParticipants": [
+          "tight",
+          "hero-50",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 7,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:heuristic:8:7",
+        "effectiveParticipants": [
+          "tight",
+          "hero-128",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:6:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:6:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:6:1",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:6:1",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:6:2",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:6:2",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:6:3",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "baseline-v0",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:6:3",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "baseline-v0",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:6:4",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "hero-50",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:6:4",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "hero-128",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:6:5",
+        "effectiveParticipants": [
+          "aggressor",
+          "hero-50",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:6:5",
+        "effectiveParticipants": [
+          "aggressor",
+          "hero-128",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:7:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:7:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:7:1",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:7:1",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:7:2",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-50",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:7:2",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-128",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:7:3",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-50",
+          "baseline-v0",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:7:3",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-128",
+          "baseline-v0",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:7:4",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-50",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:7:4",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-128",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:7:5",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "hero-50",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:7:5",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "hero-128",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:7:6",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "hero-50",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:7:6",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "hero-128",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:1",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:1",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:2",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-50",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:2",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-128",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:3",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-50",
+          "baseline-v0",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:3",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-128",
+          "baseline-v0",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:4",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-50",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:4",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-128",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:5",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-50",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:5",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-128",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:6",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "hero-50",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:6",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "hero-128",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 7,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:7",
+        "effectiveParticipants": [
+          "tight",
+          "hero-50",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170001,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 7,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170001:baseline-opponent:8:7",
+        "effectiveParticipants": [
+          "tight",
+          "hero-128",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:6:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:6:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:6:1",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:6:1",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:6:2",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-50",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:6:2",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-128",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:6:3",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "hero-50",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:6:3",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "hero-128",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:6:4",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "hero-50",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:6:4",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "hero-128",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:6:5",
+        "effectiveParticipants": [
+          "chart",
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:6:5",
+        "effectiveParticipants": [
+          "chart",
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:7:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:7:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:7:1",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:7:1",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:7:2",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-50",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:7:2",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-128",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:7:3",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-50",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:7:3",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-128",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:7:4",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-50",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:7:4",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-128",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:7:5",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:7:5",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:7:6",
+        "effectiveParticipants": [
+          "tight",
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:7:6",
+        "effectiveParticipants": [
+          "tight",
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:1",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:1",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:2",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-50",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:2",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-128",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:3",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-50",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:3",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-128",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:4",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-50",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:4",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-128",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:5",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:5",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:6",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:6",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 7,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:7",
+        "effectiveParticipants": [
+          "station",
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 7,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:heuristic:8:7",
+        "effectiveParticipants": [
+          "station",
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:6:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:6:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:6:1",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:6:1",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:6:2",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-50",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:6:2",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-128",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:6:3",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-50",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:6:3",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-128",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:6:4",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "hero-50",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:6:4",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "hero-128",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:6:5",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:6:5",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:7:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:7:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:7:1",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:7:1",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:7:2",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-50",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:7:2",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-128",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:7:3",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-50",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:7:3",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-128",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:7:4",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-50",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:7:4",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-128",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:7:5",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:7:5",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:7:6",
+        "effectiveParticipants": [
+          "tight",
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:7:6",
+        "effectiveParticipants": [
+          "tight",
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:1",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:1",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:2",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-50",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:2",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-128",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:3",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-50",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:3",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-128",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:4",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-50",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:4",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-128",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:5",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:5",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:6",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:6",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 7,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:7",
+        "effectiveParticipants": [
+          "station",
+          "hero-50",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170002,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 7,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170002:baseline-opponent:8:7",
+        "effectiveParticipants": [
+          "station",
+          "hero-128",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:6:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:6:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:6:1",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:6:1",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:6:2",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-50",
+          "station"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:6:2",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-128",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:6:3",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-50",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:6:3",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "hero-128",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:6:4",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:6:4",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:6:5",
+        "effectiveParticipants": [
+          "tight",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:6:5",
+        "effectiveParticipants": [
+          "tight",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:7:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:7:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:7:1",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:7:1",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:7:2",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-50",
+          "station"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:7:2",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-128",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:7:3",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-50",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:7:3",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-128",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:7:4",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:7:4",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:7:5",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:7:5",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:7:6",
+        "effectiveParticipants": [
+          "station",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:7:6",
+        "effectiveParticipants": [
+          "station",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:1",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:1",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:2",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "station"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:2",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:3",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:3",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:4",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:4",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:5",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:5",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:6",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:6",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 7,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:7",
+        "effectiveParticipants": [
+          "position",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 7,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:heuristic:8:7",
+        "effectiveParticipants": [
+          "position",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:6:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:6:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:6:1",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:6:1",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:6:2",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-50",
+          "station"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:6:2",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-128",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:6:3",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-50",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:6:3",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "hero-128",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:6:4",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:6:4",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:6:5",
+        "effectiveParticipants": [
+          "tight",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:6:5",
+        "effectiveParticipants": [
+          "tight",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:7:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:7:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:7:1",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:7:1",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:7:2",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-50",
+          "station"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:7:2",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-128",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:7:3",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-50",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:7:3",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-128",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:7:4",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:7:4",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:7:5",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:7:5",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:7:6",
+        "effectiveParticipants": [
+          "station",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:7:6",
+        "effectiveParticipants": [
+          "station",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:1",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:1",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:2",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "station"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:2",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:3",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:3",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:4",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:4",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:5",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:5",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:6",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:6",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 7,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:7",
+        "effectiveParticipants": [
+          "position",
+          "hero-50",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170003,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 7,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170003:baseline-opponent:8:7",
+        "effectiveParticipants": [
+          "position",
+          "hero-128",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:6:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:6:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:6:1",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:6:1",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:6:2",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-50",
+          "position"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:6:2",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "hero-128",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:6:3",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "hero-50",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:6:3",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "hero-128",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:6:4",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "hero-50",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:6:4",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "hero-128",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:6:5",
+        "effectiveParticipants": [
+          "station",
+          "hero-50",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:6:5",
+        "effectiveParticipants": [
+          "station",
+          "hero-128",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:7:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:7:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:7:1",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:7:1",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:7:2",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "position"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:7:2",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:7:3",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:7:3",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:7:4",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:7:4",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:7:5",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "hero-50",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:7:5",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "hero-128",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:7:6",
+        "effectiveParticipants": [
+          "position",
+          "hero-50",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:7:6",
+        "effectiveParticipants": [
+          "position",
+          "hero-128",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:1",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:1",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:2",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "position"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:2",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:3",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:3",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:4",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:4",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:5",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:5",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "position",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:6",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "hero-50",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:6",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "hero-128",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 7,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:7",
+        "effectiveParticipants": [
+          "aggressor",
+          "hero-50",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 7,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:heuristic:8:7",
+        "effectiveParticipants": [
+          "aggressor",
+          "hero-128",
+          "position",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:6:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:6:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:6:1",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:6:1",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:6:2",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-50",
+          "position"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:6:2",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-128",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:6:3",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-50",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:6:3",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "hero-128",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:6:4",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "hero-50",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:6:4",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "hero-128",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:6:5",
+        "effectiveParticipants": [
+          "station",
+          "hero-50",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:6:5",
+        "effectiveParticipants": [
+          "station",
+          "hero-128",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:7:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:7:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:7:1",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:7:1",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:7:2",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "position"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:7:2",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:7:3",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:7:3",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:7:4",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:7:4",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:7:5",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "hero-50",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:7:5",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "hero-128",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:7:6",
+        "effectiveParticipants": [
+          "position",
+          "hero-50",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:7:6",
+        "effectiveParticipants": [
+          "position",
+          "hero-128",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:1",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:1",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:2",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "position"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:2",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:3",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:3",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:4",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:4",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:5",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:5",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:6",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "hero-50",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:6",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "hero-128",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 7,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:7",
+        "effectiveParticipants": [
+          "aggressor",
+          "hero-50",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170004,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 7,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170004:baseline-opponent:8:7",
+        "effectiveParticipants": [
+          "aggressor",
+          "hero-128",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:6:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:6:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:6:1",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:6:1",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:6:2",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:6:2",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:6:3",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "aggressor",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:6:3",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "aggressor",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:6:4",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "hero-50",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:6:4",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "hero-128",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:6:5",
+        "effectiveParticipants": [
+          "position",
+          "hero-50",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 6,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:6:5",
+        "effectiveParticipants": [
+          "position",
+          "hero-128",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:7:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:7:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:7:1",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:7:1",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:7:2",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:7:2",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:7:3",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "aggressor",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:7:3",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "aggressor",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:7:4",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:7:4",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:7:5",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "hero-50",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:7:5",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "hero-128",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:7:6",
+        "effectiveParticipants": [
+          "aggressor",
+          "hero-50",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 7,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:7:6",
+        "effectiveParticipants": [
+          "aggressor",
+          "hero-128",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:1",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:1",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:2",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-50",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:2",
+        "effectiveParticipants": [
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-128",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:3",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-50",
+          "aggressor",
+          "chart"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:3",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-128",
+          "aggressor",
+          "chart"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:4",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-50",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:4",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "chart",
+          "hero-128",
+          "aggressor",
+          "chart",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:5",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "hero-50",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:5",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "chart",
+          "hero-128",
+          "aggressor",
+          "chart",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:6",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "hero-50",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:6",
+        "effectiveParticipants": [
+          "aggressor",
+          "chart",
+          "hero-128",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 7,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:7",
+        "effectiveParticipants": [
+          "chart",
+          "hero-50",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "heuristic",
+        "players": 8,
+        "rotation": 7,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:heuristic:8:7",
+        "effectiveParticipants": [
+          "chart",
+          "hero-128",
+          "aggressor",
+          "chart",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:6:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:6:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:6:1",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:6:1",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:6:2",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:6:2",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:6:3",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "hero-50",
+          "aggressor",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:6:3",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "hero-128",
+          "aggressor",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:6:4",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "hero-50",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:6:4",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "hero-128",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:6:5",
+        "effectiveParticipants": [
+          "position",
+          "hero-50",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 6,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:6:5",
+        "effectiveParticipants": [
+          "position",
+          "hero-128",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:7:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:7:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:7:1",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:7:1",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:7:2",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:7:2",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:7:3",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "aggressor",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:7:3",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "aggressor",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:7:4",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "hero-50",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:7:4",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "hero-128",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:7:5",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "hero-50",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:7:5",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "hero-128",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:7:6",
+        "effectiveParticipants": [
+          "aggressor",
+          "hero-50",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 7,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:7:6",
+        "effectiveParticipants": [
+          "aggressor",
+          "hero-128",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 0,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:0",
+        "effectiveParticipants": [
+          "hero-50",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 0,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:0",
+        "effectiveParticipants": [
+          "hero-128",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 1,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:1",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-50"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 1,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:1",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-128"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 2,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:2",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-50",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 2,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:2",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-128",
+          "aggressor"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 3,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:3",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-50",
+          "aggressor",
+          "baseline-v0"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 3,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:3",
+        "effectiveParticipants": [
+          "tight",
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-128",
+          "aggressor",
+          "baseline-v0"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 4,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:4",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-50",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 4,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:4",
+        "effectiveParticipants": [
+          "station",
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-128",
+          "aggressor",
+          "baseline-v0",
+          "tight"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 5,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:5",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-50",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 5,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:5",
+        "effectiveParticipants": [
+          "position",
+          "aggressor",
+          "baseline-v0",
+          "hero-128",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 6,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:6",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "hero-50",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 6,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:6",
+        "effectiveParticipants": [
+          "aggressor",
+          "baseline-v0",
+          "hero-128",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position"
+        ]
+      }
+    ],
+    [
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 7,
+        "arm": "50",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:7",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "hero-50",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      },
+      {
+        "seed": 170005,
+        "cell": "baseline-opponent",
+        "players": 8,
+        "rotation": 7,
+        "arm": "128",
+        "hands": 1,
+        "outputIdentity": "170005:baseline-opponent:8:7",
+        "effectiveParticipants": [
+          "baseline-v0",
+          "hero-128",
+          "aggressor",
+          "baseline-v0",
+          "tight",
+          "station",
+          "position",
+          "aggressor"
+        ]
+      }
+    ]
+  ],
+  "physicalHands": 210
+}

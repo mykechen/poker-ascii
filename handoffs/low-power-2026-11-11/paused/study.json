@@ -1,0 +1,21 @@
+{
+  "frozenAt": "2026-11-10T17:16:16.378625+00:00",
+  "classification": "engineering-power-calibration-not-profit",
+  "clusters": 80,
+  "physicalHands": 6720,
+  "workers": 2,
+  "qos": "normal",
+  "collectBatteryDraw": true,
+  "stopBatteryPercent": 25,
+  "powerSampleSeconds": 15,
+  "sourceHash": "7e5a626b965f4ffe1e94c47fcba7a4bc5663a2710be300c1e1c1733699a092c4",
+  "runs": [
+    {
+      "protocol": "handoffs/protocols/low-power-two-paused-2026-11-11.json",
+      "protocolHash": "904d7ed3b4f887dcbe2a3f5b3759b81d90c40d92255f441c53e2bdf954e13896",
+      "out": "handoffs/low-power-2026-11-11/paused/run-1"
+    }
+  ],
+  "noReturnAnalysis": true,
+  "budgetMaximumHours": 0.25
+}

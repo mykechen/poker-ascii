@@ -1,0 +1,23 @@
+{
+  "frozenAt": "2026-11-10T16:58:39.548494+00:00",
+  "classification": "engineering-power-calibration-not-profit",
+  "clusters": 5,
+  "physicalHands": 420,
+  "workers": 1,
+  "qos": "background",
+  "collectBatteryDraw": true,
+  "stopBatteryPercent": 25,
+  "powerSampleSeconds": 15,
+  "sourceHash": "d5a1f2534e93b9a35ceb4a0fa1bc45e476d2934b2d9279ed1b16087f05e4dee7",
+  "runs": [
+    {
+      "protocol": "handoffs/protocols/low-power-one-2026-11-11.json",
+      "protocolHash": "618aad61427e7e55671e0b700958b0aeef315458c92053b993f2d3b7015fac9b",
+      "out": "handoffs/low-power-2026-11-11/one/run-1"
+    }
+  ],
+  "noReturnAnalysis": true,
+  "powerAnalysis": "Inspect only throughput and power telemetry; no profit summaries or policy tuning. Compare with historical14worker17Wadapter/65Wbattery draw. No E-core-affinity guarantee; judge measured power.",
+  "budgetMaximumHours": 0.25,
+  "infrastructureRuling": "Same unused reservation and immutable protocol; prior launcher failed before any process or simulation existed; registry confirms no seed started. Correct executable resolved viaPATH."
+}

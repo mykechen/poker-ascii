@@ -1,0 +1,68 @@
+{
+  "hands": 4,
+  "seats": 8,
+  "stack": 200,
+  "smallBlind": 1,
+  "bigBlind": 2,
+  "seed": 103004,
+  "names": [
+    "current",
+    "opponent-1",
+    "opponent-2",
+    "opponent-3",
+    "opponent-4",
+    "opponent-5",
+    "opponent-6",
+    "opponent-7"
+  ],
+  "net": [
+    0,
+    -8,
+    -5,
+    -356,
+    -30,
+    401,
+    0,
+    -2
+  ],
+  "bb100": [
+    0,
+    -100,
+    -62.5,
+    -4450,
+    -375,
+    5012.5,
+    0,
+    -25
+  ],
+  "buttons": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0
+  ],
+  "decisions": [
+    4,
+    5,
+    5,
+    25,
+    15,
+    6,
+    4,
+    5
+  ],
+  "fallbacks": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "elapsedMs": 47687.683124999996,
+  "workers": 1,
+  "peakWorkerRssBytes": [
+    316817408,
+    316817408
+  ],
+  "physicalHands": 336,
+  "handsPerHour": 25365.040210264986,
+  "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded"
+}

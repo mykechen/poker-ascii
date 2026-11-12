@@ -1,0 +1,14 @@
+
+> nlhe@0.1.0 test
+> vitest run --config vitest.config.mts lib/poker/evaluation/budget.test.ts
+
+
+ RUN  v3.2.4 /private/tmp/poker-training-foundation
+
+ ✓ lib/poker/evaluation/budget.test.ts (2 tests) 1ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  13:36:31
+   Duration  120ms (transform 13ms, setup 0ms, collect 11ms, tests 1ms, environment 0ms, prepare 24ms)
+

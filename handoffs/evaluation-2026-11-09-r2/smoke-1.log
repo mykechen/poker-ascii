@@ -1,0 +1,31 @@
+sysctl: sysctl fmt -1 1024 1: Operation not permitted
+node:internal/errors:984
+  const err = new Error(message);
+              ^
+
+Error: Command failed: sysctl -n hw.perflevel0.physicalcpu hw.perflevel1.physicalcpu
+sysctl: sysctl fmt -1 1024 1: Operation not permitted
+
+    at genericNodeError (node:internal/errors:984:15)
+    at wrappedFn (node:internal/errors:538:14)
+    at checkExecSyncError (node:child_process:890:11)
+    at execFileSync (node:child_process:926:15)
+    at /private/tmp/poker-training-foundation/scripts/evaluate-frozen.ts:18:53
+    at ViteNodeRunner.runModule (file:///Users/mykechen/Desktop/APPS/poker-ascii/node_modules/vite-node/dist/client.mjs:397:4)
+    at ViteNodeRunner.directRequest (file:///Users/mykechen/Desktop/APPS/poker-ascii/node_modules/vite-node/dist/client.mjs:375:3)
+    at ViteNodeRunner.cachedRequest (file:///Users/mykechen/Desktop/APPS/poker-ascii/node_modules/vite-node/dist/client.mjs:189:11)
+    at ViteNodeRunner.executeFile (file:///Users/mykechen/Desktop/APPS/poker-ascii/node_modules/vite-node/dist/client.mjs:162:10)
+    at CAC.run (file:///Users/mykechen/Desktop/APPS/poker-ascii/node_modules/vite-node/dist/cli.mjs:102:28) {
+  status: 1,
+  signal: null,
+  output: [
+    null,
+    '',
+    'sysctl: sysctl fmt -1 1024 1: Operation not permitted\n'
+  ],
+  pid: 14946,
+  stdout: '',
+  stderr: 'sysctl: sysctl fmt -1 1024 1: Operation not permitted\n'
+}
+
+Node.js v20.14.0

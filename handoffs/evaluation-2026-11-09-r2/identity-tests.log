@@ -1,0 +1,15 @@
+
+> nlhe@0.1.0 test
+> vitest run --config vitest.config.mts lib/poker/evaluation/identity.test.ts lib/poker/evaluation/provenance.test.ts
+
+
+ RUN  v3.2.4 /private/tmp/poker-training-foundation
+
+ ✓ lib/poker/evaluation/identity.test.ts (1 test) 1ms
+ ✓ lib/poker/evaluation/provenance.test.ts (1 test) 2ms
+
+ Test Files  2 passed (2)
+      Tests  2 passed (2)
+   Start at  12:00:44
+   Duration  213ms (transform 85ms, setup 0ms, collect 191ms, tests 3ms, environment 0ms, prepare 52ms)
+

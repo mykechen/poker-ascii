@@ -1,0 +1,68 @@
+{
+  "id": "adoption-cost-v1",
+  "classification": "engineering-cost-not-profit",
+  "seeds": [
+    140001,
+    140002,
+    140003,
+    140004,
+    140005,
+    140006,
+    140007,
+    140008,
+    140009,
+    140010,
+    140011,
+    140012,
+    140013,
+    140014,
+    140015,
+    140016,
+    140017,
+    140018,
+    140019,
+    140020
+  ],
+  "pool": [
+    {
+      "id": "heuristic",
+      "opponents": [
+        "chart",
+        "tight",
+        "station",
+        "position",
+        "aggressor"
+      ]
+    },
+    {
+      "id": "baseline-opponent",
+      "opponents": [
+        "baseline-v0",
+        "tight",
+        "station",
+        "position",
+        "aggressor"
+      ]
+    }
+  ],
+  "players": [
+    6,
+    7,
+    8
+  ],
+  "hands": 1,
+  "arms": [
+    50,
+    128
+  ],
+  "stack": 200,
+  "blinds": [
+    1,
+    2
+  ],
+  "order": "50/128 on even seed index, reversed on odd",
+  "maxSeconds": 7140,
+  "sourceHash": "7e5a626b965f4ffe1e94c47fcba7a4bc5663a2710be300c1e1c1733699a092c4",
+  "scriptHash": "b6366611029e9cc03be7d040780edd60edeca20d49654fe2e74585ad61b50f68",
+  "gate": "mean hero policy-call ratio128/50<=3 and mean total hero lifecycle milliseconds/hand ratio<=3; zero fallbacks/illegal actions; finite outputs. Absolute p95/p99 reported for later latency gate."
+}

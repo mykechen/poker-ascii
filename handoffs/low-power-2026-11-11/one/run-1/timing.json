@@ -1,0 +1,49 @@
+{
+  "elapsedMs": 290031,
+  "activeElapsedMs": 290025.70025000005,
+  "clockGapMs": 5.5863749999552965,
+  "workers": 1,
+  "peakWorkerRssBytes": [
+    275775488,
+    275775488,
+    275775488,
+    275775488,
+    283525120
+  ],
+  "workerMemory": [
+    {
+      "pid": 91878,
+      "peakRssBytes": 283525120
+    }
+  ],
+  "seedTimings": [
+    {
+      "seed": 170001,
+      "elapsedMs": 67724.188042,
+      "allInMs": 0.20566299999813964
+    },
+    {
+      "seed": 170002,
+      "elapsedMs": 54653.594958,
+      "allInMs": 0.2290100000682287
+    },
+    {
+      "seed": 170003,
+      "elapsedMs": 55132.85504200001,
+      "allInMs": 0.2089519999717595
+    },
+    {
+      "seed": 170004,
+      "elapsedMs": 54390.66949999999,
+      "allInMs": 0.2635850000369828
+    },
+    {
+      "seed": 170005,
+      "elapsedMs": 57134.99633299996,
+      "allInMs": 0.2569570000632666
+    }
+  ],
+  "physicalHands": 420,
+  "handsPerHour": 5213.235826515097,
+  "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded"
+}

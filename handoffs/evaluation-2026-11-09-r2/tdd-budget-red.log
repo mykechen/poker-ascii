@@ -1,0 +1,30 @@
+
+> nlhe@0.1.0 test
+> vitest run --config vitest.config.mts lib/poker/evaluation/budget.test.ts
+
+
+ RUN  v3.2.4 /private/tmp/poker-training-foundation
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  lib/poker/evaluation/budget.test.ts [ lib/poker/evaluation/budget.test.ts ]
+Error: Cannot find module './budget' imported from '/private/tmp/poker-training-foundation/lib/poker/evaluation/budget.test.ts'
+ ❯ lib/poker/evaluation/budget.test.ts:2:1
+      1| import {it,expect} from 'vitest';
+      2| import {budgetState} from './budget';
+       | ^
+      3| it('charges suspended wall time even when the monotonic clock paused',…
+      4|  expect(budgetState(1000,10,62000,11,60000)).toEqual({elapsedMs:61000,…
+
+Caused by: Error: Failed to load url ./budget (resolved id: ./budget) in /private/tmp/poker-training-foundation/lib/poker/evaluation/budget.test.ts. Does the file exist?
+ ❯ loadAndTransform ../../../Users/mykechen/Desktop/APPS/poker-ascii/node_modules/vite/dist/node/chunks/config.js:22907:33
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  13:36:30
+   Duration  123ms (transform 12ms, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 30ms)
+

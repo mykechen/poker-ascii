@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "comparedHands": 27972,
+  "fieldsExcluded": [
+    "adjustedBb"
+  ],
+  "adjustedRun": "sustained-14-awake",
+  "rawRun": "raw-cost-matched"
+}

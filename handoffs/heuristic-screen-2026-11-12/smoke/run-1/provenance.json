@@ -1,0 +1,34 @@
+{
+  "startedAt": "2026-11-12T01:56:44.499Z",
+  "commit": "dc8f200fb44ff5e83e40e37476cd3f26d73b7855",
+  "protocolHash": "3b54e8794a5f9f427fa5d6e05f40bf28b010526c7fb1c6905a1f881a0c59653a",
+  "sourceHash": "5f7fe099eb5352303c69e50d6bdf2b3d4b85480e01dde3985f8d28b368c34681",
+  "workers": 2,
+  "hardware": {
+    "model": "Apple M4 Pro",
+    "ramGB": 48,
+    "cores": [
+      10,
+      4
+    ]
+  },
+  "node": "v20.14.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "diagnosticReuse": false,
+  "command": [
+    "/usr/local/bin/node",
+    "/Users/mykechen/Desktop/APPS/poker-ascii/.worktrees/poker-training-foundation/node_modules/.bin/vite-node",
+    "--protocol",
+    "handoffs/protocols/heuristic-smoke-v1.json",
+    "--workers",
+    "2",
+    "--out",
+    "handoffs/heuristic-screen-2026-11-12/smoke/run-1"
+  ],
+  "sleepPrevention": "caffeinate -is -w runnerPID (process-scoped, AC system-sleep assertion)",
+  "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+  "status": "complete",
+  "maxSeconds": 900,
+  "endedAt": "2026-11-12T01:58:39.478Z"
+}

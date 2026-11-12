@@ -1,0 +1,33 @@
+{
+  "startedAt": "2026-11-09T04:01:14.830Z",
+  "commit": "ea0995522ca3bdc6366a6fcfb357f3d28889d774",
+  "protocolHash": "94867d6428e954cf210abd05f19128c4c726de6f61f2a6e17941cdb6458d53ed",
+  "sourceHash": "d9073af220cc63e9a3db9d80b06d0f30d294862cc54cb8236279df23690b8ac2",
+  "workers": 1,
+  "hardware": {
+    "model": "Apple M4 Pro",
+    "ramGB": 48,
+    "cores": [
+      10,
+      4
+    ]
+  },
+  "node": "v20.14.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "diagnosticReuse": false,
+  "command": [
+    "/usr/local/bin/node",
+    "/private/tmp/poker-training-foundation/node_modules/.bin/vite-node",
+    "--protocol",
+    "handoffs/protocols/scaling-calibration-r2.json",
+    "--workers",
+    "1",
+    "--out",
+    "handoffs/evaluation-2026-11-09-r2/calibration-1"
+  ],
+  "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+  "status": "aborted-runtime-prediction",
+  "maxSeconds": 7200,
+  "reason": "Fixed calibration predicted to exceed 10-minute scaling configuration limit; no partial throughput used for selecting workers. No workers remained after termination."
+}

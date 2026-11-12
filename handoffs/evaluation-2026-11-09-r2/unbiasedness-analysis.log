@@ -1,0 +1,44 @@
+{
+  "pairedAdjustmentCI": {
+    "mean": -0.5525752314814816,
+    "ci95": [
+      -1.7353289757322357,
+      0.6301785127692725
+    ],
+    "nSeedClusters": 20,
+    "se": 0.565093239974788
+  },
+  "passed": true,
+  "byArm": {
+    "128": {
+      "rawSD": 57.76931118739525,
+      "adjustedSD": 54.82774829485759,
+      "varianceRatio": 0.9007545035113914,
+      "pairedAdjustmentCI": {
+        "mean": -0.7093460648148149,
+        "ci95": [
+          -1.775902303831698,
+          0.35721017420206813
+        ],
+        "nSeedClusters": 20,
+        "se": 0.5095766753232077
+      }
+    },
+    "50": {
+      "rawSD": 56.843630043958846,
+      "adjustedSD": 53.021442303734425,
+      "varianceRatio": 0.8700404937540994,
+      "pairedAdjustmentCI": {
+        "mean": -0.3958043981481483,
+        "ci95": [
+          -1.838177091537109,
+          1.0465682952408124
+        ],
+        "nSeedClusters": 20,
+        "se": 0.689133357235457
+      }
+    }
+  },
+  "physicalHands": 960,
+  "note": "CI diagnostic supports, but cannot prove, unbiasedness; conditional exact enumeration provides the argument."
+}

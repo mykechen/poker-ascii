@@ -1,0 +1,292 @@
+{
+  "classification": "Planning proxies only; not permission to execute Phase1B/3+ or final policy-specific N",
+  "budgetHours": 48,
+  "thisSessionComputeHours": 2.355734347986111,
+  "spent": [
+    {
+      "run": "sustained-10",
+      "hours": 0.16667166666666666,
+      "status": "failed"
+    },
+    {
+      "run": "calibration-1",
+      "hours": 0.16666666666666666,
+      "status": "conservative ten-minute charge; exact abort timestamp unavailable"
+    },
+    {
+      "run": "short-1",
+      "hours": 0.08482611111111112,
+      "status": "complete"
+    },
+    {
+      "run": "sustained-14-awake",
+      "hours": 0.15012083333333331,
+      "status": "complete"
+    },
+    {
+      "run": "sustained-8",
+      "hours": 0.1423552777777778,
+      "status": "complete"
+    },
+    {
+      "run": "sustained-1",
+      "hours": 0.157635,
+      "status": "complete"
+    },
+    {
+      "run": "variance-pilot",
+      "hours": 0.4242019444444444,
+      "status": "complete"
+    },
+    {
+      "run": "short-ten",
+      "hours": 0.008523333333333334,
+      "status": "complete"
+    },
+    {
+      "run": "raw-cost-matched",
+      "hours": 0.1381763888888889,
+      "status": "complete"
+    },
+    {
+      "run": "raw-cost",
+      "hours": 0.1402775,
+      "status": "complete"
+    },
+    {
+      "run": "short-fourteen",
+      "hours": 0.006658611111111111,
+      "status": "complete"
+    },
+    {
+      "run": "sustained-14",
+      "hours": 0.2635586111111111,
+      "status": "failed"
+    },
+    {
+      "run": "short-eight",
+      "hours": 0.008598888888888889,
+      "status": "complete"
+    },
+    {
+      "run": "smoke-four",
+      "hours": 0.007840277777777778,
+      "status": "complete"
+    },
+    {
+      "run": "smoke-serial",
+      "hours": 0.013255555555555555,
+      "status": "complete"
+    },
+    {
+      "run": "short-four",
+      "hours": 0.014884166666666667,
+      "status": "complete"
+    },
+    {
+      "run": "sustained-4",
+      "hours": 0.15197888888888889,
+      "status": "complete"
+    },
+    {
+      "run": "unbiased",
+      "hours": 0.03090361111111111,
+      "status": "complete"
+    },
+    {
+      "run": "SD diagnostic replay",
+      "hours": 0.028601014652777777,
+      "status": "complete"
+    },
+    {
+      "run": "verification/golden allowance",
+      "hours": 0.25,
+      "status": "conservative allowance covering archived test/golden runs"
+    }
+  ],
+  "engineeringCapsHours": {
+    "Task4.0 heuristic exploratory screen": 2,
+    "Task3A exporter/bridge checks": 0.5,
+    "Task4A labels allowance (not throughput guarantee)": 4,
+    "Task4B fixed training allowance": 2,
+    "Task5 parity/latency checks": 0.5
+  },
+  "recommendedCurrentEstimator": "rawBb",
+  "varianceUpperFactor": 1.0856944942041016,
+  "varianceUpper": 63.099982755470585,
+  "planningPhysicalHandsPerHour": 159044.7505836645,
+  "samplingNI": {
+    "assumedTrueEffectBb100": 30.407523555233695,
+    "nullThresholdBb100": -5,
+    "comparisons": 1,
+    "requiredSeedClusters": 3955,
+    "totalPhysicalHands": 332220,
+    "handsPerArm": 166110,
+    "runsAtMostTwoHours": 2,
+    "predictedHours": 2.0888460560993978,
+    "runSlotsHours": 4,
+    "maxClustersPerRun": 2840,
+    "assumptions": "Full rotation; variance and per-arm cost proxy from 50/128 pilot; future policy-specific pilot required before final N."
+  },
+  "samplingAssumedTrueEffectBb100": 30.407523555233695,
+  "samplingAssumptionRule": "negative mean retained; otherwise max(0,min(half mean, nominal95% lower bound))",
+  "samplingMarginProposalBb100": 5,
+  "ABCPrimaryScenarios": [
+    {
+      "assumedTrueEffectBb100": 10,
+      "nullThresholdBb100": 0,
+      "comparisons": 3,
+      "requiredSeedClusters": 66065,
+      "totalPhysicalHands": 8324190,
+      "handsPerArm": 2774730,
+      "runsAtMostTwoHours": 35,
+      "predictedHours": 52.33866549792922,
+      "runSlotsHours": 70,
+      "maxClustersPerRun": 1890,
+      "assumptions": "Full rotation; variance and per-arm cost proxy from 50/128 pilot; future policy-specific pilot required before final N.",
+      "claim": "superiority",
+      "allPlanPredictedHours": 65.78324590201473,
+      "allPlanReservedRunSlotHours": 85.35573434798611,
+      "fits48Predicted": false,
+      "fits48ReservedSlots": false
+    },
+    {
+      "assumedTrueEffectBb100": 20,
+      "nullThresholdBb100": 0,
+      "comparisons": 3,
+      "requiredSeedClusters": 16520,
+      "totalPhysicalHands": 2081520,
+      "handsPerArm": 693840,
+      "runsAtMostTwoHours": 9,
+      "predictedHours": 13.087637236445783,
+      "runSlotsHours": 18,
+      "maxClustersPerRun": 1890,
+      "assumptions": "Full rotation; variance and per-arm cost proxy from 50/128 pilot; future policy-specific pilot required before final N.",
+      "claim": "superiority",
+      "allPlanPredictedHours": 26.532217640531293,
+      "allPlanReservedRunSlotHours": 33.355734347986115,
+      "fits48Predicted": true,
+      "fits48ReservedSlots": true
+    },
+    {
+      "assumedTrueEffectBb100": 30,
+      "nullThresholdBb100": 0,
+      "comparisons": 3,
+      "requiredSeedClusters": 7345,
+      "totalPhysicalHands": 925470,
+      "handsPerArm": 308490,
+      "runsAtMostTwoHours": 4,
+      "predictedHours": 5.818928299134036,
+      "runSlotsHours": 8,
+      "maxClustersPerRun": 1890,
+      "assumptions": "Full rotation; variance and per-arm cost proxy from 50/128 pilot; future policy-specific pilot required before final N.",
+      "claim": "superiority",
+      "allPlanPredictedHours": 19.263508703219543,
+      "allPlanReservedRunSlotHours": 23.35573434798611,
+      "fits48Predicted": true,
+      "fits48ReservedSlots": true
+    },
+    {
+      "assumedTrueEffectBb100": 10,
+      "nullThresholdBb100": 5,
+      "comparisons": 3,
+      "requiredSeedClusters": 264245,
+      "totalPhysicalHands": 33294870,
+      "handsPerArm": 11098290,
+      "runsAtMostTwoHours": 140,
+      "predictedHours": 209.34277854386295,
+      "runSlotsHours": 280,
+      "maxClustersPerRun": 1890,
+      "assumptions": "Full rotation; variance and per-arm cost proxy from 50/128 pilot; future policy-specific pilot required before final N.",
+      "claim": "at least +5",
+      "allPlanPredictedHours": 222.78735894794846,
+      "allPlanReservedRunSlotHours": 295.35573434798613,
+      "fits48Predicted": false,
+      "fits48ReservedSlots": false
+    },
+    {
+      "assumedTrueEffectBb100": 20,
+      "nullThresholdBb100": 5,
+      "comparisons": 3,
+      "requiredSeedClusters": 29365,
+      "totalPhysicalHands": 3699990,
+      "handsPerArm": 1233330,
+      "runsAtMostTwoHours": 16,
+      "predictedHours": 23.26382974868223,
+      "runSlotsHours": 32,
+      "maxClustersPerRun": 1890,
+      "assumptions": "Full rotation; variance and per-arm cost proxy from 50/128 pilot; future policy-specific pilot required before final N.",
+      "claim": "at least +5",
+      "allPlanPredictedHours": 36.70841015276774,
+      "allPlanReservedRunSlotHours": 47.355734347986115,
+      "fits48Predicted": true,
+      "fits48ReservedSlots": true
+    },
+    {
+      "assumedTrueEffectBb100": 30,
+      "nullThresholdBb100": 5,
+      "comparisons": 3,
+      "requiredSeedClusters": 10570,
+      "totalPhysicalHands": 1331820,
+      "handsPerArm": 443940,
+      "runsAtMostTwoHours": 6,
+      "predictedHours": 8.373869587725904,
+      "runSlotsHours": 12,
+      "maxClustersPerRun": 1890,
+      "assumptions": "Full rotation; variance and per-arm cost proxy from 50/128 pilot; future policy-specific pilot required before final N.",
+      "claim": "at least +5",
+      "allPlanPredictedHours": 21.818449991811413,
+      "allPlanReservedRunSlotHours": 27.35573434798611,
+      "fits48Predicted": true,
+      "fits48ReservedSlots": true
+    }
+  ],
+  "singleCandidateOption": [
+    {
+      "assumedTrueEffectBb100": 10,
+      "nullThresholdBb100": 0,
+      "comparisons": 1,
+      "requiredSeedClusters": 49530,
+      "totalPhysicalHands": 4160520,
+      "handsPerArm": 2080260,
+      "runsAtMostTwoHours": 18,
+      "predictedHours": 26.159429875753013,
+      "runSlotsHours": 36,
+      "maxClustersPerRun": 2840,
+      "assumptions": "Full rotation; variance and per-arm cost proxy from 50/128 pilot; future policy-specific pilot required before final N."
+    },
+    {
+      "assumedTrueEffectBb100": 20,
+      "nullThresholdBb100": 0,
+      "comparisons": 1,
+      "requiredSeedClusters": 12385,
+      "totalPhysicalHands": 1040340,
+      "handsPerArm": 520170,
+      "runsAtMostTwoHours": 5,
+      "predictedHours": 6.541177852033133,
+      "runSlotsHours": 10,
+      "maxClustersPerRun": 2840,
+      "assumptions": "Full rotation; variance and per-arm cost proxy from 50/128 pilot; future policy-specific pilot required before final N."
+    },
+    {
+      "assumedTrueEffectBb100": 30,
+      "nullThresholdBb100": 0,
+      "comparisons": 1,
+      "requiredSeedClusters": 5505,
+      "totalPhysicalHands": 462420,
+      "handsPerArm": 231210,
+      "runsAtMostTwoHours": 2,
+      "predictedHours": 2.907483574924699,
+      "runSlotsHours": 4,
+      "maxClustersPerRun": 2840,
+      "assumptions": "Full rotation; variance and per-arm cost proxy from 50/128 pilot; future policy-specific pilot required before final N."
+    }
+  ],
+  "limitations": [
+    "Future model/heuristic variance, covariance and latency unmeasured; freeze new pilot-based N before confirmation.",
+    "ABC counts size the primary model-v1 contrast with family3 correction; secondary contrasts are not guaranteed80% power without coherent effect assumptions.",
+    "Engineering allowances are hard compute envelopes, not proof of adequate training data/model quality.",
+    "Budget excludes inactive approval/calendar waiting, includes suspended time within a launched run.",
+    "Ten-minute sustained target yielded fixed completed windows512\u2013567s; winner540s, not an exactly600s completed run."
+  ]
+}

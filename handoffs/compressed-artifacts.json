@@ -1,0 +1,26 @@
+[
+  {
+    "original": "handoffs/adoption-2026-11-10/run-1/hands.jsonl",
+    "compressed": "handoffs/adoption-2026-11-10/run-1/hands.jsonl.gz",
+    "bytes": 333652328,
+    "sha256": "ce5bc40690115339f4c64b41f61dddebf76da7ea7a8ebdd46fe780a2f8707b56"
+  },
+  {
+    "original": "handoffs/evaluation-2026-11-09-r2/variance-pilot/hands.jsonl",
+    "compressed": "handoffs/evaluation-2026-11-09-r2/variance-pilot/hands.jsonl.gz",
+    "bytes": 98451767,
+    "sha256": "d081675ee67d76b37d78615c50769b4823efa66e91b834e5c0ac32a03a791c19"
+  },
+  {
+    "original": "handoffs/protocols/adoption-128-fresh-r1-manifest.json",
+    "compressed": "handoffs/protocols/adoption-128-fresh-r1-manifest.json.gz",
+    "bytes": 99345717,
+    "sha256": "7b3e78b41e73677ca57d984bbcaa884a28c378448cfc8acc7c74e99d1a99ad26"
+  },
+  {
+    "original": "handoffs/protocols/adoption-128-r1-manifest.json",
+    "compressed": "handoffs/protocols/adoption-128-r1-manifest.json.gz",
+    "bytes": 99345717,
+    "sha256": "bc02da0ae9f6381014bf9b845844923783408d11c7d4a4560aed62d31e94c6c2"
+  }
+]

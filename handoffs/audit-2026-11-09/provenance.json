@@ -1,0 +1,24 @@
+{
+  "commit": "ea0995522ca3bdc6366a6fcfb357f3d28889d774",
+  "runner": "handoffs/audit-2026-11-09/measure.ts",
+  "purpose": "fixed 960-hand descriptive audit, not EV confirmation",
+  "seeds": [
+    104001,
+    104002,
+    104003,
+    104004,
+    104005,
+    104006,
+    104007,
+    104008,
+    104009,
+    104010
+  ],
+  "arms": [
+    50,
+    128
+  ],
+  "rotations": 6,
+  "handsPerMatch": 8,
+  "runtimeLimitMs": 7200000
+}

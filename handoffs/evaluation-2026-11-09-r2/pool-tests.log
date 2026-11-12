@@ -1,0 +1,15 @@
+
+> nlhe@0.1.0 test
+> vitest run --config vitest.config.mts lib/poker/evaluation/pool.test.ts
+
+
+ RUN  v3.2.4 /private/tmp/poker-training-foundation
+
+ ✓ lib/poker/evaluation/pool.test.ts (1 test) 23757ms
+   ✓ 1 and 4 child workers produce byte-identical non-timing records  23756ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  11:50:44
+   Duration  23.99s (transform 86ms, setup 0ms, collect 112ms, tests 23.76s, environment 0ms, prepare 26ms)
+

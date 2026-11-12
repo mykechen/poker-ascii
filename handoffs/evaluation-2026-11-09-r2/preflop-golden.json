@@ -1,0 +1,52 @@
+{
+  "point": {
+    "board": [],
+    "button": 0,
+    "terminalChance": true,
+    "pots": [
+      {
+        "name": "POT",
+        "amount": 400
+      }
+    ],
+    "players": [
+      {
+        "seat": 0,
+        "hole": [
+          "As",
+          "Ah"
+        ],
+        "committed": 200,
+        "folded": false,
+        "allIn": true
+      },
+      {
+        "seat": 1,
+        "hole": [
+          "Kc",
+          "Kd"
+        ],
+        "committed": 200,
+        "folded": false,
+        "allIn": true
+      }
+    ]
+  },
+  "result": {
+    "payouts": [
+      325.0219587176109,
+      74.97804128238911,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "runouts": 1712304
+  },
+  "equity": 0.8125548967940273,
+  "elapsedMs": 56050.328917000006,
+  "classification": "fixed exhaustive engine enumeration; no Monte Carlo",
+  "maxSeconds": 7200
+}

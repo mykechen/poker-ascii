@@ -1,0 +1,6849 @@
+{
+  "elapsedMs": 4137607,
+  "activeElapsedMs": 4137513.348125,
+  "clockGapMs": 96.4191250000149,
+  "workers": 2,
+  "workerIdleMs": 2000,
+  "peakWorkerRssBytes": [
+    289292288,
+    306298880,
+    312999936,
+    301711360,
+    312999936,
+    311083008,
+    312999936,
+    311083008,
+    312999936,
+    323796992,
+    321355776,
+    323796992,
+    321585152,
+    323796992,
+    332890112,
+    332890112,
+    328187904,
+    332890112,
+    328187904,
+    336265216,
+    330809344,
+    336265216,
+    330809344,
+    336265216,
+    335921152,
+    339148800,
+    335921152,
+    339148800,
+    335921152,
+    339148800,
+    335921152,
+    339148800,
+    335921152,
+    339148800,
+    342704128,
+    343441408,
+    342704128,
+    343441408,
+    342704128,
+    343441408,
+    343441408,
+    342704128,
+    343441408,
+    342704128,
+    343441408,
+    342704128,
+    344752128,
+    342704128,
+    344752128,
+    342704128,
+    345604096,
+    342704128,
+    345604096,
+    342704128,
+    346701824,
+    342704128,
+    346701824,
+    342704128,
+    346701824,
+    342704128,
+    346701824,
+    342704128,
+    346701824,
+    342704128,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    346701824,
+    343261184,
+    348651520,
+    343261184,
+    348651520,
+    343261184,
+    348651520,
+    343261184,
+    348651520,
+    343261184,
+    348651520,
+    343261184,
+    348651520,
+    348651520,
+    343261184,
+    348651520,
+    343261184,
+    348651520,
+    343261184,
+    348651520,
+    343261184,
+    348651520,
+    343261184,
+    348651520,
+    343261184,
+    348651520,
+    343261184,
+    348651520,
+    344096768,
+    348651520,
+    344096768,
+    348651520,
+    344096768,
+    348651520,
+    344096768,
+    348651520,
+    344096768,
+    348651520,
+    344096768,
+    348651520,
+    348651520,
+    344096768,
+    348651520,
+    344096768,
+    348651520,
+    344096768,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    345112576,
+    348651520,
+    346963968,
+    348651520,
+    346963968,
+    348651520,
+    346963968,
+    348651520,
+    349880320,
+    348651520,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    348651520,
+    349880320,
+    349241344,
+    349880320,
+    349241344,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344,
+    350453760,
+    349241344
+  ],
+  "workerMemory": [
+    {
+      "pid": 13532,
+      "peakRssBytes": 350453760
+    },
+    {
+      "pid": 13531,
+      "peakRssBytes": 349241344
+    }
+  ],
+  "seedTimings": [
+    {
+      "seed": 190001,
+      "elapsedMs": 14427.599333,
+      "allInMs": 0.07541599999495929,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 32,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190002,
+      "elapsedMs": 14349.206917,
+      "allInMs": 0.07349400000322248,
+      "controlStats": {
+        "control": {
+          "decisions": 104,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190003,
+      "elapsedMs": 14685.711292,
+      "allInMs": 0.051541999986511655,
+      "controlStats": {
+        "control": {
+          "decisions": 104,
+          "eligible": 24,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190004,
+      "elapsedMs": 11701.814042000002,
+      "allInMs": 0.03941400001713191,
+      "controlStats": {
+        "control": {
+          "decisions": 88,
+          "eligible": 20,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190005,
+      "elapsedMs": 12123.531208999997,
+      "allInMs": 0.043331000004400266,
+      "controlStats": {
+        "control": {
+          "decisions": 100,
+          "eligible": 27,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190006,
+      "elapsedMs": 15183.854833000005,
+      "allInMs": 0.05933799994090805,
+      "controlStats": {
+        "control": {
+          "decisions": 88,
+          "eligible": 24,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190007,
+      "elapsedMs": 13301.663792,
+      "allInMs": 0.059462000033818185,
+      "controlStats": {
+        "control": {
+          "decisions": 118,
+          "eligible": 33,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190008,
+      "elapsedMs": 14074.462250000004,
+      "allInMs": 0.06620400000974769,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 24,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190009,
+      "elapsedMs": 11213.281082999994,
+      "allInMs": 0.04078500007017283,
+      "controlStats": {
+        "control": {
+          "decisions": 91,
+          "eligible": 19,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190010,
+      "elapsedMs": 15264.152541000003,
+      "allInMs": 0.0564129999402212,
+      "controlStats": {
+        "control": {
+          "decisions": 130,
+          "eligible": 37,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190011,
+      "elapsedMs": 15296.327583999999,
+      "allInMs": 0.04586999994353391,
+      "controlStats": {
+        "control": {
+          "decisions": 97,
+          "eligible": 22,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190012,
+      "elapsedMs": 15311.804957999993,
+      "allInMs": 0.04770399989502039,
+      "controlStats": {
+        "control": {
+          "decisions": 149,
+          "eligible": 44,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190013,
+      "elapsedMs": 12872.658916,
+      "allInMs": 0.04545600000710692,
+      "controlStats": {
+        "control": {
+          "decisions": 111,
+          "eligible": 30,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190014,
+      "elapsedMs": 12690.747999999992,
+      "allInMs": 0.05150099996535573,
+      "controlStats": {
+        "control": {
+          "decisions": 107,
+          "eligible": 27,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190015,
+      "elapsedMs": 13307.934999999998,
+      "allInMs": 0.04666900007578079,
+      "controlStats": {
+        "control": {
+          "decisions": 99,
+          "eligible": 19,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190016,
+      "elapsedMs": 17857.08583299999,
+      "allInMs": 0.052881999901728705,
+      "controlStats": {
+        "control": {
+          "decisions": 110,
+          "eligible": 32,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190017,
+      "elapsedMs": 11872.194082999995,
+      "allInMs": 0.05282700005045626,
+      "controlStats": {
+        "control": {
+          "decisions": 107,
+          "eligible": 26,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190018,
+      "elapsedMs": 14345.289374999993,
+      "allInMs": 0.03187400009483099,
+      "controlStats": {
+        "control": {
+          "decisions": 139,
+          "eligible": 42,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190019,
+      "elapsedMs": 13467.05329099999,
+      "allInMs": 0.054331999737769365,
+      "controlStats": {
+        "control": {
+          "decisions": 126,
+          "eligible": 39,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190020,
+      "elapsedMs": 14155.177790999995,
+      "allInMs": 0.03233399998862296,
+      "controlStats": {
+        "control": {
+          "decisions": 122,
+          "eligible": 37,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190021,
+      "elapsedMs": 15633.440541999997,
+      "allInMs": 0.039462999819079414,
+      "controlStats": {
+        "control": {
+          "decisions": 96,
+          "eligible": 25,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190022,
+      "elapsedMs": 11401.696124999988,
+      "allInMs": 0.026740000117570162,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 30,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190023,
+      "elapsedMs": 15033.479541999986,
+      "allInMs": 0.03707599997869693,
+      "controlStats": {
+        "control": {
+          "decisions": 119,
+          "eligible": 32,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190024,
+      "elapsedMs": 10512.494417000009,
+      "allInMs": 0.028833000047598034,
+      "controlStats": {
+        "control": {
+          "decisions": 86,
+          "eligible": 21,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190025,
+      "elapsedMs": 13287.706833000004,
+      "allInMs": 0.030415000073844567,
+      "controlStats": {
+        "control": {
+          "decisions": 83,
+          "eligible": 18,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190026,
+      "elapsedMs": 14190.689416000008,
+      "allInMs": 0.028879000310553238,
+      "controlStats": {
+        "control": {
+          "decisions": 95,
+          "eligible": 20,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190027,
+      "elapsedMs": 13180.69991699999,
+      "allInMs": 0.02946200006408617,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 28,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190028,
+      "elapsedMs": 15246.010458000004,
+      "allInMs": 0.02866899990476668,
+      "controlStats": {
+        "control": {
+          "decisions": 148,
+          "eligible": 42,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190029,
+      "elapsedMs": 14295.497583000018,
+      "allInMs": 0.026625000115018338,
+      "controlStats": {
+        "control": {
+          "decisions": 115,
+          "eligible": 30,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190030,
+      "elapsedMs": 13530.934207999991,
+      "allInMs": 0.0287080000853166,
+      "controlStats": {
+        "control": {
+          "decisions": 118,
+          "eligible": 30,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190031,
+      "elapsedMs": 15178.464917000005,
+      "allInMs": 0.042536000022664666,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 26,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190032,
+      "elapsedMs": 12320.212833000027,
+      "allInMs": 0.02671299991197884,
+      "controlStats": {
+        "control": {
+          "decisions": 119,
+          "eligible": 34,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190033,
+      "elapsedMs": 15299.086750000017,
+      "allInMs": 0.03195799991954118,
+      "controlStats": {
+        "control": {
+          "decisions": 129,
+          "eligible": 40,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190034,
+      "elapsedMs": 14316.625333000004,
+      "allInMs": 0.03024700001697056,
+      "controlStats": {
+        "control": {
+          "decisions": 148,
+          "eligible": 39,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190035,
+      "elapsedMs": 15697.927708999952,
+      "allInMs": 0.0299579999409616,
+      "controlStats": {
+        "control": {
+          "decisions": 110,
+          "eligible": 19,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190036,
+      "elapsedMs": 15566.064458000008,
+      "allInMs": 0.04025200009346008,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190037,
+      "elapsedMs": 13415.937042000005,
+      "allInMs": 0.0413739996147342,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 26,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190038,
+      "elapsedMs": 11209.186209000007,
+      "allInMs": 0.0447089999797754,
+      "controlStats": {
+        "control": {
+          "decisions": 82,
+          "eligible": 26,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190039,
+      "elapsedMs": 12299.551000000036,
+      "allInMs": 0.03608200006419793,
+      "controlStats": {
+        "control": {
+          "decisions": 103,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190040,
+      "elapsedMs": 12760.794333999977,
+      "allInMs": 0.0263790002791211,
+      "controlStats": {
+        "control": {
+          "decisions": 88,
+          "eligible": 17,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190041,
+      "elapsedMs": 16222.302457999962,
+      "allInMs": 0.042252000130247325,
+      "controlStats": {
+        "control": {
+          "decisions": 93,
+          "eligible": 22,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190042,
+      "elapsedMs": 12619.658874999965,
+      "allInMs": 0.03478200000245124,
+      "controlStats": {
+        "control": {
+          "decisions": 96,
+          "eligible": 26,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190043,
+      "elapsedMs": 13204.281167000008,
+      "allInMs": 0.026916000177152455,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 20,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190044,
+      "elapsedMs": 13764.182250000013,
+      "allInMs": 0.03750300011597574,
+      "controlStats": {
+        "control": {
+          "decisions": 119,
+          "eligible": 28,
+          "raises": 8
+        }
+      }
+    },
+    {
+      "seed": 190045,
+      "elapsedMs": 12217.158666000003,
+      "allInMs": 0.030039999342989177,
+      "controlStats": {
+        "control": {
+          "decisions": 90,
+          "eligible": 21,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190046,
+      "elapsedMs": 14661.253374999971,
+      "allInMs": 0.042878999607637525,
+      "controlStats": {
+        "control": {
+          "decisions": 91,
+          "eligible": 21,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190047,
+      "elapsedMs": 12264.089541999972,
+      "allInMs": 0.04350800026440993,
+      "controlStats": {
+        "control": {
+          "decisions": 111,
+          "eligible": 31,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190048,
+      "elapsedMs": 12843.873625000007,
+      "allInMs": 0.03691800031810999,
+      "controlStats": {
+        "control": {
+          "decisions": 94,
+          "eligible": 27,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190049,
+      "elapsedMs": 11637.950459000014,
+      "allInMs": 0.03724399989005178,
+      "controlStats": {
+        "control": {
+          "decisions": 88,
+          "eligible": 14,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190050,
+      "elapsedMs": 15349.759874999989,
+      "allInMs": 0.0329119999660179,
+      "controlStats": {
+        "control": {
+          "decisions": 106,
+          "eligible": 32,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190051,
+      "elapsedMs": 13460.039083999989,
+      "allInMs": 0.025880999688524753,
+      "controlStats": {
+        "control": {
+          "decisions": 90,
+          "eligible": 29,
+          "raises": 5
+        }
+      }
+    },
+    {
+      "seed": 190052,
+      "elapsedMs": 12383.999750000017,
+      "allInMs": 0.026498999970499426,
+      "controlStats": {
+        "control": {
+          "decisions": 92,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190053,
+      "elapsedMs": 14274.246959000011,
+      "allInMs": 0.030291000264696777,
+      "controlStats": {
+        "control": {
+          "decisions": 125,
+          "eligible": 32,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190054,
+      "elapsedMs": 11195.88179200003,
+      "allInMs": 0.034042999672237784,
+      "controlStats": {
+        "control": {
+          "decisions": 84,
+          "eligible": 24,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190055,
+      "elapsedMs": 14186.009749999968,
+      "allInMs": 0.024743999994825572,
+      "controlStats": {
+        "control": {
+          "decisions": 117,
+          "eligible": 28,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190056,
+      "elapsedMs": 15823.466875000042,
+      "allInMs": 0.04200099938316271,
+      "controlStats": {
+        "control": {
+          "decisions": 112,
+          "eligible": 36,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190057,
+      "elapsedMs": 13531.440249999985,
+      "allInMs": 0.026087000325787812,
+      "controlStats": {
+        "control": {
+          "decisions": 124,
+          "eligible": 31,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190058,
+      "elapsedMs": 13159.907958000025,
+      "allInMs": 0.03216600022278726,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 30,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190059,
+      "elapsedMs": 11741.564165999996,
+      "allInMs": 0.029374999809078872,
+      "controlStats": {
+        "control": {
+          "decisions": 95,
+          "eligible": 21,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190060,
+      "elapsedMs": 14994.607458000013,
+      "allInMs": 0.049085999839007854,
+      "controlStats": {
+        "control": {
+          "decisions": 122,
+          "eligible": 40,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190061,
+      "elapsedMs": 14852.06466699997,
+      "allInMs": 0.03624799975659698,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 20,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190062,
+      "elapsedMs": 12761.936208,
+      "allInMs": 0.03266899974551052,
+      "controlStats": {
+        "control": {
+          "decisions": 78,
+          "eligible": 16,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190063,
+      "elapsedMs": 12297.287041999982,
+      "allInMs": 0.03962499997578561,
+      "controlStats": {
+        "control": {
+          "decisions": 104,
+          "eligible": 32,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190064,
+      "elapsedMs": 12380.88404199999,
+      "allInMs": 0.03762600017944351,
+      "controlStats": {
+        "control": {
+          "decisions": 94,
+          "eligible": 22,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190065,
+      "elapsedMs": 14926.87179200002,
+      "allInMs": 0.029206999926827848,
+      "controlStats": {
+        "control": {
+          "decisions": 122,
+          "eligible": 33,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190066,
+      "elapsedMs": 15597.67979199998,
+      "allInMs": 0.0482950002187863,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 30,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190067,
+      "elapsedMs": 13481.371333000017,
+      "allInMs": 0.034589999879244715,
+      "controlStats": {
+        "control": {
+          "decisions": 115,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190068,
+      "elapsedMs": 14297.014042000053,
+      "allInMs": 0.033463000028859824,
+      "controlStats": {
+        "control": {
+          "decisions": 94,
+          "eligible": 26,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190069,
+      "elapsedMs": 11184.924875000026,
+      "allInMs": 0.02324599982239306,
+      "controlStats": {
+        "control": {
+          "decisions": 97,
+          "eligible": 20,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190070,
+      "elapsedMs": 15073.840375000029,
+      "allInMs": 0.026091999607160687,
+      "controlStats": {
+        "control": {
+          "decisions": 127,
+          "eligible": 39,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190071,
+      "elapsedMs": 15317.358541999944,
+      "allInMs": 0.026959999930113554,
+      "controlStats": {
+        "control": {
+          "decisions": 112,
+          "eligible": 26,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190072,
+      "elapsedMs": 16147.325334000052,
+      "allInMs": 0.04740800033323467,
+      "controlStats": {
+        "control": {
+          "decisions": 129,
+          "eligible": 39,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190073,
+      "elapsedMs": 13287.023958000005,
+      "allInMs": 0.03465899976436049,
+      "controlStats": {
+        "control": {
+          "decisions": 104,
+          "eligible": 29,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190074,
+      "elapsedMs": 13250.851167000015,
+      "allInMs": 0.04217200027778745,
+      "controlStats": {
+        "control": {
+          "decisions": 93,
+          "eligible": 18,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190075,
+      "elapsedMs": 14316.689375000075,
+      "allInMs": 0.0339189994847402,
+      "controlStats": {
+        "control": {
+          "decisions": 108,
+          "eligible": 24,
+          "raises": 7
+        }
+      }
+    },
+    {
+      "seed": 190076,
+      "elapsedMs": 16078.333583,
+      "allInMs": 0.0408720001578331,
+      "controlStats": {
+        "control": {
+          "decisions": 112,
+          "eligible": 29,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190077,
+      "elapsedMs": 12135.787708000047,
+      "allInMs": 0.03083200065884739,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 19,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190078,
+      "elapsedMs": 13336.735125000007,
+      "allInMs": 0.03929199988488108,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 28,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190079,
+      "elapsedMs": 11279.220333000063,
+      "allInMs": 0.03208500053733587,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 24,
+          "raises": 8
+        }
+      }
+    },
+    {
+      "seed": 190080,
+      "elapsedMs": 13928.705249999999,
+      "allInMs": 0.03670899977441877,
+      "controlStats": {
+        "control": {
+          "decisions": 108,
+          "eligible": 30,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190081,
+      "elapsedMs": 16565.760791000095,
+      "allInMs": 0.048583000199869275,
+      "controlStats": {
+        "control": {
+          "decisions": 115,
+          "eligible": 34,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190082,
+      "elapsedMs": 11336.132041999954,
+      "allInMs": 0.043250000569969416,
+      "controlStats": {
+        "control": {
+          "decisions": 77,
+          "eligible": 18,
+          "raises": 5
+        }
+      }
+    },
+    {
+      "seed": 190083,
+      "elapsedMs": 12538.38054199994,
+      "allInMs": 0.03832699975464493,
+      "controlStats": {
+        "control": {
+          "decisions": 72,
+          "eligible": 15,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190084,
+      "elapsedMs": 11051.159957999946,
+      "allInMs": 0.029203000129200518,
+      "controlStats": {
+        "control": {
+          "decisions": 87,
+          "eligible": 24,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190085,
+      "elapsedMs": 15167.59695799998,
+      "allInMs": 0.03242300043348223,
+      "controlStats": {
+        "control": {
+          "decisions": 106,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190086,
+      "elapsedMs": 14407.63300000003,
+      "allInMs": 0.02858099981676787,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 26,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190087,
+      "elapsedMs": 14012.04345899995,
+      "allInMs": 0.039367000106722116,
+      "controlStats": {
+        "control": {
+          "decisions": 113,
+          "eligible": 34,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190088,
+      "elapsedMs": 12943.10704199993,
+      "allInMs": 0.03728800034150481,
+      "controlStats": {
+        "control": {
+          "decisions": 100,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190089,
+      "elapsedMs": 14714.232916999958,
+      "allInMs": 0.037877000169828534,
+      "controlStats": {
+        "control": {
+          "decisions": 147,
+          "eligible": 44,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190090,
+      "elapsedMs": 14435.536416999996,
+      "allInMs": 0.030792000237852335,
+      "controlStats": {
+        "control": {
+          "decisions": 119,
+          "eligible": 32,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190091,
+      "elapsedMs": 15804.583707999904,
+      "allInMs": 0.03387900022789836,
+      "controlStats": {
+        "control": {
+          "decisions": 103,
+          "eligible": 30,
+          "raises": 5
+        }
+      }
+    },
+    {
+      "seed": 190092,
+      "elapsedMs": 12392.400999999954,
+      "allInMs": 0.04141499998513609,
+      "controlStats": {
+        "control": {
+          "decisions": 116,
+          "eligible": 38,
+          "raises": 5
+        }
+      }
+    },
+    {
+      "seed": 190093,
+      "elapsedMs": 16441.153208000003,
+      "allInMs": 0.031167000415734947,
+      "controlStats": {
+        "control": {
+          "decisions": 121,
+          "eligible": 36,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190094,
+      "elapsedMs": 13166.435625000042,
+      "allInMs": 0.030540000763721764,
+      "controlStats": {
+        "control": {
+          "decisions": 120,
+          "eligible": 36,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190095,
+      "elapsedMs": 13071.446541999932,
+      "allInMs": 0.02971000026445836,
+      "controlStats": {
+        "control": {
+          "decisions": 90,
+          "eligible": 16,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190096,
+      "elapsedMs": 15473.210375000024,
+      "allInMs": 0.041046000085771084,
+      "controlStats": {
+        "control": {
+          "decisions": 100,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190097,
+      "elapsedMs": 12988.29925000004,
+      "allInMs": 0.03125299955718219,
+      "controlStats": {
+        "control": {
+          "decisions": 108,
+          "eligible": 16,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190098,
+      "elapsedMs": 14987.315042000031,
+      "allInMs": 0.03158100030850619,
+      "controlStats": {
+        "control": {
+          "decisions": 135,
+          "eligible": 40,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190099,
+      "elapsedMs": 11615.56237499998,
+      "allInMs": 0.023712999536655843,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 30,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190100,
+      "elapsedMs": 15593.038749999949,
+      "allInMs": 0.028041000943630934,
+      "controlStats": {
+        "control": {
+          "decisions": 133,
+          "eligible": 47,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190101,
+      "elapsedMs": 14346.70791700005,
+      "allInMs": 0.031542999437078834,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 28,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190102,
+      "elapsedMs": 14705.285749999923,
+      "allInMs": 0.027874999563209713,
+      "controlStats": {
+        "control": {
+          "decisions": 130,
+          "eligible": 35,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190103,
+      "elapsedMs": 11091.16616699996,
+      "allInMs": 0.02254100050777197,
+      "controlStats": {
+        "control": {
+          "decisions": 78,
+          "eligible": 18,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190104,
+      "elapsedMs": 12638.60141699994,
+      "allInMs": 0.02562600001692772,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 21,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190105,
+      "elapsedMs": 11975.001792000025,
+      "allInMs": 0.02517099946271628,
+      "controlStats": {
+        "control": {
+          "decisions": 89,
+          "eligible": 15,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190106,
+      "elapsedMs": 15171.419875000021,
+      "allInMs": 0.035450000083073974,
+      "controlStats": {
+        "control": {
+          "decisions": 104,
+          "eligible": 31,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190107,
+      "elapsedMs": 12186.604541999986,
+      "allInMs": 0.030499000451527536,
+      "controlStats": {
+        "control": {
+          "decisions": 119,
+          "eligible": 41,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190108,
+      "elapsedMs": 14114.860624999972,
+      "allInMs": 0.032916999771259725,
+      "controlStats": {
+        "control": {
+          "decisions": 115,
+          "eligible": 29,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190109,
+      "elapsedMs": 14827.001291000051,
+      "allInMs": 0.04062499990686774,
+      "controlStats": {
+        "control": {
+          "decisions": 134,
+          "eligible": 34,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190110,
+      "elapsedMs": 13610.329249999952,
+      "allInMs": 0.01979800034314394,
+      "controlStats": {
+        "control": {
+          "decisions": 106,
+          "eligible": 22,
+          "raises": 7
+        }
+      }
+    },
+    {
+      "seed": 190111,
+      "elapsedMs": 15518.021292000078,
+      "allInMs": 0.021162999444641173,
+      "controlStats": {
+        "control": {
+          "decisions": 95,
+          "eligible": 18,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190112,
+      "elapsedMs": 11295.624667000026,
+      "allInMs": 0.027877999818883836,
+      "controlStats": {
+        "control": {
+          "decisions": 91,
+          "eligible": 21,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190113,
+      "elapsedMs": 15650.098374999943,
+      "allInMs": 0.03228600032161921,
+      "controlStats": {
+        "control": {
+          "decisions": 126,
+          "eligible": 35,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190114,
+      "elapsedMs": 11474.405874999939,
+      "allInMs": 0.028001000871881843,
+      "controlStats": {
+        "control": {
+          "decisions": 85,
+          "eligible": 19,
+          "raises": 7
+        }
+      }
+    },
+    {
+      "seed": 190115,
+      "elapsedMs": 15891.701583000016,
+      "allInMs": 0.026250000693835318,
+      "controlStats": {
+        "control": {
+          "decisions": 129,
+          "eligible": 33,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190116,
+      "elapsedMs": 13506.546624999959,
+      "allInMs": 0.03179099957924336,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 32,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190117,
+      "elapsedMs": 13746.362708,
+      "allInMs": 0.02587100036907941,
+      "controlStats": {
+        "control": {
+          "decisions": 99,
+          "eligible": 22,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190118,
+      "elapsedMs": 11533.615083999932,
+      "allInMs": 0.030749000259675086,
+      "controlStats": {
+        "control": {
+          "decisions": 92,
+          "eligible": 26,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190119,
+      "elapsedMs": 13138.941166999983,
+      "allInMs": 0.035159999621100724,
+      "controlStats": {
+        "control": {
+          "decisions": 90,
+          "eligible": 20,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190120,
+      "elapsedMs": 12665.721958999988,
+      "allInMs": 0.030870000482536852,
+      "controlStats": {
+        "control": {
+          "decisions": 95,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190121,
+      "elapsedMs": 14356.050125000067,
+      "allInMs": 0.02945799962617457,
+      "controlStats": {
+        "control": {
+          "decisions": 85,
+          "eligible": 22,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190122,
+      "elapsedMs": 13943.049416000023,
+      "allInMs": 0.031089999480172992,
+      "controlStats": {
+        "control": {
+          "decisions": 126,
+          "eligible": 38,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190123,
+      "elapsedMs": 16151.402000000002,
+      "allInMs": 0.029797999653965235,
+      "controlStats": {
+        "control": {
+          "decisions": 140,
+          "eligible": 43,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190124,
+      "elapsedMs": 13214.378707999946,
+      "allInMs": 0.04546100040897727,
+      "controlStats": {
+        "control": {
+          "decisions": 136,
+          "eligible": 35,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190125,
+      "elapsedMs": 13104.947124999948,
+      "allInMs": 0.0352040003053844,
+      "controlStats": {
+        "control": {
+          "decisions": 106,
+          "eligible": 24,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190126,
+      "elapsedMs": 16941.811915999977,
+      "allInMs": 0.032664000522345304,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 22,
+          "raises": 8
+        }
+      }
+    },
+    {
+      "seed": 190127,
+      "elapsedMs": 13534.861707999953,
+      "allInMs": 0.02595699962694198,
+      "controlStats": {
+        "control": {
+          "decisions": 113,
+          "eligible": 31,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190128,
+      "elapsedMs": 14309.864292000071,
+      "allInMs": 0.036874999408610165,
+      "controlStats": {
+        "control": {
+          "decisions": 114,
+          "eligible": 32,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190129,
+      "elapsedMs": 12069.22766600002,
+      "allInMs": 0.03466800006572157,
+      "controlStats": {
+        "control": {
+          "decisions": 108,
+          "eligible": 29,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190130,
+      "elapsedMs": 16154.541124999989,
+      "allInMs": 0.0331270006718114,
+      "controlStats": {
+        "control": {
+          "decisions": 127,
+          "eligible": 30,
+          "raises": 8
+        }
+      }
+    },
+    {
+      "seed": 190131,
+      "elapsedMs": 15041.857000000076,
+      "allInMs": 0.0323369997786358,
+      "controlStats": {
+        "control": {
+          "decisions": 115,
+          "eligible": 33,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190132,
+      "elapsedMs": 15148.467334000045,
+      "allInMs": 0.030328999971970916,
+      "controlStats": {
+        "control": {
+          "decisions": 114,
+          "eligible": 32,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190133,
+      "elapsedMs": 12906.02575000003,
+      "allInMs": 0.03070899995509535,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 34,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190134,
+      "elapsedMs": 12370.34062500007,
+      "allInMs": 0.03441600000951439,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 30,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190135,
+      "elapsedMs": 12943.894749999978,
+      "allInMs": 0.026791000505909324,
+      "controlStats": {
+        "control": {
+          "decisions": 108,
+          "eligible": 33,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190136,
+      "elapsedMs": 15429.77587500005,
+      "allInMs": 0.030998000409454107,
+      "controlStats": {
+        "control": {
+          "decisions": 115,
+          "eligible": 36,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190137,
+      "elapsedMs": 13235.811708000023,
+      "allInMs": 0.020869999891147017,
+      "controlStats": {
+        "control": {
+          "decisions": 123,
+          "eligible": 29,
+          "raises": 8
+        }
+      }
+    },
+    {
+      "seed": 190138,
+      "elapsedMs": 13061.45004200004,
+      "allInMs": 0.030747000128030777,
+      "controlStats": {
+        "control": {
+          "decisions": 104,
+          "eligible": 36,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190139,
+      "elapsedMs": 11490.208041999955,
+      "allInMs": 0.0246640017721802,
+      "controlStats": {
+        "control": {
+          "decisions": 116,
+          "eligible": 34,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190140,
+      "elapsedMs": 14352.001917000161,
+      "allInMs": 0.033754000440239906,
+      "controlStats": {
+        "control": {
+          "decisions": 95,
+          "eligible": 20,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190141,
+      "elapsedMs": 14501.068875000114,
+      "allInMs": 0.02546500018797815,
+      "controlStats": {
+        "control": {
+          "decisions": 112,
+          "eligible": 32,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190142,
+      "elapsedMs": 14317.747999999905,
+      "allInMs": 0.0346250010188669,
+      "controlStats": {
+        "control": {
+          "decisions": 121,
+          "eligible": 37,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190143,
+      "elapsedMs": 14309.103416000027,
+      "allInMs": 0.018209000816568732,
+      "controlStats": {
+        "control": {
+          "decisions": 127,
+          "eligible": 39,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190144,
+      "elapsedMs": 12945.827624999918,
+      "allInMs": 0.02924799988977611,
+      "controlStats": {
+        "control": {
+          "decisions": 113,
+          "eligible": 26,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190145,
+      "elapsedMs": 12850.515416999813,
+      "allInMs": 0.01900100102648139,
+      "controlStats": {
+        "control": {
+          "decisions": 90,
+          "eligible": 15,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190146,
+      "elapsedMs": 15610.851416000165,
+      "allInMs": 0.033581000519916415,
+      "controlStats": {
+        "control": {
+          "decisions": 104,
+          "eligible": 28,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190147,
+      "elapsedMs": 10777.982499999925,
+      "allInMs": 0.021253000246360898,
+      "controlStats": {
+        "control": {
+          "decisions": 84,
+          "eligible": 18,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190148,
+      "elapsedMs": 12509.916042000055,
+      "allInMs": 0.02445800043642521,
+      "controlStats": {
+        "control": {
+          "decisions": 107,
+          "eligible": 32,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190149,
+      "elapsedMs": 12244.841790999984,
+      "allInMs": 0.03316499921493232,
+      "controlStats": {
+        "control": {
+          "decisions": 94,
+          "eligible": 18,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190150,
+      "elapsedMs": 12542.329917000141,
+      "allInMs": 0.03320399974472821,
+      "controlStats": {
+        "control": {
+          "decisions": 90,
+          "eligible": 22,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190151,
+      "elapsedMs": 15171.145541999955,
+      "allInMs": 0.04712200094945729,
+      "controlStats": {
+        "control": {
+          "decisions": 89,
+          "eligible": 29,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190152,
+      "elapsedMs": 11746.101958000101,
+      "allInMs": 0.026039000134915113,
+      "controlStats": {
+        "control": {
+          "decisions": 111,
+          "eligible": 38,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190153,
+      "elapsedMs": 15088.030458000023,
+      "allInMs": 0.030497999861836433,
+      "controlStats": {
+        "control": {
+          "decisions": 108,
+          "eligible": 25,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190154,
+      "elapsedMs": 10492.064000000013,
+      "allInMs": 0.05441900109872222,
+      "controlStats": {
+        "control": {
+          "decisions": 104,
+          "eligible": 32,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190155,
+      "elapsedMs": 15341.784916999983,
+      "allInMs": 0.03862400003708899,
+      "controlStats": {
+        "control": {
+          "decisions": 112,
+          "eligible": 28,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190156,
+      "elapsedMs": 14880.17341599986,
+      "allInMs": 0.030081000411882997,
+      "controlStats": {
+        "control": {
+          "decisions": 100,
+          "eligible": 30,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190157,
+      "elapsedMs": 14414.430999999866,
+      "allInMs": 0.051493998849764466,
+      "controlStats": {
+        "control": {
+          "decisions": 127,
+          "eligible": 40,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190158,
+      "elapsedMs": 12025.837749999948,
+      "allInMs": 0.03254100028425455,
+      "controlStats": {
+        "control": {
+          "decisions": 94,
+          "eligible": 28,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190159,
+      "elapsedMs": 11839.412833999842,
+      "allInMs": 0.0318679993506521,
+      "controlStats": {
+        "control": {
+          "decisions": 117,
+          "eligible": 38,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190160,
+      "elapsedMs": 15527.8578329999,
+      "allInMs": 0.03237199899740517,
+      "controlStats": {
+        "control": {
+          "decisions": 117,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190161,
+      "elapsedMs": 13916.71220900002,
+      "allInMs": 0.04316299827769399,
+      "controlStats": {
+        "control": {
+          "decisions": 86,
+          "eligible": 20,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190162,
+      "elapsedMs": 13620.48912500008,
+      "allInMs": 0.04299999983049929,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 34,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190163,
+      "elapsedMs": 12091.669958000071,
+      "allInMs": 0.03687400068156421,
+      "controlStats": {
+        "control": {
+          "decisions": 87,
+          "eligible": 23,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190164,
+      "elapsedMs": 11897.052041999996,
+      "allInMs": 0.038662998704239726,
+      "controlStats": {
+        "control": {
+          "decisions": 83,
+          "eligible": 20,
+          "raises": 8
+        }
+      }
+    },
+    {
+      "seed": 190165,
+      "elapsedMs": 13697.789708999917,
+      "allInMs": 0.03041699924506247,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 24,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190166,
+      "elapsedMs": 16455.07999999984,
+      "allInMs": 0.03566800057888031,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 25,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190167,
+      "elapsedMs": 12334.969875000184,
+      "allInMs": 0.030075000366196036,
+      "controlStats": {
+        "control": {
+          "decisions": 116,
+          "eligible": 34,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190168,
+      "elapsedMs": 14755.57995800022,
+      "allInMs": 0.039830999448895454,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 28,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190169,
+      "elapsedMs": 11603.262083999813,
+      "allInMs": 0.022620998322963715,
+      "controlStats": {
+        "control": {
+          "decisions": 83,
+          "eligible": 12,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190170,
+      "elapsedMs": 14442.366625000024,
+      "allInMs": 0.033708001021295786,
+      "controlStats": {
+        "control": {
+          "decisions": 104,
+          "eligible": 30,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190171,
+      "elapsedMs": 13093.551791999955,
+      "allInMs": 0.030961998738348484,
+      "controlStats": {
+        "control": {
+          "decisions": 82,
+          "eligible": 15,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190172,
+      "elapsedMs": 13869.527082999935,
+      "allInMs": 0.03645899938419461,
+      "controlStats": {
+        "control": {
+          "decisions": 99,
+          "eligible": 23,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190173,
+      "elapsedMs": 13241.505041999975,
+      "allInMs": 0.026622000616043806,
+      "controlStats": {
+        "control": {
+          "decisions": 121,
+          "eligible": 37,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190174,
+      "elapsedMs": 14472.158083999995,
+      "allInMs": 0.04267300106585026,
+      "controlStats": {
+        "control": {
+          "decisions": 140,
+          "eligible": 37,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190175,
+      "elapsedMs": 15088.534708000021,
+      "allInMs": 0.037799000507220626,
+      "controlStats": {
+        "control": {
+          "decisions": 117,
+          "eligible": 32,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190176,
+      "elapsedMs": 18324.82579199993,
+      "allInMs": 0.03253500000573695,
+      "controlStats": {
+        "control": {
+          "decisions": 143,
+          "eligible": 30,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190177,
+      "elapsedMs": 12273.512834000168,
+      "allInMs": 0.03558700019493699,
+      "controlStats": {
+        "control": {
+          "decisions": 108,
+          "eligible": 39,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190178,
+      "elapsedMs": 14515.494665999897,
+      "allInMs": 0.04112599999643862,
+      "controlStats": {
+        "control": {
+          "decisions": 116,
+          "eligible": 32,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190179,
+      "elapsedMs": 13073.869042000035,
+      "allInMs": 0.04174600122496486,
+      "controlStats": {
+        "control": {
+          "decisions": 100,
+          "eligible": 24,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190180,
+      "elapsedMs": 14940.424083000049,
+      "allInMs": 0.03687600186094642,
+      "controlStats": {
+        "control": {
+          "decisions": 137,
+          "eligible": 40,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190181,
+      "elapsedMs": 16116.291875000112,
+      "allInMs": 0.033917000284418464,
+      "controlStats": {
+        "control": {
+          "decisions": 97,
+          "eligible": 18,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190182,
+      "elapsedMs": 14101.102417000104,
+      "allInMs": 0.04116699961014092,
+      "controlStats": {
+        "control": {
+          "decisions": 126,
+          "eligible": 40,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190183,
+      "elapsedMs": 15205.641624999931,
+      "allInMs": 0.04624599986709654,
+      "controlStats": {
+        "control": {
+          "decisions": 120,
+          "eligible": 40,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190184,
+      "elapsedMs": 12922.871457999805,
+      "allInMs": 0.04412700026296079,
+      "controlStats": {
+        "control": {
+          "decisions": 119,
+          "eligible": 36,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190185,
+      "elapsedMs": 15695.086332999868,
+      "allInMs": 0.04487899923697114,
+      "controlStats": {
+        "control": {
+          "decisions": 101,
+          "eligible": 25,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190186,
+      "elapsedMs": 15879.800291999942,
+      "allInMs": 0.02808400010690093,
+      "controlStats": {
+        "control": {
+          "decisions": 117,
+          "eligible": 39,
+          "raises": 5
+        }
+      }
+    },
+    {
+      "seed": 190187,
+      "elapsedMs": 14137.52370800008,
+      "allInMs": 0.03312000026926398,
+      "controlStats": {
+        "control": {
+          "decisions": 106,
+          "eligible": 29,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190188,
+      "elapsedMs": 15394.022875000024,
+      "allInMs": 0.0244179992005229,
+      "controlStats": {
+        "control": {
+          "decisions": 133,
+          "eligible": 26,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190189,
+      "elapsedMs": 13375.322332999902,
+      "allInMs": 0.02750100032426417,
+      "controlStats": {
+        "control": {
+          "decisions": 103,
+          "eligible": 20,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190190,
+      "elapsedMs": 14536.839457999915,
+      "allInMs": 0.034336000913754106,
+      "controlStats": {
+        "control": {
+          "decisions": 128,
+          "eligible": 36,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190191,
+      "elapsedMs": 16576.73145800014,
+      "allInMs": 0.037994999438524246,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 34,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190192,
+      "elapsedMs": 12777.657958999975,
+      "allInMs": 0.034835000988096,
+      "controlStats": {
+        "control": {
+          "decisions": 100,
+          "eligible": 23,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190193,
+      "elapsedMs": 14559.662916999776,
+      "allInMs": 0.035455998964607716,
+      "controlStats": {
+        "control": {
+          "decisions": 103,
+          "eligible": 32,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190194,
+      "elapsedMs": 11093.90241599991,
+      "allInMs": 0.025167000712826848,
+      "controlStats": {
+        "control": {
+          "decisions": 104,
+          "eligible": 32,
+          "raises": 8
+        }
+      }
+    },
+    {
+      "seed": 190195,
+      "elapsedMs": 13943.655874999939,
+      "allInMs": 0.029088999843224883,
+      "controlStats": {
+        "control": {
+          "decisions": 101,
+          "eligible": 21,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190196,
+      "elapsedMs": 13832.271583999973,
+      "allInMs": 0.0374140003696084,
+      "controlStats": {
+        "control": {
+          "decisions": 95,
+          "eligible": 28,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190197,
+      "elapsedMs": 15055.14845800004,
+      "allInMs": 0.03553999913856387,
+      "controlStats": {
+        "control": {
+          "decisions": 128,
+          "eligible": 41,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190198,
+      "elapsedMs": 12800.057750000153,
+      "allInMs": 0.031791000394150615,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 27,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190199,
+      "elapsedMs": 12429.9907920002,
+      "allInMs": 0.029955000383779407,
+      "controlStats": {
+        "control": {
+          "decisions": 95,
+          "eligible": 22,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190200,
+      "elapsedMs": 13371.80379200005,
+      "allInMs": 0.029750000685453415,
+      "controlStats": {
+        "control": {
+          "decisions": 97,
+          "eligible": 25,
+          "raises": 10
+        }
+      }
+    },
+    {
+      "seed": 190201,
+      "elapsedMs": 15849.936874999898,
+      "allInMs": 0.04232799983583391,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 25,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190202,
+      "elapsedMs": 13191.198792000068,
+      "allInMs": 0.03658299962989986,
+      "controlStats": {
+        "control": {
+          "decisions": 113,
+          "eligible": 29,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190203,
+      "elapsedMs": 13720.260333999991,
+      "allInMs": 0.028290000976994634,
+      "controlStats": {
+        "control": {
+          "decisions": 97,
+          "eligible": 24,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190204,
+      "elapsedMs": 12397.983709000051,
+      "allInMs": 0.03425099910236895,
+      "controlStats": {
+        "control": {
+          "decisions": 110,
+          "eligible": 28,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190205,
+      "elapsedMs": 14605.250333999982,
+      "allInMs": 0.03187100007198751,
+      "controlStats": {
+        "control": {
+          "decisions": 89,
+          "eligible": 17,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190206,
+      "elapsedMs": 15120.135750000132,
+      "allInMs": 0.03153899894095957,
+      "controlStats": {
+        "control": {
+          "decisions": 113,
+          "eligible": 31,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190207,
+      "elapsedMs": 13192.708124999888,
+      "allInMs": 0.028291000286117196,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 25,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190208,
+      "elapsedMs": 12868.410749999806,
+      "allInMs": 0.02949699992313981,
+      "controlStats": {
+        "control": {
+          "decisions": 106,
+          "eligible": 34,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190209,
+      "elapsedMs": 11552.78966699983,
+      "allInMs": 0.03579099988564849,
+      "controlStats": {
+        "control": {
+          "decisions": 92,
+          "eligible": 26,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190210,
+      "elapsedMs": 13570.083291999996,
+      "allInMs": 0.022836999036371708,
+      "controlStats": {
+        "control": {
+          "decisions": 111,
+          "eligible": 30,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190211,
+      "elapsedMs": 16020.989124999847,
+      "allInMs": 0.032874999567866325,
+      "controlStats": {
+        "control": {
+          "decisions": 91,
+          "eligible": 24,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190212,
+      "elapsedMs": 12702.374040999915,
+      "allInMs": 0.030004998203366995,
+      "controlStats": {
+        "control": {
+          "decisions": 111,
+          "eligible": 27,
+          "raises": 12
+        }
+      }
+    },
+    {
+      "seed": 190213,
+      "elapsedMs": 14753.462917000055,
+      "allInMs": 0.032750999787822366,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 27,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190214,
+      "elapsedMs": 11205.393958,
+      "allInMs": 0.036534000653773546,
+      "controlStats": {
+        "control": {
+          "decisions": 111,
+          "eligible": 37,
+          "raises": 5
+        }
+      }
+    },
+    {
+      "seed": 190215,
+      "elapsedMs": 14333.296124999877,
+      "allInMs": 0.032583000138401985,
+      "controlStats": {
+        "control": {
+          "decisions": 108,
+          "eligible": 23,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190216,
+      "elapsedMs": 15730.273082999978,
+      "allInMs": 0.048954999540001154,
+      "controlStats": {
+        "control": {
+          "decisions": 95,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190217,
+      "elapsedMs": 13205.49766699993,
+      "allInMs": 0.05070499936118722,
+      "controlStats": {
+        "control": {
+          "decisions": 114,
+          "eligible": 34,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190218,
+      "elapsedMs": 14412.453291999875,
+      "allInMs": 0.03729400038719177,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 35,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190219,
+      "elapsedMs": 10058.78649999993,
+      "allInMs": 0.038669997826218605,
+      "controlStats": {
+        "control": {
+          "decisions": 84,
+          "eligible": 24,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190220,
+      "elapsedMs": 16102.84783299989,
+      "allInMs": 0.032914000330492854,
+      "controlStats": {
+        "control": {
+          "decisions": 140,
+          "eligible": 32,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190221,
+      "elapsedMs": 13029.716916000005,
+      "allInMs": 0.03916500019840896,
+      "controlStats": {
+        "control": {
+          "decisions": 100,
+          "eligible": 30,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190222,
+      "elapsedMs": 14819.46233400004,
+      "allInMs": 0.022792999865487218,
+      "controlStats": {
+        "control": {
+          "decisions": 138,
+          "eligible": 28,
+          "raises": 9
+        }
+      }
+    },
+    {
+      "seed": 190223,
+      "elapsedMs": 14441.087541999994,
+      "allInMs": 0.030044000130146742,
+      "controlStats": {
+        "control": {
+          "decisions": 132,
+          "eligible": 42,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190224,
+      "elapsedMs": 11831.892125000013,
+      "allInMs": 0.03574800072237849,
+      "controlStats": {
+        "control": {
+          "decisions": 96,
+          "eligible": 24,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190225,
+      "elapsedMs": 13029.171457999852,
+      "allInMs": 0.02162500098347664,
+      "controlStats": {
+        "control": {
+          "decisions": 99,
+          "eligible": 21,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190226,
+      "elapsedMs": 16182.65870800009,
+      "allInMs": 0.03570900112390518,
+      "controlStats": {
+        "control": {
+          "decisions": 111,
+          "eligible": 37,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190227,
+      "elapsedMs": 13089.68299999996,
+      "allInMs": 0.03395899920724332,
+      "controlStats": {
+        "control": {
+          "decisions": 117,
+          "eligible": 38,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190228,
+      "elapsedMs": 12305.573875000002,
+      "allInMs": 0.03395699919201434,
+      "controlStats": {
+        "control": {
+          "decisions": 73,
+          "eligible": 12,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190229,
+      "elapsedMs": 10952.497749999864,
+      "allInMs": 0.02771400031633675,
+      "controlStats": {
+        "control": {
+          "decisions": 89,
+          "eligible": 22,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190230,
+      "elapsedMs": 13861.80633299984,
+      "allInMs": 0.031126000685617328,
+      "controlStats": {
+        "control": {
+          "decisions": 119,
+          "eligible": 33,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190231,
+      "elapsedMs": 17282.06799999997,
+      "allInMs": 0.03725100075826049,
+      "controlStats": {
+        "control": {
+          "decisions": 116,
+          "eligible": 38,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190232,
+      "elapsedMs": 12577.58516700007,
+      "allInMs": 0.024835999589413404,
+      "controlStats": {
+        "control": {
+          "decisions": 120,
+          "eligible": 36,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190233,
+      "elapsedMs": 13744.489333000034,
+      "allInMs": 0.028456999454647303,
+      "controlStats": {
+        "control": {
+          "decisions": 112,
+          "eligible": 34,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190234,
+      "elapsedMs": 11908.000165999867,
+      "allInMs": 0.02503900066949427,
+      "controlStats": {
+        "control": {
+          "decisions": 107,
+          "eligible": 27,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190235,
+      "elapsedMs": 13723.537333999993,
+      "allInMs": 0.025287000462412834,
+      "controlStats": {
+        "control": {
+          "decisions": 93,
+          "eligible": 19,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190236,
+      "elapsedMs": 12944.923625000054,
+      "allInMs": 0.02900300081819296,
+      "controlStats": {
+        "control": {
+          "decisions": 101,
+          "eligible": 30,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190237,
+      "elapsedMs": 15380.215415999992,
+      "allInMs": 0.031166999600827694,
+      "controlStats": {
+        "control": {
+          "decisions": 137,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190238,
+      "elapsedMs": 14863.673625000054,
+      "allInMs": 0.027088999515399337,
+      "controlStats": {
+        "control": {
+          "decisions": 137,
+          "eligible": 41,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190239,
+      "elapsedMs": 14238.660625000019,
+      "allInMs": 0.03058200073428452,
+      "controlStats": {
+        "control": {
+          "decisions": 129,
+          "eligible": 40,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190240,
+      "elapsedMs": 13347.082832999993,
+      "allInMs": 0.022455998929217458,
+      "controlStats": {
+        "control": {
+          "decisions": 110,
+          "eligible": 27,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190241,
+      "elapsedMs": 17002.189208999975,
+      "allInMs": 0.03321299911476672,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 30,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190242,
+      "elapsedMs": 14825.934000000125,
+      "allInMs": 0.034457000670954585,
+      "controlStats": {
+        "control": {
+          "decisions": 132,
+          "eligible": 39,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190243,
+      "elapsedMs": 15574.363791000098,
+      "allInMs": 0.028087000362575054,
+      "controlStats": {
+        "control": {
+          "decisions": 121,
+          "eligible": 33,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190244,
+      "elapsedMs": 12932.83808399993,
+      "allInMs": 0.026963000185787678,
+      "controlStats": {
+        "control": {
+          "decisions": 127,
+          "eligible": 32,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190245,
+      "elapsedMs": 14029.309958999977,
+      "allInMs": 0.023002998670563102,
+      "controlStats": {
+        "control": {
+          "decisions": 81,
+          "eligible": 14,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190246,
+      "elapsedMs": 13855.46670800005,
+      "allInMs": 0.03437099978327751,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 32,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190247,
+      "elapsedMs": 13629.01345800003,
+      "allInMs": 0.03150299866683781,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 18,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190248,
+      "elapsedMs": 12482.209792000009,
+      "allInMs": 0.025870999787002802,
+      "controlStats": {
+        "control": {
+          "decisions": 97,
+          "eligible": 27,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190249,
+      "elapsedMs": 12767.508957999991,
+      "allInMs": 0.024752999655902386,
+      "controlStats": {
+        "control": {
+          "decisions": 100,
+          "eligible": 14,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190250,
+      "elapsedMs": 13701.405124999816,
+      "allInMs": 0.021373000694438815,
+      "controlStats": {
+        "control": {
+          "decisions": 121,
+          "eligible": 36,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190251,
+      "elapsedMs": 18999.235458000097,
+      "allInMs": 0.03279000031761825,
+      "controlStats": {
+        "control": {
+          "decisions": 140,
+          "eligible": 33,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190252,
+      "elapsedMs": 13893.598167000106,
+      "allInMs": 0.019620999693870544,
+      "controlStats": {
+        "control": {
+          "decisions": 131,
+          "eligible": 31,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190253,
+      "elapsedMs": 12765.278707999969,
+      "allInMs": 0.024631000123918056,
+      "controlStats": {
+        "control": {
+          "decisions": 114,
+          "eligible": 31,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190254,
+      "elapsedMs": 12297.617667000042,
+      "allInMs": 0.043504999252036214,
+      "controlStats": {
+        "control": {
+          "decisions": 112,
+          "eligible": 30,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190255,
+      "elapsedMs": 14038.307165999897,
+      "allInMs": 0.03186699794605374,
+      "controlStats": {
+        "control": {
+          "decisions": 104,
+          "eligible": 18,
+          "raises": 7
+        }
+      }
+    },
+    {
+      "seed": 190256,
+      "elapsedMs": 14077.64766700007,
+      "allInMs": 0.051290999399498105,
+      "controlStats": {
+        "control": {
+          "decisions": 84,
+          "eligible": 24,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190257,
+      "elapsedMs": 13642.143833999988,
+      "allInMs": 0.03653799998573959,
+      "controlStats": {
+        "control": {
+          "decisions": 112,
+          "eligible": 23,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190258,
+      "elapsedMs": 15508.387624999974,
+      "allInMs": 0.03108499967493117,
+      "controlStats": {
+        "control": {
+          "decisions": 135,
+          "eligible": 39,
+          "raises": 9
+        }
+      }
+    },
+    {
+      "seed": 190259,
+      "elapsedMs": 12408.981707999948,
+      "allInMs": 0.04587499937042594,
+      "controlStats": {
+        "control": {
+          "decisions": 116,
+          "eligible": 34,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190260,
+      "elapsedMs": 16687.851790999994,
+      "allInMs": 0.04104700079187751,
+      "controlStats": {
+        "control": {
+          "decisions": 125,
+          "eligible": 33,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190261,
+      "elapsedMs": 16306.186208999949,
+      "allInMs": 0.033834999427199364,
+      "controlStats": {
+        "control": {
+          "decisions": 112,
+          "eligible": 20,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190262,
+      "elapsedMs": 12196.826750000007,
+      "allInMs": 0.02899400028400123,
+      "controlStats": {
+        "control": {
+          "decisions": 90,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190263,
+      "elapsedMs": 11261.237083000131,
+      "allInMs": 0.030456000240519643,
+      "controlStats": {
+        "control": {
+          "decisions": 88,
+          "eligible": 22,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190264,
+      "elapsedMs": 13488.686499999836,
+      "allInMs": 0.024092999519780278,
+      "controlStats": {
+        "control": {
+          "decisions": 116,
+          "eligible": 27,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190265,
+      "elapsedMs": 14705.269374999916,
+      "allInMs": 0.024451998760923743,
+      "controlStats": {
+        "control": {
+          "decisions": 129,
+          "eligible": 37,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190266,
+      "elapsedMs": 14496.653457999928,
+      "allInMs": 0.03053500154055655,
+      "controlStats": {
+        "control": {
+          "decisions": 89,
+          "eligible": 19,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190267,
+      "elapsedMs": 13705.236250000075,
+      "allInMs": 0.030878998804837465,
+      "controlStats": {
+        "control": {
+          "decisions": 125,
+          "eligible": 37,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190268,
+      "elapsedMs": 13778.334625000134,
+      "allInMs": 0.03145699808374047,
+      "controlStats": {
+        "control": {
+          "decisions": 103,
+          "eligible": 26,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190269,
+      "elapsedMs": 11975.504958000034,
+      "allInMs": 0.02549999998882413,
+      "controlStats": {
+        "control": {
+          "decisions": 103,
+          "eligible": 26,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190270,
+      "elapsedMs": 13914.054459000006,
+      "allInMs": 0.02833199966698885,
+      "controlStats": {
+        "control": {
+          "decisions": 79,
+          "eligible": 10,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190271,
+      "elapsedMs": 12391.896375000011,
+      "allInMs": 0.0282950010150671,
+      "controlStats": {
+        "control": {
+          "decisions": 78,
+          "eligible": 20,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190272,
+      "elapsedMs": 13878.29070799984,
+      "allInMs": 0.028375001158565283,
+      "controlStats": {
+        "control": {
+          "decisions": 114,
+          "eligible": 31,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190273,
+      "elapsedMs": 13442.298500000034,
+      "allInMs": 0.025582000613212585,
+      "controlStats": {
+        "control": {
+          "decisions": 107,
+          "eligible": 25,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190274,
+      "elapsedMs": 11723.28249999974,
+      "allInMs": 0.03495300002396107,
+      "controlStats": {
+        "control": {
+          "decisions": 99,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190275,
+      "elapsedMs": 13543.865333000198,
+      "allInMs": 0.02320499811321497,
+      "controlStats": {
+        "control": {
+          "decisions": 111,
+          "eligible": 29,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190276,
+      "elapsedMs": 17297.056624999736,
+      "allInMs": 0.03541700029745698,
+      "controlStats": {
+        "control": {
+          "decisions": 122,
+          "eligible": 24,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190277,
+      "elapsedMs": 11958.648041999899,
+      "allInMs": 0.03370200144127011,
+      "controlStats": {
+        "control": {
+          "decisions": 97,
+          "eligible": 20,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190278,
+      "elapsedMs": 13817.60166699998,
+      "allInMs": 0.027715001720935106,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 24,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190279,
+      "elapsedMs": 12053.864957999904,
+      "allInMs": 0.02499500336125493,
+      "controlStats": {
+        "control": {
+          "decisions": 118,
+          "eligible": 40,
+          "raises": 5
+        }
+      }
+    },
+    {
+      "seed": 190280,
+      "elapsedMs": 12929.844666999765,
+      "allInMs": 0.023126999847590923,
+      "controlStats": {
+        "control": {
+          "decisions": 97,
+          "eligible": 22,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190281,
+      "elapsedMs": 15822.608957999852,
+      "allInMs": 0.030548998154699802,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 29,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190282,
+      "elapsedMs": 12160.13083300041,
+      "allInMs": 0.029668002389371395,
+      "controlStats": {
+        "control": {
+          "decisions": 100,
+          "eligible": 22,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190283,
+      "elapsedMs": 12612.216165999882,
+      "allInMs": 0.038708999287337065,
+      "controlStats": {
+        "control": {
+          "decisions": 94,
+          "eligible": 29,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190284,
+      "elapsedMs": 12975.38445799984,
+      "allInMs": 0.024879998993128538,
+      "controlStats": {
+        "control": {
+          "decisions": 132,
+          "eligible": 32,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190285,
+      "elapsedMs": 15508.51716599986,
+      "allInMs": 0.024329999927431345,
+      "controlStats": {
+        "control": {
+          "decisions": 117,
+          "eligible": 31,
+          "raises": 8
+        }
+      }
+    },
+    {
+      "seed": 190286,
+      "elapsedMs": 13260.817874999717,
+      "allInMs": 0.03412499884143472,
+      "controlStats": {
+        "control": {
+          "decisions": 90,
+          "eligible": 24,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190287,
+      "elapsedMs": 13684.20708299987,
+      "allInMs": 0.034745996817946434,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 34,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190288,
+      "elapsedMs": 12289.198415999766,
+      "allInMs": 0.03895500022917986,
+      "controlStats": {
+        "control": {
+          "decisions": 97,
+          "eligible": 16,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190289,
+      "elapsedMs": 14952.925208,
+      "allInMs": 0.02362500037997961,
+      "controlStats": {
+        "control": {
+          "decisions": 142,
+          "eligible": 41,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190290,
+      "elapsedMs": 10960.53249999974,
+      "allInMs": 0.03108899900689721,
+      "controlStats": {
+        "control": {
+          "decisions": 79,
+          "eligible": 20,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190291,
+      "elapsedMs": 15786.94454200007,
+      "allInMs": 0.0315420045517385,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 23,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190292,
+      "elapsedMs": 12643.553459000308,
+      "allInMs": 0.028207999654114246,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 35,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190293,
+      "elapsedMs": 13870.004916999955,
+      "allInMs": 0.02729199966415763,
+      "controlStats": {
+        "control": {
+          "decisions": 101,
+          "eligible": 34,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190294,
+      "elapsedMs": 13009.830749999732,
+      "allInMs": 0.02924600150436163,
+      "controlStats": {
+        "control": {
+          "decisions": 138,
+          "eligible": 43,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190295,
+      "elapsedMs": 12984.646665999666,
+      "allInMs": 0.03487800247967243,
+      "controlStats": {
+        "control": {
+          "decisions": 108,
+          "eligible": 27,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190296,
+      "elapsedMs": 16522.816582999658,
+      "allInMs": 0.02533199917525053,
+      "controlStats": {
+        "control": {
+          "decisions": 121,
+          "eligible": 31,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190297,
+      "elapsedMs": 12195.119332999922,
+      "allInMs": 0.021711000707000494,
+      "controlStats": {
+        "control": {
+          "decisions": 108,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190298,
+      "elapsedMs": 12964.974000000395,
+      "allInMs": 0.03208299865946174,
+      "controlStats": {
+        "control": {
+          "decisions": 88,
+          "eligible": 30,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190299,
+      "elapsedMs": 11660.537791999988,
+      "allInMs": 0.026334003545343876,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 30,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190300,
+      "elapsedMs": 15051.96441600006,
+      "allInMs": 0.027087002992630005,
+      "controlStats": {
+        "control": {
+          "decisions": 116,
+          "eligible": 32,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190301,
+      "elapsedMs": 15024.820791000035,
+      "allInMs": 0.037874998059123755,
+      "controlStats": {
+        "control": {
+          "decisions": 119,
+          "eligible": 39,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190302,
+      "elapsedMs": 13334.458916999865,
+      "allInMs": 0.030252001248300076,
+      "controlStats": {
+        "control": {
+          "decisions": 104,
+          "eligible": 26,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190303,
+      "elapsedMs": 13737.632166999858,
+      "allInMs": 0.027245002798736095,
+      "controlStats": {
+        "control": {
+          "decisions": 121,
+          "eligible": 34,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190304,
+      "elapsedMs": 12355.938624999952,
+      "allInMs": 0.020500002428889275,
+      "controlStats": {
+        "control": {
+          "decisions": 101,
+          "eligible": 24,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190305,
+      "elapsedMs": 14658.444625000004,
+      "allInMs": 0.021415999624878168,
+      "controlStats": {
+        "control": {
+          "decisions": 132,
+          "eligible": 41,
+          "raises": 7
+        }
+      }
+    },
+    {
+      "seed": 190306,
+      "elapsedMs": 16470.154833000153,
+      "allInMs": 0.027415001764893532,
+      "controlStats": {
+        "control": {
+          "decisions": 107,
+          "eligible": 17,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190307,
+      "elapsedMs": 12876.34158300003,
+      "allInMs": 0.029374999459832907,
+      "controlStats": {
+        "control": {
+          "decisions": 119,
+          "eligible": 30,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190308,
+      "elapsedMs": 14924.598583000246,
+      "allInMs": 0.02870799833908677,
+      "controlStats": {
+        "control": {
+          "decisions": 111,
+          "eligible": 26,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190309,
+      "elapsedMs": 11217.785583000164,
+      "allInMs": 0.02299699792638421,
+      "controlStats": {
+        "control": {
+          "decisions": 99,
+          "eligible": 16,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190310,
+      "elapsedMs": 13957.406125000212,
+      "allInMs": 0.025170997716486454,
+      "controlStats": {
+        "control": {
+          "decisions": 96,
+          "eligible": 22,
+          "raises": 5
+        }
+      }
+    },
+    {
+      "seed": 190311,
+      "elapsedMs": 17762.31383300014,
+      "allInMs": 0.03183400118723512,
+      "controlStats": {
+        "control": {
+          "decisions": 146,
+          "eligible": 38,
+          "raises": 5
+        }
+      }
+    },
+    {
+      "seed": 190312,
+      "elapsedMs": 12748.838499999605,
+      "allInMs": 0.02500300295650959,
+      "controlStats": {
+        "control": {
+          "decisions": 95,
+          "eligible": 23,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190313,
+      "elapsedMs": 14210.47579099983,
+      "allInMs": 0.028667000122368336,
+      "controlStats": {
+        "control": {
+          "decisions": 136,
+          "eligible": 42,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190314,
+      "elapsedMs": 14219.049165999983,
+      "allInMs": 0.026748002041131258,
+      "controlStats": {
+        "control": {
+          "decisions": 133,
+          "eligible": 48,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190315,
+      "elapsedMs": 11860.836624999996,
+      "allInMs": 0.023333999328315258,
+      "controlStats": {
+        "control": {
+          "decisions": 89,
+          "eligible": 25,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190316,
+      "elapsedMs": 14262.304333999753,
+      "allInMs": 0.03308199904859066,
+      "controlStats": {
+        "control": {
+          "decisions": 91,
+          "eligible": 32,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190317,
+      "elapsedMs": 11472.336207999848,
+      "allInMs": 0.02553600212559104,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 28,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190318,
+      "elapsedMs": 14220.503792000003,
+      "allInMs": 0.024460000917315483,
+      "controlStats": {
+        "control": {
+          "decisions": 96,
+          "eligible": 23,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190319,
+      "elapsedMs": 12479.530458000023,
+      "allInMs": 0.02137499814853072,
+      "controlStats": {
+        "control": {
+          "decisions": 115,
+          "eligible": 26,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190320,
+      "elapsedMs": 15620.405665999744,
+      "allInMs": 0.027124001178890467,
+      "controlStats": {
+        "control": {
+          "decisions": 129,
+          "eligible": 39,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190321,
+      "elapsedMs": 13964.552000000142,
+      "allInMs": 0.027993000578135252,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 28,
+          "raises": 7
+        }
+      }
+    },
+    {
+      "seed": 190322,
+      "elapsedMs": 12974.513416999951,
+      "allInMs": 0.0355900009162724,
+      "controlStats": {
+        "control": {
+          "decisions": 84,
+          "eligible": 20,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190323,
+      "elapsedMs": 11327.439541999716,
+      "allInMs": 0.030665000900626183,
+      "controlStats": {
+        "control": {
+          "decisions": 100,
+          "eligible": 36,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190324,
+      "elapsedMs": 13012.391250000335,
+      "allInMs": 0.023751997854560614,
+      "controlStats": {
+        "control": {
+          "decisions": 137,
+          "eligible": 29,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190325,
+      "elapsedMs": 14412.014874999877,
+      "allInMs": 0.030663996934890747,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 23,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190326,
+      "elapsedMs": 14764.093041000422,
+      "allInMs": 0.02754499949514866,
+      "controlStats": {
+        "control": {
+          "decisions": 116,
+          "eligible": 32,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190327,
+      "elapsedMs": 12764.34770799987,
+      "allInMs": 0.038375000935047865,
+      "controlStats": {
+        "control": {
+          "decisions": 83,
+          "eligible": 24,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190328,
+      "elapsedMs": 14215.835374999791,
+      "allInMs": 0.0265039992518723,
+      "controlStats": {
+        "control": {
+          "decisions": 125,
+          "eligible": 38,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190329,
+      "elapsedMs": 12792.14433299983,
+      "allInMs": 0.034042997751384974,
+      "controlStats": {
+        "control": {
+          "decisions": 97,
+          "eligible": 24,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190330,
+      "elapsedMs": 13796.606707999948,
+      "allInMs": 0.03679499728605151,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 26,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190331,
+      "elapsedMs": 13761.413459000178,
+      "allInMs": 0.03491299878805876,
+      "controlStats": {
+        "control": {
+          "decisions": 84,
+          "eligible": 15,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190332,
+      "elapsedMs": 14250.366000000387,
+      "allInMs": 0.04408400133252144,
+      "controlStats": {
+        "control": {
+          "decisions": 121,
+          "eligible": 38,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190333,
+      "elapsedMs": 14673.219207999762,
+      "allInMs": 0.0335440025664866,
+      "controlStats": {
+        "control": {
+          "decisions": 138,
+          "eligible": 41,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190334,
+      "elapsedMs": 13009.984290999826,
+      "allInMs": 0.031416996382176876,
+      "controlStats": {
+        "control": {
+          "decisions": 118,
+          "eligible": 28,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190335,
+      "elapsedMs": 12136.018833000213,
+      "allInMs": 0.0296629979275167,
+      "controlStats": {
+        "control": {
+          "decisions": 95,
+          "eligible": 27,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190336,
+      "elapsedMs": 16175.365500000305,
+      "allInMs": 0.028710000682622194,
+      "controlStats": {
+        "control": {
+          "decisions": 110,
+          "eligible": 31,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190337,
+      "elapsedMs": 13119.296290999744,
+      "allInMs": 0.042748000007122755,
+      "controlStats": {
+        "control": {
+          "decisions": 114,
+          "eligible": 38,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190338,
+      "elapsedMs": 14447.464707999956,
+      "allInMs": 0.02841399982571602,
+      "controlStats": {
+        "control": {
+          "decisions": 126,
+          "eligible": 36,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190339,
+      "elapsedMs": 14131.4169999999,
+      "allInMs": 0.030705001670867205,
+      "controlStats": {
+        "control": {
+          "decisions": 122,
+          "eligible": 36,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190340,
+      "elapsedMs": 13067.634624999948,
+      "allInMs": 0.027747000567615032,
+      "controlStats": {
+        "control": {
+          "decisions": 96,
+          "eligible": 19,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190341,
+      "elapsedMs": 19770.423082999885,
+      "allInMs": 0.03596099931746721,
+      "controlStats": {
+        "control": {
+          "decisions": 136,
+          "eligible": 40,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190342,
+      "elapsedMs": 12493.449166000355,
+      "allInMs": 0.02954799821600318,
+      "controlStats": {
+        "control": {
+          "decisions": 111,
+          "eligible": 28,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190343,
+      "elapsedMs": 13188.692583000287,
+      "allInMs": 0.01658299844712019,
+      "controlStats": {
+        "control": {
+          "decisions": 84,
+          "eligible": 24,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190344,
+      "elapsedMs": 12020.644749999978,
+      "allInMs": 0.02412799932062626,
+      "controlStats": {
+        "control": {
+          "decisions": 115,
+          "eligible": 31,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190345,
+      "elapsedMs": 13863.088499999605,
+      "allInMs": 0.020829002372920513,
+      "controlStats": {
+        "control": {
+          "decisions": 92,
+          "eligible": 17,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190346,
+      "elapsedMs": 15750.381000000052,
+      "allInMs": 0.024036000482738018,
+      "controlStats": {
+        "control": {
+          "decisions": 123,
+          "eligible": 26,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190347,
+      "elapsedMs": 14477.300874999724,
+      "allInMs": 0.018666003830730915,
+      "controlStats": {
+        "control": {
+          "decisions": 134,
+          "eligible": 38,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190348,
+      "elapsedMs": 13323.469583000056,
+      "allInMs": 0.02058000024408102,
+      "controlStats": {
+        "control": {
+          "decisions": 128,
+          "eligible": 31,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190349,
+      "elapsedMs": 12052.550458000042,
+      "allInMs": 0.019168999046087265,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 34,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190350,
+      "elapsedMs": 12311.372791000176,
+      "allInMs": 0.026829001493752003,
+      "controlStats": {
+        "control": {
+          "decisions": 101,
+          "eligible": 28,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190351,
+      "elapsedMs": 16480.324957999866,
+      "allInMs": 0.026960003189742565,
+      "controlStats": {
+        "control": {
+          "decisions": 110,
+          "eligible": 37,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190352,
+      "elapsedMs": 12000.081042000093,
+      "allInMs": 0.024214000441133976,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 28,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190353,
+      "elapsedMs": 14148.407375000417,
+      "allInMs": 0.018711000215262175,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 29,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190354,
+      "elapsedMs": 11784.31333299959,
+      "allInMs": 0.024291001725941896,
+      "controlStats": {
+        "control": {
+          "decisions": 106,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190355,
+      "elapsedMs": 13400.391125000082,
+      "allInMs": 0.022505000699311495,
+      "controlStats": {
+        "control": {
+          "decisions": 116,
+          "eligible": 33,
+          "raises": 9
+        }
+      }
+    },
+    {
+      "seed": 190356,
+      "elapsedMs": 18243.392707999796,
+      "allInMs": 0.02004300057888031,
+      "controlStats": {
+        "control": {
+          "decisions": 117,
+          "eligible": 36,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190357,
+      "elapsedMs": 13320.902459000237,
+      "allInMs": 0.02928899973630905,
+      "controlStats": {
+        "control": {
+          "decisions": 119,
+          "eligible": 40,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190358,
+      "elapsedMs": 13882.25704200007,
+      "allInMs": 0.03149600187316537,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 24,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190359,
+      "elapsedMs": 12030.062125000171,
+      "allInMs": 0.031001001596450806,
+      "controlStats": {
+        "control": {
+          "decisions": 120,
+          "eligible": 31,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190360,
+      "elapsedMs": 14545.176250000019,
+      "allInMs": 0.03545899782329798,
+      "controlStats": {
+        "control": {
+          "decisions": 108,
+          "eligible": 26,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190361,
+      "elapsedMs": 14273.55366700003,
+      "allInMs": 0.03383000195026398,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 28,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190362,
+      "elapsedMs": 13812.274042000063,
+      "allInMs": 0.03145699901506305,
+      "controlStats": {
+        "control": {
+          "decisions": 116,
+          "eligible": 37,
+          "raises": 7
+        }
+      }
+    },
+    {
+      "seed": 190363,
+      "elapsedMs": 13902.879958999809,
+      "allInMs": 0.02495899796485901,
+      "controlStats": {
+        "control": {
+          "decisions": 127,
+          "eligible": 30,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190364,
+      "elapsedMs": 14578.56433300022,
+      "allInMs": 0.03716699965298176,
+      "controlStats": {
+        "control": {
+          "decisions": 143,
+          "eligible": 47,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190365,
+      "elapsedMs": 13798.920500000007,
+      "allInMs": 0.022786001674830914,
+      "controlStats": {
+        "control": {
+          "decisions": 100,
+          "eligible": 21,
+          "raises": 9
+        }
+      }
+    },
+    {
+      "seed": 190366,
+      "elapsedMs": 16626.71758399997,
+      "allInMs": 0.027668002992868423,
+      "controlStats": {
+        "control": {
+          "decisions": 111,
+          "eligible": 30,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190367,
+      "elapsedMs": 11940.911834000144,
+      "allInMs": 0.025911999866366386,
+      "controlStats": {
+        "control": {
+          "decisions": 103,
+          "eligible": 27,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190368,
+      "elapsedMs": 12969.775083999615,
+      "allInMs": 0.029418999329209328,
+      "controlStats": {
+        "control": {
+          "decisions": 93,
+          "eligible": 26,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190369,
+      "elapsedMs": 11642.547666999977,
+      "allInMs": 0.026708003599196672,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 22,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190370,
+      "elapsedMs": 13861.900499999989,
+      "allInMs": 0.03904400020837784,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 24,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190371,
+      "elapsedMs": 14939.418542,
+      "allInMs": 0.030541003681719303,
+      "controlStats": {
+        "control": {
+          "decisions": 114,
+          "eligible": 36,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190372,
+      "elapsedMs": 13654.257875000127,
+      "allInMs": 0.029833996668457985,
+      "controlStats": {
+        "control": {
+          "decisions": 90,
+          "eligible": 20,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190373,
+      "elapsedMs": 14860.060250000097,
+      "allInMs": 0.020452997647225857,
+      "controlStats": {
+        "control": {
+          "decisions": 134,
+          "eligible": 43,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190374,
+      "elapsedMs": 12538.541749999858,
+      "allInMs": 0.033502000384032726,
+      "controlStats": {
+        "control": {
+          "decisions": 106,
+          "eligible": 30,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190375,
+      "elapsedMs": 14495.703708000015,
+      "allInMs": 0.04841799708083272,
+      "controlStats": {
+        "control": {
+          "decisions": 143,
+          "eligible": 42,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190376,
+      "elapsedMs": 14465.771665999666,
+      "allInMs": 0.0307500041089952,
+      "controlStats": {
+        "control": {
+          "decisions": 96,
+          "eligible": 25,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190377,
+      "elapsedMs": 12687.016333000269,
+      "allInMs": 0.03191300109028816,
+      "controlStats": {
+        "control": {
+          "decisions": 111,
+          "eligible": 34,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190378,
+      "elapsedMs": 12943.936166999862,
+      "allInMs": 0.03258399851620197,
+      "controlStats": {
+        "control": {
+          "decisions": 88,
+          "eligible": 26,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190379,
+      "elapsedMs": 11714.86337500019,
+      "allInMs": 0.031043998431414366,
+      "controlStats": {
+        "control": {
+          "decisions": 106,
+          "eligible": 26,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190380,
+      "elapsedMs": 16063.046124999877,
+      "allInMs": 0.03291699942201376,
+      "controlStats": {
+        "control": {
+          "decisions": 122,
+          "eligible": 38,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190381,
+      "elapsedMs": 13854.023958999664,
+      "allInMs": 0.02791300183162093,
+      "controlStats": {
+        "control": {
+          "decisions": 100,
+          "eligible": 23,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190382,
+      "elapsedMs": 11572.284208000172,
+      "allInMs": 0.027000998612493277,
+      "controlStats": {
+        "control": {
+          "decisions": 89,
+          "eligible": 21,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190383,
+      "elapsedMs": 13217.694333999883,
+      "allInMs": 0.03028900222852826,
+      "controlStats": {
+        "control": {
+          "decisions": 110,
+          "eligible": 28,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190384,
+      "elapsedMs": 11423.236000000034,
+      "allInMs": 0.02558300131931901,
+      "controlStats": {
+        "control": {
+          "decisions": 111,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190385,
+      "elapsedMs": 15037.685000000056,
+      "allInMs": 0.032287001609802246,
+      "controlStats": {
+        "control": {
+          "decisions": 118,
+          "eligible": 34,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190386,
+      "elapsedMs": 15121.955709000118,
+      "allInMs": 0.025080998428165913,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 18,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190387,
+      "elapsedMs": 13181.475416000001,
+      "allInMs": 0.032377999275922775,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 29,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190388,
+      "elapsedMs": 12805.911584000103,
+      "allInMs": 0.024744998198002577,
+      "controlStats": {
+        "control": {
+          "decisions": 107,
+          "eligible": 34,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190389,
+      "elapsedMs": 12404.255708999932,
+      "allInMs": 0.024874999653548002,
+      "controlStats": {
+        "control": {
+          "decisions": 103,
+          "eligible": 28,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190390,
+      "elapsedMs": 12875.730500000063,
+      "allInMs": 0.02691799821332097,
+      "controlStats": {
+        "control": {
+          "decisions": 100,
+          "eligible": 20,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190391,
+      "elapsedMs": 15970.135542000178,
+      "allInMs": 0.025998998899012804,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 32,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190392,
+      "elapsedMs": 12078.9562090002,
+      "allInMs": 0.029249999206513166,
+      "controlStats": {
+        "control": {
+          "decisions": 103,
+          "eligible": 31,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190393,
+      "elapsedMs": 14157.294582999777,
+      "allInMs": 0.030213001184165478,
+      "controlStats": {
+        "control": {
+          "decisions": 108,
+          "eligible": 38,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190394,
+      "elapsedMs": 13628.957292000297,
+      "allInMs": 0.026254001073539257,
+      "controlStats": {
+        "control": {
+          "decisions": 139,
+          "eligible": 32,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190395,
+      "elapsedMs": 14065.265250000171,
+      "allInMs": 0.03166299872100353,
+      "controlStats": {
+        "control": {
+          "decisions": 88,
+          "eligible": 13,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190396,
+      "elapsedMs": 16397.22429200029,
+      "allInMs": 0.034162997268140316,
+      "controlStats": {
+        "control": {
+          "decisions": 131,
+          "eligible": 33,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190397,
+      "elapsedMs": 13373.907333999872,
+      "allInMs": 0.030580998864024878,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 26,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190398,
+      "elapsedMs": 13314.80695899995,
+      "allInMs": 0.023536999709904194,
+      "controlStats": {
+        "control": {
+          "decisions": 114,
+          "eligible": 33,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190399,
+      "elapsedMs": 13555.720833000261,
+      "allInMs": 0.02374199777841568,
+      "controlStats": {
+        "control": {
+          "decisions": 112,
+          "eligible": 24,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190400,
+      "elapsedMs": 12457.81808300037,
+      "allInMs": 0.032707000616937876,
+      "controlStats": {
+        "control": {
+          "decisions": 97,
+          "eligible": 22,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190401,
+      "elapsedMs": 16229.025665999856,
+      "allInMs": 0.04528499906882644,
+      "controlStats": {
+        "control": {
+          "decisions": 107,
+          "eligible": 26,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190402,
+      "elapsedMs": 12399.548875000328,
+      "allInMs": 0.037376999855041504,
+      "controlStats": {
+        "control": {
+          "decisions": 110,
+          "eligible": 27,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190403,
+      "elapsedMs": 14022.648417000193,
+      "allInMs": 0.034119000658392906,
+      "controlStats": {
+        "control": {
+          "decisions": 107,
+          "eligible": 34,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190404,
+      "elapsedMs": 13245.603333000094,
+      "allInMs": 0.030837999656796455,
+      "controlStats": {
+        "control": {
+          "decisions": 127,
+          "eligible": 31,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190405,
+      "elapsedMs": 15052.478374999948,
+      "allInMs": 0.025663000997155905,
+      "controlStats": {
+        "control": {
+          "decisions": 110,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190406,
+      "elapsedMs": 13126.872791999951,
+      "allInMs": 0.03271400136873126,
+      "controlStats": {
+        "control": {
+          "decisions": 85,
+          "eligible": 26,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190407,
+      "elapsedMs": 15602.994332999922,
+      "allInMs": 0.029499000404030085,
+      "controlStats": {
+        "control": {
+          "decisions": 129,
+          "eligible": 32,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190408,
+      "elapsedMs": 14431.152999999933,
+      "allInMs": 0.028203997761011124,
+      "controlStats": {
+        "control": {
+          "decisions": 147,
+          "eligible": 44,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190409,
+      "elapsedMs": 11701.609375,
+      "allInMs": 0.027331997640430927,
+      "controlStats": {
+        "control": {
+          "decisions": 90,
+          "eligible": 16,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190410,
+      "elapsedMs": 13787.923125000205,
+      "allInMs": 0.021671000868082047,
+      "controlStats": {
+        "control": {
+          "decisions": 124,
+          "eligible": 31,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190411,
+      "elapsedMs": 14555.615125000011,
+      "allInMs": 0.0330039975233376,
+      "controlStats": {
+        "control": {
+          "decisions": 77,
+          "eligible": 18,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190412,
+      "elapsedMs": 12915.74045899976,
+      "allInMs": 0.03413000097498298,
+      "controlStats": {
+        "control": {
+          "decisions": 123,
+          "eligible": 36,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190413,
+      "elapsedMs": 13937.684249999933,
+      "allInMs": 0.02525000087916851,
+      "controlStats": {
+        "control": {
+          "decisions": 116,
+          "eligible": 34,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190414,
+      "elapsedMs": 11209.440708999988,
+      "allInMs": 0.026999996975064278,
+      "controlStats": {
+        "control": {
+          "decisions": 101,
+          "eligible": 28,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190415,
+      "elapsedMs": 12727.667667000089,
+      "allInMs": 0.023705998435616493,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 20,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190416,
+      "elapsedMs": 15865.712249999866,
+      "allInMs": 0.028828000649809837,
+      "controlStats": {
+        "control": {
+          "decisions": 104,
+          "eligible": 25,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190417,
+      "elapsedMs": 11799.877499999944,
+      "allInMs": 0.028995998669415712,
+      "controlStats": {
+        "control": {
+          "decisions": 103,
+          "eligible": 31,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190418,
+      "elapsedMs": 13378.434917000122,
+      "allInMs": 0.028371001593768597,
+      "controlStats": {
+        "control": {
+          "decisions": 89,
+          "eligible": 24,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190419,
+      "elapsedMs": 12636.420917000156,
+      "allInMs": 0.029671999160200357,
+      "controlStats": {
+        "control": {
+          "decisions": 125,
+          "eligible": 39,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190420,
+      "elapsedMs": 16675.527917,
+      "allInMs": 0.027166001498699188,
+      "controlStats": {
+        "control": {
+          "decisions": 132,
+          "eligible": 36,
+          "raises": 8
+        }
+      }
+    },
+    {
+      "seed": 190421,
+      "elapsedMs": 15192.482499999925,
+      "allInMs": 0.03175599779933691,
+      "controlStats": {
+        "control": {
+          "decisions": 116,
+          "eligible": 34,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190422,
+      "elapsedMs": 14007.910792000126,
+      "allInMs": 0.02666399860754609,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 19,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190423,
+      "elapsedMs": 10912.478916999884,
+      "allInMs": 0.028041998855769634,
+      "controlStats": {
+        "control": {
+          "decisions": 83,
+          "eligible": 20,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190424,
+      "elapsedMs": 13277.631583000068,
+      "allInMs": 0.026083997916430235,
+      "controlStats": {
+        "control": {
+          "decisions": 107,
+          "eligible": 22,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190425,
+      "elapsedMs": 13303.396666999906,
+      "allInMs": 0.022623001597821712,
+      "controlStats": {
+        "control": {
+          "decisions": 128,
+          "eligible": 33,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190426,
+      "elapsedMs": 17466.902457999997,
+      "allInMs": 0.030752000864595175,
+      "controlStats": {
+        "control": {
+          "decisions": 115,
+          "eligible": 36,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190427,
+      "elapsedMs": 11967.62283300003,
+      "allInMs": 0.028331998270004988,
+      "controlStats": {
+        "control": {
+          "decisions": 97,
+          "eligible": 26,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190428,
+      "elapsedMs": 12366.798750000075,
+      "allInMs": 0.057080999948084354,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 33,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190429,
+      "elapsedMs": 14061.643000000156,
+      "allInMs": 0.032746996730566025,
+      "controlStats": {
+        "control": {
+          "decisions": 122,
+          "eligible": 31,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190430,
+      "elapsedMs": 12667.521542000119,
+      "allInMs": 0.033702999353408813,
+      "controlStats": {
+        "control": {
+          "decisions": 95,
+          "eligible": 20,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190431,
+      "elapsedMs": 16802.970666000154,
+      "allInMs": 0.03399899695068598,
+      "controlStats": {
+        "control": {
+          "decisions": 117,
+          "eligible": 36,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190432,
+      "elapsedMs": 13751.863415999804,
+      "allInMs": 0.029621999710798264,
+      "controlStats": {
+        "control": {
+          "decisions": 119,
+          "eligible": 30,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190433,
+      "elapsedMs": 14407.638875000179,
+      "allInMs": 0.04399600112810731,
+      "controlStats": {
+        "control": {
+          "decisions": 120,
+          "eligible": 40,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190434,
+      "elapsedMs": 10549.681584000122,
+      "allInMs": 0.03433199878782034,
+      "controlStats": {
+        "control": {
+          "decisions": 91,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190435,
+      "elapsedMs": 14874.055000000168,
+      "allInMs": 0.024998999200761318,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 22,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190436,
+      "elapsedMs": 14791.257500000298,
+      "allInMs": 0.028920998331159353,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 23,
+          "raises": 7
+        }
+      }
+    },
+    {
+      "seed": 190437,
+      "elapsedMs": 13407.79899999965,
+      "allInMs": 0.03570699971169233,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190438,
+      "elapsedMs": 14420.659083999693,
+      "allInMs": 0.030002000741660595,
+      "controlStats": {
+        "control": {
+          "decisions": 126,
+          "eligible": 42,
+          "raises": 5
+        }
+      }
+    },
+    {
+      "seed": 190439,
+      "elapsedMs": 12540.179500000086,
+      "allInMs": 0.02817100239917636,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 27,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190440,
+      "elapsedMs": 13561.478082999587,
+      "allInMs": 0.02970899874344468,
+      "controlStats": {
+        "control": {
+          "decisions": 120,
+          "eligible": 41,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190441,
+      "elapsedMs": 14228.942499999888,
+      "allInMs": 0.033537999261170626,
+      "controlStats": {
+        "control": {
+          "decisions": 81,
+          "eligible": 16,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190442,
+      "elapsedMs": 13038.219709000085,
+      "allInMs": 0.029958002269268036,
+      "controlStats": {
+        "control": {
+          "decisions": 120,
+          "eligible": 33,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190443,
+      "elapsedMs": 12363.321374999825,
+      "allInMs": 0.03521199943497777,
+      "controlStats": {
+        "control": {
+          "decisions": 79,
+          "eligible": 23,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190444,
+      "elapsedMs": 11071.985291999765,
+      "allInMs": 0.034630998969078064,
+      "controlStats": {
+        "control": {
+          "decisions": 93,
+          "eligible": 26,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190445,
+      "elapsedMs": 14477.6265420001,
+      "allInMs": 0.03816199954599142,
+      "controlStats": {
+        "control": {
+          "decisions": 127,
+          "eligible": 40,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190446,
+      "elapsedMs": 15845.625457999762,
+      "allInMs": 0.03825299767777324,
+      "controlStats": {
+        "control": {
+          "decisions": 136,
+          "eligible": 34,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190447,
+      "elapsedMs": 13883.997874999885,
+      "allInMs": 0.04282700177282095,
+      "controlStats": {
+        "control": {
+          "decisions": 117,
+          "eligible": 31,
+          "raises": 12
+        }
+      }
+    },
+    {
+      "seed": 190448,
+      "elapsedMs": 14567.965833000373,
+      "allInMs": 0.02328699827194214,
+      "controlStats": {
+        "control": {
+          "decisions": 141,
+          "eligible": 39,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190449,
+      "elapsedMs": 11581.180625000037,
+      "allInMs": 0.0299160024151206,
+      "controlStats": {
+        "control": {
+          "decisions": 87,
+          "eligible": 16,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190450,
+      "elapsedMs": 15111.30791700026,
+      "allInMs": 0.034083000384271145,
+      "controlStats": {
+        "control": {
+          "decisions": 122,
+          "eligible": 38,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190451,
+      "elapsedMs": 16816.21316699963,
+      "allInMs": 0.03908399725332856,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190452,
+      "elapsedMs": 11740.278750000056,
+      "allInMs": 0.02837499976158142,
+      "controlStats": {
+        "control": {
+          "decisions": 101,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190453,
+      "elapsedMs": 14468.926250000019,
+      "allInMs": 0.06050700042396784,
+      "controlStats": {
+        "control": {
+          "decisions": 112,
+          "eligible": 38,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190454,
+      "elapsedMs": 13155.036791999824,
+      "allInMs": 0.03517199866473675,
+      "controlStats": {
+        "control": {
+          "decisions": 121,
+          "eligible": 26,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190455,
+      "elapsedMs": 14327.063666000031,
+      "allInMs": 0.023372000083327293,
+      "controlStats": {
+        "control": {
+          "decisions": 113,
+          "eligible": 26,
+          "raises": 5
+        }
+      }
+    },
+    {
+      "seed": 190456,
+      "elapsedMs": 15438.696374999825,
+      "allInMs": 0.031124998349696398,
+      "controlStats": {
+        "control": {
+          "decisions": 110,
+          "eligible": 25,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190457,
+      "elapsedMs": 13238.256166999694,
+      "allInMs": 0.031121000181883574,
+      "controlStats": {
+        "control": {
+          "decisions": 103,
+          "eligible": 25,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190458,
+      "elapsedMs": 11546.002292000223,
+      "allInMs": 0.03070999961346388,
+      "controlStats": {
+        "control": {
+          "decisions": 83,
+          "eligible": 22,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190459,
+      "elapsedMs": 13236.117374999914,
+      "allInMs": 0.027831001672893763,
+      "controlStats": {
+        "control": {
+          "decisions": 95,
+          "eligible": 18,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 190460,
+      "elapsedMs": 13010.969833000097,
+      "allInMs": 0.02379499888047576,
+      "controlStats": {
+        "control": {
+          "decisions": 116,
+          "eligible": 27,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190461,
+      "elapsedMs": 14997.078457999974,
+      "allInMs": 0.03566999826580286,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 34,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190462,
+      "elapsedMs": 11065.770916999783,
+      "allInMs": 0.030585001222789288,
+      "controlStats": {
+        "control": {
+          "decisions": 90,
+          "eligible": 29,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190463,
+      "elapsedMs": 13400.197750000283,
+      "allInMs": 0.02616600040346384,
+      "controlStats": {
+        "control": {
+          "decisions": 118,
+          "eligible": 36,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190464,
+      "elapsedMs": 13204.882834000047,
+      "allInMs": 0.023368001449853182,
+      "controlStats": {
+        "control": {
+          "decisions": 121,
+          "eligible": 36,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190465,
+      "elapsedMs": 13605.309832999948,
+      "allInMs": 0.02454300131648779,
+      "controlStats": {
+        "control": {
+          "decisions": 119,
+          "eligible": 32,
+          "raises": 10
+        }
+      }
+    },
+    {
+      "seed": 190466,
+      "elapsedMs": 16511.920708000194,
+      "allInMs": 0.033285999204963446,
+      "controlStats": {
+        "control": {
+          "decisions": 110,
+          "eligible": 16,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190467,
+      "elapsedMs": 14225.546624999959,
+      "allInMs": 0.02787600178271532,
+      "controlStats": {
+        "control": {
+          "decisions": 127,
+          "eligible": 37,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190468,
+      "elapsedMs": 13216.182416999713,
+      "allInMs": 0.02770699793472886,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 26,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190469,
+      "elapsedMs": 12578.838333999738,
+      "allInMs": 0.02670900011435151,
+      "controlStats": {
+        "control": {
+          "decisions": 126,
+          "eligible": 35,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190470,
+      "elapsedMs": 14712.947833999991,
+      "allInMs": 0.031790999229997396,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 24,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190471,
+      "elapsedMs": 14754.39124999987,
+      "allInMs": 0.03045300068333745,
+      "controlStats": {
+        "control": {
+          "decisions": 103,
+          "eligible": 28,
+          "raises": 5
+        }
+      }
+    },
+    {
+      "seed": 190472,
+      "elapsedMs": 13244.413500000257,
+      "allInMs": 0.036417997907847166,
+      "controlStats": {
+        "control": {
+          "decisions": 101,
+          "eligible": 30,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190473,
+      "elapsedMs": 12620.919916999992,
+      "allInMs": 0.03046400099992752,
+      "controlStats": {
+        "control": {
+          "decisions": 110,
+          "eligible": 34,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190474,
+      "elapsedMs": 12442.612916999962,
+      "allInMs": 0.03358099889010191,
+      "controlStats": {
+        "control": {
+          "decisions": 95,
+          "eligible": 24,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190475,
+      "elapsedMs": 14581.364333000034,
+      "allInMs": 0.024755002930760384,
+      "controlStats": {
+        "control": {
+          "decisions": 124,
+          "eligible": 33,
+          "raises": 8
+        }
+      }
+    },
+    {
+      "seed": 190476,
+      "elapsedMs": 15219.220708000008,
+      "allInMs": 0.034036997240036726,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 28,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190477,
+      "elapsedMs": 13249.897415999789,
+      "allInMs": 0.02716500125825405,
+      "controlStats": {
+        "control": {
+          "decisions": 121,
+          "eligible": 31,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190478,
+      "elapsedMs": 15909.906582999974,
+      "allInMs": 0.029291000682860613,
+      "controlStats": {
+        "control": {
+          "decisions": 119,
+          "eligible": 31,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190479,
+      "elapsedMs": 12554.864041000139,
+      "allInMs": 0.026417001150548458,
+      "controlStats": {
+        "control": {
+          "decisions": 121,
+          "eligible": 31,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190480,
+      "elapsedMs": 13437.362292000093,
+      "allInMs": 0.037165998946875334,
+      "controlStats": {
+        "control": {
+          "decisions": 88,
+          "eligible": 15,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190481,
+      "elapsedMs": 14954.641958999913,
+      "allInMs": 0.03262499999254942,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 30,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190482,
+      "elapsedMs": 12373.756707999855,
+      "allInMs": 0.027290000580251217,
+      "controlStats": {
+        "control": {
+          "decisions": 75,
+          "eligible": 16,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190483,
+      "elapsedMs": 14032.993624999654,
+      "allInMs": 0.021995996590703726,
+      "controlStats": {
+        "control": {
+          "decisions": 128,
+          "eligible": 40,
+          "raises": 8
+        }
+      }
+    },
+    {
+      "seed": 190484,
+      "elapsedMs": 13442.503333999775,
+      "allInMs": 0.030836000572890043,
+      "controlStats": {
+        "control": {
+          "decisions": 116,
+          "eligible": 29,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190485,
+      "elapsedMs": 15864.83820799971,
+      "allInMs": 0.019041999708861113,
+      "controlStats": {
+        "control": {
+          "decisions": 135,
+          "eligible": 40,
+          "raises": 5
+        }
+      }
+    },
+    {
+      "seed": 190486,
+      "elapsedMs": 14654.901625000406,
+      "allInMs": 0.031249999068677425,
+      "controlStats": {
+        "control": {
+          "decisions": 90,
+          "eligible": 24,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190487,
+      "elapsedMs": 12311.46416700026,
+      "allInMs": 0.02499200263991952,
+      "controlStats": {
+        "control": {
+          "decisions": 117,
+          "eligible": 40,
+          "raises": 8
+        }
+      }
+    },
+    {
+      "seed": 190488,
+      "elapsedMs": 12793.665792000014,
+      "allInMs": 0.031836997251957655,
+      "controlStats": {
+        "control": {
+          "decisions": 91,
+          "eligible": 30,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190489,
+      "elapsedMs": 11846.72212500032,
+      "allInMs": 0.017124001402407885,
+      "controlStats": {
+        "control": {
+          "decisions": 97,
+          "eligible": 18,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190490,
+      "elapsedMs": 17409.079708999954,
+      "allInMs": 0.027333000674843788,
+      "controlStats": {
+        "control": {
+          "decisions": 153,
+          "eligible": 45,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190491,
+      "elapsedMs": 12972.651291999966,
+      "allInMs": 0.03033600188791752,
+      "controlStats": {
+        "control": {
+          "decisions": 79,
+          "eligible": 20,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190492,
+      "elapsedMs": 13128.84983399976,
+      "allInMs": 0.030293999705463648,
+      "controlStats": {
+        "control": {
+          "decisions": 114,
+          "eligible": 31,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190493,
+      "elapsedMs": 12678.334541999735,
+      "allInMs": 0.0278329998254776,
+      "controlStats": {
+        "control": {
+          "decisions": 106,
+          "eligible": 34,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190494,
+      "elapsedMs": 13224.700749999844,
+      "allInMs": 0.02416899846866727,
+      "controlStats": {
+        "control": {
+          "decisions": 119,
+          "eligible": 34,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190495,
+      "elapsedMs": 12489.610374999698,
+      "allInMs": 0.02249799994751811,
+      "controlStats": {
+        "control": {
+          "decisions": 86,
+          "eligible": 16,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190496,
+      "elapsedMs": 16124.953375000041,
+      "allInMs": 0.042795002460479736,
+      "controlStats": {
+        "control": {
+          "decisions": 110,
+          "eligible": 36,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190497,
+      "elapsedMs": 12461.812375000212,
+      "allInMs": 0.025371999945491552,
+      "controlStats": {
+        "control": {
+          "decisions": 110,
+          "eligible": 22,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190498,
+      "elapsedMs": 13595.770082999952,
+      "allInMs": 0.02941600140184164,
+      "controlStats": {
+        "control": {
+          "decisions": 103,
+          "eligible": 34,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190499,
+      "elapsedMs": 11216.15075000003,
+      "allInMs": 0.031213001813739538,
+      "controlStats": {
+        "control": {
+          "decisions": 96,
+          "eligible": 22,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190500,
+      "elapsedMs": 12186.566749999765,
+      "allInMs": 0.02266799984499812,
+      "controlStats": {
+        "control": {
+          "decisions": 91,
+          "eligible": 26,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190501,
+      "elapsedMs": 13990.277499999851,
+      "allInMs": 0.038755002431571484,
+      "controlStats": {
+        "control": {
+          "decisions": 89,
+          "eligible": 20,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190502,
+      "elapsedMs": 12665.736666999757,
+      "allInMs": 0.0284609985537827,
+      "controlStats": {
+        "control": {
+          "decisions": 120,
+          "eligible": 26,
+          "raises": 3
+        }
+      }
+    },
+    {
+      "seed": 190503,
+      "elapsedMs": 13950.579874999821,
+      "allInMs": 0.0427550021559,
+      "controlStats": {
+        "control": {
+          "decisions": 95,
+          "eligible": 27,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190504,
+      "elapsedMs": 10551.379958000034,
+      "allInMs": 0.03158199926838279,
+      "controlStats": {
+        "control": {
+          "decisions": 102,
+          "eligible": 32,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190505,
+      "elapsedMs": 15856.989290999714,
+      "allInMs": 0.028836998157203197,
+      "controlStats": {
+        "control": {
+          "decisions": 115,
+          "eligible": 27,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190506,
+      "elapsedMs": 13630.050708000083,
+      "allInMs": 0.0281280018389225,
+      "controlStats": {
+        "control": {
+          "decisions": 91,
+          "eligible": 26,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190507,
+      "elapsedMs": 12894.023041999899,
+      "allInMs": 0.02850000187754631,
+      "controlStats": {
+        "control": {
+          "decisions": 98,
+          "eligible": 27,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190508,
+      "elapsedMs": 12763.267541000154,
+      "allInMs": 0.026378999464213848,
+      "controlStats": {
+        "control": {
+          "decisions": 107,
+          "eligible": 32,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190509,
+      "elapsedMs": 13103.012999999803,
+      "allInMs": 0.024287999607622623,
+      "controlStats": {
+        "control": {
+          "decisions": 103,
+          "eligible": 23,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190510,
+      "elapsedMs": 13846.1111659999,
+      "allInMs": 0.02679900312796235,
+      "controlStats": {
+        "control": {
+          "decisions": 109,
+          "eligible": 20,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190511,
+      "elapsedMs": 17711.14545900002,
+      "allInMs": 0.03196400078013539,
+      "controlStats": {
+        "control": {
+          "decisions": 134,
+          "eligible": 39,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190512,
+      "elapsedMs": 13995.402999999933,
+      "allInMs": 0.029084996320307255,
+      "controlStats": {
+        "control": {
+          "decisions": 127,
+          "eligible": 34,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190513,
+      "elapsedMs": 12455.935374999885,
+      "allInMs": 0.03162100026383996,
+      "controlStats": {
+        "control": {
+          "decisions": 81,
+          "eligible": 18,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190514,
+      "elapsedMs": 12334.826040999964,
+      "allInMs": 0.027582000475376844,
+      "controlStats": {
+        "control": {
+          "decisions": 120,
+          "eligible": 33,
+          "raises": 5
+        }
+      }
+    },
+    {
+      "seed": 190515,
+      "elapsedMs": 15350.894665999804,
+      "allInMs": 0.0273320022970438,
+      "controlStats": {
+        "control": {
+          "decisions": 129,
+          "eligible": 39,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190516,
+      "elapsedMs": 13446.199833000079,
+      "allInMs": 0.0351649965159595,
+      "controlStats": {
+        "control": {
+          "decisions": 84,
+          "eligible": 21,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190517,
+      "elapsedMs": 14260.796124999877,
+      "allInMs": 0.03216999722644687,
+      "controlStats": {
+        "control": {
+          "decisions": 140,
+          "eligible": 34,
+          "raises": 6
+        }
+      }
+    },
+    {
+      "seed": 190518,
+      "elapsedMs": 14462.84683299996,
+      "allInMs": 0.031417999882251024,
+      "controlStats": {
+        "control": {
+          "decisions": 118,
+          "eligible": 32,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190519,
+      "elapsedMs": 13446.499209000263,
+      "allInMs": 0.03162899985909462,
+      "controlStats": {
+        "control": {
+          "decisions": 138,
+          "eligible": 42,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190520,
+      "elapsedMs": 14716.742291000206,
+      "allInMs": 0.02495100349187851,
+      "controlStats": {
+        "control": {
+          "decisions": 91,
+          "eligible": 15,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190521,
+      "elapsedMs": 14385.937917000148,
+      "allInMs": 0.035088001284748316,
+      "controlStats": {
+        "control": {
+          "decisions": 120,
+          "eligible": 31,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 190522,
+      "elapsedMs": 14585.722833000124,
+      "allInMs": 0.028042000718414783,
+      "controlStats": {
+        "control": {
+          "decisions": 107,
+          "eligible": 26,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190523,
+      "elapsedMs": 12343.55879200017,
+      "allInMs": 0.028212998062372208,
+      "controlStats": {
+        "control": {
+          "decisions": 110,
+          "eligible": 32,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 190524,
+      "elapsedMs": 14858.277209000196,
+      "allInMs": 0.03054600302129984,
+      "controlStats": {
+        "control": {
+          "decisions": 132,
+          "eligible": 35,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 190525,
+      "elapsedMs": 12490.559666999616,
+      "allInMs": 0.03862999798730016,
+      "controlStats": {
+        "control": {
+          "decisions": 107,
+          "eligible": 33,
+          "raises": 4
+        }
+      }
+    }
+  ],
+  "physicalHands": 44100,
+  "handsPerHour": 38370.004691117356,
+  "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded"
+}

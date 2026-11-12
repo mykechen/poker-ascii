@@ -1,0 +1,344 @@
+[
+  {
+    "run": "short-1",
+    "workers": 1,
+    "seconds": 305.309678541,
+    "hands": 1176,
+    "handsPerHour": 13866.576455195705,
+    "peakWorkerMiB": 312.796875,
+    "workerMemory": null,
+    "allInFractionOfWorkerService": 0.00031837596867040536,
+    "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "sourceHash": "7cd384f46439954a84626bd2ecc27b4f64a9bb4331cc462f97c574cf2cc0d797"
+  },
+  {
+    "run": "short-eight",
+    "workers": 8,
+    "seconds": 30.920499084,
+    "hands": 1176,
+    "handsPerHour": 136918.87664875053,
+    "peakWorkerMiB": 303.8125,
+    "workerMemory": null,
+    "allInFractionOfWorkerService": 0.0006444874946345138,
+    "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "sourceHash": "3174d13c974ccf6a1e1da9307eb49a460ceb73aefd14da0163cba52d1ad65bf2"
+  },
+  {
+    "run": "short-four",
+    "workers": 4,
+    "seconds": 53.541589541,
+    "hands": 1176,
+    "handsPerHour": 79071.24230516315,
+    "peakWorkerMiB": 306.8125,
+    "workerMemory": null,
+    "allInFractionOfWorkerService": 0.0005612323885898108,
+    "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "sourceHash": "3174d13c974ccf6a1e1da9307eb49a460ceb73aefd14da0163cba52d1ad65bf2"
+  },
+  {
+    "run": "short-fourteen",
+    "workers": 14,
+    "seconds": 23.931499584,
+    "hands": 1176,
+    "handsPerHour": 176904.91918987304,
+    "peakWorkerMiB": 280.828125,
+    "workerMemory": [
+      {
+        "pid": 23815,
+        "peakRssBytes": 276709376
+      },
+      {
+        "pid": 23825,
+        "peakRssBytes": 271777792
+      },
+      {
+        "pid": 23820,
+        "peakRssBytes": 274628608
+      },
+      {
+        "pid": 23818,
+        "peakRssBytes": 280346624
+      },
+      {
+        "pid": 23813,
+        "peakRssBytes": 283770880
+      },
+      {
+        "pid": 23824,
+        "peakRssBytes": 275775488
+      },
+      {
+        "pid": 23823,
+        "peakRssBytes": 280117248
+      },
+      {
+        "pid": 23814,
+        "peakRssBytes": 267370496
+      },
+      {
+        "pid": 23819,
+        "peakRssBytes": 277413888
+      },
+      {
+        "pid": 23821,
+        "peakRssBytes": 293584896
+      },
+      {
+        "pid": 23816,
+        "peakRssBytes": 284377088
+      },
+      {
+        "pid": 23822,
+        "peakRssBytes": 290553856
+      },
+      {
+        "pid": 23817,
+        "peakRssBytes": 294469632
+      },
+      {
+        "pid": 23812,
+        "peakRssBytes": 294158336
+      }
+    ],
+    "allInFractionOfWorkerService": 0.0006249314301900387,
+    "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "sourceHash": "3b0dfbd8a722ffa49c36b8b66707dcbb762fd530ae72e8ca457436b1383bd945"
+  },
+  {
+    "run": "short-ten",
+    "workers": 10,
+    "seconds": 30.650323459,
+    "hands": 1176,
+    "handsPerHour": 138125.78538243347,
+    "peakWorkerMiB": 311.578125,
+    "workerMemory": [
+      {
+        "pid": 23351,
+        "peakRssBytes": 325566464
+      },
+      {
+        "pid": 23359,
+        "peakRssBytes": 305709056
+      },
+      {
+        "pid": 23357,
+        "peakRssBytes": 300449792
+      },
+      {
+        "pid": 23349,
+        "peakRssBytes": 301203456
+      },
+      {
+        "pid": 23350,
+        "peakRssBytes": 289603584
+      },
+      {
+        "pid": 23358,
+        "peakRssBytes": 289800192
+      },
+      {
+        "pid": 23363,
+        "peakRssBytes": 322732032
+      },
+      {
+        "pid": 23352,
+        "peakRssBytes": 323764224
+      },
+      {
+        "pid": 23353,
+        "peakRssBytes": 326713344
+      },
+      {
+        "pid": 23348,
+        "peakRssBytes": 325566464
+      }
+    ],
+    "allInFractionOfWorkerService": 0.0005810650785489868,
+    "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "sourceHash": "3b0dfbd8a722ffa49c36b8b66707dcbb762fd530ae72e8ca457436b1383bd945"
+  },
+  {
+    "run": "sustained-1",
+    "workers": 1,
+    "seconds": 567.426681125,
+    "hands": 2184,
+    "handsPerHour": 13856.239513467592,
+    "peakWorkerMiB": 309.078125,
+    "workerMemory": [
+      {
+        "pid": 24973,
+        "peakRssBytes": 324091904
+      }
+    ],
+    "allInFractionOfWorkerService": 0.4479757154705054,
+    "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "sourceHash": "3b0dfbd8a722ffa49c36b8b66707dcbb762fd530ae72e8ca457436b1383bd945"
+  },
+  {
+    "run": "sustained-10",
+    "workers": 10,
+    "seconds": 600.018,
+    "hands": 21588,
+    "handsPerHour": 129524.1142765717,
+    "peakWorkerMiB": null,
+    "workerMemory": null,
+    "allInFractionOfWorkerService": null,
+    "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "thermalEnd": "unavailable after resource cap",
+    "sourceHash": "3b0dfbd8a722ffa49c36b8b66707dcbb762fd530ae72e8ca457436b1383bd945",
+    "status": "capped-throughput-lower-bound",
+    "note": "Only whole completed clusters counted; all in-flight work charged to elapsed time, excluded from numerator. Not return/variance evidence."
+  },
+  {
+    "run": "sustained-14-awake",
+    "workers": 14,
+    "seconds": 540.249110875,
+    "hands": 27972,
+    "handsPerHour": 186394.0133782085,
+    "peakWorkerMiB": 343.546875,
+    "workerMemory": [
+      {
+        "pid": 62184,
+        "peakRssBytes": 351141888
+      },
+      {
+        "pid": 62179,
+        "peakRssBytes": 356417536
+      },
+      {
+        "pid": 62182,
+        "peakRssBytes": 349208576
+      },
+      {
+        "pid": 62187,
+        "peakRssBytes": 356171776
+      },
+      {
+        "pid": 62189,
+        "peakRssBytes": 352845824
+      },
+      {
+        "pid": 62183,
+        "peakRssBytes": 352010240
+      },
+      {
+        "pid": 62177,
+        "peakRssBytes": 354287616
+      },
+      {
+        "pid": 62188,
+        "peakRssBytes": 352518144
+      },
+      {
+        "pid": 62186,
+        "peakRssBytes": 360235008
+      },
+      {
+        "pid": 62180,
+        "peakRssBytes": 354959360
+      },
+      {
+        "pid": 62181,
+        "peakRssBytes": 357187584
+      },
+      {
+        "pid": 62178,
+        "peakRssBytes": 353632256
+      },
+      {
+        "pid": 62185,
+        "peakRssBytes": 357154816
+      },
+      {
+        "pid": 62176,
+        "peakRssBytes": 353255424
+      }
+    ],
+    "allInFractionOfWorkerService": 0.09610995222211145,
+    "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "sourceHash": "d5a1f2534e93b9a35ceb4a0fa1bc45e476d2934b2d9279ed1b16087f05e4dee7"
+  },
+  {
+    "run": "sustained-4",
+    "workers": 4,
+    "seconds": 547.020887416,
+    "hands": 12516,
+    "handsPerHour": 82369.06676972001,
+    "peakWorkerMiB": 306.171875,
+    "workerMemory": [
+      {
+        "pid": 28082,
+        "peakRssBytes": 316358656
+      },
+      {
+        "pid": 28079,
+        "peakRssBytes": 318865408
+      },
+      {
+        "pid": 28081,
+        "peakRssBytes": 321044480
+      },
+      {
+        "pid": 28080,
+        "peakRssBytes": 320520192
+      }
+    ],
+    "allInFractionOfWorkerService": 0.038930804460970955,
+    "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "sourceHash": "3b0dfbd8a722ffa49c36b8b66707dcbb762fd530ae72e8ca457436b1383bd945"
+  },
+  {
+    "run": "sustained-8",
+    "workers": 8,
+    "seconds": 512.105200541,
+    "hands": 21672,
+    "handsPerHour": 152349.94668591273,
+    "peakWorkerMiB": 319.796875,
+    "workerMemory": [
+      {
+        "pid": 31160,
+        "peakRssBytes": 327974912
+      },
+      {
+        "pid": 31154,
+        "peakRssBytes": 328679424
+      },
+      {
+        "pid": 31161,
+        "peakRssBytes": 329646080
+      },
+      {
+        "pid": 31158,
+        "peakRssBytes": 318963712
+      },
+      {
+        "pid": 31155,
+        "peakRssBytes": 335331328
+      },
+      {
+        "pid": 31157,
+        "peakRssBytes": 324272128
+      },
+      {
+        "pid": 31156,
+        "peakRssBytes": 330006528
+      },
+      {
+        "pid": 31159,
+        "peakRssBytes": 328237056
+      }
+    ],
+    "allInFractionOfWorkerService": 0.02080947114100136,
+    "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "sourceHash": "3b0dfbd8a722ffa49c36b8b66707dcbb762fd530ae72e8ca457436b1383bd945"
+  }
+]

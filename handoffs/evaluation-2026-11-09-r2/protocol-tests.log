@@ -1,0 +1,16 @@
+
+> nlhe@0.1.0 test
+> vitest run --config vitest.config.mts lib/poker/evaluation/protocol.test.ts
+
+
+ RUN  v3.2.4 /private/tmp/poker-training-foundation
+
+ ✓ lib/poker/evaluation/protocol.test.ts (4 tests) 28382ms
+   ✓ evaluation protocol > identical arms pair to zero, deck fingerprints are sample-independent, conserved and reproducible  21331ms
+   ✓ evaluation protocol > keeps privileged scoring outside all non-evaluation modules and feature import closure  7039ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  11:49:15
+   Duration  28.62s (transform 87ms, setup 0ms, collect 108ms, tests 28.38s, environment 0ms, prepare 29ms)
+

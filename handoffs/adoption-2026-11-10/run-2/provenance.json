@@ -1,0 +1,35 @@
+{
+  "startedAt": "2026-11-10T03:36:25.815Z",
+  "commit": "ea0995522ca3bdc6366a6fcfb357f3d28889d774",
+  "protocolHash": "4e36f053bcc83465c9c36c3a3586b927eb7f2ed64d9ad9594c9582f1d1a85622",
+  "sourceHash": "d5a1f2534e93b9a35ceb4a0fa1bc45e476d2934b2d9279ed1b16087f05e4dee7",
+  "workers": 14,
+  "hardware": {
+    "model": "Apple M4 Pro",
+    "ramGB": 48,
+    "cores": [
+      10,
+      4
+    ]
+  },
+  "node": "v20.14.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "diagnosticReuse": false,
+  "command": [
+    "/usr/local/bin/node",
+    "/private/tmp/poker-training-foundation/node_modules/.bin/vite-node",
+    "--protocol",
+    "handoffs/protocols/adoption-128-r2.json",
+    "--workers",
+    "14",
+    "--out",
+    "handoffs/adoption-2026-11-10/run-2"
+  ],
+  "sleepPrevention": "caffeinate -is -w runnerPID (process-scoped, AC system-sleep assertion)",
+  "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+  "status": "interrupted",
+  "maxSeconds": 7140,
+  "interruptedAt": "2026-11-10T03:56:14.226345+00:00",
+  "interruptionReason": "Owner reported imminent battery loss; controller terminated, workers verified stopped. No outcomes inspected. No automatic retry/top-up."
+}

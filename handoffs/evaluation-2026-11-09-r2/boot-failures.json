@@ -1,0 +1,13 @@
+{
+  "classification": "pre-engine startup failures; no seeds consumed",
+  "attempts": [
+    {
+      "directory": "smoke-1",
+      "reason": "Sandbox denied sysctl CPU layout query; retried with approved permission as smoke-serial."
+    },
+    {
+      "directory": "short-4",
+      "reason": "Sandbox denied sysctl CPU layout query; retried as short-four with approved permission."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "id": "scaling-short-locked-r2",
+  "classification": "scaling-diagnostic",
+  "sourceHash": "3174d13c974ccf6a1e1da9307eb49a460ceb73aefd14da0163cba52d1ad65bf2",
+  "poolHash": "66ab6591ed2ce837a9092d6959d1964de7fe6089486c14b4d22e18292df087d8",
+  "pool": [
+    {
+      "id": "heuristic",
+      "opponents": [
+        "chart",
+        "tight",
+        "station",
+        "position",
+        "aggressor"
+      ]
+    },
+    {
+      "id": "baseline-opponent",
+      "opponents": [
+        "baseline-v0",
+        "tight",
+        "station",
+        "position",
+        "aggressor"
+      ]
+    }
+  ],
+  "arms": [
+    {
+      "id": "50",
+      "samples": 50
+    },
+    {
+      "id": "128",
+      "samples": 128
+    }
+  ],
+  "seeds": [
+    108101,
+    108102,
+    108103,
+    108104,
+    108105,
+    108106,
+    108107,
+    108108,
+    108109,
+    108110,
+    108111,
+    108112,
+    108113,
+    108114
+  ],
+  "hands": 1,
+  "players": [
+    6,
+    7,
+    8
+  ],
+  "stack": 200,
+  "smallBlind": 1,
+  "bigBlind": 2,
+  "adjustAllIn": true,
+  "maxSeconds": 600
+}

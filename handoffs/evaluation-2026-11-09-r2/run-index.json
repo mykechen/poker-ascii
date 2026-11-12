@@ -1,0 +1,164 @@
+[
+  {
+    "run": "calibration-1",
+    "status": "aborted-runtime-prediction",
+    "protocolHash": "94867d6428e954cf210abd05f19128c4c726de6f61f2a6e17941cdb6458d53ed",
+    "sourceHash": "d9073af220cc63e9a3db9d80b06d0f30d294862cc54cb8236279df23690b8ac2",
+    "startedAt": "2026-11-09T04:01:14.830Z",
+    "endedAt": null,
+    "classification": null
+  },
+  {
+    "run": "raw-cost",
+    "status": "complete",
+    "protocolHash": "8dca16636fcce266daaecdf37f89e6c7d7269ff21aaf1cf64d46aed4f6fe4d77",
+    "sourceHash": "d5a1f2534e93b9a35ceb4a0fa1bc45e476d2934b2d9279ed1b16087f05e4dee7",
+    "startedAt": "2026-11-09T13:50:49.953Z",
+    "endedAt": "2026-11-09T13:59:14.952Z",
+    "classification": null
+  },
+  {
+    "run": "raw-cost-matched",
+    "status": "complete",
+    "protocolHash": "f782520ab04bdc661d2729bb43f95e0cac8a87fd281d959ac9ef16d38f4f1bb2",
+    "sourceHash": "d5a1f2534e93b9a35ceb4a0fa1bc45e476d2934b2d9279ed1b16087f05e4dee7",
+    "startedAt": "2026-11-09T14:00:36.961Z",
+    "endedAt": "2026-11-09T14:08:54.396Z",
+    "classification": null
+  },
+  {
+    "run": "short-1",
+    "status": "complete",
+    "protocolHash": "9fbde8c5280add29e8916dfcbe745f60240e4b3ea97e8d0bf9be9ca38a72e5f9",
+    "sourceHash": "7cd384f46439954a84626bd2ecc27b4f64a9bb4331cc462f97c574cf2cc0d797",
+    "startedAt": "2026-11-09T04:08:14.453Z",
+    "endedAt": "2026-11-09T04:13:19.827Z",
+    "classification": null
+  },
+  {
+    "run": "short-eight",
+    "status": "complete",
+    "protocolHash": "c6cab9b0db778308e7248fadb4d8e340a33894d92eb0e862e57a86acfc0eb53e",
+    "sourceHash": "3174d13c974ccf6a1e1da9307eb49a460ceb73aefd14da0163cba52d1ad65bf2",
+    "startedAt": "2026-11-09T04:18:24.322Z",
+    "endedAt": "2026-11-09T04:18:55.278Z",
+    "classification": null
+  },
+  {
+    "run": "short-four",
+    "status": "complete",
+    "protocolHash": "c6cab9b0db778308e7248fadb4d8e340a33894d92eb0e862e57a86acfc0eb53e",
+    "sourceHash": "3174d13c974ccf6a1e1da9307eb49a460ceb73aefd14da0163cba52d1ad65bf2",
+    "startedAt": "2026-11-09T04:16:24.395Z",
+    "endedAt": "2026-11-09T04:17:17.978Z",
+    "classification": null
+  },
+  {
+    "run": "short-fourteen",
+    "status": "complete",
+    "protocolHash": "36bc7a8e2a497a3d50e7597c9492a7eae058a4ca53bb333cb66901b12b3bad4c",
+    "sourceHash": "3b0dfbd8a722ffa49c36b8b66707dcbb762fd530ae72e8ca457436b1383bd945",
+    "startedAt": "2026-11-09T04:21:26.576Z",
+    "endedAt": "2026-11-09T04:21:50.547Z",
+    "classification": null
+  },
+  {
+    "run": "short-ten",
+    "status": "complete",
+    "protocolHash": "36bc7a8e2a497a3d50e7597c9492a7eae058a4ca53bb333cb66901b12b3bad4c",
+    "sourceHash": "3b0dfbd8a722ffa49c36b8b66707dcbb762fd530ae72e8ca457436b1383bd945",
+    "startedAt": "2026-11-09T04:20:03.415Z",
+    "endedAt": "2026-11-09T04:20:34.099Z",
+    "classification": null
+  },
+  {
+    "run": "smoke-four",
+    "status": "complete",
+    "protocolHash": "5704d5c0a0a0dd03b90e5d43d3d82f85b80b24f58d7d35e914f8a85616857ba9",
+    "sourceHash": "2bc38733eed93b5c349817e5d1231cc42cb0065c4b7b15623bc8c50d03f7e4e9",
+    "startedAt": "2026-11-09T03:58:07.423Z",
+    "endedAt": "2026-11-09T03:58:35.648Z",
+    "classification": null
+  },
+  {
+    "run": "smoke-serial",
+    "status": "complete",
+    "protocolHash": "5704d5c0a0a0dd03b90e5d43d3d82f85b80b24f58d7d35e914f8a85616857ba9",
+    "sourceHash": "2bc38733eed93b5c349817e5d1231cc42cb0065c4b7b15623bc8c50d03f7e4e9",
+    "startedAt": "2026-11-09T03:57:10.357Z",
+    "endedAt": "2026-11-09T03:57:58.077Z",
+    "classification": null
+  },
+  {
+    "run": "sustained-1",
+    "status": "complete",
+    "protocolHash": "e4e0cd870b45e2980861b0f9bec4d2939e37e080d0bdee81dba106c37d65401d",
+    "sourceHash": "3b0dfbd8a722ffa49c36b8b66707dcbb762fd530ae72e8ca457436b1383bd945",
+    "startedAt": "2026-11-09T04:24:42.850Z",
+    "endedAt": "2026-11-09T04:34:10.336Z",
+    "classification": null
+  },
+  {
+    "run": "sustained-10",
+    "status": "failed",
+    "protocolHash": "e30e3242b8778a3b0988352c28aa71723e767d008a1d3b83fefa997af4a351d5",
+    "sourceHash": "3b0dfbd8a722ffa49c36b8b66707dcbb762fd530ae72e8ca457436b1383bd945",
+    "startedAt": "2026-11-09T04:56:04.482Z",
+    "endedAt": "2026-11-09T05:06:04.500Z",
+    "classification": null
+  },
+  {
+    "run": "sustained-14",
+    "status": "failed",
+    "protocolHash": "9b89a0834dd22751a20b11e6d39184bbbcdf78be62191c0715b596cc5ecf2aaa",
+    "sourceHash": "3b0dfbd8a722ffa49c36b8b66707dcbb762fd530ae72e8ca457436b1383bd945",
+    "startedAt": "2026-11-09T05:07:34.764Z",
+    "endedAt": "2026-11-09T05:23:23.575Z",
+    "classification": "sleep-interrupted; excluded from worker ranking"
+  },
+  {
+    "run": "sustained-14-awake",
+    "status": "complete",
+    "protocolHash": "b7b4c9c96116ebfa91c014e21358a19c4b47b6c33eb0522fd67e950ff130c2fb",
+    "sourceHash": "d5a1f2534e93b9a35ceb4a0fa1bc45e476d2934b2d9279ed1b16087f05e4dee7",
+    "startedAt": "2026-11-09T13:38:24.133Z",
+    "endedAt": "2026-11-09T13:47:24.568Z",
+    "classification": null
+  },
+  {
+    "run": "sustained-4",
+    "status": "complete",
+    "protocolHash": "cb2d5d640155485ee1efdf1477364600e26c812ac12ccb52f5f6c13349562110",
+    "sourceHash": "3b0dfbd8a722ffa49c36b8b66707dcbb762fd530ae72e8ca457436b1383bd945",
+    "startedAt": "2026-11-09T04:35:37.204Z",
+    "endedAt": "2026-11-09T04:44:44.328Z",
+    "classification": null
+  },
+  {
+    "run": "sustained-8",
+    "status": "complete",
+    "protocolHash": "9f2dc42f0d18b140f90c6db3d9f96ba878869cc2bd08ab42ecfcc2344c9802d1",
+    "sourceHash": "3b0dfbd8a722ffa49c36b8b66707dcbb762fd530ae72e8ca457436b1383bd945",
+    "startedAt": "2026-11-09T04:46:07.349Z",
+    "endedAt": "2026-11-09T04:54:39.828Z",
+    "classification": null
+  },
+  {
+    "run": "unbiased",
+    "status": "complete",
+    "protocolHash": "b5871685b14107d8bee578bbc5f47f586bb4ba908884da3f538df670a1c0e309",
+    "sourceHash": "2bc38733eed93b5c349817e5d1231cc42cb0065c4b7b15623bc8c50d03f7e4e9",
+    "startedAt": "2026-11-09T03:57:31.693Z",
+    "endedAt": "2026-11-09T03:59:22.946Z",
+    "classification": null
+  },
+  {
+    "run": "variance-pilot",
+    "status": "complete",
+    "protocolHash": "ef0dad283fd14ea3df4c7edc4e61078adb7ca960209623c0cf6ba3776b630af9",
+    "sourceHash": "d5a1f2534e93b9a35ceb4a0fa1bc45e476d2934b2d9279ed1b16087f05e4dee7",
+    "startedAt": "2026-11-09T14:10:44.303Z",
+    "endedAt": "2026-11-09T14:36:11.430Z",
+    "classification": null
+  }
+]

@@ -1,0 +1,95 @@
+{
+  "elapsedMs": 30920.499084,
+  "workers": 8,
+  "peakWorkerRssBytes": [
+    295747584,
+    294912000,
+    296910848,
+    297664512,
+    297566208,
+    294453248,
+    311918592,
+    318570496,
+    298090496,
+    298041344,
+    316325888,
+    294453248,
+    297566208,
+    316948480
+  ],
+  "seedTimings": [
+    {
+      "seed": 108101,
+      "elapsedMs": 16807.806915999998,
+      "allInMs": 4.890796999994393
+    },
+    {
+      "seed": 108102,
+      "elapsedMs": 14016.505500000001,
+      "allInMs": 6.692336999996996
+    },
+    {
+      "seed": 108103,
+      "elapsedMs": 14915.4565,
+      "allInMs": 0.12482999999406275
+    },
+    {
+      "seed": 108104,
+      "elapsedMs": 12716.049375,
+      "allInMs": 5.175337000007062
+    },
+    {
+      "seed": 108105,
+      "elapsedMs": 15946.614,
+      "allInMs": 0.14499699999799986
+    },
+    {
+      "seed": 108106,
+      "elapsedMs": 15979.811958,
+      "allInMs": 16.35870699999225
+    },
+    {
+      "seed": 108107,
+      "elapsedMs": 13661.489167,
+      "allInMs": 0.13312300000666255
+    },
+    {
+      "seed": 108108,
+      "elapsedMs": 15144.583916,
+      "allInMs": 46.316585999990025
+    },
+    {
+      "seed": 108109,
+      "elapsedMs": 13484.807334,
+      "allInMs": 4.030791999994108
+    },
+    {
+      "seed": 108110,
+      "elapsedMs": 14973.937042,
+      "allInMs": 19.37062999999216
+    },
+    {
+      "seed": 108111,
+      "elapsedMs": 16614.799667,
+      "allInMs": 6.662289000010787
+    },
+    {
+      "seed": 108112,
+      "elapsedMs": 13677.41175,
+      "allInMs": 0.069459000009374
+    },
+    {
+      "seed": 108113,
+      "elapsedMs": 14344.886457999999,
+      "allInMs": 16.120958999972572
+    },
+    {
+      "seed": 108114,
+      "elapsedMs": 12932.605833,
+      "allInMs": 6.16879599999811
+    }
+  ],
+  "physicalHands": 1176,
+  "handsPerHour": 136918.87664875053,
+  "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded"
+}

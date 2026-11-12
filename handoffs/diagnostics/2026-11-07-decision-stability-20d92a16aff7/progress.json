@@ -1,0 +1,131 @@
+{
+  "status": "complete",
+  "source": "ea0995522ca3bdc6366a6fcfb357f3d28889d774",
+  "fingerprint": "20d92a16aff7d440cd20424d11ca7e2180a913eab2e840e9a7ce324ad71c529c",
+  "settings": {
+    "seeds": [
+      103001,
+      103002,
+      103003,
+      103004,
+      103005,
+      103006,
+      103007,
+      103008,
+      103009,
+      103010,
+      103011,
+      103012,
+      103013,
+      103014,
+      103015,
+      103016,
+      103017,
+      103018,
+      103019,
+      103020
+    ],
+    "fields": {
+      "legacy": [
+        {
+          "id": "train-balanced",
+          "opponents": [
+            "chart",
+            "tight",
+            "station",
+            "position",
+            "aggressor"
+          ]
+        },
+        {
+          "id": "train-pressure",
+          "opponents": [
+            "maniac",
+            "station",
+            "chart",
+            "aggressor",
+            "tight"
+          ]
+        },
+        {
+          "id": "train-passive",
+          "opponents": [
+            "station",
+            "maniac",
+            "position",
+            "tight",
+            "chart"
+          ]
+        }
+      ],
+      "expanded": [
+        {
+          "id": "train-expanded-a",
+          "opponents": [
+            "multiway",
+            "station",
+            "learner",
+            "tight",
+            "maniac"
+          ]
+        },
+        {
+          "id": "train-expanded-b",
+          "opponents": [
+            "learner",
+            "position",
+            "multiway",
+            "aggressor",
+            "station"
+          ]
+        },
+        {
+          "id": "train-expanded-c",
+          "opponents": [
+            "tight",
+            "multiway",
+            "maniac",
+            "learner",
+            "position"
+          ]
+        }
+      ]
+    },
+    "hands": 4,
+    "players": [
+      6,
+      7,
+      8
+    ],
+    "budgets": [
+      50,
+      128,
+      512
+    ],
+    "exactLimit": 10000,
+    "salts": [
+      0,
+      2654435769,
+      2246822507,
+      3266489909,
+      668265263,
+      374761393,
+      3550635116,
+      4251993797
+    ],
+    "budgetMs": 7200000,
+    "sampling": "hash-assigned-street-v2",
+    "quotas": {
+      "legacy:preflop": 54,
+      "legacy:flop": 53,
+      "legacy:turn": 53,
+      "expanded:preflop": 54,
+      "expanded:flop": 53,
+      "expanded:turn": 53
+    }
+  },
+  "completedMatches": 2520,
+  "completedStates": 320,
+  "elapsedMs": 2832096.591333,
+  "error": null
+}

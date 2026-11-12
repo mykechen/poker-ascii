@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "id": "scaling-calibration-r2",
+  "classification": "scaling-diagnostic",
+  "sourceHash": "d9073af220cc63e9a3db9d80b06d0f30d294862cc54cb8236279df23690b8ac2",
+  "poolHash": "66ab6591ed2ce837a9092d6959d1964de7fe6089486c14b4d22e18292df087d8",
+  "pool": [
+    {
+      "id": "heuristic",
+      "opponents": [
+        "chart",
+        "tight",
+        "station",
+        "position",
+        "aggressor"
+      ]
+    },
+    {
+      "id": "baseline-opponent",
+      "opponents": [
+        "baseline-v0",
+        "tight",
+        "station",
+        "position",
+        "aggressor"
+      ]
+    }
+  ],
+  "arms": [
+    {
+      "id": "50",
+      "samples": 50
+    },
+    {
+      "id": "128",
+      "samples": 128
+    }
+  ],
+  "seeds": [
+    108001,
+    108002,
+    108003,
+    108004,
+    108005,
+    108006,
+    108007,
+    108008,
+    108009,
+    108010,
+    108011,
+    108012,
+    108013,
+    108014,
+    108015,
+    108016,
+    108017,
+    108018,
+    108019,
+    108020,
+    108021,
+    108022,
+    108023,
+    108024,
+    108025,
+    108026,
+    108027,
+    108028
+  ],
+  "hands": 2,
+  "players": [
+    6,
+    7,
+    8
+  ],
+  "stack": 200,
+  "smallBlind": 1,
+  "bigBlind": 2,
+  "adjustAllIn": true,
+  "maxSeconds": 7200
+}

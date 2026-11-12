@@ -1,0 +1,14 @@
+   PreventSystemSleep             0
+   PreventUserIdleSystemSleep     1
+   pid 76384(caffeinate): [0x000d0cb80001a1fd] 00:00:10 PreventUserIdleSystemSleep named: "caffeinate command-line tool"  
+	Details: caffeinate asserting for 1200 secs
+   pid 76384(caffeinate): [0x000d0cb80007a1fe] 00:00:10 PreventSystemSleep named: "caffeinate command-line tool"  
+	Details: caffeinate asserting for 1200 secs
+   pid 639(sharingd): [0x000d0c980001a1f6] 00:00:41 PreventUserIdleSystemSleep named: "Handoff"  
+   pid 418(coreaudiod): [0x000d0a3d0001826b] 00:10:44 PreventUserIdleSystemSleep named: "com.apple.audio.AudioTap-1AEA1D36-473D-4B5E-A65E-B94FB5A6D650.context.preventuseridlesleep"  
+   pid 418(coreaudiod): [0x000d0a3d00019f17] 00:10:44 PreventUserIdleSystemSleep named: "com.apple.audio.BuiltInSpeakerDevice.context.preventuseridlesleep"  
+   pid 345(powerd): [0x000c9db700018b21] 08:06:37 PreventUserIdleSystemSleep named: "Powerd - Prevent sleep while display is on"  
+   pid 70982(caffeinate): [0x000d07ff0001a132] 00:20:19 PreventUserIdleSystemSleep named: "caffeinate command-line tool"  
+	Details: caffeinate asserting on behalf of Process ID 70971
+   pid 70982(caffeinate): [0x000d07ff0007a133] 00:20:19 PreventSystemSleep named: "caffeinate command-line tool"  
+	Details: caffeinate asserting on behalf of Process ID 70971

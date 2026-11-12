@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "id": "heuristic-smoke-v1",
+  "classification": "engineering-smoke",
+  "sourceHash": "5f7fe099eb5352303c69e50d6bdf2b3d4b85480e01dde3985f8d28b368c34681",
+  "poolHash": "66ab6591ed2ce837a9092d6959d1964de7fe6089486c14b4d22e18292df087d8",
+  "pool": [
+    {
+      "id": "heuristic",
+      "opponents": [
+        "chart",
+        "tight",
+        "station",
+        "position",
+        "aggressor"
+      ]
+    },
+    {
+      "id": "baseline-opponent",
+      "opponents": [
+        "baseline-v0",
+        "tight",
+        "station",
+        "position",
+        "aggressor"
+      ]
+    }
+  ],
+  "arms": [
+    {
+      "id": "v1",
+      "samples": 128
+    },
+    {
+      "id": "control",
+      "samples": 128,
+      "kind": "value-raise"
+    }
+  ],
+  "seeds": [
+    149001,
+    149002,
+    149003,
+    149004,
+    149005,
+    149006,
+    149007,
+    149008,
+    149009,
+    149010,
+    149011,
+    149012,
+    149013,
+    149014
+  ],
+  "hands": 1,
+  "players": [
+    6,
+    7,
+    8
+  ],
+  "stack": 200,
+  "smallBlind": 1,
+  "bigBlind": 2,
+  "adjustAllIn": false,
+  "maxSeconds": 900,
+  "workerIdleMs": 2000
+}

@@ -1,0 +1,20 @@
+{
+  "registryHashBefore": "12485d6e30ac259eb4e3d334d555704015c30beb89da01d1bfcc70459551f847",
+  "checkedNamespaces": [
+    "retired_inspected_ranges",
+    "reserved_not_run",
+    "started_batches",
+    "evaluation_reservations"
+  ],
+  "fresh": true,
+  "seeds": [
+    170001,
+    170002,
+    170003,
+    170004,
+    170005
+  ],
+  "protocolHash": "618aad61427e7e55671e0b700958b0aeef315458c92053b993f2d3b7015fac9b",
+  "classification": "engineering-smoke",
+  "checkedAt": "2026-11-10T16:58:16.526Z"
+}

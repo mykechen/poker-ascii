@@ -1,0 +1,35 @@
+{
+  "registryHashBefore": "73f09fbaf68d958f45350a99826c675e739b5048055d56e1fe75b14964c9c928",
+  "checkedNamespaces": [
+    "retired_inspected_ranges",
+    "reserved_not_run",
+    "started_batches",
+    "evaluation_reservations"
+  ],
+  "fresh": true,
+  "seeds": [
+    171001,
+    171002,
+    171003,
+    171004,
+    171005,
+    171006,
+    171007,
+    171008,
+    171009,
+    171010,
+    171011,
+    171012,
+    171013,
+    171014,
+    171015,
+    171016,
+    171017,
+    171018,
+    171019,
+    171020
+  ],
+  "protocolHash": "4311cdaa222cce0df3f1439ead709fcf5d5dff983019beaf43b91bdfd445a29a",
+  "classification": "engineering-smoke",
+  "checkedAt": "2026-11-10T16:58:39.412Z"
+}

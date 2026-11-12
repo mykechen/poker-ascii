@@ -1,0 +1,34 @@
+{
+  "startedAt": "2026-11-09T04:56:04.482Z",
+  "commit": "ea0995522ca3bdc6366a6fcfb357f3d28889d774",
+  "protocolHash": "e30e3242b8778a3b0988352c28aa71723e767d008a1d3b83fefa997af4a351d5",
+  "sourceHash": "3b0dfbd8a722ffa49c36b8b66707dcbb762fd530ae72e8ca457436b1383bd945",
+  "workers": 10,
+  "hardware": {
+    "model": "Apple M4 Pro",
+    "ramGB": 48,
+    "cores": [
+      10,
+      4
+    ]
+  },
+  "node": "v20.14.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "diagnosticReuse": false,
+  "command": [
+    "/usr/local/bin/node",
+    "/private/tmp/poker-training-foundation/node_modules/.bin/vite-node",
+    "--protocol",
+    "handoffs/protocols/sustained-10-r2.json",
+    "--workers",
+    "10",
+    "--out",
+    "handoffs/evaluation-2026-11-09-r2/sustained-10"
+  ],
+  "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+  "status": "failed",
+  "maxSeconds": 600,
+  "error": "Error: Worker failed (null/SIGTERM): \n    at ChildProcess.<anonymous> (/private/tmp/poker-training-foundation/lib/poker/evaluation/pool.ts:21:122)\n    at ChildProcess.emit (node:events:519:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:294:12)",
+  "endedAt": "2026-11-09T05:06:04.500Z"
+}

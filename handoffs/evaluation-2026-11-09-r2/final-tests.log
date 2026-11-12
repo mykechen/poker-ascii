@@ -1,0 +1,74 @@
+
+ RUN  v3.2.4 /private/tmp/poker-training-foundation
+
+ ✓ lib/poker/session.test.ts (2 tests) 123ms
+ ✓ lib/poker/support-offset.test.ts (7 tests) 283ms
+ ✓ lib/poker/diagnostic-truth.test.ts (5 tests) 300ms
+ ✓ lib/poker/diagnostic-beliefs.test.ts (5 tests) 257ms
+ ✓ lib/poker/population-fit.test.ts (6 tests) 456ms
+   ✓ converges deterministically and masks minority actions  450ms
+ ✓ lib/poker/equity.test.ts (7 tests) 106ms
+ ✓ lib/poker/benchmark.test.ts (5 tests) 53ms
+ ✓ lib/poker/contextual-fit.test.ts (4 tests) 131ms
+ ✓ lib/poker/river-ev.test.ts (9 tests) 151ms
+ ✓ lib/poker/training-strict.test.ts (2 tests) 13ms
+stderr | lib/poker/rooms.test.ts > bot seats > acts only for a bot, after the pause and the think, and times out if the policy fails
+Bot did not return a legal action. 0
+
+ ✓ lib/poker/train.test.ts (7 tests) 124ms
+ ✓ lib/poker/rooms.test.ts (13 tests) 19ms
+ ✓ lib/poker/engine.test.ts (17 tests) 11ms
+ ✓ lib/poker/hand-features.test.ts (4 tests) 136ms
+ ✓ lib/poker/decision-stability.test.ts (6 tests) 10ms
+ ✓ lib/poker/bot.test.ts (8 tests) 6ms
+ ✓ lib/poker/observations.test.ts (1 test) 6ms
+ ✓ lib/poker/benchmark-opponents.test.ts (7 tests) 1015ms
+   ✓ equity-defender completes legal conserving six-player matches  436ms
+   ✓ equity-pressure completes legal conserving six-player matches  433ms
+ ✓ lib/poker/range-beliefs.test.ts (9 tests) 5ms
+ ✓ lib/poker/local.test.ts (2 tests) 8ms
+ ✓ lib/poker/forecast-diagnostics.test.ts (4 tests) 4ms
+ ✓ lib/poker/cpu-profile.test.ts (3 tests) 2ms
+ ✓ lib/poker/evaluation/lock.test.ts (1 test) 4ms
+ ✓ lib/poker/offset-confirmation.test.ts (3 tests) 2ms
+ ✓ lib/poker/evaluation/provenance.test.ts (1 test) 3ms
+ ✓ lib/poker/contextual-response.test.ts (7 tests) 5ms
+ ✓ lib/poker/league.test.ts (9 tests) 1138ms
+   ✓ collects public forecast contexts and maps rotated opponents by participant name  1100ms
+ ✓ lib/poker/view-reconstruction.test.ts (1 test) 5ms
+ ✓ lib/poker/learner.test.ts (3 tests) 3ms
+ ✓ lib/poker/reopening.test.ts (2 tests) 3ms
+ ✓ lib/poker/calibration.test.ts (3 tests) 3ms
+ ✓ lib/poker/strategies.test.ts (4 tests) 3ms
+ ✓ lib/poker/candidate.test.ts (2 tests) 2ms
+ ✓ lib/poker/population-fields.test.ts (2 tests) 2ms
+ ✓ lib/poker/contextual-experiment.test.ts (3 tests) 2ms
+ ✓ lib/poker/frequency-confirmation.test.ts (4 tests) 2ms
+ ✓ lib/poker/pots.test.ts (2 tests) 2ms
+ ✓ lib/poker/handoff.test.ts (2 tests) 3ms
+ ✓ lib/poker/evaluation/budget.test.ts (2 tests) 2ms
+ ✓ lib/poker/opponent.test.ts (1 test) 1ms
+ ✓ lib/poker/evaluation/identity.test.ts (1 test) 2ms
+ ✓ lib/poker/decision-diagnostics.test.ts (1 test) 3ms
+ ✓ lib/poker/contextual-selection.test.ts (2 tests) 1ms
+ ✓ lib/poker/equity-policy.test.ts (5 tests) 1847ms
+   ✓ plays legal six-player hands without accessing hidden information  338ms
+   ✓ captures public decision snapshots without changing seeded actions  1505ms
+ ✓ lib/poker/contextual-replay.test.ts (4 tests) 1881ms
+   ✓ league capture excludes target cards and reproduces observer forecasts  1784ms
+ ✓ lib/poker/adaptive.test.ts (6 tests) 2089ms
+   ✓ learns observed tendencies across hands and clears them in a new session  662ms
+   ✓ reports observer exposure and snapshots without changing adaptive seeded play  768ms
+ ✓ lib/poker/evaluation/pool.test.ts (1 test) 25867ms
+   ✓ 1 and 4 child workers produce byte-identical non-timing records  25866ms
+ ✓ lib/poker/evaluation/protocol.test.ts (4 tests) 31406ms
+   ✓ evaluation protocol > identical arms pair to zero, deck fingerprints are sample-independent, conserved and reproducible  24336ms
+   ✓ evaluation protocol > keeps privileged scoring outside all non-evaluation modules and feature import closure  7056ms
+ ✓ lib/poker/evaluation/all-in.test.ts (5 tests) 58651ms
+   ✓ AA vs KK preflop exhausts all 1,712,304 boards and matches frozen exact payout  58635ms
+
+ Test Files  49 passed (49)
+      Tests  214 passed (214)
+   Start at  21:36:32
+   Duration  58.90s (transform 975ms, setup 0ms, collect 3.01s, tests 126.15s, environment 8ms, prepare 2.52s)
+

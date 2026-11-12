@@ -1,0 +1,34 @@
+{
+  "startedAt": "2026-11-10T17:16:16.818Z",
+  "commit": "3674c2720062f5ed58c2dbeadb36baa9adc32170",
+  "protocolHash": "c34626cfd91a959dc535f6ba5a585f93186336b45ff95016e5d41a7d0b99a354",
+  "sourceHash": "d5a1f2534e93b9a35ceb4a0fa1bc45e476d2934b2d9279ed1b16087f05e4dee7",
+  "workers": 2,
+  "hardware": {
+    "model": "Apple M4 Pro",
+    "ramGB": 48,
+    "cores": [
+      10,
+      4
+    ]
+  },
+  "node": "v20.14.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "diagnosticReuse": false,
+  "command": [
+    "/usr/local/bin/node",
+    "/Users/mykechen/Desktop/APPS/poker-ascii/.worktrees/poker-training-foundation/node_modules/.bin/vite-node",
+    "--protocol",
+    "handoffs/protocols/low-power-two-normal-2026-11-11.json",
+    "--workers",
+    "2",
+    "--out",
+    "handoffs/low-power-2026-11-11/two-normal/run-1"
+  ],
+  "sleepPrevention": "caffeinate -is -w runnerPID (process-scoped, AC system-sleep assertion)",
+  "thermalStart": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+  "status": "complete",
+  "maxSeconds": 900,
+  "endedAt": "2026-11-10T17:18:28.822Z"
+}

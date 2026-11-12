@@ -1,0 +1,3 @@
+# Resolved test infrastructure failure
+
+Reconstructed from tool output because final-tests.log was replaced by the clean verification run. All214tests passed, but Vitest reported one unhandled `[vitest-worker]: Timeout calling "onTaskUpdate"`; duration68.18s. Installed Vitest birpc default timeout is60,000ms. The synchronous exhaustive preflop test blocked its worker long enough to trip RPC despite its120s test timeout. It now awaits a child process running the same exact enumeration and exact golden checks. Final run49files/214tests,0errors,58.90s. Original preflop-golden.json remains unchanged; test output is temporary and exclusive-write.

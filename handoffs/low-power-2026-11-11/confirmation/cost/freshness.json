@@ -1,0 +1,33 @@
+{
+  "registryHashBefore": "afea1a4a1571174d2b3f66f35c67eb7c7447a5ac4ee293288281b61f56e5a946",
+  "checkedNamespaces": [
+    "retired_inspected_ranges",
+    "reserved_not_run",
+    "started_batches",
+    "evaluation_reservations"
+  ],
+  "fresh": true,
+  "seeds": [
+    140001,
+    140002,
+    140003,
+    140004,
+    140005,
+    140006,
+    140007,
+    140008,
+    140009,
+    140010,
+    140011,
+    140012,
+    140013,
+    140014,
+    140015,
+    140016,
+    140017,
+    140018,
+    140019,
+    140020
+  ],
+  "checkedAt": "2026-11-11T16:49:58.989Z"
+}

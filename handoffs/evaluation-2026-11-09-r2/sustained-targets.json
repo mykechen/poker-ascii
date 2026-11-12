@@ -1,0 +1,47 @@
+[
+  {
+    "workers": 1,
+    "clusters": 26,
+    "physicalHands": 2184,
+    "predictedSeconds": 567.0036887189999,
+    "targetSeconds": 570,
+    "hardCapSeconds": 600,
+    "calibrationRun": "short-1"
+  },
+  {
+    "workers": 4,
+    "clusters": 149,
+    "physicalHands": 12516,
+    "predictedSeconds": 569.8354886863572,
+    "targetSeconds": 570,
+    "hardCapSeconds": 600,
+    "calibrationRun": "short-four"
+  },
+  {
+    "workers": 8,
+    "clusters": 258,
+    "physicalHands": 21672,
+    "predictedSeconds": 569.8206259765715,
+    "targetSeconds": 570,
+    "hardCapSeconds": 600,
+    "calibrationRun": "short-eight"
+  },
+  {
+    "workers": 10,
+    "clusters": 260,
+    "physicalHands": 21840,
+    "predictedSeconds": 569.22029281,
+    "targetSeconds": 570,
+    "hardCapSeconds": 600,
+    "calibrationRun": "short-ten"
+  },
+  {
+    "workers": 14,
+    "clusters": 333,
+    "physicalHands": 27972,
+    "predictedSeconds": 569.2278115337142,
+    "targetSeconds": 570,
+    "hardCapSeconds": 600,
+    "calibrationRun": "short-fourteen"
+  }
+]

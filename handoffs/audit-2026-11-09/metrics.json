@@ -1,0 +1,107 @@
+{
+  "handSD50": 61.88243252105869,
+  "handSD128": 66.78614169245166,
+  "pairedHandCorrelation": 0.8160204554837847,
+  "rotatedCorrelation": 0.7403792634148725,
+  "throughputHandsPerHour": {
+    "50": 36528.77794216239,
+    "128": 30462.502947244102
+  },
+  "power": {
+    "unpaired": {
+      "varianceDifference": 8289.824176887612,
+      "requiredUnits": 26026334,
+      "physicalHands": 52052668,
+      "hours": 1566.8612964808035,
+      "twoHourRunsIdeal": 784,
+      "twoHourRunsWith90minWork": 1045
+    },
+    "paired": {
+      "varianceDifference": 1544.7804007915797,
+      "requiredUnits": 4849919,
+      "physicalHands": 9699838,
+      "hours": 291.97928421908676,
+      "twoHourRunsIdeal": 146,
+      "twoHourRunsWith90minWork": 195
+    },
+    "rotated": {
+      "varianceDifference": 285.8207179588607,
+      "requiredUnits": 897349,
+      "physicalHands": 10768188,
+      "hours": 324.138178862014,
+      "twoHourRunsIdeal": 163,
+      "twoHourRunsWith90minWork": 217
+    }
+  },
+  "strategy": {
+    "50": {
+      "hands": 480,
+      "vpip": 0.4875,
+      "pfr": 0.0,
+      "streets": {
+        "preflop": {
+          "decisions": 532,
+          "aggressive": 0,
+          "lastActionHands": 227,
+          "lastActionBb100": -19.823788546255507
+        },
+        "flop": {
+          "decisions": 278,
+          "aggressive": 0,
+          "lastActionHands": 35,
+          "lastActionBb100": 464.28571428571433
+        },
+        "turn": {
+          "decisions": 248,
+          "aggressive": 0,
+          "lastActionHands": 34,
+          "lastActionBb100": -1389.7058823529412
+        },
+        "river": {
+          "decisions": 195,
+          "aggressive": 82,
+          "lastActionHands": 184,
+          "lastActionBb100": 3358.423913043478
+        }
+      }
+    },
+    "128": {
+      "hands": 480,
+      "vpip": 0.49375,
+      "pfr": 0.0,
+      "streets": {
+        "preflop": {
+          "decisions": 532,
+          "aggressive": 0,
+          "lastActionHands": 219,
+          "lastActionBb100": -9.817351598173515
+        },
+        "flop": {
+          "decisions": 294,
+          "aggressive": 0,
+          "lastActionHands": 33,
+          "lastActionBb100": 212.12121212121212
+        },
+        "turn": {
+          "decisions": 261,
+          "aggressive": 0,
+          "lastActionHands": 35,
+          "lastActionBb100": -598.5714285714286
+        },
+        "river": {
+          "decisions": 203,
+          "aggressive": 88,
+          "lastActionHands": 193,
+          "lastActionBb100": 3904.6632124352327
+        }
+      }
+    }
+  },
+  "descriptiveDeltaBb100": 323.0208333333333,
+  "descriptiveCI95": [
+    34.97363161531956,
+    611.0680350513471
+  ],
+  "handsPerArm": 480,
+  "elapsedMs": 104046.44562500001
+}

@@ -1,0 +1,12 @@
+{
+  "identical": true,
+  "serial": "short-1",
+  "parallel": [
+    "short-four",
+    "short-eight",
+    "short-ten",
+    "short-fourteen"
+  ],
+  "bytes": 1728417,
+  "note": "Integrity/source telemetry amendments do not alter hand records."
+}

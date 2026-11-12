@@ -1,0 +1,214 @@
+{
+  "directory": "handoffs/diagnostics/2026-11-07-decision-stability-20d92a16aff7",
+  "source": "ea0995522ca3bdc6366a6fcfb357f3d28889d774",
+  "status": "complete",
+  "failures": [],
+  "matches": 2520,
+  "assignments": 10080,
+  "eligible": 4874,
+  "states": 320,
+  "scored": 320,
+  "pairedInstabilityReduction": {
+    "128": {
+      "positiveMeansReducedInstability": true,
+      "cells": {
+        "legacy:preflop": {
+          "n": 19,
+          "mean": 0.08051378446115287,
+          "standardError": 0.02118770310577845,
+          "approximate95CI": [
+            0.03599842023591235,
+            0.1250291486863934
+          ]
+        },
+        "legacy:flop": {
+          "n": 17,
+          "mean": 0.05423669467787115,
+          "standardError": 0.018415910745916374,
+          "approximate95CI": [
+            0.015194963896528434,
+            0.09327842545921386
+          ]
+        },
+        "legacy:turn": {
+          "n": 20,
+          "mean": 0.033928571428571426,
+          "standardError": 0.015603450649025744,
+          "approximate95CI": [
+            0.0012705492201605453,
+            0.0665865936369823
+          ]
+        },
+        "expanded:preflop": {
+          "n": 20,
+          "mean": 0.08982142857142857,
+          "standardError": 0.024087463733611165,
+          "approximate95CI": [
+            0.0394063669769804,
+            0.14023649016587675
+          ]
+        },
+        "expanded:flop": {
+          "n": 19,
+          "mean": 0.06331453634085213,
+          "standardError": 0.027285029062215607,
+          "approximate95CI": [
+            0.005988690281137139,
+            0.12064038240056713
+          ]
+        },
+        "expanded:turn": {
+          "n": 20,
+          "mean": 0.019017857142857142,
+          "standardError": 0.010776974344425625,
+          "approximate95CI": [
+            -0.0035383501600256898,
+            0.041574064445739974
+          ]
+        }
+      },
+      "macroCompleteSeedSensitivity": {
+        "n": 15,
+        "mean": 0.05269179894179894,
+        "standardError": 0.009351513072771217,
+        "approximate95CI": [
+          0.03263280340070468,
+          0.0727507944828932
+        ]
+      },
+      "completeSeeds": [
+        103002,
+        103003,
+        103004,
+        103005,
+        103007,
+        103008,
+        103009,
+        103010,
+        103011,
+        103012,
+        103015,
+        103016,
+        103017,
+        103018,
+        103019
+      ]
+    },
+    "512": {
+      "positiveMeansReducedInstability": true,
+      "cells": {
+        "legacy:preflop": {
+          "n": 19,
+          "mean": 0.11168546365914787,
+          "standardError": 0.02110919572366876,
+          "approximate95CI": [
+            0.06733504344371981,
+            0.15603588387457595
+          ]
+        },
+        "legacy:flop": {
+          "n": 17,
+          "mean": 0.07664565826330533,
+          "standardError": 0.02018921802975535,
+          "approximate95CI": [
+            0.03384451604022398,
+            0.11944680048638667
+          ]
+        },
+        "legacy:turn": {
+          "n": 20,
+          "mean": 0.07610119047619048,
+          "standardError": 0.02157497826048883,
+          "approximate95CI": [
+            0.030944760976987354,
+            0.1212576199753936
+          ]
+        },
+        "expanded:preflop": {
+          "n": 20,
+          "mean": 0.1793154761904762,
+          "standardError": 0.031724802565954426,
+          "approximate95CI": [
+            0.11291546441993358,
+            0.2457154879610188
+          ]
+        },
+        "expanded:flop": {
+          "n": 19,
+          "mean": 0.1351190476190476,
+          "standardError": 0.032963704536818274,
+          "approximate95CI": [
+            0.06586230438719241,
+            0.2043757908509028
+          ]
+        },
+        "expanded:turn": {
+          "n": 20,
+          "mean": 0.04473214285714285,
+          "standardError": 0.019350817346606836,
+          "approximate95CI": [
+            0.004230882150694747,
+            0.08523340356359096
+          ]
+        }
+      },
+      "macroCompleteSeedSensitivity": {
+        "n": 15,
+        "mean": 0.10197751322751322,
+        "standardError": 0.010869341421834464,
+        "approximate95CI": [
+          0.0786627758776783,
+          0.12529225057734816
+        ]
+      },
+      "completeSeeds": [
+        103002,
+        103003,
+        103004,
+        103005,
+        103007,
+        103008,
+        103009,
+        103010,
+        103011,
+        103012,
+        103015,
+        103016,
+        103017,
+        103018,
+        103019
+      ]
+    }
+  },
+  "latency": {
+    "50": {
+      "decisions": 2560,
+      "totalMs": 16729.22858500341,
+      "meanMs": 6.534854916016957,
+      "medianMs": 5.745229000225663,
+      "p95Ms": 12.216541000176221
+    },
+    "128": {
+      "decisions": 2560,
+      "totalMs": 38155.145841002,
+      "meanMs": 14.904353844141406,
+      "medianMs": 12.994978999719024,
+      "p95Ms": 26.903249999973923
+    },
+    "512": {
+      "decisions": 2560,
+      "totalMs": 145856.88397399243,
+      "meanMs": 56.97534530234079,
+      "medianMs": 48.766833500005305,
+      "p95Ms": 101.54708400042728
+    }
+  },
+  "limits": [
+    "Inspected fixed current-policy states; eight RNG streams are not independent poker hands.",
+    "Descriptive paired seed t intervals; approximate critical values; no multiple-comparison adjustment.",
+    "Complete-seed macro sensitivity differs from archived macro when cell seed coverage differs.",
+    "No profit confidence interval: no candidate on-policy profit experiment occurred. Stability is not correctness or strength.",
+    "No independent equity-world enumeration or earliest-decision replay; assignment and accounting checked from archives.",
+    "Snapshot hole privacy only; arbitrary log content not exhaustively inspected."
+  ]
+}

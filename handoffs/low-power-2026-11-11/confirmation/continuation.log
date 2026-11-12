@@ -1,0 +1,25 @@
+{
+  "classification": "Independent fixed-work adoption confirmation, not final model-goal test",
+  "metric": "128-minus-50 raw bb/100, equal seed/stratum/table/rotation weights",
+  "physicalHands": 332220,
+  "handsPerArm": 166110,
+  "independentSeedClusters": 3955,
+  "result": {
+    "mean": 88.92112154596352,
+    "ci95": [
+      65.92883634665647,
+      111.91340674527056
+    ],
+    "nSeedClusters": 3955,
+    "se": 11.727382347557413
+  },
+  "noninferiorityMarginBb100": 5,
+  "passedNoninferiority": true,
+  "alpha": "one contrast95%two-sided CI; one-sided lower-tail alpha.025",
+  "adoptionDecision": "pending fresh cost check",
+  "noOptionalStopping": true,
+  "sourceHash": "7e5a626b965f4ffe1e94c47fcba7a4bc5663a2710be300c1e1c1733699a092c4",
+  "studyHash": "e9c63b6f8ce2ecb6a9af7675158f21c0777efd199da2812beb7ca8ab3260d98f",
+  "statisticsSourceHash": "530c86f96f9ba9b16e6750e2fb27357b87d7fc9a365b860837a4a36ae832c33c",
+  "reference": "128sampling effect is not counted toward the later +5goal if128 becomesv1"
+}

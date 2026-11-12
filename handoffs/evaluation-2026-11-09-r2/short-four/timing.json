@@ -1,0 +1,95 @@
+{
+  "elapsedMs": 53541.589541,
+  "workers": 4,
+  "peakWorkerRssBytes": [
+    288374784,
+    296353792,
+    291799040,
+    311836672,
+    293568512,
+    312950784,
+    311836672,
+    312901632,
+    293568512,
+    321716224,
+    320307200,
+    313606144,
+    295387136,
+    321716224
+  ],
+  "seedTimings": [
+    {
+      "seed": 108101,
+      "elapsedMs": 15710.71875,
+      "allInMs": 4.044215999999835
+    },
+    {
+      "seed": 108102,
+      "elapsedMs": 13034.280999999999,
+      "allInMs": 6.331334999992293
+    },
+    {
+      "seed": 108103,
+      "elapsedMs": 13874.084165999999,
+      "allInMs": 0.11262999999911472
+    },
+    {
+      "seed": 108104,
+      "elapsedMs": 11813.551,
+      "allInMs": 5.19750399999424
+    },
+    {
+      "seed": 108105,
+      "elapsedMs": 14923.952542,
+      "allInMs": 0.14129000001230452
+    },
+    {
+      "seed": 108106,
+      "elapsedMs": 16659.616708,
+      "allInMs": 14.932793000009042
+    },
+    {
+      "seed": 108107,
+      "elapsedMs": 12653.432375000002,
+      "allInMs": 0.07354500001019915
+    },
+    {
+      "seed": 108108,
+      "elapsedMs": 12604.594708,
+      "allInMs": 27.368621999992683
+    },
+    {
+      "seed": 108109,
+      "elapsedMs": 13082.014500000001,
+      "allInMs": 4.777754000006098
+    },
+    {
+      "seed": 108110,
+      "elapsedMs": 14510.892167000002,
+      "allInMs": 18.308540000020002
+    },
+    {
+      "seed": 108111,
+      "elapsedMs": 14449.474125000004,
+      "allInMs": 5.757298999986233
+    },
+    {
+      "seed": 108112,
+      "elapsedMs": 13332.664125000003,
+      "allInMs": 0.06558600001881132
+    },
+    {
+      "seed": 108113,
+      "elapsedMs": 13467.154792000001,
+      "allInMs": 15.637201000019559
+    },
+    {
+      "seed": 108114,
+      "elapsedMs": 12044.944958,
+      "allInMs": 5.098872999980813
+    }
+  ],
+  "physicalHands": 1176,
+  "handsPerHour": 79071.24230516315,
+  "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded"
+}

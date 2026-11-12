@@ -1,0 +1,13 @@
+.........E
+======================================================================
+ERROR: test_preassigned_rotations_balance_positions_jointly_with_five_lineup_offsets (python.tests.test_evaluation.RotationDesignTests.test_preassigned_rotations_balance_positions_jointly_with_five_lineup_offsets)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/poker-training-foundation/python/tests/test_evaluation.py", line 56, in test_preassigned_rotations_balance_positions_jointly_with_five_lineup_offsets
+    from python.evaluation.power import design_rotation
+ImportError: cannot import name 'design_rotation' from 'python.evaluation.power' (/private/tmp/poker-training-foundation/python/evaluation/power.py)
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.066s
+
+FAILED (errors=1)

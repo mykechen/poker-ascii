@@ -1,0 +1,30 @@
+
+> nlhe@0.1.0 test
+> vitest run --config vitest.config.mts lib/poker/evaluation/pool.test.ts
+
+
+ RUN  v3.2.4 /private/tmp/poker-training-foundation
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  lib/poker/evaluation/pool.test.ts [ lib/poker/evaluation/pool.test.ts ]
+Error: Cannot find module './pool' imported from '/private/tmp/poker-training-foundation/lib/poker/evaluation/pool.test.ts'
+ ❯ lib/poker/evaluation/pool.test.ts:2:1
+      1| import {it,expect} from 'vitest';
+      2| import {runPool} from './pool';
+       | ^
+      3| import {hashObject,type Protocol} from './protocol';
+      4| it('1 and 4 child workers produce byte-identical non-timing records',a…
+
+Caused by: Error: Failed to load url ./pool (resolved id: ./pool) in /private/tmp/poker-training-foundation/lib/poker/evaluation/pool.test.ts. Does the file exist?
+ ❯ loadAndTransform ../../../Users/mykechen/Desktop/APPS/poker-ascii/node_modules/vite/dist/node/chunks/config.js:22907:33
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  11:50:20
+   Duration  144ms (transform 14ms, setup 0ms, collect 0ms, tests 0ms, environment 0ms, prepare 32ms)
+

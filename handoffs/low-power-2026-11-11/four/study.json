@@ -1,0 +1,22 @@
+{
+  "frozenAt": "2026-11-10T16:58:39.548980+00:00",
+  "classification": "engineering-power-calibration-not-profit",
+  "clusters": 20,
+  "physicalHands": 1680,
+  "workers": 4,
+  "qos": "background",
+  "collectBatteryDraw": true,
+  "stopBatteryPercent": 25,
+  "powerSampleSeconds": 15,
+  "sourceHash": "d5a1f2534e93b9a35ceb4a0fa1bc45e476d2934b2d9279ed1b16087f05e4dee7",
+  "runs": [
+    {
+      "protocol": "handoffs/protocols/low-power-four-2026-11-11.json",
+      "protocolHash": "4311cdaa222cce0df3f1439ead709fcf5d5dff983019beaf43b91bdfd445a29a",
+      "out": "handoffs/low-power-2026-11-11/four/run-1"
+    }
+  ],
+  "noReturnAnalysis": true,
+  "powerAnalysis": "Inspect only throughput and power telemetry; no profit summaries or policy tuning. Compare with historical14worker17Wadapter/65Wbattery draw. No E-core-affinity guarantee; judge measured power.",
+  "budgetMaximumHours": 0.25
+}

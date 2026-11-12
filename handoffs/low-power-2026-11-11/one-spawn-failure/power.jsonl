@@ -1,0 +1,1 @@
+{"at": "2026-11-10T16:58:39.670311+00:00", "batteryPercent": 48, "acPower": true, "stop": false, "voltageMillivolts": 11696, "currentMilliamps": 1573, "batteryWatts": -18.397808, "adapterWatts": 27, "raw": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22610019)\t48%; charging; 3:20 remaining present: true\n"}

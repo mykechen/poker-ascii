@@ -1,0 +1,528 @@
+{
+  "physicalHands": 70560,
+  "seeds": 840,
+  "handsPerHour": {
+    "raw": 159044.7505836645,
+    "adjusted": 133068.6969715027
+  },
+  "arms": {
+    "128": {
+      "rawSD": 68.7869229412207,
+      "adjustedSD": 63.96559701432795,
+      "varianceRatio": 0.8647312427671362
+    },
+    "50": {
+      "rawSD": 66.91526523855158,
+      "adjustedSD": 62.33324481569468,
+      "varianceRatio": 0.8677388914531451
+    }
+  },
+  "designs": {
+    "rawBb": {
+      "unpaired": {
+        "variance": 1527.9325806637878,
+        "physicalHandsPerUnit": 12.0,
+        "independentUnit": "one independent seed per arm; one preassigned balanced rotation per cell",
+        "correlation": null,
+        "seedBalancingQuantum": 840,
+        "scenariosSuperiorityBonferroni3": {
+          "5": {
+            "requiredSeedUnits": 6399120,
+            "physicalHands": 76789440.0,
+            "hours": 482.8165640060241,
+            "handsPerArm": 38394720.0,
+            "independentSeeds": 12798240,
+            "handsPerHour": 159044.7505836645,
+            "twoHourRunsAt90minWork": 332,
+            "conservativeUpperVarianceSeedUnits": 6946800,
+            "conservativePhysicalHands": 83361600.0,
+            "conservativeHours": 524.1392733433735,
+            "conservativeRuns": 360,
+            "uniqueBaseDecks": 12798240,
+            "distinctTableDealLayouts": 38394720
+          },
+          "10": {
+            "requiredSeedUnits": 1600200,
+            "physicalHands": 19202400.0,
+            "hours": 120.73583019578314,
+            "handsPerArm": 9601200.0,
+            "independentSeeds": 3200400,
+            "handsPerHour": 159044.7505836645,
+            "twoHourRunsAt90minWork": 83,
+            "conservativeUpperVarianceSeedUnits": 1737120,
+            "conservativePhysicalHands": 20845440.0,
+            "conservativeHours": 131.06650753012048,
+            "conservativeRuns": 90,
+            "uniqueBaseDecks": 3200400,
+            "distinctTableDealLayouts": 9601200
+          },
+          "20": {
+            "requiredSeedUnits": 400680,
+            "physicalHands": 4808160.0,
+            "hours": 30.231491340361448,
+            "handsPerArm": 2404080.0,
+            "independentSeeds": 801360,
+            "handsPerHour": 159044.7505836645,
+            "twoHourRunsAt90minWork": 21,
+            "conservativeUpperVarianceSeedUnits": 434280,
+            "conservativePhysicalHands": 5211360.0,
+            "conservativeHours": 32.76662688253012,
+            "conservativeRuns": 23,
+            "uniqueBaseDecks": 801360,
+            "distinctTableDealLayouts": 2404080
+          },
+          "30": {
+            "requiredSeedUnits": 178080,
+            "physicalHands": 2136960.0,
+            "hours": 13.436218373493977,
+            "handsPerArm": 1068480.0,
+            "independentSeeds": 356160,
+            "handsPerHour": 159044.7505836645,
+            "twoHourRunsAt90minWork": 10,
+            "conservativeUpperVarianceSeedUnits": 193200,
+            "conservativePhysicalHands": 2318400.0,
+            "conservativeHours": 14.57702936746988,
+            "conservativeRuns": 10,
+            "uniqueBaseDecks": 356160,
+            "distinctTableDealLayouts": 1068480
+          }
+        }
+      },
+      "paired": {
+        "variance": 249.58063500537614,
+        "physicalHandsPerUnit": 12.0,
+        "independentUnit": "paired seed cluster; one preassigned balanced rotation per cell",
+        "correlation": 0.8375859369561833,
+        "seedBalancingQuantum": 840,
+        "scenariosSuperiorityBonferroni3": {
+          "5": {
+            "requiredSeedUnits": 1045800,
+            "physicalHands": 12549600.0,
+            "hours": 78.90609375000001,
+            "handsPerArm": 6274800.0,
+            "independentSeeds": 1045800,
+            "handsPerHour": 159044.7505836645,
+            "twoHourRunsAt90minWork": 55,
+            "conservativeUpperVarianceSeedUnits": 1134840,
+            "conservativePhysicalHands": 13618080.0,
+            "conservativeHours": 85.624202936747,
+            "conservativeRuns": 59,
+            "uniqueBaseDecks": 1045800,
+            "distinctTableDealLayouts": 3137400
+          },
+          "10": {
+            "requiredSeedUnits": 262080,
+            "physicalHands": 3144960.0,
+            "hours": 19.774057228915662,
+            "handsPerArm": 1572480.0,
+            "independentSeeds": 262080,
+            "handsPerHour": 159044.7505836645,
+            "twoHourRunsAt90minWork": 14,
+            "conservativeUpperVarianceSeedUnits": 283920,
+            "conservativePhysicalHands": 3407040.0,
+            "conservativeHours": 21.421895331325302,
+            "conservativeRuns": 15,
+            "uniqueBaseDecks": 262080,
+            "distinctTableDealLayouts": 786240
+          },
+          "20": {
+            "requiredSeedUnits": 65520,
+            "physicalHands": 786240.0,
+            "hours": 4.943514307228916,
+            "handsPerArm": 393120.0,
+            "independentSeeds": 65520,
+            "handsPerHour": 159044.7505836645,
+            "twoHourRunsAt90minWork": 4,
+            "conservativeUpperVarianceSeedUnits": 71400,
+            "conservativePhysicalHands": 856800.0,
+            "conservativeHours": 5.387163027108434,
+            "conservativeRuns": 4,
+            "uniqueBaseDecks": 65520,
+            "distinctTableDealLayouts": 196560
+          },
+          "30": {
+            "requiredSeedUnits": 29400,
+            "physicalHands": 352800.0,
+            "hours": 2.2182435993975904,
+            "handsPerArm": 176400.0,
+            "independentSeeds": 29400,
+            "handsPerHour": 159044.7505836645,
+            "twoHourRunsAt90minWork": 2,
+            "conservativeUpperVarianceSeedUnits": 31920,
+            "conservativePhysicalHands": 383040.0,
+            "conservativeHours": 2.4083787650602413,
+            "conservativeRuns": 2,
+            "uniqueBaseDecks": 29400,
+            "distinctTableDealLayouts": 88200
+          }
+        }
+      },
+      "rotated": {
+        "variance": 58.11946463054303,
+        "physicalHandsPerUnit": 84.0,
+        "independentUnit": "paired seed cluster; all rotations",
+        "correlation": 0.7796180519857985,
+        "seedBalancingQuantum": 5,
+        "scenariosSuperiorityBonferroni3": {
+          "5": {
+            "requiredSeedUnits": 243385,
+            "physicalHands": 20444340.0,
+            "hours": 128.5445758189006,
+            "handsPerArm": 10222170.0,
+            "independentSeeds": 243385,
+            "handsPerHour": 159044.7505836645,
+            "twoHourRunsAt90minWork": 86,
+            "conservativeUpperVarianceSeedUnits": 264245,
+            "conservativePhysicalHands": 22196580.0,
+            "conservativeHours": 139.5618523625753,
+            "conservativeRuns": 94,
+            "uniqueBaseDecks": 243385,
+            "distinctTableDealLayouts": 730155
+          },
+          "10": {
+            "requiredSeedUnits": 60850,
+            "physicalHands": 5111400.0,
+            "hours": 32.138124529367474,
+            "handsPerArm": 2555700.0,
+            "independentSeeds": 60850,
+            "handsPerHour": 159044.7505836645,
+            "twoHourRunsAt90minWork": 22,
+            "conservativeUpperVarianceSeedUnits": 66065,
+            "conservativePhysicalHands": 5549460.0,
+            "conservativeHours": 34.892443665286144,
+            "conservativeRuns": 24,
+            "uniqueBaseDecks": 60850,
+            "distinctTableDealLayouts": 182550
+          },
+          "20": {
+            "requiredSeedUnits": 15215,
+            "physicalHands": 1278060.0,
+            "hours": 8.035851515436747,
+            "handsPerArm": 639030.0,
+            "independentSeeds": 15215,
+            "handsPerHour": 159044.7505836645,
+            "twoHourRunsAt90minWork": 6,
+            "conservativeUpperVarianceSeedUnits": 16520,
+            "conservativePhysicalHands": 1387680.0,
+            "conservativeHours": 8.725091490963855,
+            "conservativeRuns": 6,
+            "uniqueBaseDecks": 15215,
+            "distinctTableDealLayouts": 45645
+          },
+          "30": {
+            "requiredSeedUnits": 6765,
+            "physicalHands": 568260.0,
+            "hours": 3.572956654743976,
+            "handsPerArm": 284130.0,
+            "independentSeeds": 6765,
+            "handsPerHour": 159044.7505836645,
+            "twoHourRunsAt90minWork": 3,
+            "conservativeUpperVarianceSeedUnits": 7345,
+            "conservativePhysicalHands": 616980.0,
+            "conservativeHours": 3.8792855327560245,
+            "conservativeRuns": 3,
+            "uniqueBaseDecks": 6765,
+            "distinctTableDealLayouts": 20295
+          }
+        }
+      }
+    },
+    "adjustedBb": {
+      "unpaired": {
+        "variance": 1310.7866406005587,
+        "physicalHandsPerUnit": 12.0,
+        "independentUnit": "one independent seed per arm; one preassigned balanced rotation per cell",
+        "correlation": null,
+        "seedBalancingQuantum": 840,
+        "scenariosSuperiorityBonferroni3": {
+          "5": {
+            "requiredSeedUnits": 5489400,
+            "physicalHands": 65872800.0,
+            "hours": 495.02851909722216,
+            "handsPerArm": 32936400.0,
+            "independentSeeds": 10978800,
+            "handsPerHour": 133068.6969715027,
+            "twoHourRunsAt90minWork": 344,
+            "conservativeUpperVarianceSeedUnits": 5959800,
+            "conservativePhysicalHands": 71517600.0,
+            "conservativeHours": 537.4487135416666,
+            "conservativeRuns": 374,
+            "uniqueBaseDecks": 10978800,
+            "distinctTableDealLayouts": 32936400
+          },
+          "10": {
+            "requiredSeedUnits": 1372560,
+            "physicalHands": 16470720.0,
+            "hours": 123.7760673611111,
+            "handsPerArm": 8235360.0,
+            "independentSeeds": 2745120,
+            "handsPerHour": 133068.6969715027,
+            "twoHourRunsAt90minWork": 86,
+            "conservativeUpperVarianceSeedUnits": 1490160,
+            "conservativePhysicalHands": 17881920.0,
+            "conservativeHours": 134.3811159722222,
+            "conservativeRuns": 94,
+            "uniqueBaseDecks": 2745120,
+            "distinctTableDealLayouts": 8235360
+          },
+          "20": {
+            "requiredSeedUnits": 343560,
+            "physicalHands": 4122720.0,
+            "hours": 30.981892013888885,
+            "handsPerArm": 2061360.0,
+            "independentSeeds": 687120,
+            "handsPerHour": 133068.6969715027,
+            "twoHourRunsAt90minWork": 22,
+            "conservativeUpperVarianceSeedUnits": 372960,
+            "conservativePhysicalHands": 4475520.0,
+            "conservativeHours": 33.633154166666664,
+            "conservativeRuns": 24,
+            "uniqueBaseDecks": 687120,
+            "distinctTableDealLayouts": 2061360
+          },
+          "30": {
+            "requiredSeedUnits": 152880,
+            "physicalHands": 1834560.0,
+            "hours": 13.786563194444444,
+            "handsPerArm": 917280.0,
+            "independentSeeds": 305760,
+            "handsPerHour": 133068.6969715027,
+            "twoHourRunsAt90minWork": 10,
+            "conservativeUpperVarianceSeedUnits": 166320,
+            "conservativePhysicalHands": 1995840.0,
+            "conservativeHours": 14.998568749999999,
+            "conservativeRuns": 11,
+            "uniqueBaseDecks": 305760,
+            "distinctTableDealLayouts": 917280
+          }
+        }
+      },
+      "paired": {
+        "variance": 206.78539778963773,
+        "physicalHandsPerUnit": 12.0,
+        "independentUnit": "paired seed cluster; one preassigned balanced rotation per cell",
+        "correlation": 0.8431688993466537,
+        "seedBalancingQuantum": 840,
+        "scenariosSuperiorityBonferroni3": {
+          "5": {
+            "requiredSeedUnits": 866040,
+            "physicalHands": 10392480.0,
+            "hours": 78.0986079861111,
+            "handsPerArm": 5196240.0,
+            "independentSeeds": 866040,
+            "handsPerHour": 133068.6969715027,
+            "twoHourRunsAt90minWork": 55,
+            "conservativeUpperVarianceSeedUnits": 940800,
+            "conservativePhysicalHands": 11289600.0,
+            "conservativeHours": 84.84038888888888,
+            "conservativeRuns": 59,
+            "uniqueBaseDecks": 866040,
+            "distinctTableDealLayouts": 2598120
+          },
+          "10": {
+            "requiredSeedUnits": 216720,
+            "physicalHands": 2600640.0,
+            "hours": 19.543589583333333,
+            "handsPerArm": 1300320.0,
+            "independentSeeds": 216720,
+            "handsPerHour": 133068.6969715027,
+            "twoHourRunsAt90minWork": 14,
+            "conservativeUpperVarianceSeedUnits": 235200,
+            "conservativePhysicalHands": 2822400.0,
+            "conservativeHours": 21.21009722222222,
+            "conservativeRuns": 15,
+            "uniqueBaseDecks": 216720,
+            "distinctTableDealLayouts": 650160
+          },
+          "20": {
+            "requiredSeedUnits": 54600,
+            "physicalHands": 655200.0,
+            "hours": 4.923772569444444,
+            "handsPerArm": 327600.0,
+            "independentSeeds": 54600,
+            "handsPerHour": 133068.6969715027,
+            "twoHourRunsAt90minWork": 4,
+            "conservativeUpperVarianceSeedUnits": 58800,
+            "conservativePhysicalHands": 705600.0,
+            "conservativeHours": 5.302524305555555,
+            "conservativeRuns": 4,
+            "uniqueBaseDecks": 54600,
+            "distinctTableDealLayouts": 163800
+          },
+          "30": {
+            "requiredSeedUnits": 24360,
+            "physicalHands": 292320.0,
+            "hours": 2.1967600694444442,
+            "handsPerArm": 146160.0,
+            "independentSeeds": 24360,
+            "handsPerHour": 133068.6969715027,
+            "twoHourRunsAt90minWork": 2,
+            "conservativeUpperVarianceSeedUnits": 26880,
+            "conservativePhysicalHands": 322560.0,
+            "conservativeHours": 2.424011111111111,
+            "conservativeRuns": 2,
+            "uniqueBaseDecks": 24360,
+            "distinctTableDealLayouts": 73080
+          }
+        }
+      },
+      "rotated": {
+        "variance": 50.076144242825514,
+        "physicalHandsPerUnit": 84.0,
+        "independentUnit": "paired seed cluster; all rotations",
+        "correlation": 0.7891544784747185,
+        "seedBalancingQuantum": 5,
+        "scenariosSuperiorityBonferroni3": {
+          "5": {
+            "requiredSeedUnits": 209705,
+            "physicalHands": 17615220.0,
+            "hours": 132.3768880353009,
+            "handsPerArm": 8807610.0,
+            "independentSeeds": 209705,
+            "handsPerHour": 133068.6969715027,
+            "twoHourRunsAt90minWork": 89,
+            "conservativeUpperVarianceSeedUnits": 227675,
+            "conservativePhysicalHands": 19124700.0,
+            "conservativeHours": 143.72050253182869,
+            "conservativeRuns": 96,
+            "uniqueBaseDecks": 209705,
+            "distinctTableDealLayouts": 629115
+          },
+          "10": {
+            "requiredSeedUnits": 52430,
+            "physicalHands": 4404120.0,
+            "hours": 33.096589207175924,
+            "handsPerArm": 2202060.0,
+            "independentSeeds": 52430,
+            "handsPerHour": 133068.6969715027,
+            "twoHourRunsAt90minWork": 23,
+            "conservativeUpperVarianceSeedUnits": 56920,
+            "conservativePhysicalHands": 4781280.0,
+            "conservativeHours": 35.93091469907407,
+            "conservativeRuns": 24,
+            "uniqueBaseDecks": 52430,
+            "distinctTableDealLayouts": 157290
+          },
+          "20": {
+            "requiredSeedUnits": 13110,
+            "physicalHands": 1101240.0,
+            "hours": 8.275725434027777,
+            "handsPerArm": 550620.0,
+            "independentSeeds": 13110,
+            "handsPerHour": 133068.6969715027,
+            "twoHourRunsAt90minWork": 6,
+            "conservativeUpperVarianceSeedUnits": 14230,
+            "conservativePhysicalHands": 1195320.0,
+            "conservativeHours": 8.982728674768518,
+            "conservativeRuns": 6,
+            "uniqueBaseDecks": 13110,
+            "distinctTableDealLayouts": 39330
+          },
+          "30": {
+            "requiredSeedUnits": 5830,
+            "physicalHands": 489720.0,
+            "hours": 3.6802043692129627,
+            "handsPerArm": 244860.0,
+            "independentSeeds": 5830,
+            "handsPerHour": 133068.6969715027,
+            "twoHourRunsAt90minWork": 3,
+            "conservativeUpperVarianceSeedUnits": 6325,
+            "conservativePhysicalHands": 531300.0,
+            "conservativeHours": 3.992674551504629,
+            "conservativeRuns": 3,
+            "uniqueBaseDecks": 5830,
+            "distinctTableDealLayouts": 17490
+          }
+        }
+      }
+    }
+  },
+  "observedUniqueBaseDecks": 840,
+  "observedDistinctTableDealLayouts": 2520,
+  "varianceUpper95FactorNormalClusterApprox": 1.0856944942041016,
+  "iidHandApproximation": {
+    "rawBb": {
+      "unpairedVariance": 9209.293489667143,
+      "pairedVariance": 1438.3489676550817,
+      "rotatedVariance": 199.75250039370584,
+      "warning": "Per-hand/deal approximation only, not independent seed-cluster sizing."
+    },
+    "adjustedBb": {
+      "unpairedVariance": 7977.031010652729,
+      "pairedVariance": 1207.223493996609,
+      "rotatedVariance": 169.30986292778516,
+      "warning": "Per-hand/deal approximation only, not independent seed-cluster sizing."
+    }
+  },
+  "perHandCorrelation": {
+    "rawBb": 0.8441365917794503,
+    "adjustedBb": 0.8489461288467469
+  },
+  "exploratorySamplingDeltaBb100": {
+    "mean": 78.33127982907595,
+    "ci95": [
+      30.407523555233695,
+      126.25503610291821
+    ],
+    "nSeedClusters": 840,
+    "se": 24.416072049356167
+  },
+  "unbiasednessDiagnostic": {
+    "pairedAdjustmentCI": {
+      "mean": -0.025984181054416387,
+      "ci95": [
+        -0.3544911870300642,
+        0.3025228249212314
+      ],
+      "nSeedClusters": 840,
+      "se": 0.167366904229868
+    },
+    "passed": true,
+    "byArm": {
+      "128": {
+        "rawSD": 68.7869229412207,
+        "adjustedSD": 63.96559701432795,
+        "varianceRatio": 0.8647312427671362,
+        "pairedAdjustmentCI": {
+          "mean": -0.049198856269000946,
+          "ci95": [
+            -0.40005345176979273,
+            0.30165573923179084
+          ],
+          "nSeedClusters": 840,
+          "se": 0.17875249664581921
+        }
+      },
+      "50": {
+        "rawSD": 66.91526523855158,
+        "adjustedSD": 62.33324481569468,
+        "varianceRatio": 0.8677388914531451,
+        "pairedAdjustmentCI": {
+          "mean": -0.0027695058398318376,
+          "ci95": [
+            -0.3404910683709402,
+            0.33495205669127653
+          ],
+          "nSeedClusters": 840,
+          "se": 0.17206151279676352
+        }
+      }
+    },
+    "physicalHands": 70560,
+    "note": "CI diagnostic supports, but cannot prove, unbiasedness; conditional exact enumeration provides the argument."
+  },
+  "limitations": [
+    "Exploratory seeds retired from confirmation. No promotion or profit claim.",
+    "Power uses normal planning approximation, seed-cluster variance, equal pool/table weights; pilot uncertainty remains.",
+    "Preassigned single-rotation throughput proxied by full-rotation physical-hand rate; new policy latency/correlation must be measured. Raw and adjusted use separate measured same-worker rates when supplied.",
+    "Assumed effects are scenarios; no model or heuristic pilot exists to justify choosing an effect yet."
+  ],
+  "analysisSourceHash": "3b210c0d8607570b610c364fc2c080f1c8877ade8b360bd0d7968e968bf0d959",
+  "workers": 14,
+  "measuredRates": {
+    "raw-cost": 198805.93822958064,
+    "raw-cost-matched": 202436.90130368792,
+    "sustained-14-awake": 186329.9009131533,
+    "variance-pilot": 166335.8712143784
+  }
+}

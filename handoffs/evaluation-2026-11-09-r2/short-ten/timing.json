@@ -1,0 +1,137 @@
+{
+  "elapsedMs": 30650.323459,
+  "workers": 10,
+  "peakWorkerRssBytes": [
+    293322752,
+    298614784,
+    300449792,
+    299941888,
+    289603584,
+    289800192,
+    322732032,
+    323764224,
+    326713344,
+    325566464,
+    305709056,
+    301203456,
+    300449792,
+    325566464
+  ],
+  "workerMemory": [
+    {
+      "pid": 23351,
+      "peakRssBytes": 325566464
+    },
+    {
+      "pid": 23359,
+      "peakRssBytes": 305709056
+    },
+    {
+      "pid": 23357,
+      "peakRssBytes": 300449792
+    },
+    {
+      "pid": 23349,
+      "peakRssBytes": 301203456
+    },
+    {
+      "pid": 23350,
+      "peakRssBytes": 289603584
+    },
+    {
+      "pid": 23358,
+      "peakRssBytes": 289800192
+    },
+    {
+      "pid": 23363,
+      "peakRssBytes": 322732032
+    },
+    {
+      "pid": 23352,
+      "peakRssBytes": 323764224
+    },
+    {
+      "pid": 23353,
+      "peakRssBytes": 326713344
+    },
+    {
+      "pid": 23348,
+      "peakRssBytes": 325566464
+    }
+  ],
+  "seedTimings": [
+    {
+      "seed": 108101,
+      "elapsedMs": 18152.311334,
+      "allInMs": 4.843464999997423
+    },
+    {
+      "seed": 108102,
+      "elapsedMs": 15078.717042,
+      "allInMs": 7.897497999995153
+    },
+    {
+      "seed": 108103,
+      "elapsedMs": 16087.683625000001,
+      "allInMs": 0.1303350000014234
+    },
+    {
+      "seed": 108104,
+      "elapsedMs": 13754.210459,
+      "allInMs": 5.56983999999602
+    },
+    {
+      "seed": 108105,
+      "elapsedMs": 17135.533583,
+      "allInMs": 0.12549800000647338
+    },
+    {
+      "seed": 108106,
+      "elapsedMs": 17323.000625,
+      "allInMs": 16.78991999999994
+    },
+    {
+      "seed": 108107,
+      "elapsedMs": 14718.885583000001,
+      "allInMs": 0.11974299999712912
+    },
+    {
+      "seed": 108108,
+      "elapsedMs": 16305.003125,
+      "allInMs": 32.78983599999572
+    },
+    {
+      "seed": 108109,
+      "elapsedMs": 14582.447291,
+      "allInMs": 5.6099179999952185
+    },
+    {
+      "seed": 108110,
+      "elapsedMs": 16947.513916,
+      "allInMs": 22.24770899999021
+    },
+    {
+      "seed": 108111,
+      "elapsedMs": 16564.089125,
+      "allInMs": 5.903872000002593
+    },
+    {
+      "seed": 108112,
+      "elapsedMs": 12894.608625000003,
+      "allInMs": 0.07175200000892801
+    },
+    {
+      "seed": 108113,
+      "elapsedMs": 14335.902458,
+      "allInMs": 18.092371000006096
+    },
+    {
+      "seed": 108114,
+      "elapsedMs": 12863.04275,
+      "allInMs": 5.750001999987944
+    }
+  ],
+  "physicalHands": 1176,
+  "handsPerHour": 138125.78538243347,
+  "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded"
+}

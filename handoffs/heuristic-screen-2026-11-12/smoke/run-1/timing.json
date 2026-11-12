@@ -1,0 +1,206 @@
+{
+  "elapsedMs": 114936.213,
+  "activeElapsedMs": 114936.356584,
+  "clockGapMs": 1.213000000003376,
+  "workers": 2,
+  "workerIdleMs": 2000,
+  "peakWorkerRssBytes": [
+    286064640,
+    304414720,
+    291323904,
+    314671104,
+    318390272,
+    320208896,
+    318390272,
+    320208896,
+    318390272,
+    320208896,
+    318390272,
+    320208896,
+    318390272,
+    320208896
+  ],
+  "workerMemory": [
+    {
+      "pid": 5399,
+      "peakRssBytes": 320208896
+    },
+    {
+      "pid": 5398,
+      "peakRssBytes": 318390272
+    }
+  ],
+  "seedTimings": [
+    {
+      "seed": 149001,
+      "elapsedMs": 15220.378833,
+      "allInMs": 0.06433399999713174,
+      "controlStats": {
+        "control": {
+          "decisions": 104,
+          "eligible": 21,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 149002,
+      "elapsedMs": 14711.586542,
+      "allInMs": 0.06587200000194571,
+      "controlStats": {
+        "control": {
+          "decisions": 131,
+          "eligible": 38,
+          "raises": 1
+        }
+      }
+    },
+    {
+      "seed": 149003,
+      "elapsedMs": 13392.287625,
+      "allInMs": 0.057124000013573095,
+      "controlStats": {
+        "control": {
+          "decisions": 87,
+          "eligible": 26,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 149004,
+      "elapsedMs": 13162.5085,
+      "allInMs": 0.06087500001012813,
+      "controlStats": {
+        "control": {
+          "decisions": 119,
+          "eligible": 33,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 149005,
+      "elapsedMs": 15775.523958000002,
+      "allInMs": 0.049876000037329504,
+      "controlStats": {
+        "control": {
+          "decisions": 118,
+          "eligible": 33,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 149006,
+      "elapsedMs": 15102.974832999997,
+      "allInMs": 0.05025800002840697,
+      "controlStats": {
+        "control": {
+          "decisions": 105,
+          "eligible": 25,
+          "raises": 14
+        }
+      }
+    },
+    {
+      "seed": 149007,
+      "elapsedMs": 14034.849416999998,
+      "allInMs": 0.057369000009202864,
+      "controlStats": {
+        "control": {
+          "decisions": 120,
+          "eligible": 29,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 149008,
+      "elapsedMs": 14460.346040999997,
+      "allInMs": 0.06708300000900635,
+      "controlStats": {
+        "control": {
+          "decisions": 96,
+          "eligible": 31,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 149009,
+      "elapsedMs": 11637.812874999989,
+      "allInMs": 0.06312399996386375,
+      "controlStats": {
+        "control": {
+          "decisions": 103,
+          "eligible": 26,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 149010,
+      "elapsedMs": 15440.386374999987,
+      "allInMs": 0.06375600000319537,
+      "controlStats": {
+        "control": {
+          "decisions": 122,
+          "eligible": 33,
+          "raises": 0
+        }
+      }
+    },
+    {
+      "seed": 149011,
+      "elapsedMs": 15549.218666999994,
+      "allInMs": 0.05824799991387408,
+      "controlStats": {
+        "control": {
+          "decisions": 97,
+          "eligible": 25,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 149012,
+      "elapsedMs": 14743.264708000002,
+      "allInMs": 0.0687090000428725,
+      "controlStats": {
+        "control": {
+          "decisions": 108,
+          "eligible": 35,
+          "raises": 4
+        }
+      }
+    },
+    {
+      "seed": 149013,
+      "elapsedMs": 13623.699582999994,
+      "allInMs": 0.07524900003045332,
+      "controlStats": {
+        "control": {
+          "decisions": 123,
+          "eligible": 36,
+          "raises": 2
+        }
+      }
+    },
+    {
+      "seed": 149014,
+      "elapsedMs": 14179.699250000005,
+      "allInMs": 0.07575599997653626,
+      "controlStats": {
+        "control": {
+          "decisions": 122,
+          "eligible": 33,
+          "raises": 0
+        }
+      }
+    }
+  ],
+  "physicalHands": 1176,
+  "handsPerHour": 36834.34393301265,
+  "thermalEnd": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded"
+}

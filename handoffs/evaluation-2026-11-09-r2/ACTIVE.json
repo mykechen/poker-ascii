@@ -1,0 +1,26 @@
+{
+  "activeSession": null,
+  "activeRun": null,
+  "protocol": "handoffs/protocols/variance-pilot-r2.json",
+  "next": "finish sustained benchmarks 4,8,10,14 sequentially with >=60s cooling, then fix a fresh 50/128 pilot <=90min predicted (single <=2h run), analyze, finish revised plan",
+  "mainPilotStarted": true,
+  "sourceMustRemainFrozen": true,
+  "shortCalibrationsComplete": [
+    1,
+    4,
+    8,
+    10,
+    14
+  ],
+  "fullVerification": "49 files/214 TS tests; 12 Python tests; tsc clean",
+  "stopConditions": "any parallel record mismatch, all-in unbiasedness/exactness failure, or unit issue invalidating audit beyond power => stop/report",
+  "pilotTargetClusters": 840,
+  "pilotTargetPhysicalHands": 70560,
+  "status": "complete; no simulator active",
+  "mainPilotComplete": true,
+  "results": [
+    "pilot-metrics.json",
+    "confirmatory-budget.json",
+    "../PLAN-2026-11-09-r2.md"
+  ]
+}

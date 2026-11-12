@@ -1,12 +1,13 @@
-import { readBotAction, type BotNote } from "./bot";
-import { learner } from "./learner";
+import type { BotNote } from "./bot";
+import { liveBotAction, nextOpening } from "./live-bot";
 import { apply, createTable, legalActions } from "./engine";
 import { ACTION_MS, BOT_THINK_MS, STREET_PAUSE_MS } from "./timing";
 import { SEAT_COUNT, type Command, type TableState } from "./types";
-import { projectForPlayer } from "./view";
 
 export type LocalSession = {
   table: TableState;
+  /** The table right after this hand was dealt. The bot replays the hand from here. */
+  handOpening: TableState | null;
   revealed: boolean;
   bots: boolean[];
   botNotes: BotNote[];
@@ -26,6 +27,7 @@ export type LocalAction =
 export function createLocalSession(): LocalSession {
   return {
     table: createTable(),
+    handOpening: null,
     revealed: false,
     bots: Array.from({ length: SEAT_COUNT }, () => false),
     botNotes: [],
@@ -86,6 +88,7 @@ function moved(session: LocalSession, table: TableState, bots: boolean[]): Local
   return {
     ...session,
     table,
+    handOpening: nextOpening(session.handOpening ?? null, session.table, table),
     bots,
     revealed: sameActor ? session.revealed : false,
     botNotes: table.handNumber === session.table.handNumber ? session.botNotes : [],
@@ -114,7 +117,7 @@ function tick(session: LocalSession, now: number): LocalSession {
     return base;
   }
 
-  const decision = readBotAction(projectForPlayer(table, table.toAct), learner);
+  const decision = liveBotAction(session.handOpening ?? null, table, table.toAct);
   if (!decision) {
     const failed = { ...base, botAttempt: turnKey };
     if (now >= openAt + ACTION_MS) return timedOut(failed, table.toAct, now);

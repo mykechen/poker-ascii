@@ -12,7 +12,7 @@ import type { Card, Street } from "./types";
 import type { PublicView } from "./view";
 
 type Evidence = { seat: number; street: Street; board: Card[]; facing: boolean; action: ActionClass };
-export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor"> & { priorStrength?: number; learn?: boolean; styleRetention?: number; riverRiskPenalty?: number; riverSamples?: number | false; onRiverDecision?: (result: RiverResult) => void; flopUniformWeight?: number; responseModel?:ResponseModel; onReplay?: (event:ReplayObservation)=>void; onPrediction?: (record: ForecastRecord & {facing:boolean;observerStatus:ObserverStatus}) => void } = {}) {
+export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor"> & { priorStrength?: number; learn?: boolean; styleRetention?: number; riverRiskPenalty?: number; riverSamples?: number | false; riverRangeDefense?: number; onRiverDecision?: (result: RiverResult) => void; flopUniformWeight?: number; responseModel?:ResponseModel; onReplay?: (event:ReplayObservation)=>void; onPrediction?: (record: ForecastRecord & {facing:boolean;observerStatus:ObserverStatus}) => void } = {}) {
   const learn=options.learn??false;
   const retention=options.styleRetention??1;
   if(!Number.isFinite(retention)||retention<0||retention>1)throw new Error("Style retention must be between zero and one.");
@@ -40,7 +40,7 @@ export function createAdaptivePolicy(options: Omit<EquityPolicyOptions,"rangeFor
     ensureHand(view);
     if(view.street==="river" && options.riverSamples!==false) {
       for(const opponent of view.seats.filter(s=>s.inHand&&!s.folded&&s.seat!==view.toAct))beliefFor(opponent.seat).condition(knownCards(view));
-      const result=evaluateRiverActions(view,{samples:options.riverSamples??64,riskPenalty:options.riverRiskPenalty,seed:(options.seed??1)^Math.imul(view.handNumber,31)^view.log.length,
+      const result=evaluateRiverActions(view,{samples:options.riverSamples??64,riskPenalty:options.riverRiskPenalty,rangeDefense:options.riverRangeDefense,seed:(options.seed??1)^Math.imul(view.handNumber,31)^view.log.length,
         rangeFor:seat=>beliefFor(seat).mixture(),styleFor:(seat,cards)=>beliefFor(seat).typeWeightsGiven(cards)});
       options.onRiverDecision?.(result);return result.best;
     }

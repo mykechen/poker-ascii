@@ -1,5 +1,7 @@
-import { expect, it } from 'vitest';
-import { createBenchmarkOpponent } from './benchmark-opponents';
+import { describe, expect, it } from 'vitest';
+import { createBenchmarkOpponent, strongestShare } from './benchmark-opponents';
+import { evaluate } from './evaluator';
+import type { Card } from './types';
 import { playMatch } from './train';
 import { apply, createTable } from './engine';
 import { projectForPlayer } from './view';
@@ -47,4 +49,51 @@ for(const kind of ['equity-defender','equity-pressure'] as const)it(`${kind} val
  const decision=createBenchmarkOpponent(kind,8,1)(view);
  expect(decision.action).toBe('call');
  expect(decision.reason).toBe('Uniform-range showdown call value 9.0.');
+});
+
+describe('size-reader', () => {
+  const board: Card[] = ['2c', '3d', '7h', '9s', 'Jc'];
+
+  it('ranks the strongest share of a bettor\'s hands and skips known cards', () => {
+    const top = strongestShare(board, ['Jd', 'Th', ...board], 0.01);
+    expect(top.length).toBeGreaterThan(0);
+    expect(top.length).toBeLessThan(20);
+    for (const hand of top) expect(hand.cards.some(card => card === 'Jd' || card === 'Th')).toBe(false);
+    // Sets and better: nothing in a 1% range is one pair.
+    for (const hand of top) expect(evaluate([...board, ...hand.cards]).score[0]).toBeGreaterThanOrEqual(3);
+    expect(strongestShare(board, board, 1)).toHaveLength(1081);
+    expect(() => strongestShare(board, board, 0)).toThrow();
+  });
+
+  /** Heads-up river with a pot of `pot` chips in which the other player bets `bet`. */
+  function facingRiverBet(pot: number, bet: number) {
+    let state = createTable();
+    for (let seat = 0; seat < 2; seat++) state = apply(state, { type: 'sit', seat, name: `P${seat}`, stack: 500 });
+    state = apply(state, { type: 'startHand' });
+    state = apply(state, { type: 'act', seat: state.toAct!, action: 'raise', amount: pot / 2 });
+    state = apply(state, { type: 'act', seat: state.toAct!, action: 'call' });
+    while (state.street !== 'river') state = apply(state, { type: 'act', seat: state.toAct!, action: 'check' });
+    state = apply(state, { type: 'act', seat: state.toAct!, action: 'raise', amount: bet });
+    expect(state.error).toBeNull();
+    const view = projectForPlayer(state, state.toAct);
+    view.board = [...board];
+    view.seats[view.toAct!]!.hole = ['Jd', 'Th'];
+    return view;
+  }
+
+  it('calls a small river bet with top pair but folds it to a huge shove', () => {
+    const reader = createBenchmarkOpponent('size-reader', 256, 1);
+    expect(reader(facingRiverBet(20, 10)).action).toBe('call');
+    expect(reader(facingRiverBet(20, 400)).action).toBe('fold');
+    expect(reader(facingRiverBet(20, 400)).reason).toMatch(/^Size-read/);
+  });
+
+  it('differs from equity-defender, which calls the shove', () => {
+    expect(createBenchmarkOpponent('equity-defender', 256, 1)(facingRiverBet(20, 400)).action).toBe('call');
+  });
+
+  it('completes legal conserving six-player matches', () => {
+    const report = playMatch({ seats: Array.from({ length: 6 }, (_, i) => ({ name: `P${i}`, policy: createBenchmarkOpponent('size-reader', 8, i) })), hands: 3, invalidAction: 'throw' });
+    expect(report.net.reduce((a, b) => a + b, 0)).toBe(0);
+  });
 });

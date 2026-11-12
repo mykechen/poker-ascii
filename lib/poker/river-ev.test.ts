@@ -1,7 +1,7 @@
-import {expect,it} from "vitest";
+import {describe,expect,it} from "vitest";
 import {apply,createTable,legalActions} from "./engine";
 import {projectForPlayer} from "./view";
-import {evaluateRiverActions} from "./river-ev";
+import {defends,evaluateRiverActions,rangePercentiles} from "./river-ev";
 import type {Policy} from "./bot";
 export function riverFixture(){
  let state=createTable();
@@ -91,4 +91,70 @@ it("can prefer a lower but more certain estimate when explicitly configured",asy
  const certain={action:{action:"check" as const,reason:"certain"},ev:5,standardError:0,samples:4};
  expect(chooseRiverCandidate([risky,certain],0)).toBe(risky);
  expect(chooseRiverCandidate([risky,certain],1)).toBe(certain);
+});
+describe("range defense", () => {
+  const board: ["2c","3d","7h","9s","Jc"] = ["2c","3d","7h","9s","Jc"];
+  it("ranks hands within their range, ties counting half", () => {
+    const percentiles = rangePercentiles([
+      { cards: ["Ah","Kd"], weight: 1 },
+      { cards: ["Jh","Td"], weight: 2 },
+      { cards: ["Js","Th"], weight: 2 },
+      { cards: ["9h","9d"], weight: 1 },
+    ], board);
+    expect(percentiles.get("AhKd")).toBeCloseTo(1 / 12);
+    expect(percentiles.get("JhTd")).toBeCloseTo(0.5);
+    expect(percentiles.get("9d9h")).toBeCloseTo(11 / 12);
+  });
+  it("continues with less of the range as the bet grows, and never folds the top", () => {
+    const pot = 4;
+    const threshold = (bet: number) => [...Array(101).keys()].map(i => i / 100).find(p => defends(p, bet, pot + bet, 1))!;
+    expect(threshold(2)).toBeLessThan(threshold(4));
+    expect(threshold(4)).toBeLessThan(threshold(198));
+    expect(threshold(4)).toBeCloseTo(0.5);
+    expect(defends(1, 198, 202, 1)).toBe(true);
+    expect(defends(0.5, 0, 4, 1)).toBe(true);
+    expect(() => defends(0.5, 2, 6, -1)).toThrow();
+  });
+  it("stops v1 shoving one pair for 50 times the pot", () => {
+    const state = riverFixture();
+    state.seats[1]!.hole = ["Jh","Td"];
+    const view = projectForPlayer(state, 1);
+    const v1 = evaluateRiverActions(view, { samples: 400, seed: 3 });
+    const defended = evaluateRiverActions(view, { samples: 400, seed: 3, rangeDefense: 1 });
+    expect(v1.best.action).toBe("all_in");
+    expect(defended.best.action).not.toBe("all_in");
+    const shove = defended.candidates.find(c => c.action.action === "all_in")!;
+    expect(shove.ev).toBeLessThan(Math.max(...defended.candidates.map(c => c.ev)));
+  });
+  it("does not mistake a ten-high shove for a free pot when few samples miss the callers", () => {
+    // Live table hand: 7h Td on Kd 2h Jc 8c Qd, pot 4. Sixteen plain samples usually
+    // contain none of the ~2% of hands that call a 50x shove, so the shove scored +4 with SE 0.
+    const state = riverFixture();
+    state.board = ["Kd","2h","Jc","8c","Qd"];
+    state.seats[1]!.hole = ["7h","Td"];
+    state.seats[0]!.hole = ["2c","3d"];
+    const view = projectForPlayer(state, 1);
+    let shoves = 0;
+    for (let seed = 1; seed <= 40; seed++) {
+      const result = evaluateRiverActions(view, { samples: 16, seed, riskPenalty: 1, rangeDefense: 1 });
+      const shove = result.candidates.find(c => c.action.action === "all_in")!;
+      // Half the samples are dealt a caller, so the shove is never scored as a sure +4.
+      expect(shove.standardError).toBeGreaterThan(0);
+      expect(shove.ev).toBeLessThan(view.pot);
+      if (result.best.action === "all_in") shoves++;
+    }
+    // Plain sampling shoved on about three seeds in four; the rest is noise among near-zero options.
+    expect(shoves).toBeLessThanOrEqual(4);
+  });
+  it("estimates a bet's value without bias across sample sizes", () => {
+    const state = riverFixture();
+    state.seats[1]!.hole = ["Jh","Td"];
+    const view = projectForPlayer(state, 1);
+    const reference = evaluateRiverActions(view, { samples: 4000, seed: 99, rangeDefense: 1 });
+    const small = Array.from({ length: 40 }, (_, i) => evaluateRiverActions(view, { samples: 32, seed: i + 1, rangeDefense: 1 }));
+    for (const [index, candidate] of reference.candidates.entries()) {
+      const mean = small.reduce((n, r) => n + r.candidates[index]!.ev, 0) / small.length;
+      expect(Math.abs(mean - candidate.ev)).toBeLessThan(4 * candidate.standardError + 2);
+    }
+  });
 });

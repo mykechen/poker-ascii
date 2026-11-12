@@ -26,8 +26,10 @@ describe("local bot seat", () => {
     expect(session.table.seats[0]!.lastAction).toBe("SB 1");
     expect(session.botNotes).toEqual([]);
     session = reduceLocal(session, { type: "botTick", now: 1_000 + STREET_PAUSE_MS + BOT_THINK_MS });
-    expect(session.table.seats[0]!.folded).toBe(true);
-    expect(session.botNotes.map((note) => note.text)).toEqual(["Trash hand. Fold."]);
+    // The table bot completes 7-2 heads-up from the small blind: one chip for a share of four.
+    expect(session.table.seats[0]!.lastAction).toBe("CALL 1");
+    expect(session.botNotes).toHaveLength(1);
+    expect(session.botNotes[0]!.text).toMatch(/^Equity \d+\.\d%\. Showdown call value -?\d+\.\d\.$/);
   });
 
   it("checks or folds a bot that fails, and refuses a person acting for it", () => {

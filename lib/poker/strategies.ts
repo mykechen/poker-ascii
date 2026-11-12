@@ -4,7 +4,7 @@ import { learner } from "./learner";
 import { createBenchmarkOpponent } from "./benchmark-opponents";
 import type { PublicView } from "./view";
 
-export type StrategyId = "chart" | "multiway" | "tight" | "station" | "aggressor" | "position" | "maniac" | "learner" | "equity-defender" | "equity-pressure";
+export type StrategyId = "chart" | "multiway" | "tight" | "station" | "aggressor" | "position" | "maniac" | "learner" | "equity-defender" | "equity-pressure" | "size-reader";
 
 export type Strategy = {
   id: StrategyId;
@@ -119,6 +119,7 @@ export const strategies: readonly Strategy[] = [
 export const benchmarkStrategies: readonly Strategy[] = [
   {id:"equity-defender",name:"Equity defender",rule:"Uniform-range showdown equity; check/call/fold on incremental value. Unproven benchmark strength.",policy:createBenchmarkOpponent("equity-defender")},
   {id:"equity-pressure",name:"Equity pressure",rule:"Independent equity policy plus conservative value raises. Unproven benchmark strength.",policy:createBenchmarkOpponent("equity-pressure")},
+  {id:"size-reader",name:"Size reader",rule:"Equity defender that puts a river bettor on a stronger range the bigger the bet. Unproven benchmark strength.",policy:createBenchmarkOpponent("size-reader")},
 ];
 
 export function strategyById(id: StrategyId): Strategy {

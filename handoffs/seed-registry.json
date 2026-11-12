@@ -225,6 +225,11 @@
       "start": 190001,
       "end": 190525,
       "reason": "heuristic-control-screen-v1 completed and retired from future confirmation"
+    },
+    {
+      "start": 990101,
+      "end": 990424,
+      "reason": "river-defense-2026-11-12 exploratory screens (pot-odds, loose, size-aware fields; plain and stratified range defense) completed and inspected; retired from future confirmation"
     }
   ],
   "reserved_not_run": [

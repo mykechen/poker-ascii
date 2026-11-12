@@ -2,7 +2,7 @@ import { randomBytes, randomInt } from "node:crypto";
 import { mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { readBotAction, type BotNote, type Policy } from "./bot";
-import { learner } from "./learner";
+import { liveBotAction, nextOpening } from "./live-bot";
 import { legalActions, apply, createTable } from "./engine";
 import { ACTION_MS, BETWEEN_HANDS_MS, BOT_THINK_MS, STREET_PAUSE_MS } from "./timing";
 import { SEAT_COUNT, type Command, type PlayAction, type TableState } from "./types";
@@ -15,10 +15,10 @@ const ACTIONS: readonly PlayAction[] = ["fold", "check", "call", "raise", "all_i
 
 export { ACTION_MS, BETWEEN_HANDS_MS, STREET_PAUSE_MS };
 
-let botPolicy: Policy = learner;
+/** Null plays the table bot (v1 with range-defense river sizing). Tests swap in a policy; the table still rejects anything outside the menu. */
+let botPolicy: Policy | null = null;
 
-/** Tests swap the policy. The table still rejects anything outside the menu. */
-export function setBotPolicy(next: Policy): void {
+export function setBotPolicy(next: Policy | null): void {
   botPolicy = next;
 }
 
@@ -54,6 +54,8 @@ type Waiter = {
 type Room = {
   code: string;
   table: TableState;
+  /** The table right after this hand was dealt. The bot replays the hand from here. */
+  handOpening: TableState | null;
   version: number;
   updatedAt: number;
   hostToken: string;
@@ -152,7 +154,7 @@ export function resetRooms(): void {
   current.fileOverride = null;
   current.loaded = true;
   current.now = () => Date.now();
-  botPolicy = learner;
+  botPolicy = null;
 }
 
 export function configureRooms(options: { file: string | null }): void {
@@ -440,6 +442,7 @@ function commit(room: Room, token: string, command: Command): RoomResult | { err
 function follow(room: Room, before: TableState, after: TableState) {
   const now = runtime().now();
   if (before.handNumber !== after.handNumber) room.botNotes = [];
+  room.handOpening = nextOpening(room.handOpening, before, after);
   if (after.phase === "complete") {
     room.actNotBefore = null;
     room.actDeadline = null;
@@ -575,7 +578,9 @@ function takeBotAction(room: Room, now: number): boolean {
   const key = `${room.table.handNumber}:${room.table.street}:${seat}`;
   if (room.botAttempt === key) return false;
   room.botAttempt = key;
-  const decision = readBotAction(projectForPlayer(room.table, seat), botPolicy);
+  const decision = botPolicy
+    ? readBotAction(projectForPlayer(room.table, seat), botPolicy)
+    : liveBotAction(room.handOpening, room.table, seat);
   if (!decision) {
     console.error("Bot did not return a legal action.", seat);
     return false;
@@ -640,6 +645,7 @@ function blankRoom(): Room {
   return {
     code,
     table: createTable(),
+    handOpening: null,
     version: 0,
     updatedAt: runtime().now(),
     hostToken: "",
@@ -715,6 +721,7 @@ function save() {
 type SerializedRoom = {
   code: string;
   table: TableState;
+  handOpening?: TableState | null;
   version: number;
   updatedAt: number;
   hostToken: string;
@@ -731,6 +738,7 @@ function serialize(room: Room): SerializedRoom {
   return {
     code: room.code,
     table: room.table,
+    handOpening: room.handOpening,
     version: room.version,
     updatedAt: room.updatedAt,
     hostToken: room.hostToken,
@@ -749,6 +757,7 @@ function deserialize(item: SerializedRoom): Room {
   return {
     code: item.code,
     table: item.table,
+    handOpening: item.handOpening ?? null,
     version: item.version,
     updatedAt: item.updatedAt,
     hostToken: item.hostToken,

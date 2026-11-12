@@ -45,3 +45,5 @@ next-env.d.ts
 
 # Vercel
 .vercel
+# Local linked research worktrees (their contents are versioned on their own branches).
+/.worktrees/

@@ -1,0 +1,8 @@
+{
+  "adoptedSamples": 128,
+  "passed": true,
+  "noninferiorityLower": 65.92883634665647,
+  "meanDecisionRatio": 1.814434988066679,
+  "lifecycleRatio": 1.2679778401564648,
+  "technicalRecovery": "recovery/provenance-addendum.json"
+}
